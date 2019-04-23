@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-topic-container',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic-container.component.css']
 })
 export class TopicContainerComponent implements OnInit {
-
+  @Input() MainData;
   constructor() { }
 
   ngOnInit() {

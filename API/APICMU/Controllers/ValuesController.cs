@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace APICMU.Controllers
 {
@@ -16,16 +17,19 @@ namespace APICMU.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            var fileStream = new FileStream("file.txt", FileMode.Open, FileAccess.Read);
+            Dictionary<int, String> dic = new Dictionary<int, string>();
+            var fileStream = new FileStream("DataFiles/main/DataFile.txt", FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
+                
                 string line;
+                int count = 0;
                 while ((line = streamReader.ReadLine()) != null)
                 {
-                    
+                    dic.Add(count++, line);
                 }
             }
-            return null;
+            return Ok(JsonConvert.SerializeObject(dic));
         }
 
         // GET api/values/5
