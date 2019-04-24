@@ -7,7 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TopicContainerComponent implements OnInit {
   @Input() MainData;
-  constructor() { }
+ 
+  constructor() { 
+    
+  }
 
   ngOnInit() {
   }

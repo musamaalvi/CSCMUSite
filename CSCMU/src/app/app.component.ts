@@ -8,12 +8,14 @@ import { HttpClient } from "@angular/common/http";
 export class AppComponent {
   title = 'CSCMU';
   topicContainerData;
-
+  showData=false;
 
   constructor(private httpClient: HttpClient) {
     this.httpClient.get("https://localhost:44310/api/values").subscribe(data =>{
       this.topicContainerData = data;
       debugger;
+      this.showData=true
+
     })
 
   }

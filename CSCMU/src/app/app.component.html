@@ -45,7 +45,7 @@
                                 <div class="spacer"></div>
                             </div>
                         </div>
-                        <div id="unit-128-content" class="unit-panel" role="region" aria-labelledby="unit-128-trigger">
+                        <div *ngIf="showData" id="unit-128-content" class="unit-panel" role="region" aria-labelledby="unit-128-trigger">
                             <div>
                                 <app-topic-container [MainData]="topicContainerData"></app-topic-container>
                             </div>
