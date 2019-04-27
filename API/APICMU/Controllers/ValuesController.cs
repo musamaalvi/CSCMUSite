@@ -17,7 +17,10 @@ namespace APICMU.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            Dictionary<int, String> dic = new Dictionary<int, string>();
+            List<string> subHeadings = new List<string>();
+            List<string> mainHeadings = new List<string>();
+            
+            Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
             var fileStream = new FileStream("DataFiles/main/DataFile.txt", FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
@@ -26,8 +29,14 @@ namespace APICMU.Controllers
                 int count = 0;
                 while ((line = streamReader.ReadLine()) != null)
                 {
-                    dic.Add(count++, line);
+                    if (line.Split('|')[1] == "SubHeading")
+                        subHeadings.Add(line.Split('|')[0]);
+                    if (line.Split('|')[1] == "MainHeading")
+                        mainHeadings.Add(line.Split('|')[0]);
+                    
                 }
+                dic.Add("MainHeading", mainHeadings);
+                dic.Add("SubHeading", subHeadings);
             }
             return Ok(JsonConvert.SerializeObject(dic));
         }

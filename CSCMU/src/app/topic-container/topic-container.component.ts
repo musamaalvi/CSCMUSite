@@ -11,7 +11,9 @@ export class TopicContainerComponent implements OnInit {
   constructor() { 
     
   }
+ atagclick(atag){
 
+}
   ngOnInit() {
   }
 

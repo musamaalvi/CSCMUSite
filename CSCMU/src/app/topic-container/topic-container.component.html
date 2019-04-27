@@ -1,22 +1,22 @@
 <div class="topic-container">
   <div class="topic-header">
       <button id="topic-114-trigger" class="topic-trigger depth-1 " type="button" aria-expanded="true" aria-controls="topic-114-content">
-          <div class="indicator open"></div>1.1. {{MainData[0].split('|')[1]}}
+          <div class="indicator open"></div> {{MainData["MainHeading"][0].split('#')[1]}}
           <div class="spacer"></div>
           <div class="status-icon complete"></div>
       </button>
   </div>
   <div id="topic-114-content" class="topic-panel" role="region" aria-labelledby="topic-114-trigger">
-      <div>
+      <div *ngFor="let item of MainData['SubHeading']">
           <div class="notes-container ">
-              <div role="button" tabindex="0"><a class="notes-link depth-2"><span class="notes-icon"></span>1.1.1. Getting Started<div class="spacer"></div><div class="status-icon complete"></div></a></div>
+              <div role="button" tabindex="0"><a class="notes-link depth-2"><span class="notes-icon"></span>{{item.split('#')[1]}}<div class="spacer"></div><div class="status-icon complete"></div></a></div>
           </div>
       </div>
-      <div>
+      <!-- <div>
           <div class="notes-container ">
-              <div role="button" tabindex="0"><a class="notes-link depth-2"><span class="notes-icon"></span>1.1.2. Position and Size<div class="spacer"></div><div class="status-icon complete"></div></a></div>
+              <div role="button" tabindex="0"><a class="notes-link depth-2"><span class="notes-icon"></span>{{MainData[0].split('|')[3].split('#')[1]}}<div class="spacer"></div><div class="status-icon complete"></div></a></div>
           </div>
-      </div>
+      </div> -->
       <div>
           <div class="collection-summary-container ">
               <div role="button" tabindex="0" class="inactive  ">
