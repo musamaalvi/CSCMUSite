@@ -1,3 +1,0 @@
-1000#1.1. Basics|MainHeading
-10001#1.1.1. Getting Started|SubHeading
-10002#1.1.2. Position and Size|SubHeading

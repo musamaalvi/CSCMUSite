@@ -9,7 +9,7 @@ export class TopicContainerComponent implements OnInit {
   @Input() MainData;
  
   constructor() { 
-    
+    console.log(this.MainData)
   }
  atagclick(atag){
 

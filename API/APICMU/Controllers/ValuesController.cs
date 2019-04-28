@@ -19,26 +19,41 @@ namespace APICMU.Controllers
         {
             List<string> subHeadings = new List<string>();
             List<string> mainHeadings = new List<string>();
-            
             Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
-            var fileStream = new FileStream("DataFiles/main/DataFile.txt", FileMode.Open, FileAccess.Read);
-            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            Dictionary<int, Dictionary<string, List<string>>> returnDic = new Dictionary<int, Dictionary<string, List<string>>>();
+            DirectoryInfo dinfo = new DirectoryInfo("DataFiles/main/");
+          
+
+            FileInfo[] Files = dinfo.GetFiles("*.txt");
+
+            int count = 0;
+            foreach (FileInfo file in Files)
             {
-                
-                string line;
-                int count = 0;
-                while ((line = streamReader.ReadLine()) != null)
+                 subHeadings = new List<string>();
+                 mainHeadings = new List<string>();
+                 dic = new Dictionary<string, List<string>>();
+                var fileStream = new FileStream(file.Name, FileMode.Open, FileAccess.Read);
+                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
-                    if (line.Split('|')[1] == "SubHeading")
-                        subHeadings.Add(line.Split('|')[0]);
-                    if (line.Split('|')[1] == "MainHeading")
-                        mainHeadings.Add(line.Split('|')[0]);
+
+                    string line;
                     
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        if (line.Split('|')[1] == "SubHeading")
+                            subHeadings.Add(line.Split('|')[0]);
+                        if (line.Split('|')[1] == "MainHeading")
+                            mainHeadings.Add(line.Split('|')[0]);
+
+                    }
+                    dic.Add("MainHeading", mainHeadings);
+                    dic.Add("SubHeading", subHeadings);
+                    returnDic.Add(count++, dic);
                 }
-                dic.Add("MainHeading", mainHeadings);
-                dic.Add("SubHeading", subHeadings);
             }
-            return Ok(JsonConvert.SerializeObject(dic));
+            
+            
+            return Ok(JsonConvert.SerializeObject(returnDic));
         }
 
         // GET api/values/5
