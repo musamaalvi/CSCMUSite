@@ -19,20 +19,28 @@ namespace APICMU.Controllers
         {
             List<string> subHeadings = new List<string>();
             List<string> mainHeadings = new List<string>();
+            List<string> Headings = new List<string>();
+
+
             Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
-            Dictionary<int, Dictionary<string, List<string>>> returnDic = new Dictionary<int, Dictionary<string, List<string>>>();
+            Dictionary<int, Dictionary<string, List<string>>> subDic = new Dictionary<int, Dictionary<string, List<string>>>();
+            Dictionary<int, Dictionary<int, Dictionary<string, List<string>>>> returnDic = new Dictionary<int, Dictionary<int, Dictionary<string, List<string>>>>();
+
             DirectoryInfo dinfo = new DirectoryInfo("DataFiles/main/");
           
 
             FileInfo[] Files = dinfo.GetFiles("*.txt");
 
-            int count = 0;
+            int count = 0, anotherCounter = 0;
             foreach (FileInfo file in Files)
             {
                  subHeadings = new List<string>();
                  mainHeadings = new List<string>();
+                 Headings = new List<string>();
                  dic = new Dictionary<string, List<string>>();
-                var fileStream = new FileStream(file.Name, FileMode.Open, FileAccess.Read);
+
+
+                var fileStream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read);
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
 
@@ -40,15 +48,29 @@ namespace APICMU.Controllers
                     
                     while ((line = streamReader.ReadLine()) != null)
                     {
+                        if (line == "end")
+                        {
+                            dic.Add("MainHeading", mainHeadings);
+                            dic.Add("SubHeading", subHeadings);
+                            dic.Add("Heading", Headings);
+                            subDic.Add(anotherCounter, dic);
+                            anotherCounter++;
+                            subHeadings = new List<string>();
+                            mainHeadings = new List<string>();
+                            Headings = new List<string>();
+                            dic = new Dictionary<string, List<string>>();
+                            continue;
+                        }
                         if (line.Split('|')[1] == "SubHeading")
                             subHeadings.Add(line.Split('|')[0]);
                         if (line.Split('|')[1] == "MainHeading")
                             mainHeadings.Add(line.Split('|')[0]);
+                        if (line.Split('|')[1] == "Heading")
+                            Headings.Add(line.Split('|')[0]);
 
                     }
-                    dic.Add("MainHeading", mainHeadings);
-                    dic.Add("SubHeading", subHeadings);
-                    returnDic.Add(count++, dic);
+                    
+                    returnDic.Add(count++, subDic);
                 }
             }
             

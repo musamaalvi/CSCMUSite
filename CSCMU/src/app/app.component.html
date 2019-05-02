@@ -41,20 +41,15 @@
                 <div *ngIf="showData" class="syllabus-inner">
                     <div  *ngFor="let key of numbers" class="unit-container">
                         <div class="unit-header">
-                            <div role="button" tabindex="0" class="unit-trigger in-progress " aria-expanded="true" aria-controls="unit-128-content">1: Creating Drawings
+                            <div role="button" tabindex="0" class="unit-trigger in-progress " aria-expanded="true" aria-controls="unit-128-content">{{topicContainerData[key][0]["Heading"][0].split('#')[1]}}
                                 <div class="spacer"></div>
                             </div>
                         </div>
                         <div id="unit-128-content" class="unit-panel" role="region" aria-labelledby="unit-128-trigger">
-                            <div>
-                                <app-topic-container [MainData]="topicContainerData[key]"></app-topic-container>
+                          <div *ngFor="let innerN of objectKeys(topicContainerData[key])">
+                                <app-topic-container [MainData]="topicContainerData[key][innerN]"></app-topic-container>
                             </div>
-                            <div>
-                              <app-topic-container [MainData]="topicContainerData[key]"></app-topic-container>
-                            </div>
-                            <div>
-                              <app-topic-container [MainData]="topicContainerData[key]"></app-topic-container>
-                            </div>
+                            
                             <!-- <div>
                                 <div class="collection-summary-container ">
                                     <div role="button" tabindex="0" class="inactive  ">
