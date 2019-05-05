@@ -3,6 +3,12 @@
 100011#1.1.1. Getting Started|SubHeading
 100012#1.1.2. Position and Size|SubHeading
 100013#1.1.3. Random|SubHeading
+100013#1.1.3. Random|SubHeading
+end
+20001#2.1. Basics|MainHeading
+200011#2.1.1. Getting Started|SubHeading
+200012#2.1.2. Position and Size|SubHeading
+200013#2.1.3. Random|SubHeading
 end
 20001#2.1. Basics|MainHeading
 200011#2.1.1. Getting Started|SubHeading

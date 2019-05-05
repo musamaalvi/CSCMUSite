@@ -43,9 +43,9 @@ namespace APICMU.Controllers
                 var fileStream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read);
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
-
+                    anotherCounter = 0;
                     string line;
-                    
+                    subDic = new Dictionary<int, Dictionary<string, List<string>>>();
                     while ((line = streamReader.ReadLine()) != null)
                     {
                         if (line == "end")
