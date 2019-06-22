@@ -9,14 +9,10 @@
   <div id="topic-114-content" class="topic-panel" role="region" aria-labelledby="topic-114-trigger">
       <div *ngFor="let item of MainData['SubHeading']">
           <div class="notes-container ">
-              <div role="button" tabindex="0"><a class="notes-link depth-2"><span class="notes-icon"></span>{{item.split('#')[1]}}<div class="spacer"></div><div class="status-icon complete"></div></a></div>
+              <div role="button" tabindex="0"><a (click)="headingClicked($event)" id="{{item.split('#')[0]}}" class="notes-link depth-2"><span class="notes-icon"></span>{{item.split('#')[1]}}<div class="spacer"></div><div class="status-icon complete"></div></a></div>
           </div>
       </div>
-      <!-- <div>
-          <div class="notes-container ">
-              <div role="button" tabindex="0"><a class="notes-link depth-2"><span class="notes-icon"></span>{{MainData[0].split('|')[3].split('#')[1]}}<div class="spacer"></div><div class="status-icon complete"></div></a></div>
-          </div>
-      </div> -->
+      
       <div>
           <div class="collection-summary-container ">
               <div role="button" tabindex="0" class="inactive  ">

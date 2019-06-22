@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-topic-container',
@@ -7,13 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TopicContainerComponent implements OnInit {
   @Input() MainData;
- 
-  constructor() { 
+
+  constructor(private router: Router) {
     console.log(this.MainData)
   }
- atagclick(atag){
 
-}
+  headingClicked(event) {
+    this.router.navigateByUrl('/details')
+  }
+  atagclick(atag) {
+
+  }
   ngOnInit() {
   }
 

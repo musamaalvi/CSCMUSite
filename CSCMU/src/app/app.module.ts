@@ -7,13 +7,15 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TopicContainerComponent } from './topic-container/topic-container.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainPageComponent } from './main-page/main-page.component';
+import { DrilldowmComponent } from './drilldowm/drilldowm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     TopicContainerComponent,
-    MainPageComponent
+    MainPageComponent,
+    DrilldowmComponent
   ],
   imports: [
     BrowserModule,
