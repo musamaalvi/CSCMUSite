@@ -4,7 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { DrilldowmComponent } from './drilldowm/drilldowm.component';
 
 const routes: Routes = [{path:'', component:MainPageComponent},
-{path:'details', component:DrilldowmComponent}];
+{path:'details/:id', component:DrilldowmComponent}];
 
 
 @NgModule({

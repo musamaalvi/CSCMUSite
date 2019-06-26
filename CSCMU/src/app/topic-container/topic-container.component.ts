@@ -15,7 +15,8 @@ export class TopicContainerComponent implements OnInit {
   }
 
   headingClicked(event) {
-    this.router.navigateByUrl('/details')
+    debugger;
+    this.router.navigateByUrl('/details/'+event.currentTarget.id)
   }
   atagclick(atag) {
 
