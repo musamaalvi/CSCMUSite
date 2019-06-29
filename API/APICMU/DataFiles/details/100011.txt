@@ -1,4 +1,8 @@
-10000#1 Position and Size|Heading
+10001#Our First Program|MainHeading
+100011#To start, let's draw a rectangle. Press the run button to run this Python code:|Paragraph
+100012# |InlineContainer
+100013#1.1.3. Random|SubHeading
+end
 10001#Our First Program|MainHeading
 100011#To start, let's draw a rectangle. Press the run button to run this Python code:|Paragraph
 100012# |InlineContainer

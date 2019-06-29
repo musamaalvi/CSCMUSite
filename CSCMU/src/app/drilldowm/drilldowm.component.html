@@ -1059,8 +1059,8 @@
                 <div class="notes-page-container" tabindex="-1">
                     <div class="notes-page-inner">
                         <h1 id="toc-main-title">Position and Size</h1>
-                        <div id="toc-28e48a547ccf7c27fa46de0dd5a2808147a5765a">
-                            <h2>Our First Program</h2>
+                        <div *ngFor="let item of mainData['0']">
+                            <h2 *ngIf="item.split('|')[1]=='MainHeading'">{{item.split('|')[0].split('#')[1]}}</h2>
                             <div class="dynamic-html notes-content teacher">
                                 <p>
                                     To start, let's draw a rectangle. Press the <b>run button</b> to run this Python code:

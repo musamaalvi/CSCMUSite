@@ -17,7 +17,7 @@ export class MainPageComponent{
   
   constructor(private httpClient: HttpClient) {
     this.objectKeys = Object.keys;
-    this.httpClient.get("https://localhost:44310/api/values").subscribe(data =>{
+    this.httpClient.get("https://localhost:44310/api/values/GetInitial").subscribe(data =>{
       this.topicContainerData = data;
       for(var i=0;i<Object.keys(this.topicContainerData).length;i++){
         // for(var j=0;j<Object.keys(this.topicContainerData[i]).length;j++){

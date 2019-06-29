@@ -14,7 +14,7 @@ namespace APICMU.Controllers
     public class ValuesController : ControllerBase
     {
         // GET api/values
-        [HttpGet]
+        [HttpGet("GetInitial")]
         public ActionResult<IEnumerable<string>> Get()
         {
             List<string> subHeadings = new List<string>();
@@ -78,6 +78,64 @@ namespace APICMU.Controllers
             return Ok(JsonConvert.SerializeObject(returnDic));
         }
 
+
+        [HttpGet("DrillDownDetail/{id}")]
+        public ActionResult<IEnumerable<string>> DrillDownDetail(int id)
+        {
+            List<string> subHeadings = new List<string>();
+            List<string> mainHeadings = new List<string>();
+            List<string> Headings = new List<string>();
+
+
+            Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
+            Dictionary<int, Dictionary<string, List<string>>> subDic = new Dictionary<int, Dictionary<string, List<string>>>();
+            Dictionary<int, List<string>> returnDic = new Dictionary<int, List<string>>();
+
+            DirectoryInfo dinfo = new DirectoryInfo("DataFiles/details/");
+
+
+            FileInfo[] Files = dinfo.GetFiles(id+".txt");
+
+            int count = 0, anotherCounter = 0;
+            foreach (FileInfo file in Files)
+            {
+                subHeadings = new List<string>();
+                mainHeadings = new List<string>();
+                Headings = new List<string>();
+                dic = new Dictionary<string, List<string>>();
+
+
+                var fileStream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read);
+                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                {
+                    anotherCounter = 0;
+                    string line;
+                    List<string> lst = new List<string>();
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        if (line == "end")
+                        {
+
+                            returnDic.Add(count++, lst);
+                            lst = new List<string>();
+                            continue;
+                        }
+                        else
+                        {
+                            lst.Add(line);
+                        }
+                        
+                        
+
+                    }
+
+                    
+                }
+            }
+
+
+            return Ok(JsonConvert.SerializeObject(returnDic));
+        }
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
