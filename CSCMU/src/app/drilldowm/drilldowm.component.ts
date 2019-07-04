@@ -9,6 +9,7 @@ import { HttpClient } from "@angular/common/http";
 export class DrilldowmComponent implements OnInit {
   id: number;
   mainData;
+  objectKeys = Object.keys;
   theHtmlString
   constructor(private route: ActivatedRoute, private httpClient: HttpClient) { 
     
