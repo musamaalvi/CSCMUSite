@@ -6,6 +6,7 @@
 end
 10001#The Canvas|MainHeading
 100011#To understand what is going on, we first have to talk about the canvas. In this course, all drawing is done on a canvas. The canvas is made up of tiny colored points, or pixels. We use (x,y) coordinates to talk about pixels on the canvas, like so:  (0, 0) is the left-top corner of the canvas (not the middle!). As x increases, you head right. As y increases, you head down, not up!Our canvas is a 400x400 square, so (200, 200) is the middle of the canvas, and (400, 400) is the right-bottom corner.|Paragraph
-100011# |CheckPoint
+100011# Rect(10,20,30,40) |Box
+100011# where is the right-bottom corner of the rectangle?  |Alert
 end
 
