@@ -1116,13 +1116,7 @@
                                                     </div>
                                                     <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
                                                         <div class="ace_line" style="height:14.40000057220459px"><span
-                                                                class="ace_identifier">Rect</span><span
-                                                                class="ace_paren ace_lparen">(</span><span
-                                                                class="ace_constant ace_numeric">10</span>, <span
-                                                                class="ace_constant ace_numeric">20</span>, <span
-                                                                class="ace_constant ace_numeric">30</span>, <span
-                                                                class="ace_constant ace_numeric">40</span><span
-                                                                class="ace_paren ace_rparen">)</span></div>
+                                                                class="ace_identifier">{{item.split('|')[0].split('#')[1]}}</span></div>
                                                         <div class="ace_line" style="height:14.40000057220459px"></div>
                                                     </div>
                                                     <div class="ace_layer ace_marker-layer"></div>
@@ -1159,7 +1153,7 @@
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
                                     <h3>Checkpoint 1<span>
-                                            <div class="status-icon complete"></div><button class="redo">Redo
+                                            <div class="status-icon complete"></div><button #buttonCheckPoint id="{{item.split('|')[0].split('#')[0]}}" (click)="CheckPointClick(id)" class="redo">Redo
                                                 checkpoint</button>
                                         </span></h3>
                                 </div>
@@ -1184,7 +1178,7 @@
                             </div>
                         </div>
 
-                        <div id="toc-00683ba2987a0bc59f05925391b863880854cb44">
+                        <!-- <div id="toc-00683ba2987a0bc59f05925391b863880854cb44">
                             <h2>The Canvas</h2>
                             <div class="dynamic-html notes-content teacher">
                                 <p>
@@ -1325,7 +1319,7 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="button flat small teal continue">Continue</button>
+                        <button class="button flat small teal continue">Continue</button> -->
                     </div>
                 </div>
                 <div></div>
