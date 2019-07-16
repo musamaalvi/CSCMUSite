@@ -11,6 +11,7 @@ export class DrilldowmComponent implements OnInit {
   mainData;
   objectKeys = Object.keys;
   theHtmlString
+  htmlString="";
   constructor(private route: ActivatedRoute, private httpClient: HttpClient) { 
     
     this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/100011").subscribe(data =>{
@@ -24,6 +25,9 @@ export class DrilldowmComponent implements OnInit {
 
   CheckPointClick(id){
     debugger;
+    this.htmlString='<input type="radio" name="gender" value="male"> Male<br>\
+    <input type="radio" name="gender" value="female"> Female<br>\
+    <input type="radio" name="gender" value="other"> Other<br>  '
   }
 
   ngOnInit() {
