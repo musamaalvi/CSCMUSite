@@ -1156,9 +1156,11 @@
                                             <div class="status-icon complete"></div><button id="{{item.split('|')[0].split('#')[0]}}" (click)="CheckPointClick(CheckPointDiv)" class="redo">Redo
                                                 checkpoint</button>
                                         </span></h3>
-                                        <div #CheckPointDiv>
+                                        <div hidden #CheckPointDiv>
+                                            <p></p>
                                                 <input type="radio" name="gender" value="male"> Male<br>
                                                 <input type="radio" name="gender" value="female"> Female<br>
+                                                <input type="radio" name="gender" value="other"> Other<br>  
                                                 <input type="radio" name="gender" value="other"> Other<br>  
                                             </div>
                                 </div>

@@ -78,7 +78,25 @@ namespace APICMU.Controllers
             return Ok(JsonConvert.SerializeObject(returnDic));
         }
 
+        [HttpGet("CheckPoint/{id}")]
+        public ActionResult<IEnumerable<string>> CheckPoint(int id)
+        {
+            String line;
+            List<string> cp = new List<string>();
+            var fileStream = new FileStream("DataFiles/checkpoints/5000.txt", FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+                
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    cp.Add(line);
+                }
 
+
+            }
+
+            return Ok(JsonConvert.SerializeObject(cp));
+        }
         [HttpGet("DrillDownDetail/{id}")]
         public ActionResult<IEnumerable<string>> DrillDownDetail(int id)
         {
