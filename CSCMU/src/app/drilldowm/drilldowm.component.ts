@@ -13,9 +13,12 @@ export class DrilldowmComponent implements OnInit {
   theHtmlString
   htmlString="";
   checkPointData
+  DrillDownDetailPage
   constructor(private route: ActivatedRoute, private httpClient: HttpClient) { 
-    
-    this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/100011").subscribe(data =>{
+    this.route.paramMap.subscribe(params => {
+      this.DrillDownDetailPage = +params.get('id')
+    });
+    this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/"+this.DrillDownDetailPage).subscribe(data =>{
     
     this.mainData=data;
     //this.SetHTML();
@@ -24,9 +27,9 @@ export class DrilldowmComponent implements OnInit {
   }
 
 
-  CheckPointClick(id){
+  CheckPointClick(id, idCheckPoint){
     debugger;
-    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/5000").subscribe(data =>{
+    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + idCheckPoint).subscribe(data =>{
     
     this.checkPointData = data;
     id.childNodes[0].textContent=this.checkPointData[0];

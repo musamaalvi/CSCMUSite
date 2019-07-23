@@ -1153,7 +1153,7 @@
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
                                     <h3>Checkpoint 1<span>
-                                            <div class="status-icon complete"></div><button id="{{item.split('|')[0].split('#')[0]}}" (click)="CheckPointClick(CheckPointDiv)" class="redo">Redo
+                                            <div class="status-icon complete"></div><button id="{{item.split('|')[0].split('#')[0]}}" (click)="CheckPointClick(CheckPointDiv, id)" class="redo">Redo
                                                 checkpoint</button>
                                         </span></h3>
                                         <div hidden #CheckPointDiv>

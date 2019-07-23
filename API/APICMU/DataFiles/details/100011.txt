@@ -11,4 +11,3 @@ end
 100011# where is the right-bottom corner of the rectangle?  |Alert
 12312# |CheckPoint
 end
-
