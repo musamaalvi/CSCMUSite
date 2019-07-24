@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
+
+declare var $:any;
 @Component({
   selector: 'app-drilldowm',
   templateUrl: './drilldowm.component.html',
@@ -41,6 +43,15 @@ export class DrilldowmComponent implements OnInit {
     //this.SetHTML();
 
     })
+  }
+  SubmitButtonClicked(options){
+debugger;
+for(var i=0;i< $(options).find('input').length; i++){
+      if($(options).find('input')[i].checked==true){
+        
+      }
+}
+
   }
 
   ngOnInit() {
