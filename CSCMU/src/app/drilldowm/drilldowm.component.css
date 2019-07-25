@@ -1,0 +1,13 @@
+.checkPointHiddenWrong{
+    display: none !important;
+}
+
+
+.checkPointHiddenCorrect{
+    display: none !important;
+    
+}
+
+.Donttry-again {
+    background-color: green;
+}

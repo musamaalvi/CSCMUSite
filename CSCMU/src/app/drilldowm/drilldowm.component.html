@@ -1164,7 +1164,8 @@
                                                 <input type="radio" name="gender" value="other"> Other<br>  
 
                                                 <button class="button flat small teal" (click)="SubmitButtonClicked(CheckPointDiv)">Submit</button>
-                                                <div hidden class="try-again">Nice Effort. You have one more try</div>
+                                                <div  class="checkPointHiddenWrong try-again">Nice Effort. You have one more try</div>
+                                                <div  class="checkPointHiddenCorrect Donttry-again">Great Job !</div>
                                             </div>
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='Box'">

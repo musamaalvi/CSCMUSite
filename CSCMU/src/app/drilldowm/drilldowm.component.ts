@@ -48,8 +48,11 @@ export class DrilldowmComponent implements OnInit {
 debugger;
 for(var i=0;i< $(options).find('input').length; i++){
       if($(options).find('input')[i].checked==true){
-        
-      }
+        if(i!=this.checkPointData[5])
+          $(options).closest('div').find('div').removeClass('checkPointHiddenWrong')
+        else
+          $(options).closest('div').find('div').removeClass('checkPointHiddenCorrect')
+        }
 }
 
   }
