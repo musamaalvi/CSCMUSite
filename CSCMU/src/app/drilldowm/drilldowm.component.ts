@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 
-declare var $:any;
+declare var $: any;
 @Component({
   selector: 'app-drilldowm',
   templateUrl: './drilldowm.component.html',
@@ -13,47 +13,51 @@ export class DrilldowmComponent implements OnInit {
   mainData;
   objectKeys = Object.keys;
   theHtmlString
-  htmlString="";
+  htmlString = "";
   checkPointData
   DrillDownDetailPage
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) { 
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
     this.route.paramMap.subscribe(params => {
       this.DrillDownDetailPage = +params.get('id')
     });
-    this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/"+this.DrillDownDetailPage).subscribe(data =>{
-    
-    this.mainData=data;
-    //this.SetHTML();
+    this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/" + this.DrillDownDetailPage).subscribe(data => {
+
+      this.mainData = data;
+      //this.SetHTML();
 
     })
   }
 
-
-  CheckPointClick(id, idCheckPoint){
+  alertBoxClicked(AlertBox){
     debugger;
-    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + idCheckPoint).subscribe(data =>{
-    
-    this.checkPointData = data;
-    id.childNodes[0].textContent=this.checkPointData[0];
-    id.childNodes[2].textContent=this.checkPointData[1];
-    id.childNodes[5].textContent=this.checkPointData[2];
-    id.childNodes[8].textContent=this.checkPointData[3];
-    id.childNodes[11].textContent=this.checkPointData[4];
-    id.hidden = false
-    //this.SetHTML();
+    $(AlertBox).removeAttr('hidden')
+
+  }
+  CheckPointClick(id, idCheckPoint) {
+    debugger;
+    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + idCheckPoint).subscribe(data => {
+
+      this.checkPointData = data;
+      id.childNodes[0].textContent = this.checkPointData[0];
+      id.childNodes[2].textContent = this.checkPointData[1];
+      id.childNodes[5].textContent = this.checkPointData[2];
+      id.childNodes[8].textContent = this.checkPointData[3];
+      id.childNodes[11].textContent = this.checkPointData[4];
+      id.hidden = false
+      //this.SetHTML();
 
     })
   }
-  SubmitButtonClicked(options){
-debugger;
-for(var i=0;i< $(options).find('input').length; i++){
-      if($(options).find('input')[i].checked==true){
-        if(i!=this.checkPointData[5])
+  SubmitButtonClicked(options) {
+    debugger;
+    for (var i = 0; i < $(options).find('input').length; i++) {
+      if ($(options).find('input')[i].checked == true) {
+        if (i != this.checkPointData[5])
           $(options).closest('div').find('div').removeClass('checkPointHiddenWrong')
         else
           $(options).closest('div').find('div').removeClass('checkPointHiddenCorrect')
-        }
-}
+      }
+    }
 
   }
 

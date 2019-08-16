@@ -1172,17 +1172,17 @@
                                     <pre><code class="hljs">{{item.split('|')[0].split('#')[1]}}
                                                                     </code></pre>
                                 </div>
-                                <div *ngIf="item.split('|')[1]=='Alert'" class="alert">
+                                <div *ngIf="item.split('|')[2]=='Alert'" class="alert">
                                         <b>Question:</b> {{item.split('|')[0].split('#')[1]}}
                                         <br>
-                                        <div class="cmu-cs-academy-hidden-answer" hidden="">
-                                            <b>Answer:</b> the left is at 10, and the width is 30, so the right is at (10+30), or 40. Similarly, the top is at 20, and the height is 40, so the bottom is at (20+40), or 60. Thus, the right-bottom is at (40, 60).
+                                        <div class="cmu-cs-academy-hidden-answer" hidden="" #HiddenAlertBox>
+                                            <b>Answer:</b> {{item.split('|')[1]}}
                                         </div>
                                         <div id="991d10b7e0ccfde9dc17f45a6e2330ba62d477c3" class="show-answer-root hidden">
                                             <button class="button flat small show-answer-button">Hide</button>
                                         </div>
                                         <div id="9e2e2f6c270b702282876b92ed586e8a679d64fd" class="show-answer-root">
-                                            <button class="button flat small show-answer-button show-answer-button-code-is-hidden">Show answer</button>
+                                            <button class="button flat small show-answer-button show-answer-button-code-is-hidden" (click)="alertBoxClicked(HiddenAlertBox)" >Show answer</button>
                                         </div>
                                     </div>
                         

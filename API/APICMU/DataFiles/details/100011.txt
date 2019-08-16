@@ -8,6 +8,6 @@ end
 100011#To understand what is going on, we first have to talk about the canvas. In this course, all drawing is done on a canvas. The canvas is made up of tiny colored points, or pixels. We use (x,y) coordinates to talk about pixels on the canvas, like so:  (0, 0) is the left-top corner of the canvas (not the middle!). As x increases, you head right. As y increases, you head down, not up!Our canvas is a 400x400 square, so (200, 200) is the middle of the canvas, and (400, 400) is the right-bottom corner.|Paragraph
 100011# Rect(10,20,30,40) |Box
 123123# checking |Paragraph
-100011# where is the right-bottom corner of the rectangle?  |Alert
+100011# where is the right-bottom corner of the rectangle?| the left is at 10, and the width is 30, so the right is at (10+30), or 40. Similarly, the top is at 20, and the height is 40, so the bottom is at (20+40), or 60. Thus, the right-bottom is at (40, 60).  |Alert
 12312# |CheckPoint
 end
