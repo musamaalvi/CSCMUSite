@@ -11,3 +11,7 @@
 .Donttry-again {
     background-color: green;
 }
+
+.IframeHidden {
+    display: none !important
+}

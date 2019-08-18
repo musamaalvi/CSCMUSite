@@ -24,4 +24,15 @@ end
 100011# Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6) |InlineContainer
 100011#This can become clearer if we include another rectangle:|Paragraph
 100011# Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6)|InlineContainer
+100011#Run this code. See how the blue-bordered rectangle has no fill. Here is one more example, to make it clear that a fill of None is not the same as a white fill:|Paragraph
+end
+10001#Default values|MainHeading
+100011#We just learned that fill, border, and borderWidth are optional arguments. If we do not supply an optional argument, the shape uses the default value for that argument. The default fill is 'black'. The default border is None. And the default borderWidth is 2.|Paragraph
+100011# When does the Inspector include the borderWidth in its feedback? You may have to run some code from above a few times to answer this question.| When the borderWidth is any value except the default value of 2.  |Alert
+end
+10001#The Inspector|MainHeading
+100011#The Inspector is a great way to get useful info about shapes, but it only gives as much info as you need. For example, it tells you the colors of a shape, but it does not say whether the colors are for the fill or for the border. This is left for you to figure out! So the Inspector is super helpful, but it definitely leaves some important problem-solving for you.|Paragraph
+end
+10001#Practice|MainHeading
+100011#That's it for fills and borders! So now let's try some exercises to practice.|Paragraph
 end
