@@ -28,6 +28,10 @@ export class DrilldowmComponent implements OnInit {
     })
   }
 
+  iFrameClicked(iFrameHandle){
+    debugger
+  }
+
   alertBoxClicked(AlertBox){
     debugger;
     $(AlertBox).removeAttr('hidden')
