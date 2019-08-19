@@ -1,6 +1,6 @@
 10001#Fill|MainHeading
 100011#To change a shape's color, use the optional fill argument, like so::|Paragraph
-100012# Rect(50, 50, 100, 100, fill='green')|InlineContainer
+100012#Rect(50, 50, 100, 100, fill='green')|InlineContainer
 100011#Run the code, and you should see a green rectangle. Great! Now edit the code to try to make the rectangle orange. Did it work? When using fill, here are some rules to follow: Include fill after the required arguments -- left, top, width, and height. Always place an equals sign (=) before the color name. Put quotes around the color name. You can use either single quotes, like 'blue', or double quotes, like "blue". As we saw before, if any of these rules are not right, you have a syntax error and the code will not run until you fix the error|Paragraph
 12312# |CheckPoint
 12312# |CheckPoint
@@ -13,17 +13,17 @@ end
 end
 10001#Borders|MainHeading
 100011#Rectangles may have an optional border, like so::|Paragraph
-100011# Rect(50, 50, 100, 100, fill='yellow', border='blue') |InlineContainer
-123123# Run the code to see a yellow rectangle with a thin blue border around it. Then, edit the code to get a blue rectangle with a yellow frame around it. Success? By default, borders are 2 pixels wide. You can change that with borderWidth: |Paragraph
-100011# Rect(50, 50, 100, 100, fill='yellow', border='blue', borderWidth=12) |InlineContainer
+100011#Rect(50, 50, 100, 100, fill='yellow', border='blue') |InlineContainer
+123123#Run the code to see a yellow rectangle with a thin blue border around it. Then, edit the code to get a blue rectangle with a yellow frame around it. Success? By default, borders are 2 pixels wide. You can change that with borderWidth: |Paragraph
+100011#Rect(50, 50, 100, 100, fill='yellow', border='blue', borderWidth=12) |InlineContainer
 100011#Run the code to see a yellow rectangle with a 12-pixel-thick blue border around it.|Paragraph
 12312# |CheckPoint
 end
 10001#Empty Fills|MainHeading
 100011#We can draw a rectangle with only a border color, and without any fill color. To do this, set the fill to None, like so:|Paragraph
-100011# Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6) |InlineContainer
+100011#Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6) |InlineContainer
 100011#This can become clearer if we include another rectangle:|Paragraph
-100011# Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6)|InlineContainer
+100011#Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6)|InlineContainer
 100011#Run this code. See how the blue-bordered rectangle has no fill. Here is one more example, to make it clear that a fill of None is not the same as a white fill:|Paragraph
 end
 10001#Default values|MainHeading
