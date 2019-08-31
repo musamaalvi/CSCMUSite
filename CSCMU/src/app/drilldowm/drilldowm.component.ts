@@ -16,6 +16,7 @@ export class DrilldowmComponent implements OnInit {
   htmlString = "";
   checkPointData
   DrillDownDetailPage
+  showMainPage = false;
   apiURL="http://127.0.0.1:1000/"
   constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
     this.route.paramMap.subscribe(params => {
@@ -25,19 +26,14 @@ export class DrilldowmComponent implements OnInit {
 
       this.mainData = data;
       //this.SetHTML();
-
+      this.showMainPage=true;
     })
   }
 
   iFrameClicked(iFrameHandle){
     debugger
     $(iFrameHandle).removeClass("IframeHidden")
-    var obj =  {
-      code : $(iFrameHandle).closest('div[class=inline-af-container]').find('.codeIFrame').text()
-    }
-    this.httpClient.post(this.apiURL+'IFrameCodeRun', obj).subscribe(data => {
-      var result = data['result']
-    })
+    
   }
 
   alertBoxClicked(AlertBox){

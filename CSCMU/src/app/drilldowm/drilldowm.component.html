@@ -16,7 +16,93 @@
     <title>Position and Size | CMU CS Academy</title>
     <!-- <link href="staticDrillDown/css/main.f4e81609.chunk.css" rel="stylesheet"> -->
     <style></style>
-
+    
+    <!-- <script id="python_script" type="text/python">
+        import sys
+        import traceback
+        from browser import document, timer
+        
+        FIRST_TIME = True
+        def inform(*args):
+            document["status-info"].html = "".join(args)
+        
+        def _write(*args):
+            document["turtle-print-output"].html += "".join(args)
+        def __write(*args):
+            document["turtle-print-output"].html += '<span class="error">' + "".join(args) + "</span>"
+        
+        sys.stdout.write = _write
+        sys.stderr.write = __write
+        
+        def clear_print():
+            document["turtle-print-output"].html = ""
+        
+        def run_code(ev):
+            global FIRST_TIME
+            if FIRST_TIME:
+                FIRST_TIME = False
+                inform("Importing turtle module for the first time and processing; please wait")
+            else:
+                inform("Processing")
+            document["run"].class_name = "btn-disabled"
+            # delay to allow updated DOM with above text to be shown.
+            timer.set_timeout(exec_code, 1)
+        
+        document["runCodePython"].bind("click", run_code)
+        
+        def exec_code():
+            _code= "print ('usama alvi')"
+            try:
+                exec(_code)
+            except:
+                try:
+                    traceback.print_exc()
+                except:
+                    print("could not print traceback")
+            document["clear"].class_name = "btn-enabled"
+            document["replay-scene"].class_name = "btn-enabled"
+            inform("")
+        
+        def delayed_clear():
+            from turtle import restart
+            restart()
+            inform("")
+            document["run"].class_name = "btn-enabled"
+            document["replay-scene"].class_name = "btn-disabled"
+            document["clear"].class_name = "btn-disabled"
+            clear_print()
+        
+        def clear(ev):
+            global FIRST_TIME
+            if FIRST_TIME:
+                FIRST_TIME = False
+                inform("Importing turtle module for the first time and processing; please wait")
+                document["run"].class_name = "btn-disabled"
+            # delay to allow updated DOM with above text to be shown.
+            timer.set_timeout(delayed_clear, 1)
+        
+        document["clear"].bind("click", clear)
+        
+        def replay(ev):
+            # importing turtle earlier slows down the loading
+            # of this page
+            from turtle import replay_scene
+            replay_scene()
+        
+        document["replay-scene"].bind("click", replay)
+        
+        def copy_content(ev):
+            choice = document["demo_selector"].value
+            document["source"].text = document['demo'+ str(choice)].text
+            document["info"].html = document['info'+ str(choice)].html
+            clear(ev)
+        
+        document["demo_selector"].bind("change", copy_content)
+        
+        # Start with first demo
+        document["source"].text = document["demo1"].text
+        document["info"].html = document["info1"].html
+        </script> -->
     <style id="ace_editor.css">
         .ace_editor {
             position: relative;
@@ -999,7 +1085,7 @@
     </style>
 </head>
 
-<body class="font-regular">
+<body class="font-regular" onload="brython({debug:0, ipy_id:['demo8']})">
     <div class="freshwidget-container responsive" id="FreshWidget" data-html2canvas-ignore="true"
         style="display: none;">
         <div class="widget-ovelay" id="freshwidget-overlay">&nbsp;</div>
@@ -1075,7 +1161,7 @@
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAsCAYAAAB2d9g5AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcFFQ0rEVnanQAAAxBJREFUWMPtmMtPE1EUxs8dWqGlvAzEAgXa8m6rogYCupD4gETUplHQSEWjWAyibCAKLnBh2Lrqn+DGlS5woRutUWgHmFJBJCo+8NUnJZTC0HbGhQlB2g69ZerCeHadO51fzp3vfPecQSzLwt8MAv5y/PtAAdciwzJwj+qfejNPqXAemoQIaJKfRVrlBbwMZ+YnABcGABBiGfixNGfE3lLSbtLGs21JKAlOKtquYQFDbBDGHC8exgNsKNDl50kK8UQz7R4HX3ARG5aVnA3HFa3fsVVqsZs648nuTIkBpQjEeGURZAIw7nxlxIVVZu7+VC09iF+HUy4SlkNLeAWNBHCuvEsRV+Fb7KYBbKHItPJoQuEEroZooFzDd3CFckKp/xyXtdlcZqCZFazsWoqvcAqFEzjqMBlxhVKTWx/z/Wj9eUiHlqHb1MIGmNWYHyAmxJAsFEVdZ1mAquzapvOVNx6HmTflGAYcGACAn/GDn/Zz3vPaQw4BAArbUvLnsyH+zz8E+rJOFPYOlwM+mPSOHeMbeFimrdqVUxcumjHHSwgyQV5hhWnFcLq0fSKiSkn7cwufsGQiBTrU/UhACCOXxeziTDWfwNbyTiRNlUVvMQyqXjTtsaoAoUB0iTPip98eWTdrLWul9YMH8ho3r8PN4uPCW7g72s35hxxRLgxUG5FImLr1rs3m5n7NAkIAHZqbUWHYQKtzhDM7naINKdIr+elLPbQLvvpmo66rs/ZaG4ua+WuEJ51mYCBygunCDGjX9O5BiOAPSDlHnkTxf7is6kHp27bz1+rToRWY9lqPRlprLNCVabJr+J0tZjxUxFOkSFIKupJL73gfZiinuTncukRg2NmHhBusa8tAFliwuc0PNl7XV3QhqTif/3Hty8J78K56/rhWt+PQ7f25RxIzH1pdw2HWpa+4PpiwgXTCZWbXT0VX1X0xd2jYQC/tgjnfh7Xfp5QXkTyjPHEjt81pWXMXddY+skHeDFsNTuCkm7z/27oyoV3TU4MAJRYokyhbJYI0MGhuxWxdWI3w/+80fMQv6UICCCr8x+gAAAAASUVORK5CYII="
                             alt="strength icon"></div>
                 </ul>
-                <div class="notes-page-container" tabindex="-1">
+                <div class="notes-page-container" tabindex="-1" *ngIf="showMainPage">
                     <div class="notes-page-inner">
                         <h1 id="toc-main-title">Position and Size</h1>
                         <div *ngFor="let i of objectKeys(mainData)">
@@ -1150,8 +1236,13 @@
                                         <button class="toolbar-button inline-af-play" (click)="iFrameClicked(iFrameHandle)"></button>
                                     </div>
                                     <div></div>
-                                    <iframe #iFrameHandle class="IframeHidden" width="400" height="400" src="http://localhost:3000/simple-af.html#userCanvas">
-                                    </iframe>
+                                    <pre #iFrameHandle id="turtle-print-output" class="IframeHidden"></pre>
+                                    <p><button id="runCodePython" class="btn-enabled">Run</button> <span id="status-info"></span>
+                                        <button id="clear" class="btn-disabled">Clear</button>
+                                    </p>
+                                    <input id="zone">
+<button id="mybutton">click !</button>
+                                    
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
                                     <h3>Checkpoint 1<span>
@@ -1661,9 +1752,21 @@
             a()
         }([])
     </script>
+   
+        
     <!-- <script src="staticDrillDown/js/main.a1a6e895.chunk.js"></script>
     <script type="text/javascript" src="s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
     <script src="staticDrillDown/js/cmu-graphics.969e1032.js"></script> -->
+    <div id='demo8'>
+        from browser import document, alert
+
+        # bind event 'click' on button to function echo
+        
+        def echo():
+            alert('dasda')
+        
+        echo()
+    </div>
 </body>
 
 </html>

@@ -27,8 +27,9 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/js/brython_stdlib.js",
-              "src/assets/js/brython.js"
+              "src/assets/js/brython.js",
+              "src/assets/js/brython_stdlib.js"
+              
             ]
           },
           "configurations": {
