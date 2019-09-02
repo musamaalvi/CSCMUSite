@@ -26,9 +26,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/js/brython.js",
-              "src/assets/js/brython_stdlib.js"
+              "node_modules/jquery/dist/jquery.min.js"
               
             ]
           },
