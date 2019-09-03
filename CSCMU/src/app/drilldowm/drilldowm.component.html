@@ -1076,7 +1076,7 @@
                             alt="strength icon"></div>
                 </ul>
                 <div class="notes-page-container" tabindex="-1">
-                    <div class="notes-page-inner">
+                    <div class="notes-page-inner" *ngIf="loadMainPage">
                         <h1 id="toc-main-title">Position and Size</h1>
                         <div *ngFor="let i of objectKeys(mainData)">
                             <div *ngFor="let item of mainData[i]">
@@ -1150,7 +1150,7 @@
                                         <button class="toolbar-button inline-af-play" (click)="iFrameClicked(iFrameHandle)"></button>
                                     </div>
                                     <div></div>
-                                    <iframe #iFrameHandle class="IframeHidden" width="400" height="400" src="http://localhost:3000/simple-af.html#userCanvas">
+                                    <iframe #iFrameHandle class="IframeHidden active" width="800" height="800" src="http://127.0.0.1:8887/ace.html">
                                     </iframe>
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
