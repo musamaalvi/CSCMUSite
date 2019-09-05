@@ -16,6 +16,7 @@
     <title>Position and Size | CMU CS Academy</title>
     <!-- <link href="staticDrillDown/css/main.f4e81609.chunk.css" rel="stylesheet"> -->
     <style></style>
+
     
     <!-- <script id="python_script" type="text/python">
         import sys
@@ -1085,7 +1086,7 @@
     </style>
 </head>
 
-<body class="font-regular" >
+<body class="font-regular">
     <div class="freshwidget-container responsive" id="FreshWidget" data-html2canvas-ignore="true"
         style="display: none;">
         <div class="widget-ovelay" id="freshwidget-overlay">&nbsp;</div>
@@ -1233,15 +1234,24 @@
                                         </div>
                                     </div>
                                     <div class="inline-editor-button-group">
-                                        <button class="toolbar-button inline-af-play" (click)="iFrameClicked(iFrameHandle)"></button>
+                                        <button class="toolbar-button inline-af-play" (click)="iFrameClicked(iFrameHandle, iFrameHandle1)"></button>
                                     </div>
-                                    <div></div>
-                                    <pre #iFrameHandle id="turtle-print-output" class="IframeHidden"></pre>
+
+                                    <pre #iFrameHandle1 id="turtle-div" style="width: 60%; height:400px; float:right;" class="IframeHidden"> </pre>
+                                    <div inline-af-left>
+                                    <div class="console">
+                                    <pre #iFrameHandle class="IframeHidden">
+                                        <div class="console-title-container">
+                                            <div class="console-title">Console</div>
+                                        </div>
+                                        <div id="turtle-print-output" style="width: 40%; height:400px; float:left"></div>
+                                    </pre>
+                                </div>
+                            </div>
                                     <p><button id="runCodePython" class="btn-enabled">Run</button> <span id="status-info"></span>
                                         <button id="clear" class="btn-disabled">Clear</button>
                                     </p>
-                                    <input id="zone">
-<button id="mybutton">click !</button>
+                                    <button id="mybutton">click !</button>
                                     
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
@@ -1436,7 +1446,9 @@
     </div>
     <div id="application-target"></div>
     <div id="brython-target"></div>
+    
     <script>
+
         var _rollbarConfig = {
             accessToken: "ce5718b091db44c2b31b4ff4d410d686",
             captureUncaught: !0,

@@ -30,10 +30,10 @@ export class DrilldowmComponent implements OnInit {
     })
   }
 
-  iFrameClicked(iFrameHandle){
+  iFrameClicked(iFrameHandle, iFrameHandle1){
     debugger
     $(iFrameHandle).removeClass("IframeHidden")
-    
+    $(iFrameHandle1).removeClass("IframeHidden")
   }
 
   alertBoxClicked(AlertBox){

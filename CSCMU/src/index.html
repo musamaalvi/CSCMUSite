@@ -10,6 +10,123 @@
 </head>
 <body >
   <app-root></app-root>
+  
+<script id="python_script" type="text/python">
+import sys
+import traceback
+from browser import document, timer
+
+FIRST_TIME = True
+def inform(*args):
+    document["status-info"].html = "".join(args)
+
+def _write(*args):
+    document["turtle-print-output"].html += "".join(args)
+def __write(*args):
+    document["turtle-print-output"].html += '<span class="error">' + "".join(args) + "</span>"
+
+sys.stdout.write = _write
+sys.stderr.write = __write
+
+def clear_print():
+    document["turtle-print-output"].html = ""
+
+def run_code(ev):
+    global FIRST_TIME
+    if FIRST_TIME:
+        FIRST_TIME = False
+        #inform("Importing turtle module for the first time and processing; please wait")
+    document["mybutton"].class_name = "btn-disabled"
+    # delay to allow updated DOM with above text to be shown.
+    timer.set_timeout(exec_code, 1)
+
+document["mybutton"].bind("click", run_code)
+
+def exec_code():
+    code = """
+from browser import document
+import turtle
+turtle.set_defaults(
+    turtle_canvas_wrapper = document['turtle-div']
+)
+s = turtle.Screen
+t = turtle.Turtle()
+
+t.width(5)
+
+for c in ['red', '#00ff00', '#fa0', 'rgb(0,0,200)']:
+    t.color(c)
+    t.forward(100)
+    t.left(90)
+
+# dot() and write() do not require the pen to be down
+t.penup()
+t.goto(-30, -100)
+t.dot(40, 'rgba(255, 0, 0, 0.5')
+t.goto(30, -100)
+t.dot(40, 'rgba(0, 255, 0, 0.5')
+t.goto(0, -70)
+t.dot(40, 'rgba(0, 0, 255, 0.5')
+
+t.goto(0, 125)
+t.color('purple')
+t.write("I love Brython!", font=("Arial", 20, "normal"))
+
+
+turtle.done()
+"""
+    _code = code
+    #_code= document["inline-editor-68eb97269a19374dd4ffc0a6538caf06b497ecce"].text
+    try:
+        exec(_code)
+    except:
+        try:
+            traceback.print_exc()
+        except:
+            print("could not print traceback")
+    document["clear"].class_name = "btn-enabled"
+    document["replay-scene"].class_name = "btn-enabled"
+    inform("")
+
+def delayed_clear():
+    from turtle import restart
+    restart()
+    inform("")
+    document["run"].class_name = "btn-enabled"
+    document["replay-scene"].class_name = "btn-disabled"
+    document["clear"].class_name = "btn-disabled"
+    clear_print()
+
+def clear(ev):
+    global FIRST_TIME
+    if FIRST_TIME:
+        FIRST_TIME = False
+        #inform("Importing turtle module for the first time and processing; please wait")
+        document["run"].class_name = "btn-disabled"
+    # delay to allow updated DOM with above text to be shown.
+    timer.set_timeout(delayed_clear, 1)
+
+def replay(ev):
+    # importing turtle earlier slows down the loading
+    # of this page
+    from turtle import replay_scene
+    replay_scene()
+
+#document["replay-scene"].bind("click", replay)
+
+def copy_content(ev):
+    choice = document["demo_selector"].value
+    document["source"].text = document['demo'+ str(choice)].text
+    document["info"].html = document['info'+ str(choice)].html
+    clear(ev)
+
+#document["demo_selector"].bind("change", copy_content)
+
+# Start with first demo
+#document["source"].text = document["demo1"].text
+#document["info"].html = document["info1"].html
+</script>
+
   <script type="text/python">
     from browser import document, alert
     
