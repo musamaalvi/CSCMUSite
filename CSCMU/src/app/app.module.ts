@@ -8,6 +8,7 @@ import { TopicContainerComponent } from './topic-container/topic-container.compo
 import { HttpClientModule } from '@angular/common/http';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DrilldowmComponent } from './drilldowm/drilldowm.component';
+import { ExcersisComponent } from './excersis/excersis.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DrilldowmComponent } from './drilldowm/drilldowm.component';
     NavBarComponent,
     TopicContainerComponent,
     MainPageComponent,
-    DrilldowmComponent
+    DrilldowmComponent,
+    ExcersisComponent
   ],
   imports: [
     BrowserModule,

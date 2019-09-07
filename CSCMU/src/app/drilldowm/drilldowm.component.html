@@ -1202,7 +1202,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
-                                                        <div class="ace_line codeIFrame" style="height:14.40000057220459px"><span
+                                                        <div class="ace_line codeIFrame" style="height:14.40000057220459px"><span #codeToRun
                                                                 class="ace_identifier">{{item.split('|')[0].split('#')[1]}}</span></div>
                                                         <div class="ace_line" style="height:14.40000057220459px"></div>
                                                     </div>
@@ -1251,7 +1251,7 @@
                                     <p><button id="runCodePython" class="btn-enabled">Run</button> <span id="status-info"></span>
                                         <button id="clear" class="btn-disabled">Clear</button>
                                     </p>
-                                    <button id="mybutton">click !</button>
+                                    <button id="mybutton" (click)="CodeRunButton(codeToRun)">click !</button>
                                     
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
