@@ -37,7 +37,7 @@ export class DrilldowmComponent implements OnInit {
   }
   CodeRunButton(codeToRun){
     debugger;
-    $('#TestingCode').text($(codeToRun).text())
+    $('#TestingCode').text($(codeToRun).val())
   }
   alertBoxClicked(AlertBox){
     debugger;
