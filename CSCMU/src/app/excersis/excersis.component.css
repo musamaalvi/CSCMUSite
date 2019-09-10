@@ -1,0 +1,8 @@
+div#turtle-print-output {
+    background-color: black;
+    color: yellow;
+    font-weight: bolder;
+    min-height: 50px;
+    height: auto;
+    max-height: 200px;
+  }

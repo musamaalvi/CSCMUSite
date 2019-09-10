@@ -1,0 +1,11 @@
+<textarea #codeToRun contenteditable="true"></textarea>
+
+
+<pre #iFrameHandle1 id="turtle-div" style="width: 60%; height:400px; float:right;" class="IframeHidden"> </pre>
+
+<div id="turtle-print-output" style="width: 40%; height:400px; float:left"></div>
+
+
+<button id="mybutton" (click)="CodeRunButton(codeToRun)">click !</button>
+<button id="clear" >Clear</button>
+<span id="status-info"></span>

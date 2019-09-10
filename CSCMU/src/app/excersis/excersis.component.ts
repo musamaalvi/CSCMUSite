@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+declare var $: any;
 @Component({
   selector: 'app-excersis',
   templateUrl: './excersis.component.html',
@@ -11,5 +13,8 @@ export class ExcersisComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  CodeRunButton(codeToRun){
+    debugger;
+    $('#TestingCode').text($(codeToRun).val())
+  }
 }

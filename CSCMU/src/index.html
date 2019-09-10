@@ -29,6 +29,7 @@ sys.stdout.write = _write
 sys.stderr.write = __write
 
 def clear_print():
+    
     document["turtle-print-output"].html = ""
 
 def run_code(ev):
@@ -58,15 +59,20 @@ def exec_code():
     inform("")
 
 def delayed_clear():
+    
     from turtle import restart
     restart()
+    
     inform("")
-    document["run"].class_name = "btn-enabled"
-    document["replay-scene"].class_name = "btn-disabled"
+    
+    document["mybutton"].class_name = "btn-enabled"
+    
     document["clear"].class_name = "btn-disabled"
+    
     clear_print()
 
 def clear(ev):
+    
     global FIRST_TIME
     if FIRST_TIME:
         FIRST_TIME = False
@@ -75,6 +81,7 @@ def clear(ev):
     # delay to allow updated DOM with above text to be shown.
     timer.set_timeout(delayed_clear, 1)
 
+document["clear"].bind("click", clear)
 def replay(ev):
     # importing turtle earlier slows down the loading
     # of this page
