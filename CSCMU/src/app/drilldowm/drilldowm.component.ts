@@ -20,7 +20,21 @@ export class DrilldowmComponent implements OnInit {
   DrillDownDetailPage
   showMainPage = false;
   apiURL="http://127.0.0.1:1000/"
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
+
+  ngAfterViewInit(){
+    debugger;
+    
+    setTimeout( ()=>{
+      callBrython();
+      }, 1000)
+    }
+  
+
+  backToLessons(){
+    this.router.navigateByUrl('/')
+  }
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {
+    
     this.route.paramMap.subscribe(params => {
       this.DrillDownDetailPage = +params.get('id')
     });
@@ -31,7 +45,7 @@ export class DrilldowmComponent implements OnInit {
       this.showMainPage=true;
     })
 
-    callBrython();
+    
   }
 
   iFrameClicked(iFrameHandle, iFrameHandle1){
@@ -78,11 +92,13 @@ export class DrilldowmComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    
     this.route.paramMap.subscribe(params => {
       this.id = +params.get('id');
 
     });
+
+    
   }
 
 }
