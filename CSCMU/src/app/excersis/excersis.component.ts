@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 declare function callBrython(): any;
 declare var $: any;
@@ -8,9 +9,15 @@ declare var $: any;
   styleUrls: ['./excersis.component.css']
 })
 export class ExcersisComponent implements OnInit {
+QuestionId
 
-  constructor() {
+
+  constructor(private route: ActivatedRoute) {
     callBrython();
+    debugger;
+    this.route.paramMap.subscribe(params => {
+      this.QuestionId = +params.get('id')
+    });
    }
 
   ngOnInit() {

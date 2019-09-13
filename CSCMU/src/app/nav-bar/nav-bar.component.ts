@@ -11,7 +11,7 @@ export class NavBarComponent implements OnInit {
   constructor(private router: Router) { }
   
   SandBoxClicked(){
-    this.router.navigateByUrl('/sandbox');
+    this.router.navigateByUrl('/sandbox/3');
   }
   ngOnInit() {
   }
