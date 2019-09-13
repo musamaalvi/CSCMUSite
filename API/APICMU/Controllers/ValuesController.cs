@@ -18,6 +18,7 @@ namespace APICMU.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             List<string> subHeadings = new List<string>();
+            List<string> Exercise = new List<string>();
             List<string> mainHeadings = new List<string>();
             List<string> Headings = new List<string>();
 
@@ -35,7 +36,8 @@ namespace APICMU.Controllers
             foreach (FileInfo file in Files)
             {
                  subHeadings = new List<string>();
-                 mainHeadings = new List<string>();
+                    Exercise = new List<string>();
+                mainHeadings = new List<string>();
                  Headings = new List<string>();
                  dic = new Dictionary<string, List<string>>();
 
@@ -52,10 +54,12 @@ namespace APICMU.Controllers
                         {
                             dic.Add("MainHeading", mainHeadings);
                             dic.Add("SubHeading", subHeadings);
+                            dic.Add("Exercise", Exercise);
                             dic.Add("Heading", Headings);
                             subDic.Add(anotherCounter, dic);
                             anotherCounter++;
                             subHeadings = new List<string>();
+                            Exercise = new List<string>();
                             mainHeadings = new List<string>();
                             Headings = new List<string>();
                             dic = new Dictionary<string, List<string>>();
@@ -67,6 +71,8 @@ namespace APICMU.Controllers
                             mainHeadings.Add(line.Split('|')[0]);
                         if (line.Split('|')[1] == "Heading")
                             Headings.Add(line.Split('|')[0]);
+                        if (line.Split('|')[1] == "Exercise")
+                            Exercise.Add(line.Split('|')[0]);
 
                     }
                     
@@ -153,6 +159,25 @@ namespace APICMU.Controllers
 
 
             return Ok(JsonConvert.SerializeObject(returnDic));
+        }
+
+        [HttpGet("ExerciseDetails/{id}")]
+        public ActionResult<IEnumerable<string>> ExerciseDetails(int id)
+        {
+
+            String line;
+            List<string> cp = new List<string>();
+            var fileStream = new FileStream("DataFiles/exercises/90001.txt", FileMode.Open, FileAccess.Read);
+    
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+
+                line = streamReader.ReadToEnd();
+
+            }
+
+
+            return Ok(JsonConvert.SerializeObject(line));
         }
         // GET api/values/5
         [HttpGet("{id}")]

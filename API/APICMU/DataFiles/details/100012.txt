@@ -1,6 +1,6 @@
 10001#Fill|MainHeading
 100011#To change a shape's color, use the optional fill argument, like so::|Paragraph
-100012#Rect(50, 50, 100, 100, fill='green')|InlineContainer
+100012#print('M Usama Alvi')|InlineContainer
 100011#Run the code, and you should see a green rectangle. Great! Now edit the code to try to make the rectangle orange. Did it work? When using fill, here are some rules to follow: Include fill after the required arguments -- left, top, width, and height. Always place an equals sign (=) before the color name. Put quotes around the color name. You can use either single quotes, like 'blue', or double quotes, like "blue". As we saw before, if any of these rules are not right, you have a syntax error and the code will not run until you fix the error|Paragraph
 12312# |CheckPoint
 12312# |CheckPoint

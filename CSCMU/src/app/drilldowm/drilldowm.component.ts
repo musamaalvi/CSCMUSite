@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 
+
+declare function callBrython(): any;
 declare var $: any;
 @Component({
   selector: 'app-drilldowm',
@@ -15,11 +17,24 @@ export class DrilldowmComponent implements OnInit {
   theHtmlString
   htmlString = "";
   checkPointData
-  loadMainPage=false;
   DrillDownDetailPage
-  
+  showMainPage = false;
   apiURL="http://127.0.0.1:1000/"
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
+
+  ngAfterViewInit(){
+    debugger;
+    
+    setTimeout( ()=>{
+      callBrython();
+      }, 1000)
+    }
+  
+
+  backToLessons(){
+    this.router.navigateByUrl('/')
+  }
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {
+    
     this.route.paramMap.subscribe(params => {
       this.DrillDownDetailPage = +params.get('id')
     });
@@ -27,22 +42,22 @@ export class DrilldowmComponent implements OnInit {
 
       this.mainData = data;
       //this.SetHTML();
-      this.loadMainPage=true;
-
+      this.showMainPage=true;
     })
+
+    
   }
 
-  iFrameClicked(iFrameHandle){
+  iFrameClicked(iFrameHandle, iFrameHandle1){
     debugger
     $(iFrameHandle).removeClass("IframeHidden")
-    // var obj =  {
-    //   code : $(iFrameHandle).closest('div[class=inline-af-container]').find('.codeIFrame').text()
-    // }
-    // this.httpClient.post(this.apiURL+'IFrameCodeRun', obj).subscribe(data => {
-    //   var result = data['result']
-    // })
+    $(iFrameHandle1).removeClass("IframeHidden")
   }
-
+  CodeRunButton(codeToRun){
+    debugger;
+    
+    $('#TestingCode').text($(codeToRun).val())
+  }
   alertBoxClicked(AlertBox){
     debugger;
     $(AlertBox).removeAttr('hidden')
@@ -77,11 +92,13 @@ export class DrilldowmComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    
     this.route.paramMap.subscribe(params => {
       this.id = +params.get('id');
 
     });
+
+    
   }
 
 }

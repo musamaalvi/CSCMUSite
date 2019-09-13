@@ -15,3 +15,19 @@
 .IframeHidden {
     display: none !important
 }
+.console-title{flex:1 1;font-weight:700}
+.console-title-container{display:flex;flex-flow:row;justify-content:space-between;font-size:.9em;padding:0 20px;height:25px;line-height:25px;color:#fff;background:#479fba}
+.console-title-container .console-title{flex:1 1;font-weight:700}
+.console{flex:1 1;display:flex;flex-flow:column;height:100%}
+.inline-af-left{flex:1 1;display:flex;flex-flow:column;margin-right:10px}
+pre#turtle-print-output {
+    flex: 1 1; 
+    margin-bottom: 0;
+    white-space:pre-wrap;
+    font-family:Inconsolata;
+    height: 100%;
+    color:#fff;
+    background-color:#666;
+    border-radius:0;
+    border:none
+  }

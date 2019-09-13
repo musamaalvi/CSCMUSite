@@ -4,11 +4,205 @@
   <meta charset="utf-8">
   <title>CSCMU</title>
   <base href="/">
-
+  <!-- <script src ="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.4/brython.js"></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body >
   <app-root></app-root>
+  
+<script id="python_script" type="text/python">
+import sys
+import traceback
+from browser import document, timer
+
+FIRST_TIME = True
+def inform(*args):
+    document["status-info"].html = "".join(args)
+
+def _write(*args):
+    document["turtle-print-output"].html += "".join(args)
+def __write(*args):
+    document["turtle-print-output"].html += '<span class="error">' + "".join(args) + "</span>"
+
+sys.stdout.write = _write
+sys.stderr.write = __write
+
+def clear_print():
+    
+    document["turtle-print-output"].html = ""
+
+def run_code(ev):
+    global FIRST_TIME
+    if FIRST_TIME:
+        FIRST_TIME = False
+        #inform("Importing turtle module for the first time and processing; please wait")
+    document["mybutton"].class_name = "btn-disabled"
+    # delay to allow updated DOM with above text to be shown.
+    timer.set_timeout(exec_code, 1)
+
+document["mybutton"].bind("click", run_code)
+
+def exec_code():
+    code = document["TestingCode"].text
+    _code = code
+    #_code= document["inline-editor-68eb97269a19374dd4ffc0a6538caf06b497ecce"].text
+    try:
+        exec(_code)
+    except:
+        try:
+            traceback.print_exc()
+        except:
+            print("could not print traceback")
+    document["clear"].class_name = "btn-enabled"
+    document["replay-scene"].class_name = "btn-enabled"
+    inform("")
+
+def delayed_clear():
+    
+    from turtle import restart
+    restart()
+    
+    inform("")
+    
+    document["mybutton"].class_name = "btn-enabled"
+    
+    document["clear"].class_name = "btn-disabled"
+    
+    clear_print()
+
+def clear(ev):
+    
+    global FIRST_TIME
+    if FIRST_TIME:
+        FIRST_TIME = False
+        #inform("Importing turtle module for the first time and processing; please wait")
+        document["run"].class_name = "btn-disabled"
+    # delay to allow updated DOM with above text to be shown.
+    timer.set_timeout(delayed_clear, 1)
+
+document["clear"].bind("click", clear)
+def replay(ev):
+    # importing turtle earlier slows down the loading
+    # of this page
+    from turtle import replay_scene
+    replay_scene()
+
+#document["replay-scene"].bind("click", replay)
+
+def copy_content(ev):
+    choice = document["demo_selector"].value
+    document["source"].text = document['demo'+ str(choice)].text
+    document["info"].html = document['info'+ str(choice)].html
+    clear(ev)
+
+#document["demo_selector"].bind("change", copy_content)
+
+# Start with first demo
+#document["source"].text = document["demo1"].text
+#document["info"].html = document["info1"].html
+</script>
+
+  <!-- <script type="text/python">
+    from browser import document, alert
+    
+    # bind event 'click' on button to function echo
+    
+    def echo(ev):
+        alert("testingVariable")
+    
+    document["mybutton"].bind("click", echo)
+    </script> -->
+
+<div id="TestingCode" style='display:none'>
+print('testing variables')
+</div>
+
+   <!-- <script id="python_script" type="text/python">
+        import sys
+        import traceback
+        from browser import document, timer
+        
+        FIRST_TIME = True
+        def inform(*args):
+            document["status-info"].html = "".join(args)
+        
+        def _write(*args):
+            document["turtle-print-output"].html += "".join(args)
+        def __write(*args):
+            document["turtle-print-output"].html += '<span class="error">' + "".join(args) + "</span>"
+        
+        sys.stdout.write = _write
+        sys.stderr.write = __write
+        
+        def clear_print():
+            document["turtle-print-output"].html = ""
+        
+        def run_code(ev):
+            global FIRST_TIME
+            if FIRST_TIME:
+                FIRST_TIME = False
+                inform("Importing turtle module for the first time and processing; please wait")
+            else:
+                inform("Processing")
+            document["run"].class_name = "btn-disabled"
+            # delay to allow updated DOM with above text to be shown.
+            timer.set_timeout(exec_code, 1)
+        
+        document["runCodePython"].bind("click", run_code)
+        
+        def exec_code():
+            _code= "print ('usama alvi')"
+            try:
+                exec(_code)
+            except:
+                try:
+                    traceback.print_exc()
+                except:
+                    print("could not print traceback")
+            document["clear"].class_name = "btn-enabled"
+            document["replay-scene"].class_name = "btn-enabled"
+            inform("")
+        
+        def delayed_clear():
+            from turtle import restart
+            restart()
+            inform("")
+            document["run"].class_name = "btn-enabled"
+            document["replay-scene"].class_name = "btn-disabled"
+            document["clear"].class_name = "btn-disabled"
+            clear_print()
+        
+        def clear(ev):
+            global FIRST_TIME
+            if FIRST_TIME:
+                FIRST_TIME = False
+                inform("Importing turtle module for the first time and processing; please wait")
+                document["run"].class_name = "btn-disabled"
+            # delay to allow updated DOM with above text to be shown.
+            timer.set_timeout(delayed_clear, 1)
+        
+        document["clear"].bind("click", clear)
+        
+        def replay(ev):
+            # importing turtle earlier slows down the loading
+            # of this page
+            from turtle import replay_scene
+            replay_scene()
+        
+        document["replay-scene"].bind("click", replay)
+        
+        def copy_content(ev):
+            choice = document["demo_selector"].value
+            document["source"].text = document['demo'+ str(choice)].text
+            document["info"].html = document['info'+ str(choice)].html
+            clear(ev)
+        
+        document["demo_selector"].bind("change", copy_content)
+        
+        # Start with first demo
+        document["source"].text = document["demo1"].text
+        document["info"].html = document["info1"].html
+        </script> -->
 </body>
 </html>

@@ -17,6 +17,7 @@
     <!-- <link href="staticDrillDown/css/main.f4e81609.chunk.css" rel="stylesheet"> -->
     <style></style>
 
+    
     <style id="ace_editor.css">
         .ace_editor {
             position: relative;
@@ -1027,7 +1028,7 @@
                     </div>
                     <div class="group center">
                         <li class="navbar-center navbar-title">
-                            <div class="navbar-back-button show-arrow" role="button" tabindex="0">Back to lessons</div>
+                            <div class="navbar-back-button show-arrow" role="button" tabindex="0" (click)="backToLessons()" >Back to lessons</div>
                         </li>
                     </div>
                     <div class="group right">
@@ -1075,8 +1076,8 @@
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAsCAYAAAB2d9g5AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcFFQ0rEVnanQAAAxBJREFUWMPtmMtPE1EUxs8dWqGlvAzEAgXa8m6rogYCupD4gETUplHQSEWjWAyibCAKLnBh2Lrqn+DGlS5woRutUWgHmFJBJCo+8NUnJZTC0HbGhQlB2g69ZerCeHadO51fzp3vfPecQSzLwt8MAv5y/PtAAdciwzJwj+qfejNPqXAemoQIaJKfRVrlBbwMZ+YnABcGABBiGfixNGfE3lLSbtLGs21JKAlOKtquYQFDbBDGHC8exgNsKNDl50kK8UQz7R4HX3ARG5aVnA3HFa3fsVVqsZs648nuTIkBpQjEeGURZAIw7nxlxIVVZu7+VC09iF+HUy4SlkNLeAWNBHCuvEsRV+Fb7KYBbKHItPJoQuEEroZooFzDd3CFckKp/xyXtdlcZqCZFazsWoqvcAqFEzjqMBlxhVKTWx/z/Wj9eUiHlqHb1MIGmNWYHyAmxJAsFEVdZ1mAquzapvOVNx6HmTflGAYcGACAn/GDn/Zz3vPaQw4BAArbUvLnsyH+zz8E+rJOFPYOlwM+mPSOHeMbeFimrdqVUxcumjHHSwgyQV5hhWnFcLq0fSKiSkn7cwufsGQiBTrU/UhACCOXxeziTDWfwNbyTiRNlUVvMQyqXjTtsaoAoUB0iTPip98eWTdrLWul9YMH8ho3r8PN4uPCW7g72s35hxxRLgxUG5FImLr1rs3m5n7NAkIAHZqbUWHYQKtzhDM7naINKdIr+elLPbQLvvpmo66rs/ZaG4ua+WuEJ51mYCBygunCDGjX9O5BiOAPSDlHnkTxf7is6kHp27bz1+rToRWY9lqPRlprLNCVabJr+J0tZjxUxFOkSFIKupJL73gfZiinuTncukRg2NmHhBusa8tAFliwuc0PNl7XV3QhqTif/3Hty8J78K56/rhWt+PQ7f25RxIzH1pdw2HWpa+4PpiwgXTCZWbXT0VX1X0xd2jYQC/tgjnfh7Xfp5QXkTyjPHEjt81pWXMXddY+skHeDFsNTuCkm7z/27oyoV3TU4MAJRYokyhbJYI0MGhuxWxdWI3w/+80fMQv6UICCCr8x+gAAAAASUVORK5CYII="
                             alt="strength icon"></div>
                 </ul>
-                <div class="notes-page-container" tabindex="-1">
-                    <div class="notes-page-inner" *ngIf="loadMainPage">
+                <div class="notes-page-container" tabindex="-1" *ngIf="showMainPage">
+                    <div class="notes-page-inner">
                         <h1 id="toc-main-title">Position and Size</h1>
                         <div *ngFor="let i of objectKeys(mainData)">
                             <div *ngFor="let item of mainData[i]">
@@ -1090,68 +1091,31 @@
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='InlineContainer'" class="inline-af-container">
                                     <div class="inline-editor-container">
-                                        <div id="inline-editor-68eb97269a19374dd4ffc0a6538caf06b497ecce" class=" ace_editor ace-xcode"
-                                            style="width: 100%; height: 28.8px; font-size: 14px; font-family: Inconsolata;">
-                                            <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off"
-                                                spellcheck="false"
-                                                style="opacity: 0; height: 14.4px; width: 7px; left: 44px; top: 14.4px;"></textarea>
-                                            <div class="ace_gutter" aria-hidden="true">
-                                                <div class="ace_layer ace_gutter-layer ace_folding-enabled"
-                                                    style="margin-top: 0px; height: 57.6px; width: 40px;">
-                                                    <div class="ace_gutter-cell " style="height: 14.4px;">1</div>
-                                                    <div class="ace_gutter-cell " style="height: 14.4px;">2</div>
-                                                </div>
-                                                <div class="ace_gutter-active-line" style="top: 14.4px; height: 14.4px;"></div>
-                                            </div>
-                                            <div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;">
-                                                <div class="ace_content"
-                                                    style="margin-top: 0px; width: 552px; height: 57.6px; margin-left: 0px;">
-                                                    <div class="ace_layer ace_print-margin-layer">
-                                                        <div class="ace_print-margin" style="left: 564px; visibility: visible;"></div>
-                                                    </div>
-                                                    <div class="ace_layer ace_marker-layer">
-                                                        <div class="ace_active-line"
-                                                            style="height:14.40000057220459px;top:14.40000057220459px;left:0;right:0;">
-                                                        </div>
-                                                    </div>
-                                                    <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
-                                                        <div class="ace_line codeIFrame" style="height:14.40000057220459px"><span
-                                                                class="ace_identifier">{{item.split('|')[0].split('#')[1]}}</span></div>
-                                                        <div class="ace_line" style="height:14.40000057220459px"></div>
-                                                    </div>
-                                                    <div class="ace_layer ace_marker-layer"></div>
-                                                    <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
-                                                        <div class="ace_cursor" style="left: 4px; top: 14.4px; width: 7px; height: 14.4px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;">
-                                                <div class="ace_scrollbar-inner" style="width: 22px; height: 28.8px;">
-                                                </div>
-                                            </div>
-                                            <div class="ace_scrollbar ace_scrollbar-h"
-                                                style="height: 22px; left: 40px; right: 0px; display: none;">
-                                                <div class="ace_scrollbar-inner" style="height: 22px; width: 552px;">
-                                                </div>
-                                            </div>
-                                            <div
-                                                style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
-                                                <div
-                                                    style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">
-                                                </div>
-                                                <div
-                                                    style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">
-                                                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-                                            </div>
+                                        <div>
+                                            <textarea #codeToRun contenteditable="true">{{item.split('|')[0].split('#')[1]}}</textarea>
+                                            
                                         </div>
                                     </div>
                                     <div class="inline-editor-button-group">
-                                        <button class="toolbar-button inline-af-play" (click)="iFrameClicked(iFrameHandle)"></button>
+                                        <button class="toolbar-button inline-af-play" (click)="iFrameClicked(iFrameHandle, iFrameHandle1)"></button>
                                     </div>
-                                    <div></div>
-                                    <iframe #iFrameHandle class="IframeHidden active" width="800" height="800" src="http://127.0.0.1:8887/ace.html">
-                                    </iframe>
+
+                                    <pre #iFrameHandle1 id="turtle-div" style="width: 60%; height:400px; float:right;" class="IframeHidden"> </pre>
+                                    <div inline-af-left>
+                                    <div class="console">
+                                    <pre #iFrameHandle class="IframeHidden">
+                                        <div class="console-title-container">
+                                            <div class="console-title">Console</div>
+                                        </div>
+                                        <div id="turtle-print-output" style="width: 40%; height:400px; float:left"></div>
+                                    </pre>
+                                </div>
+                            </div>
+                                    <p><button id="runCodePython" class="btn-enabled">Run</button> <span id="status-info"></span>
+                                        <button id="clear" class="btn-disabled">Clear</button>
+                                    </p>
+                                    <button id="mybutton" (click)="CodeRunButton(codeToRun)">click !</button>
+                                    
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
                                     <h3>Checkpoint 1<span>
@@ -1191,148 +1155,7 @@
                             </div>
                         </div>
 
-                        <!-- <div id="toc-00683ba2987a0bc59f05925391b863880854cb44">
-                            <h2>The Canvas</h2>
-                            <div class="dynamic-html notes-content teacher">
-                                <p>
-                                    To understand what is going on, we first have to talk about the <b>canvas</b>. In
-                                    this course, all drawing is done on a canvas. The canvas is made up of tiny colored
-                                    points, or <b>pixels</b>. We use <b>(x,y) coordinates</b> to talk about pixels on
-                                    the canvas, like so:
-                                </p>
-                                <ul>
-                                    <li>(0, 0) is the left-top corner of the canvas (not the middle!).</li>
-                                    <li>As x increases, you head right.</li>
-                                    <li>As y increases, you head down, not up!</li>
-                                    <li>Our canvas is a 400x400 square, so (200, 200) is the middle of the canvas, and
-                                        (400, 400) is the right-bottom corner.</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="notes-checkpoint">
-                            <h3>Checkpoint 1<span>
-                                    <div class="status-icon complete"></div><button class="redo">Redo
-                                        checkpoint</button>
-                                </span></h3>
-                        </div>
-                        <div id="toc-ca7dade5dccf1c56fca5df4f78a84898c0bf53a4">
-                            <h2>Drawing Rectangles</h2>
-                            <div class="dynamic-html notes-content teacher">
-                                <p>
-                                    Ok, let's get to the details. Here is the Python code from above:
-                                </p>
-                                <pre><code class="hljs">Rect(10, 20, 30, 40)
-</code></pre> We use <code>Rect</code> to draw a rectangle. We provide 4 values after that:
-                                <code>left</code>, <code>top</code>, <code>width</code>, and <code>height</code>. So
-                                this draws a rectangle with its left-top corner at (10, 20), a width of 30, and a height
-                                of 40.
-                                <p></p>
-
-                                <div class="alert">
-                                    <b>Question:</b> where is the right-bottom corner of the rectangle?
-                                    <br>
-                                    <div class="cmu-cs-academy-hidden-answer" hidden="">
-                                        <b>Answer:</b> the left is at 10, and the width is 30, so the right is at
-                                        (10+30), or 40. Similarly, the top is at 20, and the height is 40, so the bottom
-                                        is at (20+40), or 60. Thus, the right-bottom is at (40, 60).
-                                    </div>
-                                    <div id="991d10b7e0ccfde9dc17f45a6e2330ba62d477c3" class="show-answer-root hidden">
-                                        <button class="button flat small show-answer-button">Hide</button>
-                                    </div>
-                                    <div id="9e2e2f6c270b702282876b92ed586e8a679d64fd" class="show-answer-root">
-                                        <button
-                                            class="button flat small show-answer-button show-answer-button-code-is-hidden">Show
-                                            answer</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="notes-checkpoint">
-                            <h3>Checkpoint 2<span>
-                                    <div class="status-icon complete"></div><button class="redo">Redo
-                                        checkpoint</button>
-                                </span></h3>
-                        </div>
-                        <div class="notes-checkpoint">
-                            <h3>Checkpoint 3<span>
-                                    <div class="status-icon complete"></div><button class="redo">Redo
-                                        checkpoint</button>
-                                </span></h3>
-                        </div>
-                        <div id="toc-dae0433c210c1e3ea2d31affa83474aaf6b522fe">
-                            <h2>The Autograder</h2>
-                            <div class="dynamic-html notes-content teacher">
-                                <p>
-                                    An important part of this course is the autograder. It tells you when you have
-                                    successfully completed an exercise. Let's try it out with our first exercise! Read
-                                    the instructions below. Then, edit the code, and run it. When you think you are
-                                    done, click on the <b>autograde button</b> (the white check in the gray circle) to
-                                    see if you are right. If you are not right, edit the code, and try again.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="notes-checkpoint">
-                            <h3>Checkpoint 4<span>
-                                    <div class="status-icon complete"></div><button class="redo">Redo
-                                        checkpoint</button>
-                                </span></h3>
-                        </div>
-                        <div id="toc-805e86a8cbf628e38e4c45612c005a504009e79a">
-                            <h2>Errors</h2>
-                            <div class="dynamic-html notes-content teacher">
-                                <p>
-                                    Python is very picky. Here are some rules to follow:
-                                </p>
-
-                                <ol>
-                                    <li>Case matters, so <code>Rect</code> is not the same as <code>rect</code>.</li>
-                                    <li>A command must have the right number of values after it. For <code>Rect</code>,
-                                        that's
-                                        <code>left</code>, <code>top</code>, <code>width</code>, and
-                                        <code>height</code>. These values are called <i>arguments</i>. Here are some
-                                        rules about arguments:
-                                        <ul>
-                                            <li>They must be in the right order.</li>
-                                            <li>They must be inside parentheses.</li>
-                                            <li>They must be separated by commas.</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-
-                                <p>
-                                    If any of these rules are not right, you have an <b>error</b>, and your code will
-                                    not run correctly until you fix the error.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="notes-checkpoint">
-                            <h3>Checkpoint 5<span>
-                                    <div class="status-icon complete"></div><button class="redo">Redo
-                                        checkpoint</button>
-                                </span></h3>
-                        </div>
-                        <div class="notes-checkpoint">
-                            <h3>Checkpoint 6<span>
-                                    <div class="status-icon complete"></div><button class="redo">Redo
-                                        checkpoint</button>
-                                </span></h3>
-                        </div>
-                        <div id="toc-fce06e20e5f7f74aacccab40b59b75a56c8f7305">
-                            <h2>Comments</h2>
-                            <div class="dynamic-html notes-content teacher">Did you notice some of the code examples
-                                above included # signs followed by English text? These are called <b>comments</b>. You
-                                can add comments to any line of your code. Anything from the # sign to the end of that
-                                line is a comment. Python ignores comments. They are only for people, not Python. So why
-                                use comments? To make your code easier for you and for others to understand!
-
-                                <h2>Practice</h2>
-                                <p>
-                                    Ok, that's it! Now let's do some exercises to practice what we just learned.
-                                </p>
-                            </div>
-                        </div>
-                        <button class="button flat small teal continue">Continue</button> -->
+                      
                     </div>
                 </div>
                 <div></div>
@@ -1345,7 +1168,9 @@
     </div>
     <div id="application-target"></div>
     <div id="brython-target"></div>
+    
     <script>
+
         var _rollbarConfig = {
             accessToken: "ce5718b091db44c2b31b4ff4d410d686",
             captureUncaught: !0,
@@ -1661,9 +1486,12 @@
             a()
         }([])
     </script>
+   
+        
     <!-- <script src="staticDrillDown/js/main.a1a6e895.chunk.js"></script>
     <script type="text/javascript" src="s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
     <script src="staticDrillDown/js/cmu-graphics.969e1032.js"></script> -->
+   
 </body>
 
 </html>
