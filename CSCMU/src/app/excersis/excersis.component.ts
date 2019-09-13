@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
+declare function callBrython(): any;
 declare var $: any;
 @Component({
   selector: 'app-excersis',
@@ -9,7 +9,9 @@ declare var $: any;
 })
 export class ExcersisComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    callBrython();
+   }
 
   ngOnInit() {
   }

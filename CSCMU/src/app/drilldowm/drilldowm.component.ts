@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 
+
+declare function callBrython(): any;
 declare var $: any;
 @Component({
   selector: 'app-drilldowm',
@@ -28,6 +30,8 @@ export class DrilldowmComponent implements OnInit {
       //this.SetHTML();
       this.showMainPage=true;
     })
+
+    callBrython();
   }
 
   iFrameClicked(iFrameHandle, iFrameHandle1){
@@ -37,6 +41,7 @@ export class DrilldowmComponent implements OnInit {
   }
   CodeRunButton(codeToRun){
     debugger;
+    
     $('#TestingCode').text($(codeToRun).val())
   }
   alertBoxClicked(AlertBox){

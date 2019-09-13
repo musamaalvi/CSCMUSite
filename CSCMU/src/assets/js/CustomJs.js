@@ -1,0 +1,4 @@
+function callBrython(){
+	debugger;
+	brython();
+}
