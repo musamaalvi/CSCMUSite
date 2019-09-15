@@ -89,7 +89,7 @@ namespace APICMU.Controllers
         {
             String line;
             List<string> cp = new List<string>();
-            var fileStream = new FileStream("DataFiles/checkpoints/5000.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream("DataFiles/checkpoints/"+id.ToString()+".txt", FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
                 
@@ -167,7 +167,7 @@ namespace APICMU.Controllers
 
             String line;
             List<string> cp = new List<string>();
-            var fileStream = new FileStream("DataFiles/exercises/90001.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream("DataFiles/exercises/"+id.ToString()+".txt", FileMode.Open, FileAccess.Read);
     
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {

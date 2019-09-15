@@ -65,7 +65,7 @@ export class DrilldowmComponent implements OnInit {
   }
   CheckPointClick(id, idCheckPoint) {
     debugger;
-    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + idCheckPoint).subscribe(data => {
+    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + $(idCheckPoint).attr('id')).subscribe(data => {
 
       this.checkPointData = data;
       id.childNodes[0].textContent = this.checkPointData[0];
