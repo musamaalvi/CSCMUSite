@@ -1,0 +1,33 @@
+10001#Our First Program|MainHeading
+100011#To start, let's draw a rectangle. Press the run button to run this Python code:|Paragraph
+100012#Rect(10, 20, 30, 40)|InlineContainer
+100011#You just ran a Python program! Now, let's edit the program. In the code below, change some of the numbers and run the code a few times. See how the rectangle changes. If the code stops working, no problem! Just press the reset button to start over and try again!|Paragraph
+100012#Rect(10, 20, 30, 40)|InlineContainer
+end
+10001#The Canvas|MainHeading
+100011#To understand what is going on, we first have to talk about the canvas. In this course, all drawing is done on a canvas. The canvas is made up of tiny colored points, or pixels. We use (x,y) coordinates to talk about pixels on the canvas, like so:|Paragraph
+100011#(0, 0) is the left-top corner of the canvas (not the middle!).|Paragraph
+100011#As x increases, you head right.|Paragraph
+100011#As y increases, you head down, not up!|Paragraph
+100011#Our canvas is a 400x400 square, so (200, 200) is the middle of the canvas, and (400, 400) is the right-bottom corner.|Paragraph
+12312# |CheckPoint
+end
+10001#Drawing Rectangles|MainHeading
+100011#Ok, let's get to the details. Here is the Python code from above:|Paragraph
+100011#Rect(10, 20, 30, 40)|Box
+100011#We use Rect to draw a rectangle. We provide 4 values after that: left, top, width, and height. So this draws a rectangle with its left-top corner at (10, 20), a width of 30, and a height of 40.|Paragraph
+100011# where is the right-bottom corner of the rectangle?|the left is at 10, and the width is 30, so the right is at (10+30), or 40. Similarly, the top is at 20, and the height is 40, so the bottom is at (20+40), or 60. Thus, the right-bottom is at (40, 60). |Alert
+end
+10001#The Autograder|MainHeading
+100011#An important part of this course is the autograder. It tells you when you have successfully completed an exercise. Let's try it out with our first exercise! Read the instructions below. Then, edit the code, and run it. When you think you are done, click on the autograde button (the white check in the gray circle) to see if you are right. If you are not right, edit the code, and try again.|Paragraph
+end
+10001#Default values|MainHeading
+100011#We just learned that fill, border, and borderWidth are optional arguments. If we do not supply an optional argument, the shape uses the default value for that argument. The default fill is 'black'. The default border is None. And the default borderWidth is 2.|Paragraph
+100011# When does the Inspector include the borderWidth in its feedback? You may have to run some code from above a few times to answer this question.| When the borderWidth is any value except the default value of 2.  |Alert
+end
+10001#The Inspector|MainHeading
+100011#The Inspector is a great way to get useful info about shapes, but it only gives as much info as you need. For example, it tells you the colors of a shape, but it does not say whether the colors are for the fill or for the border. This is left for you to figure out! So the Inspector is super helpful, but it definitely leaves some important problem-solving for you.|Paragraph
+end
+10001#Practice|MainHeading
+100011#That's it for fills and borders! So now let's try some exercises to practice.|Paragraph
+end
