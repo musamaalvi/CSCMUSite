@@ -65,18 +65,25 @@ export class DrilldowmComponent implements OnInit {
   }
   CheckPointClick(id, idCheckPoint) {
     debugger;
-    this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + $(idCheckPoint).attr('id')).subscribe(data => {
 
-      this.checkPointData = data;
-      id.childNodes[0].textContent = this.checkPointData[0];
-      id.childNodes[2].textContent = this.checkPointData[1];
-      id.childNodes[5].textContent = this.checkPointData[2];
-      id.childNodes[8].textContent = this.checkPointData[3];
-      id.childNodes[11].textContent = this.checkPointData[4];
-      id.hidden = false
-      //this.SetHTML();
+    if(idCheckPoint.getAttribute('info')=="mcq"){
+      this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + $(idCheckPoint).attr('id')).subscribe(data => {
 
-    })
+        this.checkPointData = data;
+        id.childNodes[0].textContent = this.checkPointData[0];
+        id.childNodes[2].textContent = this.checkPointData[1];
+        id.childNodes[5].textContent = this.checkPointData[2];
+        id.childNodes[8].textContent = this.checkPointData[3];
+        id.childNodes[11].textContent = this.checkPointData[4];
+        id.hidden = false
+        //this.SetHTML();
+  
+      })
+    }
+    else{
+      this.router.navigateByUrl('/sandbox/'+$(idCheckPoint).attr('id'));
+    }
+    
   }
   SubmitButtonClicked(options) {
     debugger;

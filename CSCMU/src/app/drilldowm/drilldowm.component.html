@@ -1092,7 +1092,7 @@
                                 <div *ngIf="item.split('|')[1]=='InlineContainer'" class="inline-af-container">
                                     <div class="inline-editor-container">
                                         <div>
-                                            <textarea #codeToRun contenteditable="true">{{item.split('|')[0].split('#')[1]}}</textarea>
+                                            <textarea style="width: 100%" #codeToRun contenteditable="true">{{item.split('|')[0].split('#')[1]}}</textarea>
                                             
                                         </div>
                                     </div>
@@ -1111,15 +1111,16 @@
                                     </pre>
                                 </div>
                             </div>
-                                    <p><button id="runCodePython" class="btn-enabled">Run</button> <span id="status-info"></span>
+                                    <p> <span id="status-info"></span>
                                         <button id="clear" class="btn-disabled">Clear</button>
+                                        <button id="mybutton" (click)="CodeRunButton(codeToRun)">Run Code!</button>
                                     </p>
-                                    <button id="mybutton" (click)="CodeRunButton(codeToRun)">click !</button>
+                                    
                                     
                                 </div>
                                 <div *ngIf="item.split('|')[1]=='CheckPoint'" class="notes-checkpoint">
                                     <h3>Checkpoint 1<span>
-                                            <div class="status-icon complete"></div><button #checkPointButton id="{{item.split('|')[0].split('#')[0]}}" (click)="CheckPointClick(CheckPointDiv, checkPointButton)" class="redo">Redo
+                                            <div class="status-icon complete"></div><button #checkPointButton [attr.info]="item.split('|')[0].split('#')[1]" id="{{item.split('|')[0].split('#')[0]}}" (click)="CheckPointClick(CheckPointDiv, checkPointButton)" class="redo">Redo
                                                 checkpoint</button>
                                         </span></h3>
                                         <div hidden #CheckPointDiv>
