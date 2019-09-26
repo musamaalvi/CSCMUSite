@@ -53,10 +53,12 @@ export class DrilldowmComponent implements OnInit {
     $(iFrameHandle).removeClass("IframeHidden")
     $(iFrameHandle1).removeClass("IframeHidden")
   }
-  CodeRunButton(codeToRun){
+  CodeRunButton(codeToRun, outputSet){
     debugger;
     
     $('#TestingCode').text($(codeToRun).val())
+    $('#OutputDiv').text($(outputSet).attr('id'))
+    $('#pythonFunctionCaller').trigger('click')
   }
   alertBoxClicked(AlertBox){
     debugger;

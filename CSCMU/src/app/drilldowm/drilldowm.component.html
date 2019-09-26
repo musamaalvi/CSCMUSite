@@ -1079,8 +1079,8 @@
                 <div class="notes-page-container" tabindex="-1" *ngIf="showMainPage">
                     <div class="notes-page-inner">
                         <h1 id="toc-main-title">Position and Size</h1>
-                        <div *ngFor="let i of objectKeys(mainData)">
-                            <div *ngFor="let item of mainData[i]">
+                        <div *ngFor="let i of objectKeys(mainData); let k = index">
+                            <div *ngFor="let item of mainData[i]; let j = index">
                         
                         
                                 <h2 *ngIf="item.split('|')[1]=='MainHeading'">{{item.split('|')[0].split('#')[1]}}</h2>
@@ -1107,13 +1107,13 @@
                                         <div class="console-title-container">
                                             <div class="console-title">Console</div>
                                         </div>
-                                        <div id="turtle-print-output" style="width: 40%; height:400px; float:left"></div>
+                                        <div #idForOutput id="turtle-print-output{{j}}{{k}}" style="width: 40%; height:400px; float:left"></div>
                                     </pre>
                                 </div>
                             </div>
                                     <p> <span id="status-info"></span>
                                         <button id="clear" class="btn-disabled">Clear</button>
-                                        <button id="mybutton" (click)="CodeRunButton(codeToRun)">Run Code!</button>
+                                        <button id="mybutton" (click)="CodeRunButton(codeToRun, idForOutput)">Run Code!</button>
                                     </p>
                                     
                                     

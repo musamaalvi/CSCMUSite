@@ -9,30 +9,35 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body >
+    <button id="pythonFunctionCaller" hidden>testing button</button>
   <app-root></app-root>
   
 <script id="python_script" type="text/python">
 import sys
 import traceback
-from browser import document, timer
+from browser import document, timer, alert
 
 FIRST_TIME = True
 def inform(*args):
     document["status-info"].html = "".join(args)
 
 def _write(*args):
-    document["turtle-print-output"].html += "".join(args)
+    document[document["OutputDiv"].text].html += "".join(args)
 def __write(*args):
-    document["turtle-print-output"].html += '<span class="error">' + "".join(args) + "</span>"
+    document[document["OutputDiv"].text].html += '<span class="error">' + "".join(args) + "</span>"
 
-sys.stdout.write = _write
-sys.stderr.write = __write
+def outputInit():
+    #alert('stdout')
+    sys.stdout.write = _write
+    sys.stderr.write = __write
 
+outputInit() 
 def clear_print():
     
-    document["turtle-print-output"].html = ""
+    document[document["OutputDiv"].text].html = ""
 
 def run_code(ev):
+    outputInit()
     global FIRST_TIME
     if FIRST_TIME:
         FIRST_TIME = False
@@ -41,8 +46,13 @@ def run_code(ev):
     # delay to allow updated DOM with above text to be shown.
     timer.set_timeout(exec_code, 1)
 
-document["mybutton"].bind("click", run_code)
+#document["mybutton"].bind("click", run_code)
 
+
+def python_initialization():
+    alert("working")
+
+document["pythonFunctionCaller"].bind("click", run_code)
 def exec_code():
     code = document["TestingCode"].text
     _code = code
@@ -117,6 +127,7 @@ def copy_content(ev):
 <div id="TestingCode" style='display:none'>
 print('testing variables')
 </div>
+<div id="OutputDiv" style='display:none'></div>
 
    <!-- <script id="python_script" type="text/python">
         import sys
