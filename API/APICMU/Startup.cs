@@ -30,7 +30,8 @@ namespace APICMU
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://127.0.0.1:4200");
+                    builder.AllowAnyOrigin();
+                    //.WithOrigins("http://127.0.0.1:4200");
                 });
             }); 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
