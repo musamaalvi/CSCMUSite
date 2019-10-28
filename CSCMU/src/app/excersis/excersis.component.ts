@@ -36,5 +36,7 @@ QuestionId
   CodeRunButton(codeToRun){
     debugger;
     $('#TestingCode').text($(codeToRun).val())
+    $('#OutputDiv').text('turtle-print-output')
+    $('#pythonFunctionCaller').trigger('click')
   }
 }

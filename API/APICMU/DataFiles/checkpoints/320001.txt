@@ -1,0 +1,6 @@
+In the previous example, what happens when you press and hold the mouse while still moving it?
+Nothing changes -- the circle keeps moving with the mouse.
+The circle stops moving.
+The code crashes if we do that.
+We get a new circle that follows the mouse.
+1

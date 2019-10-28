@@ -1,0 +1,6 @@
+In the previous example, what happens if you do not move the mouse at all?
+More labels keep appearing.
+The code crashes if we do that.
+Nothing changes until you move the mouse.
+The labels do not move, but their values keep increasing.
+2

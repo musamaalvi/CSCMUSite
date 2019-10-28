@@ -179,6 +179,24 @@ namespace APICMU.Controllers
 
             return Ok(JsonConvert.SerializeObject(line));
         }
+        [HttpGet("InlineContainer/{id}")]
+        public ActionResult<IEnumerable<string>> InlineContainer(int id)
+        {
+
+            String line;
+            List<string> cp = new List<string>();
+            var fileStream = new FileStream("DataFiles/inline/" + id.ToString() + ".txt", FileMode.Open, FileAccess.Read);
+
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+
+                line = streamReader.ReadToEnd();
+
+            }
+
+
+            return Ok(JsonConvert.SerializeObject(line));
+        }
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)

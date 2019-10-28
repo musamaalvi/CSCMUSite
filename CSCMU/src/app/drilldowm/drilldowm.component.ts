@@ -13,6 +13,7 @@ declare var $: any;
 export class DrilldowmComponent implements OnInit {
   id: number;
   mainData;
+  mainHeading="";
   objectKeys = Object.keys;
   theHtmlString
   htmlString = "";
@@ -37,6 +38,7 @@ export class DrilldowmComponent implements OnInit {
     
     this.route.paramMap.subscribe(params => {
       this.DrillDownDetailPage = +params.get('id')
+      this.mainHeading = params.get('name')
     });
     this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/" + this.DrillDownDetailPage).subscribe(data => {
 
@@ -48,10 +50,15 @@ export class DrilldowmComponent implements OnInit {
     
   }
 
-  iFrameClicked(iFrameHandle, iFrameHandle1){
+  iFrameClicked(iFrameHandle, iFrameHandle1, codeTorRun){
     debugger
+    this.httpClient.get("https://localhost:44310/api/values/InlineContainer/" + iFrameHandle.id).subscribe(data => {
+
+      $(codeTorRun).text(data)  
+      })
     $(iFrameHandle).removeClass("IframeHidden")
     $(iFrameHandle1).removeClass("IframeHidden")
+
   }
   CodeRunButton(codeToRun, outputSet){
     debugger;

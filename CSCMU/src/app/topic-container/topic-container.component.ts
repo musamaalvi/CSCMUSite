@@ -23,7 +23,7 @@ export class TopicContainerComponent implements OnInit {
   }
   headingClicked(event) {
     debugger;
-    this.router.navigateByUrl('/details/'+event.currentTarget.id)
+    this.router.navigateByUrl('/details/'+event.currentTarget.id+"/" + event.currentTarget.innerText)
   }
   atagclick(atag) {
 

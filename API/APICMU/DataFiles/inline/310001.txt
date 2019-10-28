@@ -1,0 +1,5 @@
+Label('Mouse Move Demo #1', 200, 20, size=20, bold=True)
+Label('Move the mouse to see lots of circles!', 200, 45)
+
+def onMouseMove(x, y):
+  Circle(x, y, 20, fill='gold', border='black')

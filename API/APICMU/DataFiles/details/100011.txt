@@ -1,6 +1,7 @@
 10001#Our First Program|MainHeading
 100011#To start, let's draw a rectangle. Press the run button to run this Python code:|Paragraph
-100012# Rect(10,20,30,40)|InlineContainer
+100011#To start, let's draw a rectangle. Press the run button to run this Python code:|PinkParagraph
+111222# Rect(10,20,30,40)|InlineContainer
 100011#You just ran a Python program! Now, let's edit the program. In the code below, change some of the numbers and run the code a few times. See how the rectangle changes. If the code stops working, no problem! Just press the reset button to start over and try again!|Paragraph
 100012# testing|InlineContainer
 end

@@ -1,0 +1,8 @@
+Label('Mouse Drag Demo', 200, 20, size=20, bold=True)
+Label('Drag the mouse to move the one circle!', 200, 45)
+Label('Note: to drag the mouse, hold it down while moving it', 200, 65)
+
+c = Circle(200, 200, 20, fill='gold', border='black')
+def onMouseDrag(x, y):
+    c.centerX = x
+    c.centerY = y

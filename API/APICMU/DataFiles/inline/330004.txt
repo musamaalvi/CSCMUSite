@@ -1,0 +1,16 @@
+Label('Mouse Move and Drag Demo', 200, 20, size=20, bold=True)
+Label('Move the mouse to increase the gold counter', 200, 45)
+Label('Drag the mouse to increase the maroon counter', 200, 65)
+
+moveLabel = Label(0, 200, 150, fill='gold', size=50, bold=True)
+dragLabel = Label(0, 200, 250, fill='maroon', size=50, bold=True)
+
+def onMouseMove(x, y):
+    moveLabel.value += 1
+    moveLabel.centerX = x
+    moveLabel.centerY = y
+
+def onMouseDrag(x, y):
+    dragLabel.value += 1
+    dragLabel.centerX = x
+    dragLabel.centerY = y

@@ -1,0 +1,16 @@
+10001#onMouseMove|MainHeading
+100011#When you move the mouse on the canvas without pressing the mouse down, Python calls onMouseMove.|Paragraph
+310001#For example:|Paragraph
+310001#Label('Mouse Move Demo No.1', 200, 20, size=20, bold=True)|InlineContainer
+100011#Run that code and move the mouse around. See how we get lots of gold circles as you move. While this is nice, it is less common to create new shapes on each mouse move, and more common to change shapes, like so:|Paragraph
+310002#Label('Mouse Move Demo No.2', 200, 20, size=20, bold=True)|InlineContainer
+320001#mcq|CheckPoint
+end
+10001#onMouseDrag|MainHeading
+100011#WWe just saw onMouseMove is only called if the mouse is not pressed. If the mouse is pressed and held, instead of onMouseMove, CMU Graphics calls onMouseDrag. Let's change the previous example to use onMouseDrag:|Paragraph
+330001#Label('Mouse Drag Demo', 200, 20, size=20, bold=True)|InlineContainer
+330001#mcq|CheckPoint
+100011#Let's see another example that uses both onMouseMove and onMouseDrag:|Paragraph
+330004#Label('Mouse Move and Drag Demo', 200, 20, size=20, bold=True)|InlineContainer
+330005#mcq|CheckPoint
+end

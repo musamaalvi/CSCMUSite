@@ -1,0 +1,7 @@
+Label('Mouse Move Demo #2', 200, 20, size=20, bold=True)
+Label('Move the mouse to move the one circle!', 200, 45)
+
+c = Circle(200, 200, 20, fill='gold', border='black')
+def onMouseMove(x, y):
+    c.centerX = x
+    c.centerY = y

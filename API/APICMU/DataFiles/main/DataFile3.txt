@@ -1,6 +1,15 @@
-10000#3 Creating Drawing|Heading
-10001#3.1. Basics|MainHeading
-100011#3.1.2. Getting Started|SubHeading
-100012#3.1.3. Position and Size|SubHeading
-90000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+30000#3 Mouse Motion Events, Conditionals, and Helper Functions|Heading
+30001#3.1. Mouse Motion Events|MainHeading
+300011#3.1.1. onMouseMove and onMouseDrag|SubHeading
+30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+end
+30001#3.2. Conditionals (IF Statements)|MainHeading
+300011#3.2.1. if Statements |SubHeading
+300011#3.2.2. using if-else and multiple if's |SubHeading
+300011#3.2.1. if Statements |SubHeading
+30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+end
+30001#3.3. Helper Fuctnions|MainHeading
+300011#3.3.1. Helper Fuctnions |SubHeading
+30000#3.3.3. Exercise ,90001, Draw Two Rectangles |Exercise
 end
