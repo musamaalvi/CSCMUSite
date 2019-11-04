@@ -48,11 +48,49 @@ def run_code(ev):
 
 #document["mybutton"].bind("click", run_code)
 
+from browser import document, svg
+
+
+def Rect(left, top, width, height, fill="black", border=None, dashes=False, borderWidth=2):
+    from browser import document, svg
+    if border == None and dashes == False:
+        rect = svg.rect(x=str(left),y=str(top),width=str(width),height=str(height), stroke_width=str(borderWidth),fill=fill)
+    elif dashes == False:
+        rect = svg.rect(x=str(left),y=str(top),width=str(width),height=str(height), stroke=border, stroke_width=str(borderWidth), fill=fill)
+    else:
+        rect=svg.rect(x=str(left),y=str(top),width=str(width), height=str(height), stroke=border, stroke_width=str(borderWidth), stroke_dasharray="5", fill=fill)
+    panel = document['panel']
+    panel <= rect
 
 def python_initialization():
-    alert("working")
+    alert("Usama")
+    import turtle
+    turtle.set_defaults(
+        turtle_canvas_wrapper = document['turtle-div']
+    )
+    t = turtle.Turtle()
+    t.width(5)
+
+    for c in ['red', '#00ff00', '#fa0', 'rgb(0,0,200)']:
+        t.color(c)
+        t.forward(100)
+        t.left(90)
+
+    # dot() and write() do not require the pen to be down
+    t.penup()
+    t.goto(-30, -100)
+    t.dot(40, 'rgba(255, 0, 0, 0.5')
+    t.goto(30, -100)
+    t.dot(40, 'rgba(0, 255, 0, 0.5')
+    t.goto(0, -70)
+    t.dot(40, 'rgba(0, 0, 255, 0.5')
+    t.goto(0, 125)
+    t.color('purple')
+    t.write("I love Brython!", font=("Arial", 20, "normal"))
+    turtle.done()
 
 document["pythonFunctionCaller"].bind("click", run_code)
+
 def exec_code():
     code = document["TestingCode"].text
     _code = code
