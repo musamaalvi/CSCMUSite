@@ -50,17 +50,91 @@ def run_code(ev):
 
 from browser import document, svg
 
+class Shape:
+    def __init__(self, fill, border):
+        self._fill = fill
+        self._border = border
 
-def Rect(left, top, width, height, fill="black", border=None, dashes=False, borderWidth=2):
-    from browser import document, svg
-    if border == None and dashes == False:
-        rect = svg.rect(x=str(left),y=str(top),width=str(width),height=str(height), stroke_width=str(borderWidth),fill=fill)
-    elif dashes == False:
-        rect = svg.rect(x=str(left),y=str(top),width=str(width),height=str(height), stroke=border, stroke_width=str(borderWidth), fill=fill)
-    else:
-        rect=svg.rect(x=str(left),y=str(top),width=str(width), height=str(height), stroke=border, stroke_width=str(borderWidth), stroke_dasharray="5", fill=fill)
-    panel = document['panel']
-    panel <= rect
+
+class Rect(Shape):
+    def __init__(self, left, top, width, height, fill="black", border=None, dashes=False, borderWidth=2):
+        super().__init__(fill, border)
+        self._top = str(top)
+        self._left = str(left)
+        self._width = str(width)
+        self._height = str(height)
+        self._dashes = dashes
+        self._borderWidth = str(borderWidth)
+        self.render()
+
+
+    def render(self):
+        from browser import document, svg
+        if self._dashes == False:
+            rect = svg.rect(x=self._left, y=self._top, width=self._width, height=self._height, stroke=self._border,\
+            stroke_width=self._borderWidth, fill=self._fill)
+        else:
+            rect = svg.rect(x=self._left, y=self._top, width=self._width, height=self._height, stroke=self._border,\
+            stroke_width=self._borderWidth, stroke_dasharray='5', fill=self._fill)
+        panel = document['panel']
+        panel <= rect
+
+
+
+class Oval(Shape):
+    def __init__(self, centerX, centerY, radiusX, radiusY, fill='black', border=None):
+        super().__init__(fill, border)
+        self._centerX = str(centerX)
+        self._centerY = str(centerY)
+        self._radiusX = str(radiusX)
+        self._radiusY = str(radiusY)
+        self._fill = fill
+        self.render()
+
+
+    def render(self):
+        from browser import document, svg
+        ellipse = svg.ellipse(cx=self._centerX, cy=self._centerY, rx=self._radiusX, ry=self._radiusY, stroke=self._border,\
+        stroke_width='2', fill=self._fill)
+        panel = document['panel']
+        panel <= ellipse
+
+
+class Circle(Shape):
+    def __init__(self, centerX, centerY, radius, fill='black'):
+       self._centerX = str(centerX)
+       self._centerY = str(centerY)
+       self._radius = str(radius)
+       self._fill = fill
+       self.render()
+
+
+    def render(self):
+        from browser import document, svg
+        circle =  svg.ellipse(cx=self._centerX, cy=self._centerY, rx=self._radius, ry=self._radius,\
+        stroke_width='2', fill=self._fill)
+        panel = document['panel']
+        panel <= circle
+
+
+class Line(Shape):
+    def __init__(self, x1, y1, x2, y2):
+        self._x1 = str(x1)
+        self._y1 = str(y1)
+        self._x2 = str(x2)
+        self._y2 = str(y2)
+        self.render()
+
+
+    def render(self):
+        from browser import document, svg
+        line = svg.line(x1=self._x1, y1=self._y1, x2=self._x2, y2=self._y2, stroke="brown")
+        panel = document['panel']
+        panel <= line
+
+
+
+
 
 def python_initialization():
     alert("Usama")
