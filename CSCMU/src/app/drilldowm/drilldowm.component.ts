@@ -62,7 +62,7 @@ export class DrilldowmComponent implements OnInit {
   }
   CodeRunButton(codeToRun, outputSet){
     debugger;
-    
+    $('#panel').empty()
     $('#TestingCode').text($(codeToRun).val())
     $('#OutputDiv').text($(outputSet).attr('id'))
     $('#pythonFunctionCaller').trigger('click')
