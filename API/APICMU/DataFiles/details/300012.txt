@@ -1,0 +1,40 @@
+10001#Using if|MainHeading
+100011#We will now learn how to use a conditional statement -- also called an if statement -- to run code only if some test (or condition) is true. For example, say that when the user presses the mouse, we want to draw a circle, but only if the press is on the left half of the canvas. That is, only if (mouseX < 200). Here is the code for that:|Paragraph
+340001#def onMousePress(mouseX, mouseY):|InlineContainer
+100011#Run the code, click a few times on the left and on the right, and confirm that it works as noted. While it works, we can make it easier to use by adding a title, a brief explanation, and in this case, a helpful vertical line to separate the left and right sides. Here is the result:|Paragraph
+340002#Label('Using "if" Demo', 200, 20, size=20, bold=True)|InlineContainer
+320001#That's better! Let's take a closer look at how this works. When the mouse is pressed, Python calls onMousePress, and then runs this line:|Paragraph
+34444#if (mouseX < 200): |Box
+34444#Here, Python tests if mouseX is less than 200. If and only if that test is true, Python runs the indented code after it:|Paragraph
+34444# Circle(mouseX, mouseY, 10, fill='cyan') |Box
+320001#In this way, we only draw a circle if the user clicked on the left half of the canvas.|Paragraph
+34000#mcq|CheckPoint
+end
+10001#Multiple lines in the body|MainHeading
+100011#The code that is indented after the if is called the body of the if statement. We can include more than one line in the body. If the condition is true, then all the lines in the body will run. For example:|Paragraph
+340000#Label('Using "if" Demo (now with stars!)', 200, 20, size=20, bold=True)|InlineContainer
+100011# In the previous example, why did we need two lines in the body of the if statement?| The first line draws the circle, and the second line draws the star over the circle. |Alert
+end
+10001#Lines after the body|MainHeading
+100011#We use indenting to tell Python which lines are in the body of the if statement. Code that is no longer indented is not in the body, and Python will run that code whether or not the condition was true. For example, let's move the last line from the previous example (the one that draws the star) so it is not indented, and so not in the body, like so:|Paragraph
+350000#Label('Using "if" Demo (with more stars!)', 200, 20, size=20, bold=True)|InlineContainer
+100011# In the previous example, what is different now that the star is drawn outside the if statement's body?| Now the star is always drawn. So if we click on the left, we get a star in a circle, but if we click on the right, while we do not get a circle, we still get a star. |Alert
+end
+10001#Another example|MainHeading
+100011#Here is another example that includes multiples lines in the body, and also code after the body:|Paragraph
+350001#Label('Using "if" Demo (with a counter!)', 200, 20, size=20, bold=True)|InlineContainer
+340001#mcq|CheckPoint
+end
+10001#Some more tests|MainHeading
+100011#The examples above used < to compare two numbers. Here are a few other tests we can use:|Paragraph
+100011#(x < y)	is x less than y?|Paragraph
+100011#(x <= y)	is x less than or equal to y?|Paragraph
+100011#(x == y)	is x equal to y?|Paragraph
+100011#(x != y)	is x not equal to y?|Paragraph
+100011#(x > y)	is x greater than y?|Paragraph
+100011#(x >= y)	is x greater than or equal to y?|Paragraph
+100011#The following example uses == to test if we clicked the mouse 5 times:|Paragraph
+350002#Label('Using "if" Demo (now turns green!)', 200, 20, size=20, bold=True)|InlineContainer
+100011#Hint: Be sure to use == (two equals signs!) when you are testing if two values are equal. If you only use = (one equals sign), Python will think you are setting a value, not testing it!|PinkParagraph
+340002#mcq|CheckPoint
+end

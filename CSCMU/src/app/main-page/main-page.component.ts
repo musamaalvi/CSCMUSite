@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import {apiURL} from "../../environments/environment";
 
 @Component({
   selector: 'app-main-page',
@@ -17,7 +18,7 @@ export class MainPageComponent{
   
   constructor(private httpClient: HttpClient) {
     this.objectKeys = Object.keys;
-    this.httpClient.get("https://localhost:44310/api/values/GetInitial").subscribe(data =>{
+    this.httpClient.get(apiURL + "/api/values/GetInitial").subscribe(data =>{
       this.topicContainerData = data;
       for(var i=0;i<Object.keys(this.topicContainerData).length;i++){
         // for(var j=0;j<Object.keys(this.topicContainerData[i]).length;j++){

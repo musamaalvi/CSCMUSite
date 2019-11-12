@@ -1,0 +1,6 @@
+In the previous example, when will it draw BOTH a circle and a star? (Try it first!)
+When the user clicks anywhere on the left half of the canvas.
+Always -- on every click.
+When the user clicks in the left-top quarter of the canvas.
+Never -- on no clicks.
+3

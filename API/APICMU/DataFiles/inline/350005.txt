@@ -1,0 +1,9 @@
+Label('Multiple ifs demo #2', 200, 20, size=20, bold=True)
+Line(200, 0, 200, 400)
+Line(0, 200, 400, 200)
+
+def onMousePress(x, y):
+    if (x < 200):
+        Circle(x, y, 10, fill='cyan')
+    else:
+        Star(x, y, 10, 5)

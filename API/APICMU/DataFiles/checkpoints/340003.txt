@@ -1,0 +1,6 @@
+In the previous example, when will it draw a purple oval? (Try it first!)
+Only when (x < 200) is false, so only on the right side.
+Never -- on no clicks.
+Only when (x < 200) is true, so only on the left side.
+Always -- on every click.
+0
