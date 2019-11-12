@@ -4,9 +4,8 @@
 30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
 end
 30001#3.2. Conditionals (IF Statements)|MainHeading
-300011#3.2.1. if Statements |SubHeading
-300011#3.2.2. using if-else and multiple if's |SubHeading
-300011#3.2.1. if Statements |SubHeading
+300012#3.2.1. if Statements |SubHeading
+300013#3.2.2. using if-else and multiple if's |SubHeading
 30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
 end
 30001#3.3. Helper Fuctnions|MainHeading

@@ -1,0 +1,8 @@
+Label('Using "if" Demo (now with stars!)', 200, 20, size=20, bold=True)
+Label('Click a few times on the left and right!', 200, 45)
+Line(200, 0, 200, 400, opacity=10)
+
+def onMousePress(mouseX, mouseY):
+    if (mouseX < 200):
+        Circle(mouseX, mouseY, 10, fill='cyan')
+        Star(mouseX, mouseY, 10, 5)

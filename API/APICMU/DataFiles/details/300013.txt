@@ -1,0 +1,15 @@
+10001#Using if-else|MainHeading
+100011#We use if to run code only when some condition is true. When we use if, we can also use else to run some other code when that condition is false. For example: |Paragraph
+350003#Label('if-else demo', 200, 20, size=20, bold=True)|InlineContainer
+100011#Else and Otherwise:
+100011#In coding, using else is similar to how we use "otherwise" in everyday language. You might say: "if it's sunny, wear sunglasses, otherwise bring an umbrella". That could translate into Python as something like this:if (isSunny == True):wear('sunglasses')else:bring('umbrella')|PinkParagraph
+340003#mcq|CheckPoint
+end
+10001#Multiple if's|MainHeading
+100011#Sometimes we may want to use more than one if statement. For example, say we want to draw cyan circles when the user clicks on the left, and we also wish to draw black stars when they click on the top. For this, we will use two if's, like so:|Paragraph
+350004#Label('Multiple ifs demo #1', 200, 20, size=20, bold=True)|InlineContainer
+340004#mcq|CheckPoint
+100011#Let's try that example again, only now let's change that second if into an else:|Paragraph
+350005#Label('Multiple ifs demo #2', 200, 20, size=20, bold=True)|InlineContainer
+340005#mcq|CheckPoint
+end

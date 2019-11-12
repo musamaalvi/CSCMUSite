@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
+import {apiURL} from "../../environments/environment";
 
 
 declare function callBrython(): any;
@@ -40,7 +41,7 @@ export class DrilldowmComponent implements OnInit {
       this.DrillDownDetailPage = +params.get('id')
       this.mainHeading = params.get('name')
     });
-    this.httpClient.get("https://localhost:44310/api/values/DrillDownDetail/" + this.DrillDownDetailPage).subscribe(data => {
+    this.httpClient.get(apiURL + "/api/values/DrillDownDetail/" + this.DrillDownDetailPage).subscribe(data => {
 
       this.mainData = data;
       //this.SetHTML();
@@ -52,7 +53,7 @@ export class DrilldowmComponent implements OnInit {
 
   iFrameClicked(iFrameHandle, iFrameHandle1, codeTorRun){
     debugger
-    this.httpClient.get("https://localhost:44310/api/values/InlineContainer/" + iFrameHandle.id).subscribe(data => {
+    this.httpClient.get(apiURL + "/api/values/InlineContainer/" + iFrameHandle.id).subscribe(data => {
 
       $(codeTorRun).text(data)  
       })
@@ -76,7 +77,7 @@ export class DrilldowmComponent implements OnInit {
     debugger;
 
     if(idCheckPoint.getAttribute('info')=="mcq"){
-      this.httpClient.get("https://localhost:44310/api/values/CheckPoint/" + $(idCheckPoint).attr('id')).subscribe(data => {
+      this.httpClient.get( apiURL + "/api/values/CheckPoint/" + $(idCheckPoint).attr('id')).subscribe(data => {
 
         this.checkPointData = data;
         id.childNodes[0].textContent = this.checkPointData[0];

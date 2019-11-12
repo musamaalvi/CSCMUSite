@@ -1,0 +1,6 @@
+In the previous example, what happens if we change the == to = (just one equals sign instead of two)?
+The background turns green on the 6th click instead of the 5th click.
+Nothing changes -- the background turns green on the 5th click.
+The code does not run because this is a syntax error.
+The background never turns green.
+2

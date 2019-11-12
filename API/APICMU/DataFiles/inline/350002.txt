@@ -1,0 +1,11 @@
+Label('Using "if" Demo (now turns green!)', 200, 20, size=20, bold=True)
+Label('Click anywhere, at least 5 times!', 200, 45)
+
+totalCounter = Label(0, 200, 100, size=50, bold=True)
+
+def onMousePress(mouseX, mouseY):
+    Circle(mouseX, mouseY, 10, fill='cyan')
+    Star(mouseX, mouseY, 10, 5)
+    totalCounter.value += 1
+    if (totalCounter.value == 5):
+        app.background = 'lightGreen'

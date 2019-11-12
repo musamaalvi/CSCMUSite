@@ -1,0 +1,3 @@
+def onMousePress(mouseX, mouseY):
+    if (mouseX < 200):
+        Circle(mouseX, mouseY, 10, fill='cyan')

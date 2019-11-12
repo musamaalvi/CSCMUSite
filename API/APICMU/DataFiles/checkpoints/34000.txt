@@ -1,0 +1,6 @@
+In the previous example, what happens if we change (mouseX < 200) to (mouseY > 200)? (Try it first!)
+The circles only draw when we click in the top half of the canvas.
+Nothing changes -- the circles still only draw when we click in the left half of the canvas.
+The circles no longer draw when we click anywhere.
+The circles only draw when we click in the bottom half of the canvas.
+3

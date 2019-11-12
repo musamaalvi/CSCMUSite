@@ -1,0 +1,6 @@
+In the previous example, what happens if we indent the last line so it is inside the body? (Try it first!)
+Stars only draw on the right.
+Nothing changes.
+Stars only draw on the left.
+The code crashes.
+2
