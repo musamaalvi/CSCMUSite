@@ -1,0 +1,5 @@
+In the previous example, what happens if we change the 10's to be 1's instead? (Try it first!)
+The circle still moves, but it moves very little each time.
+The circle still moves up but not down.
+Nothing changes.
+The circle no longer moves.

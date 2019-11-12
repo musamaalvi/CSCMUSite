@@ -1,0 +1,5 @@
+def onMousePress(x, y):
+    Circle(x, y, 20, fill='gold')
+
+def onMouseRelease(x, y):
+    Circle(x, y, 20, fill='navy')

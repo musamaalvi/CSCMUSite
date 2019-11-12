@@ -1,0 +1,5 @@
+Which of the following is NOT TRUE?
+You can use the I key to show the Inspector.
+Top-level code runs only once, before any mouse events.
+The Inspector is not shown by default when you use mouse events.
+Top-level code is not inside a function definition.

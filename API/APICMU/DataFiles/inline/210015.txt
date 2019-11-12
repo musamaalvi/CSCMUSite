@@ -1,0 +1,5 @@
+def break(z):
+    Rect(50, 150, 300, 100, fill='gold')
+    Label(z, 200, 200, size=50, bold=True)
+
+break('This will not work!')

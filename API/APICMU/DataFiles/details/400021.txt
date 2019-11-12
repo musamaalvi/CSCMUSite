@@ -1,0 +1,20 @@
+40001#Key press events|MainHeading
+400011#We know that onMousePress is called when the mouse is pressed. Similarly, onKeyPress is called when a key is pressed. For example:|Paragraph
+420011#|InlineContainer
+400011#Run the code and try pressing 'b', then 'g', then some other keys, and see the circle change colors. How does this work? The parameter to onKeyPress is key, which is the name of the key that was pressed. We use the key parameter to test which key was pressed.|Paragraph
+400211#mcq|CheckPoint
+400011#Let's look at another example. Here, we will toggle the color of the circle each time any key is pressed:|Paragraph
+420012#|InlineContainer
+400212#mcq|CheckPoint
+end
+40002#Key release events|MainHeading
+400011#We can also use onKeyRelease to run code when the user releases a key. For example:|Paragraph
+420013#|InlineContainer
+end
+40003#Using arrow keys|MainHeading
+400011#We can use the arrow keys like so:|Paragraph
+420014#|InlineContainer
+400213#mcq|CheckPoint
+400011#Let's edit the previous example so that it works with left and right arrows as well as up and down arrows:|Paragraph
+400214#exercise|CheckPoint
+end

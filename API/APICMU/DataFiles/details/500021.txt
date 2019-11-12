@@ -1,0 +1,31 @@
+50001#An example|MainHeading
+500011#What happens if we press and hold a key for a while? We know that onKeyPress is called once when we press the key, and onKeyRelease is called once when we release the key. Between these, though, onKeyHold is called repeatedly, until we release the key. Check this out:|Paragraph
+520011#|InlineContainer
+500011#Run the code, and repeatedly press-hold-and-release various keys. See how the counter increases so long as any keys are held down.|Paragraph
+end
+50002#Using the keys parameter|MainHeading
+500011#Look again at the code above. See how the parameter to onKeyHold is keys and not key. What's going on? While you can only press one key at a time, you can hold down multiple keys at once. So while onKeyPress takes only one key, onKeyHold takes multiple keys.|Paragraph
+500011#We will learn more about lists later. For now, we just have to know how to test if a key is in the list of keys. We do that like so:|Paragraph
+520012#|InlineContainer
+500011#Run the code. Hold down various keys. See how the counter only increases while you hold down the 'z' key. Also, look carefully at the code. See how we test if 'z' is held down, like so: ('z' in keys). We must test that way, and not using ==. Let's see that with a broken example:|Paragraph
+520013#|InlineContainer
+500011#Run the code, hold down 'z', and see how nothing happens! This is because keys is a list of keys, not a single key, so it will never equal 'z'! Instead, we must use ('z' in keys), as we did above.|Paragraph
+500211#mcq|CheckPoint
+end
+50003#Testing for multiple keys|MainHeading
+500011#The whole point of using a list of keys in onKeyHold is to let us test if the user is holding down multiple keys at once. Here is an example:|Paragraph
+520014#|InlineContainer
+500212#mcq|CheckPoint
+end
+50004#Moving a shape|MainHeading
+500011#One common use of onKeyHold is to move a shape while some key is being pressed. Here is an example:|Paragraph
+520015#|InlineContainer
+500213#mcq|CheckPoint
+500214#mcq|CheckPoint
+end
+50005#Wraparound|MainHeading
+500011#In the previous example, we can test when the dot reaches the right edge of the canvas. When that happens we can wraparound (as we have already seen in some earlier exercises), so the dot appears to leave the canvas on the right, and to re-enter the canvas on the left. We do that like so:|Paragraph
+520016#|InlineContainer
+500011#Run the code. Press and hold the right arrow key and see how the dot moves to the right, and then the dot wraps around when it gets to the right edge.|Paragraph
+500021#When apps use onKeyHold, the autograder may need to call onKeyHold many times. To save space, some test cases will use onKeyHolds. This calls onKeyHold repeatedly. Your code should never use onKeyHolds. It is only for test cases.|PinkParagraph
+end

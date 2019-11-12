@@ -1,0 +1,9 @@
+What happens if you draw a star with roundness larger than 100? Try it!
+
+There is no error, but the star is not drawn.
+
+We get an error that the roundness is too large.
+
+A circle is drawn instead of the star.
+
+The star draws with a roundness of 100.

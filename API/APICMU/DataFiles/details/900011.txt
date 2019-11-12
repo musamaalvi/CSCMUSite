@@ -1,0 +1,15 @@
+90001#app.getTextInput()|Mainheading
+900011#We already know how to respond to a single keypress using onKeyPress. Sometimes, however, we may want the user to enter an entire string at once. In this case, we can use app.getTextInput, like so:|Paragraph
+900021#Rect(10, 20, 30, 40)|InlineContainer
+900011#Run the code and type in a long message. See how the entire message is drawn. Now, let's look closely at line 4:|Paragraph
+900011#app.getTextInput takes a prompt, which is a string that the user sees when the input dialog box pops up.|Paragraph
+900011#app.getTextInput returns a string, which the user entered. In the example above, we store that string in the variable app.message.|Paragraph
+end
+90002#int()|Mainheading
+900011#Sometimes we want the user to enter an integer, but app.getTextInput always returns a string. Fortunately, Python includes the int function, that converts a string into an integer, like so:|Paragraph
+900021#Rect(10, 20, 30, 40)|InlineContainer
+900011#Run the code and see how the dot's radius is set to the integer value you entered. The call to int on the last line is essential, as that is where we convert the input from a string to an integer.|Paragraph
+900111#|CheckPoint
+900112#|CheckPoint
+920001#We just saw that int('20.5') crashes. For now, we'll just be sure to enter integers when we want them. In the next section, we will learn one way to check that int will not crash when we call it.||Alert
+end

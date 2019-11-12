@@ -1,0 +1,40 @@
+10001#Rectangles|MainHeading
+100011#In this section, we will see some more shapes we can use. We have already seen rectangles. For example:|Paragraph
+130011#|InlineContainer
+100011#That draws a 100x200 green rectangle with its left-top at (150, 150). Fine! Now let's see some more shapes!|Paragraph
+end
+10002#Ovals|MainHeading
+100011#To draw an oval (also called an ellipse), we use the center instead of the left-top, but then we still use the width and height, like so:|Paragraph
+130012#|InlineContainer
+100011#That draws a 100x200 gold oval centered at (150, 150).|Paragraph
+100311#excercise|CheckPoint
+100011#Ovals, like most shapes, can have borders, borderWidths, gradients, and other properties that rectangles have!|Paragraph
+100312#excercise|CheckPoint
+end
+10003#Circles|MainHeading
+100011#Circles are drawn just like ovals, only instead of a width and a height we just use a radius. So we draw a circle centered at (100, 200) with a radius of 50 like so:|Paragraph
+130013#|InlineContainer
+100021# In the code above, what is the circle's leftmost point?|The circle's leftmost point is at (50, 200).|Alert
+100313#mcq|CheckPoint
+100021#What is a circle's width, in terms of its (x,y) center and its radius r?|The circle's width is double its radius. We use the asterisk (*) to multiply, so it's 2*r.|Alert
+100021#What is a circle's height, in terms of its (x,y) center and its radius r?|For a circle, its height is the same as its width, so it is also 2*r|Alert
+100314#excercise|CheckPoint
+end
+10004#Lines|MainHeading
+100011#A line runs from a point (x1, y1) to another point (x2, y2). We include those points when drawing a line. So we draw a line from (50, 100) to (75, 200) like this:|Paragraph
+130014#|InlineContainer
+100011#Run the code and look at the line. Use the Inspector and see how it highlights the endpoints of the line. Useful!|Paragraph
+100021#Can a line be drawn the other way, switching the endpoints?|Alert
+100011#We use fill for the color of a line, like so:|Sure! Here is the same line from above, but instead drawn from (75, 200) to (50, 100):|Paragraph
+130015#|InlineContainer
+100021#Hint: Lines do not have a border. It is an error to set the border of a line. Instead, use fill for the line's color.|PinkParagraph
+100021#What happens if we set the border of a line?|Good question! Let's do it and find out! Run this code:|Alert
+100011#Run the code and see the error. Look at the console. It says something like: Exception: Cannot set Line's border. That is a helpful error message! Now, edit the code to use fill instead of border. Run it to be sure your edit worked. Good job!|Paragraph
+100011#We set the width of a line using lineWidth, like so:|Paragraph
+130016#|InlineContainer
+100021#Hint:Lines do not have a borderWidth. It is an error to set the borderWidth of a line. Instead, use lineWidth.|PinkParagraph
+100315#excercise|CheckPoint
+end
+10005#Practice|MainHeading
+100011#That's all for rectangles, ovals, circles, and lines! Time for some exercises!|Paragraph
+end

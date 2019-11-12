@@ -1,0 +1,3 @@
+# Edit the fill of this rectangle so it matches the red and yellow radial gradient
+# in the solution.
+Rect(150, 150, 100, 100)

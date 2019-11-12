@@ -1,0 +1,5 @@
+What happens if you run the previous code with 100 sides? Try it!
+It crashes (you cannot draw a 100-sided regular polygon).
+It looks like a circle.
+It looks like a square.
+It looks like a line.

@@ -1,0 +1,12 @@
+Label('Using "elif" demo #1', 200, 20, size=20, bold=True)
+Label('Cyan on left, black in middle, gold on right', 200, 40, size=16)
+Line(100, 50, 100, 400, fill='lightGray')
+Line(300, 50, 300, 400, fill='lightGray')
+
+def onMousePress(x, y):
+    if (x < 100):
+        Circle(x, y, 30, fill='cyan')
+    elif (x < 300):
+        Circle(x, y, 30, fill=None, border='black')
+    else:
+        Circle(x, y, 30, fill='gold')

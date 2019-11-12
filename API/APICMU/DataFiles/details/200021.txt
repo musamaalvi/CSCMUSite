@@ -1,0 +1,24 @@
+20001#Our first examples|MainHeading
+200011#We know how to create drawings. Now, let's make our drawings interactive, so they respond to mouse events. Exciting!|Paragraph
+200011#First, let's start with this example:|Paragraph
+220011#|InlineContainer
+200011#Run the code. See how it does nothing. Well, it does something. It defines the function onMousePress, and that function would draw a circle if it was ever called. Only, we never call the function. Ok. Odd.|Paragraph
+200011#Now, run that example again, only this time, click the mouse in the canvas. And...? You will see a new circle appear each time you click! That's what our example does!|Paragraph
+200011#Let's change the code so the opacity of the circles depend on where we click: darker circles on the right, and lighter circles on the left:|Paragraph
+220012#|InlineContainer
+200011#Run the code, and click the mouse several times in the canvas, sometimes on the right, sometimes on the left. See the dark circles on the right, and light circles on the right.|Paragraph
+200012#Why does the code set opacity to x/4?|We want opacity to be 100 when x is 400.|Alert
+200012#When did we call onMousePress?|We never call onMousePress. Python calls it for us.|Alert
+200211#mcq|CheckPoint
+200212#mcq|CheckPoint
+end
+20002#The function name matters|MainHeading
+200011#How does Python know which function to call when the mouse is pressed? In this course, we are using CMU Graphics. With CMU Graphics, when the mouse is pressed, Python will always call the onMousePress function. What happens if you change the name? Let's see!|Paragraph
+220013#|InlineContainer
+200012#What happens when you run the code above, and then click the mouse in the canvas?|Basically, nothing happens. The code defines the function mouseWasPressed. Then, when you click the mouse, Python tries to call onMousePress. Since no such function exists, Python does nothing. So nothing happens.|Alert
+end
+20003#Changing parameter names|MainHeading
+200011#We have to name the function onMousePress, but we can give the parameters any names we wish. For example:|Paragraph
+220014#|InlineContainer
+200213#mcq|CheckPoint
+end

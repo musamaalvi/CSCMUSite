@@ -1,0 +1,21 @@
+60001#Motivation|MainHeading
+600011#A group is a collection of shapes that we treat as a single shape. To help see why groups are useful, let's start with this example that draws a circled star, and moves it as you move the mouse:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code, move the mouse, and see that the circled star moves with it. This code works, but it's not very convenient. We have to update the center of the circle and the star separately, even though we think of the circle and star as being part of a single shape (a circled star).|Paragraph
+600011#This is a great time to use a group. If we place the circle and the star in a group, then we can treat them as a single shape, like so:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code, move the mouse, and see how it works the same as the first example. Now, look at the code. See how we place the circle and star in a group with these lines:|Paragraph
+620011#g = Group(    Circle(200, 200, 50, fill=None, border='black', borderWidth=5),    Star(200, 200, 50, 5, fill=None, border='black', borderWidth=5))||Alert
+600011#Then, in onMouseMove, we only have to move that one group to move all the shapes inside it.|Paragraph
+end
+60002#Another example|MainHeading
+600011#To make the point even clearer, let's add some more shapes to the group:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code, move the mouse, and see how all 7 shapes move together. Just think how inconvenient it would be to write this without using a group! With a group, however, we only need two lines of code!|Paragraph
+600111#|CheckPoint
+end
+60003#Some common errors|MainHeading
+600011#We have to be careful when creating groups with shapes. Shapes must be separated by commas, and there must be a closing right-parenthesis after all the shapes.|Paragraph
+600112#|CheckPoint
+600113#|CheckPoint
+end

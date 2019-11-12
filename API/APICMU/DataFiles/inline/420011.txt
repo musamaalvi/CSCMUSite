@@ -1,0 +1,12 @@
+Label('Using onKeyPress demo #1', 200, 20, size=20, bold=True)
+Label('Press b for blue and g for gold', 200, 45, size=16)
+
+c = Circle(200, 200, 100)
+
+def onKeyPress(key):
+    if (key == 'b'):
+        c.fill = 'blue'
+    elif (key == 'g'):
+        c.fill = 'gold'
+    else:
+        c.fill = 'black'

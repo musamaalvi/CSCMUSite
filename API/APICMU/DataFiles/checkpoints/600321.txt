@@ -1,0 +1,5 @@
+In the previous example, we used c1.dx. When used this way, which of the following is True:
+dx is a custom property of c1
+dx is a function parameter
+dx is a global variable
+dx is a local variable

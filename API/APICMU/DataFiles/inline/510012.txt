@@ -1,0 +1,13 @@
+Label('Compound conditionals Demo #2:', 200, 20, size=20, bold=True)
+Label('Green if (x > 200) or (y > 200)', 200, 40, size=16)
+
+Line(200, 60, 200, 400, fill='lightGrey')
+Line(0, 200, 400, 200, fill='lightGrey')
+
+def onMousePress(x, y):
+    if ((x > 200) or (y > 200)):
+        Circle(x, y, 30, fill='lightGreen')
+        Label('Yes!!!', x, y, size=18)
+    else:
+        Circle(x, y, 30, fill='orange')
+        Label('nope', x, y, size=18)

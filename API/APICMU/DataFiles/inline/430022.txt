@@ -1,0 +1,12 @@
+Label('toFront and toBack Demo', 200, 20, size=20, bold=True)
+Label('Press f and b to move the star to front and to back', 200, 45)
+
+Rect(150, 100, 100, 200, fill='gold')
+Oval(200, 200, 250, 125, fill='navy')
+s = Star(200, 200, 150, 5, fill='violet')
+
+def onKeyPress(key):
+    if (key == 'f'):
+        s.toFront()
+    elif (key == 'b'):
+        s.toBack()

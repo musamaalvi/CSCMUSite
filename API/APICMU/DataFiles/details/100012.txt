@@ -2,14 +2,14 @@
 100011#To change a shape's color, use the optional fill argument, like so::|Paragraph
 100012#print('M Usama Alvi')|InlineContainer
 100011#Run the code, and you should see a green rectangle. Great! Now edit the code to try to make the rectangle orange. Did it work? When using fill, here are some rules to follow: Include fill after the required arguments -- left, top, width, and height. Always place an equals sign (=) before the color name. Put quotes around the color name. You can use either single quotes, like 'blue', or double quotes, like "blue". As we saw before, if any of these rules are not right, you have a syntax error and the code will not run until you fix the error|Paragraph
-5000#mcq|CheckPoint
-12312#exercise|CheckPoint
+100121# |CheckPoint
+100122# |CheckPoint
 end
 10001#Drawing Order|MainHeading
 100011#We can now see that the order in which we draw shapes matters. Each new shape is drawn on top of all the previous shapes. For example:|Paragraph
 100011# Rect(0, 0, 100, 100, fill='orange') |InlineContainer
 123123# Look carefully at the canvas. See how the lime rectangle is in front of, or on top of, the orange rectangle. Ok, now let's try it the other way: |Paragraph
-12312# |CheckPoint
+100123# |CheckPoint
 end
 10001#Borders|MainHeading
 100011#Rectangles may have an optional border, like so::|Paragraph
@@ -17,7 +17,7 @@ end
 123123#Run the code to see a yellow rectangle with a thin blue border around it. Then, edit the code to get a blue rectangle with a yellow frame around it. Success? By default, borders are 2 pixels wide. You can change that with borderWidth: |Paragraph
 100011#Rect(50, 50, 100, 100, fill='yellow', border='blue', borderWidth=12) |InlineContainer
 100011#Run the code to see a yellow rectangle with a 12-pixel-thick blue border around it.|Paragraph
-12312# |CheckPoint
+100124# |CheckPoint
 end
 10001#Empty Fills|MainHeading
 100011#We can draw a rectangle with only a border color, and without any fill color. To do this, set the fill to None, like so:|Paragraph

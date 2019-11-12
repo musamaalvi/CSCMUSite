@@ -1,0 +1,9 @@
+Label('Straight motion demo #2', 200, 20, size=20)
+Label('Now moving left and right', 200, 45)
+
+c1 = Circle(50, 150, 20, fill='navy')
+c2 = Circle(350, 250, 20, fill='gold')
+
+def onStep():
+    c1.centerX += 5
+    c2.centerX -= 5

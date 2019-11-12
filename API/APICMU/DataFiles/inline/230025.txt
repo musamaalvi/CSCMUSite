@@ -1,0 +1,11 @@
+Label('Label-Specific Properties Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to change the label", 200, 45)
+
+label = Label(0, 200, 200, italic=True, font='courier', size=50)
+
+def onMousePress(mouseX, mouseY):
+    label.value += 1
+    label.font = 'arial'
+    label.size += 20
+    label.bold = True
+    label.italic = False

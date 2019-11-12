@@ -1,0 +1,10 @@
+Label('Using onKeyRelease demo', 200, 20, size=20, bold=True)
+Label('Press and hold any key to make the circle gold', 200, 45, size=16)
+
+c = Circle(200, 200, 100)
+
+def onKeyPress(key):
+    c.fill = 'gold'
+
+def onKeyRelease(key):
+    c.fill = 'black'

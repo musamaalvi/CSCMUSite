@@ -1,0 +1,8 @@
+Label('Size Properties Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to set the rectangle's width and height", 200, 45)
+
+r = Rect(0, 0, 100, 100, fill='blue', opacity=50)
+
+def onMousePress(mouseX, mouseY):
+    r.width = mouseX
+    r.height = mouseY

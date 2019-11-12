@@ -1,0 +1,15 @@
+40001#Custom Shape Propreties|MainHeading
+400011#We know how to use shape properties, such as the radius of a circle, or the width and height of a rectangle. These properties are built-in. You can also add your own custom properties to any shape. Custom properties are not used by CMU Graphics, but may be useful for your own purposes.|Paragraph
+400011#For example, say we have an app where the player is drawn as a circle. At first, the player has low energy (red), but each mouse press gives the player a bit more energy. After a few times, the player has more energy, and turns yellow. After a few more times, the player has full energy, and turns green.|Paragraph
+400011#To do this, we need a way to store the player's energy amount. We can do this with a custom shape property, energy, like so:|Paragraph
+430011#|InlineContainer
+430001#Did we have to name that property energy?|No. We can use any name we prefer for a custom property, so long as we do not use names that CMU Graphics already uses for other purposes. Still, energy was a good name to use here!|Alert
+end
+40002#Custom App Properties|MainHeading
+400011#Say we want an app that draws a new circle each time we press the mouse. Each circle should have a number in it, which we will draw using a label. The first circle should have a 1, the second should have a 2, and so on.|Paragraph
+400011#To do this, we will use a custom property, counter, which we increase by 1 on each mouse press. However, where should we store that property? It does not really belong in any shape. In fact, when we first start the app, there are no circles anyhow.|Paragraph
+400011#In a case like this, we can use a custom app property. We will use app.counter, like so:|Paragraph
+430012#|InlineContainer
+400311#mcq|CheckPoint
+400312#mcq|CheckPoint
+end

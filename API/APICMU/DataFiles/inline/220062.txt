@@ -1,0 +1,7 @@
+c = Circle(200, 200, 20, fill='red')
+
+def onMousePress(x, y):
+    c.fill = 'blue'
+
+def onMouseRelease(x, y):
+    c.fill = 'red'

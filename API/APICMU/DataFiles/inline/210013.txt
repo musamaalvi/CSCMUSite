@@ -1,0 +1,5 @@
+def drawBigStar(starSides, color):
+    Star(200, 200, 200, starSides, fill=color)
+
+drawBigStar(8, 'black')
+drawBigStar(4, 'gold')

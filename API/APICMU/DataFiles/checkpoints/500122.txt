@@ -1,0 +1,5 @@
+Since we can often solve the same problem using multiple conditionals, or compound conditionals, or nested conditionals, how do we know which of these to use for a given problem?
+Always use compound conditionals.
+Always use nested conditionals.
+Always use multiple conditionals.
+Use whatever seems clearest to you for that particular problem.

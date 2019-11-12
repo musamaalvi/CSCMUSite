@@ -1,0 +1,5 @@
+What does c.dy mean?
+The horizontal position of c.
+The vertical position of c.
+The amount of change in the horizontal position of c.
+The amount of change in the vertical position of c.

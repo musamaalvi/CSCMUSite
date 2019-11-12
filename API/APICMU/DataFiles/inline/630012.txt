@@ -1,0 +1,7 @@
+Label('Animation Demo', 200, 20, size=20, bold=True)
+Label('Watch the star rotate!', 200, 45, size=16)
+
+star = Star(200, 200, 100, 5, fill='gold')
+
+def onStep():
+    star.rotateAngle += 1

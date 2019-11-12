@@ -1,0 +1,46 @@
+20001#Why learn about functions?|MainHeading
+200011#We just learned about creating drawings. Now we will learn about changing drawings. For example, we might draw a dog but change the color of its ears each time we draw it. And how will we make our pictures change? With functions!|Paragraph
+200011#To start, let's watch a short video about functions:|Paragraph
+200021#HINT:Vocabulary check: be sure you understand these terms from the video:|PinkParagraph
+200021#-Function definition|Paragraph
+200021#-Function call|Paragraph
+200021#-Function parameter|Paragraph
+200021#-Function argument|Paragraph
+200021#-Function name|Paragraph
+200021#-Function body|Paragraph
+200021#-Function indenting|Paragraph
+end
+20002#Our first functions|MainHeading
+200011#Here is an example from the video:|Paragraph
+210011#|InlineContainer
+200011#Run the code and see an orange square. Now change 'orange' to 'green' in the function call on the last line. Run the code again and see a green square. So the same function can draw an orange square or a green square or really a square of any color.|Paragraph
+200011#Here is another example:|Paragraph
+210012#|InlineContainer
+200111#mcq|CheckPoint
+210112#mcq|CheckPoint
+200113#mcq|CheckPoint
+end
+20003#Multiple function calls|MainHeading
+200011#We can call the same function multiple times. Here is an example:|Paragraph
+210013#|InlineContainer
+200011#This code calls drawBigStar(4, 'black') to draw a 4-sided black star, and then it calls drawBigStar(8, 'gold') to draw an 8-sided gold star. So we see both stars in the drawing.|Paragraph
+end
+20004#Legal names|MainHeading
+200011#Here are some rules for your function and parameter names:|Paragraph
+200011#- Names must start with letters, but then can include letters or numbers.|Paragraph
+200011#- Avoid words that Python already uses, such as def. We call these reserved words, and the code editor will display them in a special font and color.|Paragraph
+200011#- Upper and lower case are different, so sayHi is not the same as sayhi.|Paragraph
+200114#mcq|CheckPoint
+end
+20005#Good names|MainHeading
+200011#Just because a name is legal does not mean it is good. Here are some simple rules for good names:|Paragraph
+200011#- Good names are short and clear.|Paragraph
+200011#- Good names are camelCased (the first letter is lowercase, and then the first letter of each new word is in uppercase).|Paragraph
+200011#Why do we care about good names? For that, let's look at an example with bad names:|Paragraph
+210014#|InlineContainer
+200011#Look at this code. Is it clear what the function f does? Is it clear what the parameters z and q are for? No and no!|Paragraph
+200012#The previous code runs, but is it good code?|no, the names f, z, and q are really unhelpful. In fact, this is the same as the drawHello function from above, but the function and parameter names make it much less clear what the function does!|Alert
+200011#Here is another example, this time using an illegal name:|Paragraph
+210015#|InlineContainer
+200012#Why won't the previous code run?|break is a reserved word in Python, so we cannot use it to name a function or a parameter.|Alert
+end

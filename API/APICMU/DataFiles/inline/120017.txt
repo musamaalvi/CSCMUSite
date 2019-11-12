@@ -1,0 +1,1 @@
+Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6)

@@ -1,0 +1,43 @@
+800011#Let's learn about arcs and arrows, two shapes that can be very helpful at times.|Paragraph
+80001#Arcs|MainHeading
+800011#An arc is a part of an oval. For example:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and see that the navy arc covers a part of the gold oval. Let's take a closer look. First, here is how we drew the oval:|Paragraph
+820001#Oval(200, 200, 400, 150, fill='gold')||Alert
+800011#This draws a gold oval inside the rectangle centered at (200, 200) with a width of 400 and a height of 150.|Paragraph
+800011#Now, let's look at the arc:|Paragraph
+820001#Arc(200, 200, 400, 150, 0, 90, fill='navy')||Alert
+800011#Notice that the first 4 values -- 200, 200, 400, 150 -- are the same as the oval's. This is because an arc is part of an oval, so we first specify that oval. So those values are the centerX, centerY , width, and height of the oval. The two additional values -- 0, 90 -- specify the startAngle and the sweepAngle of the arc. As we will next explore in more detail, these two values control how much of the oval is included in the arc.|Paragraph
+end
+80001#Angles|MainHeading
+800011#Here are the facts you need to know about angles in this course:|Paragraph
+800011#-  Angles are measured in degrees.|Paragraph
+800011#-  0 degrees heads straight up.|Paragraph
+800011#-  Angles increase clockwise. Thus, for example, 90 degrees heads to the right.|Paragraph
+800011#This image may help:|Paragraph
+800111#|CheckPoint
+end
+80001#startAngle and sweepAngle|MainHeading
+800011#The startAngle and sweepAngle work together to specify which part of the oval is in an arc. If you were drawing this by hand, the startAngle is where you should put your pen down on the paper to start drawing, and the sweepAngle is how far you should draw.|Paragraph
+800011#Some examples would help. To start, let's look at different values of startAngle while keeping the sweepAngle fixed at 90 degrees (which is one-quarter of the oval):|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code, and look carefully at the code and what is drawn. Be sure to understand how changing the startAngle affects the arc that is drawn.|Paragraph
+800112#|CheckPoint
+800011#Here is another example that keeps the startAngle always at 90 degrees (to the right), and changes the sweepAngle:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code, and focus on how changing the sweepAngle affects the arc.|Paragraph
+end
+80001#Circular Arcs|MainHeading
+800011#Since an arc is part of an oval, and a circle is a kind of oval, an arc can be part of a circle. In fact, this is the most common use of arcs. To make an arc that is part of a circle, we set both its width and its height to the diameter of the circle, which is twice its radius. For example:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and see how the arc covers part of the circle. Look closely and see that the radius of the circle is 125, and the width and height of the arc are both 250.|Paragraph
+800011#To be clear, here is the same example without the circle:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800113#|CheckPoint
+end
+80001#Arrows|MainHeading
+800011#An arrow is simply a line with a triangular arrow head at one or both ends. We do not actually have an arrow shape. Instead, we use a line, and we set the arrowStart property to True to draw an arrow head at the start of the line. Similarly, we set arrowEnd to True to draw an arrow head at the end of the line. For example:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and see how the different lines have different arrow heads, depending on their values for arrowStart and arrowEnd.|Paragraph
+800114#|CheckPoint
+end

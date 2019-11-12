@@ -1,0 +1,5 @@
+def drawCircles():
+    Circle(100, 150, 80, fill='green')
+    Circle(200, 100, 70, fill='yellow')
+
+drawCircles()

@@ -1,0 +1,14 @@
+20001#Running, Testing and Autograding Functions
+200011#Before doing any exercises using function, first watch this short video that provides important useful information on running, testing, and autograding functions. Note that there are some small differences between this semester's system and the one in the video, but they are nearly identical.|Paragraph
+200011#Here are some important topics from that video:|Paragraph
+200011#- Running the solution with test cases|Paragraph
+200011#- Running your code with test cases|Paragraph
+200011#- Running your code with your own test cases|Paragraph
+200011#---- Solution does not run on your own test cases|Paragraph
+200011#---- To run the solution, select one of the built-in test cases|Paragraph
+200011#---- To preserve your own test case, place it in a comment|Paragraph
+200011#- Autograding your code|Paragraph
+200011#---- The autograder uses multiple test cases|Paragraph
+200011#---- Use the test case panel to see the last test case the autograder used|Paragraph
+200011#Ok, then, onto the fun!
+end

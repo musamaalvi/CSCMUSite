@@ -1,0 +1,4 @@
+In the previous example, what if we added onMousePress() -- would that function be called if we pressed the mouse after we pressed 's' to stop the app? (Try it first!)
+There is no way to be sure about this.
+No -- no event functions are called after app.stop() is called.
+Yes -- app.stop() stops key events but not mouse events.

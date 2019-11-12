@@ -1,0 +1,5 @@
+How can s.contains(x,y) be True yet s.hits(x,y) be False?
+This generally happens if (x,y) is on the border of s.
+This can never happen.
+This generally happens if (x,y) is inside the shape s, but s has no fill and does not draw anything at the point (x,y).
+This generally happens if (x,y) is not on the border of s.

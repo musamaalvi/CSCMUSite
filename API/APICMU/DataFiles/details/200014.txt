@@ -1,0 +1,26 @@
+20001#Parameters and arguments must match|MainHeading
+200001#Let's start with this example:|Paragraph
+210041#|InlineContainer
+200011#Run that code. See how we have two parameters -- number and color. So when we call the function, we have to provide two arguments. When we call drawCircledNumber(99, 'yellow'), Python sets number to 99, and color to 'yellow', and then runs the body of the function.|Paragraph
+end
+20002#Wrong number mismatch|MainHeading
+200011#What happens if we have the wrong number of arguments? Look at this code:|Paragraph
+210042#|InlineContainer
+200011#See how the function takes two parameters (number, color), but the function call provides only one argument (99). This will not work. Run the code and see what happens.|Paragraph
+210041#mcq|CheckPoint
+end
+20003#Wrong order mismatch|MainHeading
+200011#Let's see another kind of mismatch. This time, instead of using only one argument, let's use two, but switch their order. Run this code and see what happens:|Paragraph
+210043#|InlineContainer
+200142#mcq|CheckPoint
+200011#What just happened? When we defined the function, we said the parameters are (number, color), but we confused the order when we called the function with arguments ('yellow', 99). So Python treated 'yellow' as the number, and 99 as the color.|Paragraph
+200011#That's just silly, but Python has no way to know that. And then the program crashed, because 99 is not a legal color. But the real problem was not that 99 is not a legal color, it was that we called the function with our arguments in the wrong order.|Paragraph
+end
+20004#Functions with no parameters|MainHeading
+200011#You can have functions with no parameters, but you still have to include the parentheses in the function definition and the function call. So this works:|Paragraph
+210044#|InlineContainer
+200011#But this fails:|Paragraph
+210045#|InlineContainer
+200143#mcq|CheckPoint
+200011#Let's do some exercises!|Paragraph
+end

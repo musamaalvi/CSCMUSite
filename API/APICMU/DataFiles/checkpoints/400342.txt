@@ -1,0 +1,5 @@
+In the previous example, what happens if we call s.hitsShape(dot) instead of dot.hitsShape(s)? (Try it first!)
+The code runs, but the star moves instead of the dot.
+The code will not run due to a syntax error.
+nothing changes, these do the same thing.
+The code runs, but it crashes when we try to call hitsShape.

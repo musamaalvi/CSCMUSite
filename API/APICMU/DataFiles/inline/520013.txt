@@ -1,0 +1,9 @@
+Label('onKeyHold Demo #3', 200, 20, size=18, bold=True)
+Label('Broken example of how not to use onKeyHold!', 200, 45, size=16)
+
+counter = Label(0, 200, 200, size=100)
+
+def onKeyHold(keys):
+    # The following test will NOT work!
+    if (keys == 'z'):
+        counter.value += 1

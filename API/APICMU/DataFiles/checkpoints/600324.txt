@@ -1,0 +1,5 @@
+In the previous example, we used c.dx = -c.dx to make the circle c seem to bounce. In which earlier example did we use this same technique?
+Wraparound motion
+Reversing motion
+Bounded motion
+Standing still

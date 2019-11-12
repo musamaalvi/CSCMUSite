@@ -1,0 +1,35 @@
+200011#So far we have changed only a few properties, like centerX, centerY, and fill. Let's learn how to change other properties, too!|Paragraph
+20001#Position Properties|MainHeading
+200011#The position properties are: left, right, top, bottom, centerX, and centerY. For example:|Paragraph
+230011#|InlineContainer
+200311#mcq|CheckPoint
+end
+200012#Size Properties|MainHeading
+200011#The size properties are: width and height. For example:|Paragraph
+230012#|InlineContainer
+end
+200013#Align Property|MainHeading
+200011#The align property can be useful when first drawing a shape and aligning it in different ways. For example:|Paragraph
+230013#|InlineContainer
+200011#There are 9 legal values for align -- the same as the start values for a gradient. The previous example shows 5 of these 9 legal values. Here we see the other 4 ('left', 'top', 'right', and 'bottom'):|Paragraph
+230014#|InlineContainer
+200011#Note: unlike other properties, we can only use align when we first create a shape. So this is an error:|Paragraph
+230015#|InlineContainer
+200312#mcq|CheckPoint
+end
+200014#Fill and Border Properties|MainHeading
+200011#The fill and border properties are: fill, border, borderWidth, opacity, and dashes. For example:|Paragraph
+230016#|InlineContainer
+200313#mcq|CheckPoint
+end
+200015#Other Properties|MainHeading
+200011#Some other properties include: rotateAngle and visible. For example:|Paragraph
+230017#|InlineContainer
+200314#mcq|CheckPoint
+end
+200016#Changing Properties|MainHeading
+200011#Now that we know about all these shape properties, we will want to know how we can change them. We can use += to add to a property, and -= to subtract from it, like so:|Paragraph
+230018#|InlineContainer
+200011#The previous example used += and -=. We can also use *= to multiply by a value, and /= to divide by a value.|Paragraph
+200315#mcq|CheckPoint
+end

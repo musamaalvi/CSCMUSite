@@ -1,0 +1,7 @@
+Label('Circle-Specific Property Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to change the radius", 200, 45)
+
+c = Circle(200, 200, 50, fill='violet', opacity=75)
+
+def onMousePress(x, y):
+    c.radius += 20

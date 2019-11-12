@@ -1,0 +1,27 @@
+80001#Types|MainHeading
+800011#Each value we use in Python is a specific type. For example, 42 is an integer. We would say that the type of the value 42 is integer. If the variable x is set to 42, then we may also say that the type of x is integer.|Paragraph
+800011#Here is a table of the types of values we will see in this course:|Paragraph
+800011#Python includes many more types of values, but these are the ones we will focus on in this course.|Paragraph
+800211#|CheckPoint
+end
+80002#Type Errors|MainHeading
+800011#A type error results from using one type of value when another type is expected. For example:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and see that it crashes without drawing the circle. Instead, this error message is printed in the console:|Paragraph
+820011#An error occurred. Here is the stack trace:    line 5:       Circle(200, 200, 'whoops')    Exception: Type Error: Circle.radius should be number (but whoops is of type String)||Alert
+800011#This is a very helpful message. It tells us exactly where the error occurred (on line 5). And it tells us that the circle's radius should be a number, but we provided a string instead, and that is a type error.|Paragraph
+800212#|CheckPoint
+end
+80003#Using + with strings|MainHeading
+800011#The + operator adds two numbers, naturally. So 3 + 5 is 8. However, we can also use + with strings. In that case, it concatenates the strings, which is to say it combines them one after the other. So 'a' + 'b' is 'ab'.|Paragraph
+800011#Here is a practical example using + with strings:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and see how the label's value is the string 'My name is Fred'. Change the value of name to Wilma, and run the code again and see how it changes.|Paragraph
+800213#|CheckPoint
+end
+80004#Using str() to make strings|MainHeading
+800011#We can use the str() function to convert a value into a string. For example, str(42) is the string '42', and not the integer 42. Here is a practical example:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and press a few keys. How does this work? On line 5, we set the custom property text.count to 0. This counts the number of key presses. Then, in onKeyPress, on line 8, we increase that count by 1. Finally, on line 9, we need to make a string that includes that count. The problem is that the count is an integer. No problem -- we just call str(text.count) to convert it to a string, then we use + to concatenate that with 'Key presses: ' to get the string we draw.|Paragraph
+800214#|CheckPoint
+end

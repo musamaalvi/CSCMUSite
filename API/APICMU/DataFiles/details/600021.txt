@@ -1,0 +1,30 @@
+600011#We just saw how groups can use properties. Now we will look into the various methods we can use with groups.|Paragraph
+60001#Shape methods for groups|MainHeading
+600011#To start, groups act like shapes, so they can use shape methods like toFront and toBack. For example:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code and see how all the shapes in the group move together to the front and to the back. Here is another example where a group uses hitsShape:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code and see how moving the triangle over any shape in the group makes all the shapes change their fill.|Paragraph
+600211#|CheckPoint
+end
+60002#group.add()|MainHeading
+600011#We can use the add method to add a new shape to a group. For example:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#|Paragraph
+600212#|CheckPoint
+end
+60003#group.clear()|MainHeading
+600011#We can remove all the shapes at once from a group using the clear method, like so:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code, add a few circles, and press any key to clear them.|Paragraph
+end
+60004#group.remove()|MainHeading
+600011#We can remove a shape from a group by setting its visible property to False. We can also use the group's remove method to do the same thing, like so:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+end
+60005#app.group|MainHeading
+600011#We learned how to add shapes to a new group. What happens to shapes we draw without adding to a group? Those shapes are automatically added to app.group. This can be very helpful. For example, we can use the clear method of app.group to clear all the shapes in the app, like so:|Paragraph
+600021#Rect(10, 20, 30, 40)|InlineContainer
+600011#Run the code and add some circles, then press 'c'. See how all the shapes are cleared, even including the labels.|Paragraph
+620001#Is it a good idea for the labels to disappear? Probably not! We only did that here to show how app.group works. So in this case, we would probably prefer to put the circles in their own group, like we did in the earlier example, and just clear that group.||Alert
+end

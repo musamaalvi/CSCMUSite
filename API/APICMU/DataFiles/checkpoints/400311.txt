@@ -1,0 +1,5 @@
+In the previous example, on line 4, what happens if we set app.counter = 1 instead of app.counter = 0?
+The first circle has a 2 in it, not a 1
+The app will not run at all
+Nothing changes
+All the circles have a 1 in them

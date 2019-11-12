@@ -1,0 +1,5 @@
+In the previous example, what happens if we forget to use the parentheses in our call to s.toFront? That is, what if we call s.toFront instead of s.toFront()? (Try it first!)
+The code will not run due to a syntax error.
+Nothing changes -- the code runs the same as before.
+The code runs, but nothing happens when we press 'f' (the star does not move to the front).
+The code runs but it crashes when we press 'f' and try to call toFront.

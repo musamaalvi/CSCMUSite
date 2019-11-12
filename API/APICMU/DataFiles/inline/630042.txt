@@ -1,0 +1,14 @@
+Label('Diagonal motion demo', 200, 20, size=20)
+
+c = Circle(150, 200, 20, fill='blue')
+c.dx = 5
+c.dy = 10
+
+def onStep():
+    c.centerX += c.dx
+    if ((c.left < 0) or (c.right > 400)):
+        c.dx = -c.dx
+
+    c.centerY += c.dy
+    if ((c.top < 0) or (c.bottom > 400)):
+        c.dy = -c.dy

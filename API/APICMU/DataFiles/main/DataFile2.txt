@@ -1,6 +1,27 @@
 20000#2 Functions, Mouse Events, and Properties|Heading
-20001#2.1. Functions and asad|MainHeading
+20001#2.1. Functions|MainHeading
 200011#2.1.1. Function Basics|SubHeading
 200012#2.1.2. Running, Testing and Autograding Functions|SubHeading
-90000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+900211#2.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+200014#2.1.4. Multiple Parameters|SubHeading
+900212#2.1.5. Exercise|Exercise
+900213#2.1.6. Exercise|Exercise
+end
+20001#2.2. Mouse Events|MainHeading
+200021#2.2.1 Mouse Press Events|SubHeading
+200022#2.2.2. Using and Debugging Events|SubHeading
+900221#2.2.3. Exercise|Exercise
+900222#2.2.4. Exercise|Exercise
+200025#2.2.5. Globals|SubHeading
+200026#2.2.6. Mouse Release Events|SubHeading
+900223#2.2.7. Exercise|Exercise
+end
+20003#2.3. Properties|MainHeading
+200031#2.3.1. General Shapes Properties|SubHeading
+200032#2.3.2. Shape-Specific Properties|SubHeading
+900311#2.3.3. Exercise|Exercise
+900312#2.3.4. Exercise|Exercise
+90024#2.4. Unit 2 Exercise|Exercise
+90025#2.5. Unit 2 Creatve Task|Exercise
+90026#2.6. Unit 2 Review|Exercise
 end

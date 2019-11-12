@@ -1,0 +1,5 @@
+In the previous example, try some different backgrounds, then answer this question: which of the following are legal backgrounds?
+rgb values, like rgb(200, 150, 100)
+color names, like 'cyan' or 'purple'
+all of these.
+gradients, like gradient('red', 'blue', start='left-bottom')

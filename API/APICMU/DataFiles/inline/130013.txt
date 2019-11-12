@@ -1,0 +1,1 @@
+Circle(100, 200, 50, fill='green') # centered at (100, 200) with a radius of 50

@@ -1,0 +1,10 @@
+Label('onKeyHold Demo #6', 200, 20, size=18, bold=True)
+Label('Use right arrow to see motion with wraparound!', 200, 45, size=16)
+
+dot = Circle(200, 200, 20, fill='cyan')
+
+def onKeyHold(keys):
+    if ('right' in keys):
+        dot.centerX += 10
+        if (dot.left >= 400):
+            dot.right = 0

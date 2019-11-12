@@ -1,0 +1,1 @@
+RegularPolygon(200, 100, 75, 6)

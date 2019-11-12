@@ -1,0 +1,5 @@
+In the previous example, what happens if you press the mouse and immediately release it (without moving it)? Try it first before answering.
+We get two circles -- a navy circle drawn directly over a gold circle.
+There is no way to tell if we have one or two circles.
+The code crashes if we do that.
+We get only one circle -- the gold circle becomes navy.

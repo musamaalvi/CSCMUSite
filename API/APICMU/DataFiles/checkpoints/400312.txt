@@ -1,0 +1,5 @@
+In the previous example, what happens if we forget to include line 4, so we do not set app.counter = 0?
+The app will not run at all
+The app crashes when we press the mouse, since it tries to use app.counter, but it does not exist
+Nothing changes
+All the circles have a 1 in them

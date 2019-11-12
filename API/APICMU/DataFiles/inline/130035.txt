@@ -1,0 +1,5 @@
+Label('This is default!', 200, 50, size=36) # default font
+Label('This is arial!', 200, 125, size=36, font='arial')
+Label('This is sans!', 200, 200, size=36, font='sans')
+Label('This is courier!', 200, 275, size=36, font='courier')
+Label('This is monospace!', 200, 350, size=36, font='monospace')

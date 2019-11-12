@@ -1,0 +1,5 @@
+What error do you see in the Console when you run the code above?
+No error.
+You did something wrong. Please try again.
+'yellow' is not a number
+Circle.fill should be color

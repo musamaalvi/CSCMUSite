@@ -1,0 +1,5 @@
+In the previous example, what happens if we add this line at the start of onMousePress, so just after line 7, but before the if statement on line 8:    Circle(x, y, 40)
+We get black circles only around the orange circles.
+We get black circles only around the green circles.
+The code will not run in that case.
+We get a black circle any time we click, whether or not we get an orange or green circle inside of it.

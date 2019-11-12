@@ -1,0 +1,7 @@
+# Draw the same two rectangles as last time
+Rect(0, 0, 100, 100, fill='orange')
+Rect(50, 50, 100, 100, fill=None, border='blue', borderWidth=6)
+
+# Draw them again to the right, only now with a 'white' fill
+Rect(200, 0, 100, 100, fill='orange')
+Rect(250, 50, 100, 100, fill='white', border='blue', borderWidth=6)

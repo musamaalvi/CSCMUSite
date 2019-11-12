@@ -1,0 +1,4 @@
+# Without changing the green rectangle, move the
+# gold oval so it is centered inside the rectangle.
+Rect(200, 200, 150, 50, fill='green')
+Oval(200, 200, 150, 50, fill='gold')

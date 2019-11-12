@@ -1,0 +1,16 @@
+Label('hitsShape Demo', 200, 20, size=20, bold=True)
+Label('Move the mouse to move the dot', 200, 45)
+
+s = Star(200, 200, 140, 5, fill='lightGrey')
+L = Label('Move the mouse!', 200, 350, size=30)
+dot = Circle(200, 300, 20, fill='maroon')
+
+def onMouseMove(mouseX, mouseY):
+    dot.centerX = mouseX
+    dot.centerY = mouseY
+    if (dot.hitsShape(s) == True):
+        s.fill = 'gold'
+        L.value = 'They hit each other!!'
+    else:
+        s.fill = 'lightGrey'
+        L.value = 'They do not hit each other...'

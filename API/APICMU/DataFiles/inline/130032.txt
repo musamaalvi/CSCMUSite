@@ -1,0 +1,3 @@
+Label('small!', 200, 100, size=10)
+Label('medium', 200, 200, size=30)
+Label('large!', 200, 300, size=120)

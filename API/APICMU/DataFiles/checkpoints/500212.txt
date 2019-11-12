@@ -1,0 +1,5 @@
+In the previous example, what happens if we use or instead of and on line 7? (Try it first!)
+The counter increases if either but not both of 'x' or 'z' are held.
+The counter increases if either or both of 'x' or 'z' are held.
+The counter never increases.
+Nothing changes. The counter increases only if both 'x' and 'z' are held.

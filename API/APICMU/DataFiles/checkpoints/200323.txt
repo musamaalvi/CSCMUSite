@@ -1,0 +1,5 @@
+In the previous example, if you click enough times, the code crashes. Why?
+The star gets too many points.
+none of these
+The star's radius gets larger than the canvas.
+The star's roundness gets larger than 100.

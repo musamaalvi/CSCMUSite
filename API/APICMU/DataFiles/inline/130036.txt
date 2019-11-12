@@ -1,0 +1,4 @@
+Label('This is black!', 200, 50, size=36) # default color
+Label('This is blue!', 200, 150, size=36, fill='blue')
+Label('This has a red border!', 200, 250, size=36, fill=None, border='red')
+Label('This has a gradient!', 200, 350, size=36, fill=gradient('blue', 'orange'))

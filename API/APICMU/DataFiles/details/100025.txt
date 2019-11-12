@@ -1,0 +1,12 @@
+10001#Opacity|MainHeading
+100011#Ok, we are almost done with the lesson on colors. Just one last topic: opacity. Opacity is the opposite of transparency -- the higher the opacity, the less transparent a shape is.|Paragraph
+100011#If the opacity is 100, the largest value, the shape is not at all transparent -- you cannot see through it at all, and it completely hides all the shapes behind it.|Paragraph
+100011#If the opacity is 0, the smallest value, the shape is completely transparent, so it looks as though it is not there.|Paragraph
+100011#The default opacity is 100, so if you do not specify the opacity, the shape is entirely not transparent. For example:|Paragraph
+120051#|InlineContainer
+100011#Run the code and look carefully at the canvas. We drew two blue rectangles. The one on the left has a default opacity of 100, and completely blocks the gold rectangle. The one on the right, however, has an opacity of 50, so we can see the gold rectangle behind it.|Paragraph
+100251#exercise|CheckPoint
+end
+10002#Practice|MainHeading
+100011#That's it for opacity! Now let's do a couple excercise|Paragraph
+end

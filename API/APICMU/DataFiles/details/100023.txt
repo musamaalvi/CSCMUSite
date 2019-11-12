@@ -1,0 +1,39 @@
+10001#Named Colors|MainHeading
+100011#So far we've seen black, brown, blue, navy, gold, cyan and a few more colors. Are there others? Sure, check these out:|Paragraph
+120031#|InlineContainer
+100011#All 143 color names you can use are listed in this color table. That's a lot of colors!|Paragraph
+100231#mcq|CheckPoint
+end
+10002#Unnamed Colors|MainHeading
+100011#After the name seaGreen, the color table includes rgb(46, 139, 87). What is this? We can use this rgb value in place of the color name, like so:|Paragraph
+120032#|InlineContainer
+100011#In general, use a color name if you can. However, while the table contains just 143 names, with rgb values we can use over 16 million different colors!|Paragraph
+100011#For example, let's use mint green. There is no such color in the table, so we cannot use it by name. No problem. Do a web search for 'rgb mint green', and among the various results you will see that mint green has an rgb value of 152, 255, 152. We can use that to create a mint green rectangle like so:|Paragraph
+120033#|InlineContainer
+100011#Run the code and confirm that it works. Then, instead of mint green, make the rectangle periwinkle (yes, that's a color). To do this, you should do another web search.|Paragraph
+100232#mcq|CheckPoint
+end
+10003#Radial Gradients|MainHeading
+100011#Sidebar: What do rgb values mean? You do not need to know this for the course, but it is interesting. Rgb values include three numbers, each between 0 and 255, which show the amount of red, green, and blue in that color. For example, dark orange is rgb(255, 128, 0). The 255 means that there is lots of red in dark orange (as much as possible). The 128 means there is some green as well (about half as much as possible). And the 0 means there is no blue in dark orange. That's it.|PinkParagraph
+100011#In addition to solid colors, we can use gradients, which fade from one color to another color. We'll start with radial gradients, which fade from the center of the shape outwards to its border. For example:|Paragraph
+120034#|InlineContainer
+100011#Run the code and see how the rectangle is red at its center, and fades to blue towards the border. This is a radial gradient.|Paragraph
+100233#exercise|CheckPoint
+end
+10004#Linear Gradients|MainHeading
+100011#Besides radial gradients, we can also use linear gradients that fade straight across the shape. To do this, we include the start of the gradient. For example:|Paragraph
+120035#|InlineContainer
+100011#Run the code and see what happens. Our code includes start='left', and the gradient flows from left to right. We also could have started from the 'right', 'top', or 'bottom'. What about the corners? We can also start from them, as such:|Paragraph
+120036#|InlineContainer
+100011#See how the left-top corner is red, and the gradient fades to blue as it flows to the opposite corner. Naturally, we can specify any of the four corners: 'left-top', 'left-bottom', 'right-top', or 'right-bottom'.|Paragraph
+100234#exercise|CheckPoint
+end
+10005#Gradients with More Colors|MainHeading
+100011#We can include more than two colors in a gradient. For example:|Paragraph
+120037#|InlineContainer
+100011#Run the code, and see how it flows through each of the colors we provided, starting at the left. That's it!|Paragraph
+100235#exercise|CheckPoint
+end
+10006#Practice|MainHeading
+100011#Ok,let's do some exercise!|Paragraph
+end

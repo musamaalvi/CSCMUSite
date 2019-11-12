@@ -1,0 +1,5 @@
+# This is top-level code:
+Label('Click the mouse to see blue circles', 200, 200, size=20)
+
+def onMousePress(x, y):
+    Circle(x, y, 20, fill='blue')

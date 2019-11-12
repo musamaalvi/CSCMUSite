@@ -1,0 +1,11 @@
+Label('Vertical bouncing motion demo', 200, 20, size=20)
+
+c = Circle(200, 150, 20, fill='navy')
+c.dy = 10
+
+def onStep():
+    c.centerY += c.dy
+    if ((c.top < 0) or (c.bottom > 400)):
+        # we went off the top edge or the bottom edge,
+        # so reverse our direction ('bounce')
+        c.dy = -c.dy

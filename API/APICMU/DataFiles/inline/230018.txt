@@ -1,0 +1,9 @@
+Label('Changing Properties Demo', 200, 20, size=20, bold=True)
+Label('Press the mouse to move the rectangles', 200, 45)
+
+r1 = Rect(150, 200, 50, 50, fill='gold')
+r2 = Rect(200, 200, 50, 50, fill='navy')
+
+def onMousePress(x, y):
+   r1.centerX += 10
+   r2.centerY -= 10
