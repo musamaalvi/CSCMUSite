@@ -1,0 +1,4 @@
+Label('This is plain!', 200, 50, size=36) # normal default style
+Label('This is bold!', 200, 150, size=36, bold=True)
+Label('This is italic!', 200, 250, size=36, italic=True)
+Label('This is bold and italic!', 200, 350, size=36, bold=True, italic=True)

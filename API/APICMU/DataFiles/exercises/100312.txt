@@ -1,0 +1,3 @@
+# 
+# Draw an oval that fills the left half of the canvas from top to bottom,
+# with a 5-pixel-wide black border, and a radial blue-to-cyan gradient fill.

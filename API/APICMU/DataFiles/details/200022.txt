@@ -1,0 +1,28 @@
+20001#Printing to the console|MainHeading
+200011#Sometimes you might not be sure if an event is actually happening. For example, run this code and click a few times:|Paragraph
+220021#|InlineContainer
+200011#The first time you clicked, a circle was drawn. But what happened after that? We think another circle was drawn directly over the previous circles, but how can we be sure? Good question. One way to be sure that a function is being called is to print, like so:|Paragraph
+220022#|InlineContainer
+200011#Run the code and click a few times. See how each time you click the mouse, 'In onMousePress!' appears (is printed) in the console window, along with the (x,y) location of the mouse click. This is super useful!|Paragraph
+200012#How did we print the actual x and y values and not the strings 'x' and 'y'?| We did not put x and y in quotes. To see what we mean, let's incorrectly put them in quotes:|Alert
+200012#Using print properly:  -Use print to help you understand and debug your code. The console is for programmers, not users. So: only print info that is for you, the programmer, and not for the actual user. -Delete your print calls when you no longer need them.  -Used well, print is a powerful debugging tool!|PinkParagraph
+200221#mcq|CheckPoint
+end
+20002#Using the Inspector|MainHeading
+200011#Let's return to our first example:|Paragraph
+220023#|InlineContainer
+200011#Run this code, and click a few times, so you have a few circles. Fine. Now, move the mouse over the canvas. Do you see the Inspector? No! Why not? Because when you use mouse events, the Inspector does not turn on automatically. In this case, you can turn on the Inspector by holding down the control (or ctrl) key|Paragraph
+end
+20003#Top-level code|MainHeading
+200011#Any code that is not inside a function is called top-level code. Top-level code is called once, when we first run the program, before any events are handled. Here is an example:|Paragraph
+220024#|InlineContainer
+200011#Run the code but do not click the mouse yet. See how the top-level code runs and the label is drawn. Now, click the mouse and see how onMousePress is called each time, so a new blue circle appears, but the top-level code is only called once when you first ran the program.|Paragraph
+200222#mcq|CheckPoint
+end
+20004#A Little Math|MainHeading
+200011#This is not a math course, but now that we can use mouse events, we will use just a little math to do a lot of fun things with those events.|Paragraph
+200011#For example, say that each time the user clicks the mouse at (x,y), we want to draw two circles, one just above the other, so the two circles just meet each other at the point (x,y).|Paragraph
+200011#Let's use a little math to make that happen! The centerX of each circle is just x. But what about centerY? For the top circle, this will be y-20. Do you see why? Similarly, for the bottom circle, centerY will be y+20, like so:|Paragraph
+220025#|InlineContainer
+200011#The previous example used + and -. We can also use * to multiply and / to divide.|Paragraph
+end

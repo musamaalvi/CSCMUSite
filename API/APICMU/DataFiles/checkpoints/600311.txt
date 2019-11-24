@@ -1,0 +1,5 @@
+What happens in the previous example if we used += and -= instead of *= and /= in onKeyPress? (Try it first!)
+Nothing changes.
+The speed changes much slower with each up and down arrow.
+The speed changes much faster with each up and down arrow.
+The code will not run at all.

@@ -1,0 +1,7 @@
+Label('Align Property Demo #3', 200, 20, size=20, bold=True)
+Label("Click the mouse to see the error!", 200, 45)
+
+r = Rect(200, 200, 100, 100, fill='blue',  align='center')
+
+def onMousePress(x, y):
+    r.align = 'top' # This is not allowed!

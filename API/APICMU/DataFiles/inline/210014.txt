@@ -1,0 +1,4 @@
+def f(z, q):
+    Label('Hello!', 200, 200, size=z, bold=True, fill=q)
+
+f(100, 'blue')

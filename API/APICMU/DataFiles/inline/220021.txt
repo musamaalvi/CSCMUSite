@@ -1,0 +1,3 @@
+def onMousePress(x, y):
+    # This example ignores the (x,y) location!
+    Circle(200, 200, 20)

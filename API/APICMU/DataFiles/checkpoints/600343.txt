@@ -1,0 +1,5 @@
+What should we do to get the smoothest vertical motion from a circle c?
+Change both app.stepsPerSecond and c.dy
+Change only app.stepsPerSecond
+None of these
+Change only c.dy

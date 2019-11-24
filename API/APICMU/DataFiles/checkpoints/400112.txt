@@ -1,0 +1,5 @@
+In the previous example, which of the four squares changes behavior if we used if instead of elif? (Try it first!)
+The top-right square (black rings are not drawn).
+The bottom-right square (black rings are drawn).
+The top-left square (the cyan circles are drawn with a black ring).
+Nothing changes.

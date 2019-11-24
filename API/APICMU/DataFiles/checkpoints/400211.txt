@@ -1,0 +1,5 @@
+In the previous example, what happens if we did not draw the Labels? (Try it first!)
+The circle can change to blue or gold, but there's no way to make it black again.
+The circle no longer changes colors.
+The code still works the same way, but the user would have no idea which keys to press to make it work.
+Nothing changes.

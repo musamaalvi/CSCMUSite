@@ -1,0 +1,2 @@
+# Draw a gold polygon that connects the midpoints of each
+# side of the canvas, so it looks like a big diamond filling the canvas.

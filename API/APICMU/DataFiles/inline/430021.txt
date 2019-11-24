@@ -1,0 +1,8 @@
+Label('addPoint Demo #1', 200, 20, size=20, bold=True)
+Label('Press the mouse a few times to make a polygon', 200, 45)
+
+p = Polygon(fill='lightGreen', border='black')
+
+def onMousePress(mouseX, mouseY):
+    Circle(mouseX, mouseY, 5)
+    p.addPoint(mouseX, mouseY)

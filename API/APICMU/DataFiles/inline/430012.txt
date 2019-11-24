@@ -1,0 +1,9 @@
+Label('Custom App Property Demo', 200, 20, size=20, bold=True)
+Label('Press the mouse to add more circled values', 200, 45)
+
+app.counter = 0
+
+def onMousePress(mouseX, mouseY):
+    app.counter += 1
+    Circle(mouseX, mouseY, 20, fill='gold')
+    Label(app.counter, mouseX, mouseY, size=20)

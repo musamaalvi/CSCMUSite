@@ -1,0 +1,18 @@
+20001#onMouseRelease|MainHeading
+200011#When you press the mouse down, eventually you stop holding it down. At that time, we say that you release the mouse. At that time, CMU Graphics calls onMouseRelease, if you wrote it. For example:|Paragraph
+220061#|InlineContainer
+200011#Run the code. Press the mouse, move it around, then release it. See how you get a gold circle each time you press the mouse, and a navy circle each time you release it.|Paragraph
+200261#mcq|CheckPoint
+end
+20002#Another example|MainHeading
+200011#It is not very common to create new shapes on mouse release events. It is more common to use mouse release events to modify an existing shape, like so:|Paragraph
+220062#|InlineContainer
+200011#Run the code. Press the mouse, hold it down for a while, and release it. See how the circle turns blue when you press the mouse, and stays blue until you release it, when it turns red again. Nice!|Paragraph
+end
+20003#The pass statement|MainHeading
+200011#We can use pass to tell Python to simply do nothing at all, like so:|Paragraph
+220063#|InlineContainer
+200011#Run the code, press a few keys, and see that nothing happens. Great! This seems like there is no onMousePress function, but really there is. It's just that it does nothing!|Paragraph
+200011#Why use pass at all? Good question! We will use pass in some exercises so we can give you starter code that already defines some event functions for you (such as onMousePress). In those cases, you should replace the pass statement with your solution.|PinkParagraph
+200262#mcq|CheckPoint
+end

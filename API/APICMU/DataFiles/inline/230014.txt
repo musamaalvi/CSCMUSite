@@ -1,0 +1,10 @@
+Label('Align Property Demo #2', 200, 20, size=20, bold=True)
+Label("The circles show the anchor points for the rectangles", 200, 45)
+
+Rect(200, 125, 100, 100, fill='blue',  align='left')
+Rect(200, 125, 100, 100, fill='red',   align='right')
+Circle(200, 125, 5)
+
+Rect(200, 300, 100, 100, fill='green', align='top')
+Rect(200, 300, 100, 100, fill='gold',  align='bottom')
+Circle(200, 300, 5)

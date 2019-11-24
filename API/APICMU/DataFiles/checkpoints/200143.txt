@@ -1,0 +1,5 @@
+What error do you see in the Console when you run the code above?
+No error occurs, and two circles are drawn.
+No error is shown, but nothing happens.
+You did something wrong. Please try again.
+drawCircles call requires parentheses

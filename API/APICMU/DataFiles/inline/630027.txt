@@ -1,0 +1,10 @@
+Label('Wraparound motion demo #1', 200, 20, size=20)
+Label('The circle is always visible', 200, 40)
+
+c = Circle(200, 150, 50, fill='navy')
+c.dx = 5
+
+def onStep():
+    c.centerX += c.dx
+    if (c.right > 400):
+        c.left = 0

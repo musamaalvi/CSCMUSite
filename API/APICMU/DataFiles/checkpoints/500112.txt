@@ -1,0 +1,5 @@
+Which ONE of the following is not logically the same as (x >= 5)?
+(x > 5) and (x == 5)
+(5 < x) or (5 == x)
+(not (x < 5))
+(x > 5) or (x == 5)

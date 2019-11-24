@@ -1,0 +1,5 @@
+What does pass mean in Python?
+Crash.
+Go faster.
+Print the word 'pass' in the console.
+Do nothing.

@@ -1,0 +1,5 @@
+What error prints in the console when you run the previous code and then click the mouse?
+There is no error message.
+We can only use align when we first create a shape.
+Don't do that!
+You can't get or set the align property

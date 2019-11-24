@@ -1,0 +1,3 @@
+# Without changing the orange oval, add a 10-pixel thick black line
+# that runs from the oval's leftmost point to its topmost point.
+Oval(200, 200, 300, 100, fill='orange')

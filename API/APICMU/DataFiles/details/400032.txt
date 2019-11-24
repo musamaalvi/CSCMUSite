@@ -1,0 +1,32 @@
+40001#Methods|MainHeading
+400011#Some properties make sense for certain shapes but not others. For example, circles have a radius, but rectangles do not.|Paragraph
+400011#Similarly, some functions make sense for certain shapes and not others. For example, say we had the function addPoint, that adds a new point to a polygon. That could be handy for polygons, but it would not be helpful, say, for circles. We need a way to restrict addPoint just to polygons, but we cannot do this if it is a function. So, addPoint has to be a method.|Paragraph
+400011#Methods are basically the same as functions, with these two differences:|Paragraph
+400011#      1.Methods are called differently; they are called using shape.method(). We still include any other arguments as usual. So, for example, we use p.addPoint(x,y) to call the addPoint method of the polygon p, where x and y are arguments.|Paragraph
+400011#      2.Methods are like properties, in that some shapes can have methods that other shapes do not. For example, the addPoint method is only for polygons.|Paragraph
+end
+40002#addPoint|MainHeading
+400011#Here is an example that uses addPoint:|Paragraph
+430021#|InlineContainer
+400011#Run the code, press the mouse in 3 different locations, and see how you get a triangle. Press again, and see how that point was added to the polygon, so now it has 4 sides. Keep going for a few more points.|Paragraph
+400011#Look closely at line 8:|Paragraph
+400012# p.addPoint(mouseX, mouseY)|Box
+400011#That line calls the addPoint method, with mouseX and mouseY as arguments. This is how each new point is added to the polygon.|Paragraph
+400321#mcq|CheckPoint
+end
+40003#toFront and toBack|MainHeading
+400011#Some methods like addPoint are restricted to certain shapes. Others, like toFront and toBack, work for every shape, like so:|Paragraph
+430022#|InlineContainer
+400011#Run the code and press 'b'. See how the star moves to the back, behind the rectangle and the oval. Now, press 'f', and see how it moves to the front, on top of the rectangle and the oval.|Paragraph
+400322#mcq|CheckPoint
+end
+40004#app.stop|MainHeading
+400011#The methods we have covered so far are for shapes. There are many other methods. For example, app has some methods you can use. For example, here is one useful method: app.stop(). When you call this, the app stops, so no more events happen. Here is an example:|Paragraph
+430023#|InlineContainer
+400011#Run the code, press a few keys, then press 's', then press some more keys. See how after you press 's', onKeyPress is no longer called even if you keep pressing keys.|Paragraph
+400323#mcq|CheckPoint
+end
+40005#Object-Oriented Programming|MainHeading
+400011#Let's wrap this up with a little vocabulary. We've learned about properties and methods. An object is a value that can have both properties and methods. We've been using lots of objects already. Every shape we create can have properties and methods, so each one is an object. Similarly, app is also an object since it has properties (app.background) and methods (app.stop()).|Paragraph
+420001#When you program using objects, it is called Object-Oriented Programming. There is much more we can learn about it, but for now, we should know this much: we have been using objects all along, so we are in fact doing Object-Oriented Programming. Sounds impressive!|Paragraph
+end

@@ -1,0 +1,6 @@
+Label('Straight motion demo #1', 200, 20, size=20)
+
+c = Circle(50, 150, 20, fill='navy')
+
+def onStep():
+    c.centerX += 5

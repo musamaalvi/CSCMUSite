@@ -1,0 +1,5 @@
+What happens if we replace x/4 in the code above with (100-y/4)?
+The dark circles are on the top, light on the bottom.
+The code stops working.
+The dark circles are on the bottom, light on the top.
+The code runs fine and draws a 99 but no circle.

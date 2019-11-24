@@ -1,0 +1,11 @@
+Star( 80, 130, 35, 7, roundness=20)
+Star(160, 130, 35, 7, roundness=40)
+Star(240, 130, 35, 7, roundness=60)
+Star(320, 130, 35, 7, roundness=80)
+
+# Let's add labels for these, so it's easier to see which is which
+Label('20',  80, 180)
+Label('40', 160, 180)
+Label('60', 240, 180)
+Label('80', 320, 180)
+Label('Roundness', 200, 200)

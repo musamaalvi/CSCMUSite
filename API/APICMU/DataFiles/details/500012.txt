@@ -1,0 +1,23 @@
+50001#A First Example|MainHeading
+500011#We just used and, or, and not to make compound conditionals. Another way to deal with complex conditionals is by nesting if statements inside other if statements. These are called nested conditionals. For example:|Paragraph
+510021#|InlineContainer
+500011#Let's see what's happening here.|Paragraph
+500011#-  First, look at line 8. It tests if (x > 200).|Paragraph
+500011#-  We only get to line 9 if that test on line 8 is True, so x must be on the right.|Paragraph
+500011#-  And then we only get to line 10 if the test on line 9 is also True, so y must be on the bottom.|Paragraph
+500011#-  So we only get a green-circled 'Yes!!!' in the bottom-right.|Paragraph
+500011#Run the code and confirm this.|Paragraph
+end
+50002#Using else|MainHeading
+500011#Now let's use else in a nested conditional, like so:|Paragraph
+510022#|InlineContainer
+500011#Run the code and consider why we only get one orange-circled 'nope'. This is because the else refers to the if on line 9. But what about the if on line 8? What if that is False? That is, what if x is on the left? There is no else in that case, so nothing happens. That's why we only get green or orange circles if x is on the right, and nothing on the left.|Paragraph
+500121#mcq|CheckPoint
+end
+50003#Another Example|MainHeading
+500011#Let's slightly change the previous example and see what happens. Here, we'll move the else on line 12 outside the first if statement, like so:|Paragraph
+510023#|InlineContainer
+500011#Now what should we expect? We didn't change the tests for when we draw a green-circled 'Yes!!!', so we still will see one of these, in the lower-right corner.|Paragraph
+500011#But what about the orange-circled nope's? The only way we will draw an orange-circled nope is if the test on line 8 is False, meaning x is on the left. In that case, we go to the else on line 12, and draw an orange-circled nope. So we expect to see orange-colored nope's in the left-top and the left-bottom, but not on the right. Run the code and confirm this.|Paragraph
+500122#mcq|CheckPoint
+end

@@ -1,0 +1,3 @@
+def onMousePress(x, y):
+    print('In onMousePress!', x, y)
+    Circle(200, 200, 20)

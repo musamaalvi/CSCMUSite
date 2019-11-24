@@ -1,0 +1,18 @@
+80000#8 New Shapes,Types and Nested Loops|Heading
+80001#8.1. New Shapes|MainHeading
+800011#8.1.1. Arcs and Arrow|SubHeading
+800012#8.1.2. Exercise|Exercise
+end
+80002#8.2. Types, Operators and Functions|MainHeading
+800021#8.2.1. Types|SubHeading
+800022#8.2.2. More Operators|SubHeading
+800023#8.2.3. More Maths Functions|SubHeading
+800024#8.2.4. Exercise|Exercise
+800025#8.2.5. Exercise|Exercise
+end
+80003#8.3. nested For loops|MainHeading
+800031#8.3.1. More For loops|SubHeading
+800032#8.3.2. Exercise|Exercise
+800033#8.3.3. Nested For Loops|SubHeading
+800034#8.3.4. Exercise|Exercise
+end

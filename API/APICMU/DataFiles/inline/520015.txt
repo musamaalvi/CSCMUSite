@@ -1,0 +1,8 @@
+Label('onKeyHold Demo #5', 200, 20, size=18, bold=True)
+Label('Press the right arrow to move the dot!', 200, 45, size=16)
+
+dot = Circle(200, 200, 20, fill='cyan')
+
+def onKeyHold(keys):
+    if ('right' in keys):
+        dot.centerX += 1

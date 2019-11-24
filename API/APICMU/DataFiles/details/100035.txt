@@ -1,0 +1,25 @@
+10001#Regular Polygons|MainHeading
+100011#We know how to draw a square -- we use Rect and make the width and height the same. But what about a triangle? Or a pentagon (with 5 sides) or a hexagon (with 6 sides), and so on? These are called regular polygons, and we draw these using RegularPolygon.|Paragraph
+100011#We draw a regular polygon similarly to a circle -- with an (x,y) center and a radius. We just need one more argument: the number of points (or sides, if you prefer, since there are the same number of points as sides). Here is how we draw a hexagon centered at (200, 100) with a radius of 75:|Paragraph
+130051#|InlineContainer
+100011#We can see that this fits just inside a circle:|Paragraph
+130052#|InlineContainer
+100021# Is a 4-sided regular polygon drawn the same as a square? (Hint: run the code above, and change it to use 4 sides, and see what happens.)| A 4-sided regular polygon is actually drawn as a diamond, so not exactly the same as a square.|Alert
+100351#mcq|CheckPoint
+end
+10002#Stars|MainHeading
+100011#We draw a star in the same way that we draw a regularPolygon:|Paragraph
+130053#|InlineContainer
+100011#We can see that this, too, fits just inside a circle:|Paragraph
+130054#|InlineContainer
+end
+10003#Roundness|MainHeading
+100011#You probably have a clear idea what a 5-sided star should look like -- basically, like it does on any flag. Same goes for a 6-sided star. But a 7-sided star is less obvious. Which of the following is the right shape for a 7-sided star?|Paragraph
+100011#We see that there are many different kinds of 7-sided stars, some are more circular or rounder than others. The same is true for all stars. When we create a star, we can set its roundness to any value between 0 and 100. For example:|Paragraph
+130055#|InlineContainer
+100011#Run the code. Look very carefully at the different polygons. See how as the roundness increases, the polygon looks more circular (rounder).|Paragraph
+100021#Can you specify the roundness of 5-sided or 6-sided stars? (Try it!)|Yes, you can. You can set the roundness of any star!|Alert
+100011#We would not expect you to figure out roundness based on simply looking at a shape. Fortunately, the Inspector tells you the roundness of any star that does not use the default roundness.|Paragraph
+100352#mcq|CheckPoint
+100011#That's it for regular polygons and stars!|Paragraph
+end

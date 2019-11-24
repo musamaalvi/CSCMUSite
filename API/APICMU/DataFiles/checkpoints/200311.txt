@@ -1,0 +1,5 @@
+Which of the following are not position properties?
+centerX and centerY
+left and top
+width and height
+right and bottom

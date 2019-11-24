@@ -1,0 +1,4 @@
+def drawHello(labelSize, color):
+    Label('Hello!', 200, 200, size=labelSize, bold=True, fill=color)
+
+drawHello(100, 'blue') # Try different sizes and colors!

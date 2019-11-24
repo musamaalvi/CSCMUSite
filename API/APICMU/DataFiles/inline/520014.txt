@@ -1,0 +1,8 @@
+Label('onKeyHold Demo #4', 200, 20, size=18, bold=True)
+Label('Press and hold z and x to increase the counter!', 200, 45, size=16)
+
+counter = Label(0, 200, 200, size=100)
+
+def onKeyHold(keys):
+    if (('z' in keys) and ('x' in keys)):
+        counter.value += 1

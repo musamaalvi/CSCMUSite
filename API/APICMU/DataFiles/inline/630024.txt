@@ -1,0 +1,13 @@
+Label('Reversing motion demo', 200, 20, size=20)
+Label('Now with reversing motion', 200, 45)
+Label('Use r to reverse motion', 200, 65)
+
+c = Circle(200, 200, 20, fill='navy')
+c.dx = 5
+
+def onStep():
+    c.centerX += c.dx
+
+def onKeyPress(key):
+    if (key == 'r'):
+        c.dx = -c.dx # change the sign of c.dx

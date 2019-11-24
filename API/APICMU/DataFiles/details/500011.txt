@@ -1,0 +1,28 @@
+50001#Compound Condtionals|MainHeading
+500011#Sometimes, the test in an if statement can be a simple comparison, such as (x < 10) or (isHappy == True). Other times, tests need to be more complex than that. For example, maybe an ice cream cone on the canvas should only be melting if it is both summer and sunny at the same time. Then we would need to check whether both (isSummer == True) and (isSunny == True) in the same test. In this unit, we will explore some of these so-called complex conditionals.|Paragraph
+500011#We will start with compound conditionals. These are conditionals that use the keywords and, or, or not to combine simple tests into more complex tests.|Paragraph
+end
+50002#Using and|MainHeading
+500011#We can combine two tests, and test whether both are True using and, like so:|Paragraph
+510011#|InlineContainer
+500011#Look carefully at line 8. There are two separate tests on line 8:|Paragraph
+500011#-The first test, (x > 200), is True if the mouse is on the right half of the canvas.|Paragraph
+500011#-The second test, (y > 200), is True if the mouse is on the bottom half the canvas.|Paragraph
+500011#We combined these tests using and, so the combined test is True if the mouse is on both the right half and the bottom half of the canvas. This is why we only see one green-circled 'Yes!!!' label, the one in the bottom-right part of the canvas.|Paragraph
+500511#mcq|CheckPoint
+end
+50003#Using or|MainHeading
+500011#We just saw how and tests whether both tests are True. Sometimes we just want to test if at least one test is True. In this case, we use or, like so:|Paragraph
+510012#|InlineContainer
+500011#Look again at line 8. See how we are now using or instead of and. There are now three green-circled 'Yes!!!' labels -- in the bottom-left, the bottom-right, and the top-right of the canvas.|Paragraph
+520001#Inclusive and Exclusive Or:We use the word 'or' in everyday language in two different ways:  
+500011# -Inclusive or:        Say there is a field trip today to see a Robotic Dancing competition (yes, these exist!), and the field trip is open to students in the Robotics Club or in the Dance Club. Of course, if a student is in both clubs, they are certainly invited. So here we are using 'or' to mean: 'either or both'. This is inclusive or.|PinkParagraph
+500011# -Exclusive or:        Say that today's lunch is grilled cheese or pizza. Yum! You can order whichever one you wish, but it's not ok to order both. Here we are using 'or' to mean: 'either but not both'. This is exclusive or.|PinkParagraph
+520001#Looking carefully at the last code example, is Python's or inclusive ('either or both') or exclusive ('either but not both')?|We tested if x is on the right half or if y is on the bottom half. Both of these are true if we click on the bottom-right part of the canvas, as at (300, 300). And in that case we got a green-circled 'Yes!!!'. So we see that Python's or is inclusive ('either or both').|Alert
+end
+50004#Using not|MainHeading
+500011#The last way we can form a compound conditional is with not, like so:|Paragraph
+510013#|InlineContainer
+500011#Once again, look carefully at line 8 and see how we are using not. This does the opposite of what it would have done without the not. Since the original test was only True in the bottom-right, by using not around that test it now is only False in the bottom-right. This is why the orange-circled 'nope' is now only in the bottom-right.|Paragraph
+500512#mcq|CheckPoint
+end

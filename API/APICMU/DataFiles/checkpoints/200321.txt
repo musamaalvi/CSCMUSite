@@ -1,0 +1,5 @@
+What shape does a RegularPolygon start to look like as the number of points gets large?
+a circle
+a square
+a line
+none of these

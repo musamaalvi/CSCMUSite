@@ -1,0 +1,5 @@
+In the previous example, we set c.dx to 5, and c.dy to 10. What would happen if we reversed these, and set c.dx to 10 and c.dy to 5?
+Nothing would change.
+The circle would stop moving.
+The circle would move much more horizontally than vertically.
+The circle would move even more vertically than horizontally.

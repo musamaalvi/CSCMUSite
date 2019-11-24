@@ -1,0 +1,37 @@
+60003#Vertical Motion|MainHeading
+600011#Vertical motion is basically the same as horizontal motion, only:|Paragraph
+600011#-   use dy instead of dx|Paragraph
+600011#-   use top instead of left|Paragraph
+600011#-   use bottom instead of right|Paragraph
+600011#-   use centerY instead of centerX|Paragraph
+600011#That's it. For example, here is the previous example changed to work vertically:|Paragraph
+630041#|InlineContainer
+600341#mcq|CheckPoint
+end
+60004#Diagonal Motion|MainHeading
+600011#To move on diagonals, we move horizontally and vertically. Also, we do not have to make dx the same as dy -- as these values differ, we can make shapes move along different diagonals. Let's see the previous example one more time, but with diagonal motion:|Paragraph
+630042#|InlineContainer
+600342#mcq|CheckPoint
+end
+60006#Smooth Motion|MainHeading
+600011#The larger dx is, the faster the shape moves. For example, here is a really large dx:|Paragraph
+630043#|InlineContainer
+600011#Run the code. See how the circle definitely is moving very fast but its motion is not smooth. By taking steps of 100 pixels at a time, the motion is too choppy. Instead of making dx large, we can speed up the circle by increasing app.stepsPerSecond. Let's try it:|Paragraph
+600011#Instead of making dx larger, we can speed up the circle by changing app.stepsPerSecond. This is the number of times onStep is called each second. We can speed up the app by increasing app.stepsPerSecond. Let's try it:|Paragraph
+630044#|InlineContainer
+600011#Run the code. With a dx of 1, it sure is smooth! But even with an app.stepsPerSecond of 40, it still is slow. We can try increasing app.stepsPerSecond even more, but there is a limit to how fast the app can run, no matter how large app.stepsPerSecond is. his limit depends on your computer -- a faster computer has a higher limit, but all computers have a limit.|Paragraph
+630045#|InlineContainer
+600011#Run the code. It's a bit faster, but not fast enough. And app.stepsPerSecond is 1000. One thousand! Why isn't it faster? Because there is a limit to how fast the app can run, no matter how large app.stepsPerSecond is. This limit depends on your computer -- a faster computer has a higher limit. But all computers have some limit, and it's not very high. You can safely use app.stepsPerSecond up to about 40. Even that will be too high for some computers.|Paragraph
+600011#So what should we do? The answer is to balance these two approaches. Set dx to be larger, but not too large, or else movement will not be smooth. And set app.stepsPerSecond to be larger, but not too large, or the computer will not be able to keep up. Here is an example:|Paragraph
+630046#|InlineContainer
+600343#mcq|CheckPoint
+end
+60007#More Patterns of Motion|MainHeading
+600011#These are just a few patterns of motion. Here are some others:|Paragraph
+600011#jumping and falling (projectile motion, gravity)|Paragraph
+600011#slowing and stopping (easing with friction, deceleration)|Paragraph
+600011#directional motion (moving towards a point or at a given angle)|Paragraph
+600011#circular motion|Paragraph
+600011#and on and on!|Paragraph
+600011#There sure are a lot of kinds of motion! For now, let's have fun with what we just learned.|Paragraph
+end

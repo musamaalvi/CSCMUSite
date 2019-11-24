@@ -1,0 +1,6 @@
+Label('Arithmetic Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to add more circles", 200, 45)
+
+def onMousePress(x, y):
+    Circle(x, y-20, 20)
+    Circle(x, y+20, 20)

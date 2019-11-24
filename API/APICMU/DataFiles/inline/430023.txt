@@ -1,0 +1,12 @@
+Label('app.stop() Demo', 200, 20, size=20, bold=True)
+Label('Press s to stop the app', 200, 45)
+Label('Press any other key to increase counter', 200, 70)
+
+counter = Label(0, 200, 200, size=30)
+
+def onKeyPress(key):
+    if (key == 's'):
+        app.stop()
+        Label('App stopped!', 200, 300, size=40)
+    else:
+        counter.value += 1

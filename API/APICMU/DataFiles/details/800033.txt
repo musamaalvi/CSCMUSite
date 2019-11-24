@@ -1,0 +1,17 @@
+800011#Here is an example that uses a loop to draw 3 circles:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#This draws 3 circles arranged in a column. But what if we wanted to draw 4 such columns (each with 3 circles), so that we have a grid with 3 rows and 4 columns?|Paragraph
+800011#We know how to do something repeatedly -- with a loop! So if we want to draw 4 columns, we add another loop. We'll use a new looping variable, x. See how x was 50 for all the circles in the first example? Now, we'll have x loop over the values 50, 100, 150, and 200. And each time x changes, the y loop will still draw 3 circles in a column. This is how we get 3 rows of 4 circles each. Here is the code:|Paragraph
+800021#Rect(10, 20, 30, 40)|InlineContainer
+800011#Run the code and see how it draws 3 rows of 4 circles each. Here is how it works:|Paragraph
+800011#- We have nested loops. The outer loop is this:|Paragraph
+820001#for x in range(50, 351, 100):||Alert
+800011#And the inner loop is this:|Paragraph
+820001#for y in range(100, 301, 100):|Alert
+800011#- On the first pass of the outer loop, x is set to 50.|Paragraph
+800011#- Then, we run the entire inner loop, so y will be set to 100, then 200, then 300. And so we get circles centered at (50, 100), (50, 200), and (50, 300).|Paragraph
+800011#- We just completed one pass of the outer loop, so x is now set to 150, and we start the second pass of the outer loop.|Paragraph
+800011#- Then, we run the entire inner loop again! So y will be set to 100, then 200, then 300. And so we get circles centered at (150, 100), (150, 200), and (150, 300).|Paragraph
+800011#- So we see: the outer loop runs only once, but for each pass of the outer loop, the inner loop runs entirely.|Paragraph
+800321#|CheckPoint
+end

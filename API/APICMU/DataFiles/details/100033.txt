@@ -1,0 +1,31 @@
+10001#Labels|MainHeading
+100011#We use a label to draw text, like so:|Paragraph
+130031#|InlineContainer
+100011#This draws the value 'hello' centered at (200, 200). In general, Label takes 3 arguments -- the value to draw, and the (x,y) center where to draw it.|Paragraph
+100011#For now, we will only use label values that are strings. String values are in quotes ('single-quotes' or "double-quotes"), just like the color names we've been using. Be sure to include quotes, or you will get a syntax error!|Paragraph
+end
+10002#Size|MainHeading
+100011#We can make the label larger or smaller using the optional size argument, like so:|Paragraph
+130032#|InlineContainer
+100011#Run the following code, then change the size until the 'B' just touches the top and bottom of the canvas:|Paragraph
+130033#|InlineContainer
+100331#mcq|CheckPoint
+end
+10003#Bold and Italic|MainHeading
+100011#We can also make a label bold or italic, like so:|Paragraph
+130034#|InlineContainer
+100332#mcq|CheckPoint
+end
+10004#Fonts|MainHeading
+100011#We can change the font, like so:|Paragraph
+130035#|InlineContainer
+100011#Run that code and look carefully at the canvas to see that 'arial' and 'sans' are the same font, and 'courier' and 'monospace' are also the same font. Finally, the default font does not have to be arial, but it often is.|Paragraph
+100021#Note: our system is under development, and for now it only supports 2 fonts -- arial and courier. We plan to add more fonts soon!|PinkParagraph
+end
+10005#Fills and Borders|MainHeading
+100011#We can use colors with labels, as with other shapes:|Paragraph
+130036#|InlineContainer
+end
+10006#Practice|MainHeading
+100011#That's all! Let's practice|Paragraph
+end

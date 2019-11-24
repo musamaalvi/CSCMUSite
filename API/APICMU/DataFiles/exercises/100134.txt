@@ -1,0 +1,4 @@
+# This code draws a 100x100 square centered at (200, 200).
+# Fix the code so the square is centered at (100, 100).
+# Note that there is a big hint in the code!
+Rect(50, 50, 100, 100) # Big Hint: change the left-top to (50, 50)!

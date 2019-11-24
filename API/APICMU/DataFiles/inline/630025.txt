@@ -1,0 +1,16 @@
+Label('Standing still demo', 200, 20, size=20)
+Label('Use left and right arrows to move, s to stand still', 200, 45)
+
+c = Circle(200, 200, 20, fill='navy')
+c.dx = 0 # stand still to start
+
+def onStep():
+    c.centerX += c.dx
+
+def onKeyPress(key):
+    if (key == 's'):
+        c.dx = 0     # set dx to 0 (stand still)
+    elif (key == 'right'):
+        c.dx = 5     # make dx positive (move right)
+    elif (key == 'left'):
+        c.dx = -5    # make dx negative (move left)

@@ -1,0 +1,15 @@
+Label('Line-Specific Properties Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to change", 200, 45)
+Label("x1,y1 and dashes of the blue line", 200, 65)
+Label("x2,y2 and lineWidth of the red line", 200, 85)
+
+line1 = Line(200, 200, 400, 400, fill='blue', dashes=False)
+line2 = Line(0, 400, 200, 200, fill='red', lineWidth=2)
+
+def onMousePress(mouseX, mouseY):
+    line1.x1 = mouseX
+    line1.y1 = mouseY
+    line2.x2 = mouseX
+    line2.y2 = mouseY
+    line2.lineWidth += 2
+    line1.dashes = True

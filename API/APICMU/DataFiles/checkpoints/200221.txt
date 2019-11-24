@@ -1,0 +1,5 @@
+Which of the following is TRUE?
+You should use the Canvas, not the Console, to display information that is for programmers and not users.
+In general, you should leave print statements in your code even after you no longer need them.
+It's ok to use the Console to display messages to the user.
+Using print can help you find errors in your code.
