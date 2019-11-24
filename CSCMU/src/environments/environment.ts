@@ -6,7 +6,7 @@ export const environment = {
   production: false
 };
 
-export const apiURL = "http://192.168.2.104:88/PortalAPI";
+export const apiURL = "https://localhost:44310";
 
 /*
  * For easier debugging in development mode, you can import the following file
