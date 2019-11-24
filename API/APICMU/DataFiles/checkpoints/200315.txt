@@ -1,0 +1,5 @@
+In the previous example, what happens if we change this line: r1.centerX += 10   to this:    r1.centerX -= 10
+The gold rectangle would move up.
+The gold rectangle would move to the left.
+The gold rectangle would move to the right.
+The gold rectangle would move down.

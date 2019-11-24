@@ -1,0 +1,16 @@
+Label('Custom Shape Property Demo', 200, 20, size=20, bold=True)
+Label('Press the mouse to add energy to the player', 200, 45)
+Label('The player turns yellow when the energy is improved', 200, 65)
+Label('The player turns green when the energy is full', 200, 85)
+
+player = Circle(200, 200, 50, fill='red')
+player.energy = 0
+
+def onMousePress(x, y):
+    player.energy += 1
+    if (player.energy >= 6):
+        player.fill = 'green'
+    elif (player.energy >= 3):
+        player.fill = 'yellow'
+    else:
+        player.fill = 'red'

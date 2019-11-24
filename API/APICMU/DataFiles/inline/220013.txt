@@ -1,0 +1,3 @@
+# What happens when you run this code and click the mouse?
+def mouseWasPressed(x, y):
+    Circle(x, y, 20)

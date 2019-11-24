@@ -1,0 +1,5 @@
+# Fix the code so that the orange rectangle is in front of
+# (or on top of) the lime rectangle.  Hint: do not change the colors
+# of the rectangles!  Instead, change the order in which they are drawn.
+Rect(0, 0, 100, 100, fill='orange')
+Rect(50, 50, 100, 100, fill='lime')

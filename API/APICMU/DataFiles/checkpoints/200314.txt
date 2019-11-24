@@ -1,0 +1,5 @@
+Which rectangle turns counterclockwise when you click the mouse in the previous example?
+the blue one (r2)
+the red one (r1)
+the green one (r3)
+none of them

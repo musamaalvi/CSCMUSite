@@ -1,0 +1,10 @@
+Label('Bounded motion demo', 200, 20, size=20)
+Label('The circle stops at the right edge', 200, 40)
+
+c = Circle(200, 200, 20, fill='navy')
+c.dx = 5
+
+def onStep():
+    c.centerX += c.dx
+    if (c.right > 400):
+        c.right = 400

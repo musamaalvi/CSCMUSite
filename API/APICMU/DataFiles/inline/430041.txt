@@ -1,0 +1,13 @@
+Label('contains Demo', 200, 20, size=20, bold=True)
+Label('Move the mouse inside and outside the star', 200, 45)
+
+s = Star(200, 200, 140, 5, fill=None, borderWidth=15, border='lightGrey')
+L = Label('Move the mouse', 200, 350, size=30)
+
+def onMouseMove(mouseX, mouseY):
+    if (s.contains(mouseX, mouseY) == True):
+        s.border = 'gold'
+        L.value = 'Contains!'
+    else:
+        s.border = 'lightGrey'
+        L.value = 'Does not contain...'

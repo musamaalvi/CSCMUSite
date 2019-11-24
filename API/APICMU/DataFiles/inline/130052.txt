@@ -1,0 +1,2 @@
+Circle(200, 100, 75, fill='cyan')
+RegularPolygon(200, 100, 75, 6)

@@ -1,0 +1,5 @@
+What happens in the previous example if we used -= instead of +=? (Try it first!)
+The star moves horizontally across the canvas.
+Nothing changes.
+The star rotates counter-clockwise.
+The code will not run.

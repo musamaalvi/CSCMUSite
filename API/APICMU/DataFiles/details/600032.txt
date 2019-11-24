@@ -1,0 +1,43 @@
+600011#We saw that a common use of onStep is to animate a shape, so it appears to be moving. We will now explore more patterns of motion. We will start with horizontal motion, where only the x value changes.|Paragraph
+60001#Straight Motion|MainHeading
+600011#As we have already seen in some exercises, to move a shape horizontally, we add to its x property. If we do this in onStep, then the shape will move across the canvas, like so:|Paragraph
+630021#|InlineContainer
+600011#Run the code and see the circle move to the right. We can add a second circle moving to the left by subtracting instead of adding, like so:|Paragraph
+630022#|InlineContainer
+end
+60002#Using dx|MainHeading
+600011#We will use dx to mean the amount of change in the variable x. We can use dx to improve the previous example, like so:|Paragraph
+630023#|InlineContainer
+600011#Run the code and see how it looks the same as the previous example. As we will soon see, using dx makes the code clearer and makes it easier for us to do certain kinds of motion, such as bouncing.|Paragraph
+620011#Look closely at the last line. See how we add dx even when we move left, because dx is negative. So we see: you always add dx. To move left, you make dx negative, but still add it.|PinkParagraph
+600321#mcq|CheckPoint
+end
+60001#Reversing Motion|MainHeading
+600011#To reverse motion, we change the sign of dx. If it is positive, make it negative. If it is negative, make it positive. Here is an example:|Paragraph
+630024#|InlineContainer
+600011#Run the code, press 'r' a few times, see the circle reverse motion. Look closely at the last line of code. There, we use c.dx = -c.dx to change the sign of c.dx. If it was positive, it becomes negative. If it was negative, it becomes positive.|Paragraph
+end
+60002#Standing Still|MainHeading
+600011#One way to make a shape stop moving is to set dx to 0. We will still add it on each step, but we are adding 0, which has no effect, like so:|Paragraph
+630025#|InlineContainer
+600322#mcq|CheckPoint
+end
+60003#Bounded Motion|MainHeading
+600011#What happens when a shape reaches the edge of the canvas? One answer is to bound the motion. That is, to simply stop moving when you reach the edge. Here is an example:|Paragraph
+630026#|InlineContainer
+600011#Run the code, see how the circle moves to the right, and then stops (so its motion is bounded) when it gets to the right edge.|Paragraph
+600323#mcq|CheckPoint
+end
+60004#Wraparound Motion|MainHeading
+600011#In the example above, when the circle hit the right edge, we bounded the motion so it just stayed there. Instead, we could have the circle wraparound so it reappears on the left edge. We'll also make the circle bigger here to make the effect more obvious, like so:|Paragraph
+630027#|InlineContainer
+600011#Run the code, and see how the circle seems to exit the right edge and reappear on the left edge.|Paragraph
+600011#We actually have a choice here about how we manage wraparound. In the example above, the entire circle is always visible. We can allow the circle to go partly off the canvas, and only wraparound once it is entirely off the canvas, like so:|Paragraph
+630028#|InlineContainer
+end
+60005#Bouncing Motion|MainHeading
+600011#When a shape reaches the edge of the canvas, we can bound it (stand still), wraparound, or bounce back. To bounce, we reverse directions by changing the sign of dx, like so:|Paragraph
+630029#|InlineContainer
+600011#Run the code and watch the circle bounce. Be sure to understand how we use c.dx = -c.dx to change the sign of c.dx, and that in turn makes the circle bounce in the other direction.|Paragraph
+600324#mcq|CheckPoint
+end

@@ -1,0 +1,5 @@
+In the previous example, when is the label italic?
+Only when the value is even (0, 2, 4, ...).
+None of these
+Never
+Only when the value is 0.

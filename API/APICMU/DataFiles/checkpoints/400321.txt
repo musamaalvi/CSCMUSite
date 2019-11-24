@@ -1,0 +1,5 @@
+What is the main reason that addPoint is a method and not a function?
+There is no reason for this.
+addPoint will run faster as a method instead of a function.
+Calling addPoint is easier if it is a method instead of a function.
+addPoint only makes sense for polygons, and not other shapes, and unlike functions, methods can be restricted to just some shapes and not others.

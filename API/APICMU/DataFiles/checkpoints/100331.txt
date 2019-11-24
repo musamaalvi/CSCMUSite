@@ -1,0 +1,5 @@
+In the previous code, about what size made the 'B' just touch the top and bottom of the canvas?
+560
+650
+400
+500

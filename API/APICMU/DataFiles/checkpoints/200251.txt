@@ -1,0 +1,5 @@
+How can we be sure that there are 2 circles after we click the mouse in the previous example?
+Both a red and a blue circle are clearly visible.
+The Inspector shows one point with two colors, red and blue, even though we can only see blue.
+The circle is purple, because it combines blue and red.
+We cannot. There is no way to tell.

@@ -1,0 +1,5 @@
+In the previous broken example, what error message does Python print when it tries and fails to check if 'z' is being held? (Try it first!)
+'Error: Lists cannot equal strings.'
+No error message is printed.
+'Error: You must use the in operator here.'
+'Error on line 8.'

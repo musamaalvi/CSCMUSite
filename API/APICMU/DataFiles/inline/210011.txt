@@ -1,0 +1,4 @@
+def drawBigSquare(color):
+    Rect(50, 50, 300, 300, fill=color, border='black')
+
+drawBigSquare('orange')

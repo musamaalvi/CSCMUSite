@@ -1,0 +1,28 @@
+20001#The issue|MainHeading
+200011#Say we want to draw a red circle, and when you press the mouse anywhere, the circle changes from red to blue. We might try to do that like this:|Paragraph
+220051#|InlineContainer
+200011#Run the code and press the mouse once. It looks like it works, but it does not. Look closely using the Inspector. See how there are two circles, a blue one over a red one. This is not what we wanted.|Paragraph
+200011#What we want is to use only one circle. And for that, we need a way in our onMousePress function to refer to that circle. And for that, we need a global variable.|Paragraph
+200251#mcq|CheckPoint
+end
+20002#An example|MainHeading
+200011#Here is a working example:|Paragraph
+220052#|InlineContainer
+200011#Run the code and press the mouse. It looks like it works. Now use the Inspector and confirm that there is only one circle. So: yes, it works!|Paragraph
+200011#What's happening here? Look at line 1, and you will see that instead of just calling Circle, we have c = Circle(...). When we create a shape, we can store it in a variable. Here, we used the variable c. After that, we can use c to get and set properties of that circle. For example, c.fill is the fill color of the circle. So the line c.fill = 'blue' sets the fill color of the circle to blue.|Paragraph
+end
+20003#Some more examples|MainHeading
+200011#Now, instead of changing the color of the circle, let's change its position to where we press the mouse. We do that like so:|Paragraph
+220053#|InlineContainer
+200011#Run the code and press the mouse a few times. See how the circle moves to where you press the mouse. Now, look at lines 4 and 5. See how we use c.centerX and c.centerY to set the x and y locations of the center of the circle.|Paragraph
+200252#mcq|CheckPoint
+end
+20003#Global variable|MainHeading
+200011#Let's take a closer look at this example:|Paragraph
+200012#Rect(10, 20, 30, 40),c = Circle(200, 200, 20, fill='red')def onMousePress(x, y):    c.fill = 'blue'|Box
+200011#In the previous unit, we learned about function parameters, which are a special kind of variable. Since each function gets its own parameters, we say that those are local variables.|Paragraph
+200011#In the code above, the variable c is not a function parameter. It is defined outside of any function. We call a variable defined outside of any function a global variable. So c is a global variable.|Paragraph
+200011#Unlike local variables, global variables can be used anywhere, inside or outside any function. That is why we can use c inside onMousePress.|Paragraph
+200012#Use globals sparingly!   -----Overusing global variables quickly leads to unclear, unmanageable, and buggy code. Globals should not be overused, but they are powerful and can solve some problems. So: use globals sparingly. For now, we will only use globals to only store shapes that we need to change when events occur.|PinkParagraph
+200253#mcq|CheckPoint
+end

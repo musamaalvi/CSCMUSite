@@ -1,0 +1,7 @@
+10001#Polygons|MainHeading
+100011#Last shape! We draw a polygon similarly to a line, by listing the (x,y) points in order, like so:|Paragraph
+130071#|InlineContainer
+100011#Run the code. Do you see how the polygon connects the points (100, 100), (100, 300), and (150, 300)? See how these values are included in the call to Polygon. Also, note that the polygon clearly is not regular (where all the sides have the same length), so we could not have drawn it using regularPolygon.|Paragraph
+100371#exercise|CheckPoint
+100011#That's it! We've covered all the shapes for now! Time for a bit more practice.|Paragraph
+end

@@ -1,0 +1,24 @@
+40001#Using 'else'|MainHeading
+400011#Let's start with this example for review:|Paragraph
+410011#|InlineContainer
+400011#Run the code and see how you get cyan circles on the left, and gold circles on the right. Look closely at line 8 (the else statement). We use else after an if to run code if the previous test was False. In this example, since the previous if tested if the click was on the left, the else tests if the click was on the right.|Paragraph
+420001#Else and Otherwise: In coding, using else is similar to how we use "otherwise" in everyday language. You might say: "if it's sunny, wear sunglasses, otherwise bring an umbrella". That could translate into Python as something like this:|PinkParagraph
+400012#if (isSunny == True):    wear('sunglasses')   else:    bring('umbrella')|Box
+end
+40002#Using "elif"|MainHeading
+400011#Right after we use if, we can use elif to add another test that will only be tested if the first test was False. For example:|Paragraph
+410012#|InlineContainer
+400011#Run the code and see how you get cyan circles on the left, black rings in the middle, and gold circles on the right. Look closely at line 9 (the elif statement). This test only happens if the first test is False. So we can only get black rings if we do not get cyan circles.|Paragraph
+400111#mcq|CheckPoint
+end
+40003#Using more than one "elif"|MainHeading
+400031#We can use as many elif's as we need. Each elif is only tested if none of the previous tests was True. For example:|Paragraph
+410013#|InlineContainer
+end
+40003#Another example|MainHeading
+400031#Let's look at one more example:|Paragraph
+410014#|InlineContainer
+400011#Run the code, and click in each of the four squares and see what happens.|Paragraph
+420001#Why do we only get black rings in the top-right and not in the top-left?|The if tests if the click is on the left, and we can only get to the elif if that test was False, so only if the click was on the right. Then the elif tests if the click is on the top, so that test only passes if the click is both on the right and on the top.|Alert
+400112#mcq|CheckPoint
+end

@@ -1,0 +1,5 @@
+In the previous example, where would we see green-circled 'Yes!!!' labels if we use (y < 200) instead of (y > 200)? (Try it first!)
+Only in the top-right.
+Only in the bottom-right.
+In both the top-right and the bottom-right.
+Only in the top-left.

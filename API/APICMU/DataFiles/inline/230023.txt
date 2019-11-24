@@ -1,0 +1,11 @@
+Label('Star-Specific Properties Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to change the radius", 200, 45)
+Label("and the number of points", 200, 65)
+Label("and the roundness", 200, 85)
+
+s = Star(200, 200, 50, 4, roundness=0, fill='green', opacity=75)
+
+def onMousePress(x, y):
+    s.radius += 20
+    s.points += 1
+    s.roundness += 10

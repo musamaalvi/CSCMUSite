@@ -1,0 +1,12 @@
+Label('Straight motion demo using dx', 200, 20, size=20)
+Label('Now using the dx property', 200, 45)
+
+c1 = Circle(50, 150, 20, fill='navy')
+c1.dx = 5
+
+c2 = Circle(350, 250, 20, fill='gold')
+c2.dx = -5
+
+def onStep():
+    c1.centerX += c1.dx
+    c2.centerX += c2.dx

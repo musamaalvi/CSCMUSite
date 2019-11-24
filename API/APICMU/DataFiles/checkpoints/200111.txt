@@ -1,0 +1,5 @@
+In the previous code, what is the function name?
+def
+labelSize
+Label
+drawHello

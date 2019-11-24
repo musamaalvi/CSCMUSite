@@ -1,0 +1,5 @@
+def drawCircledNumber(number, color):
+    Circle(200, 200, 150, fill=color)
+    Label(number, 200, 200, size=200)
+
+drawCircledNumber(99, 'yellow')

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoWpxmsCFXUqOQZfSEU5vxQAAAAACAAAAAAADZgAAwAAAABAAAABaKEFlC6NfdGJAalNsiAQQAAAAAASAAACgAAAAEAAAAG6fyVkY+f/tLywgV2NSLF0YAAAAGwRLAelLHb4Oo+mEgwG+CRGmxSS0wOfxFAAAAFKKq91Ve8WvlHH/zeyE5Twxs5+Y</EncryptedPassword>
+    <_PublishTargetUrl>ftp://focus.org.pk/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="APICMU.deps.json">
+      <publishTime>10/04/2019 23:54:48</publishTime>
+    </File>
+    <File Include="APICMU.dll">
+      <publishTime>10/04/2019 23:54:27</publishTime>
+    </File>
+    <File Include="APICMU.pdb">
+      <publishTime>10/04/2019 23:54:27</publishTime>
+    </File>
+    <File Include="APICMU.runtimeconfig.json">
+      <publishTime>10/04/2019 23:54:48</publishTime>
+    </File>
+    <File Include="appsettings.Development.json">
+      <publishTime>04/20/2019 19:33:37</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>04/20/2019 19:33:37</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/04/2019 23:54:49</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+Label("Using 'else' demo #2", 200, 20, size=20, bold=True)
+Label('Cyan on left, gold on right', 200, 40, size=16)
+Line(200, 50, 200, 400, fill='lightGray')
+
+def onMousePress(x, y):
+    if (x < 200):
+        Circle(x, y, 30, fill='cyan')
+    else:
+        Circle(x, y, 30, fill='gold')

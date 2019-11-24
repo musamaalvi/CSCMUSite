@@ -1,0 +1,10 @@
+Label("Using 'elif' demo #3", 200, 20, size=20, bold=True)
+Label('Click in each of the 4 squares', 200, 40, size=16)
+Line(200, 50, 200, 400, fill='lightGray')
+Line(0, 200, 400, 200, fill='lightGray')
+
+def onMousePress(x, y):
+    if (x < 200):
+        Circle(x, y, 30, fill='cyan')
+    elif (y < 200):
+        Circle(x, y, 30, fill=None, border='black')

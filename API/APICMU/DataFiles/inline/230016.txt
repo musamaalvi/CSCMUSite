@@ -1,0 +1,14 @@
+Label('Fill and Border Properties Demo', 200, 20, size=20, bold=True)
+Label("Press the mouse to change the fill and border properties", 200, 45)
+Label("of the rectangle", 200, 65)
+
+Oval(200, 200, 300, 100)
+r = Rect(100, 100, 200, 200, fill='gold', border='navy', borderWidth=5,
+         opacity=100, dashes=True)
+
+def onMousePress(x, y):
+    r.fill = 'navy'
+    r.border = 'gold'
+    r.borderWidth = 10
+    r.dashes = False
+    r.opacity = 50

@@ -1,0 +1,22 @@
+60001#A first example|MainHeading
+600011#Sometimes we want our app to change even when the user is not using the mouse or keyboard. We do this using onStep, like so:|Paragraph
+630121#|InlineContainer
+600011#Run the code and watch the counter increase. See how the code defines onStep. Note that onStep is a built-in CMU Graphics function, just like onMousePress and onKeyHold. Unlike those functions, which are called when the user does something, onStep is called repeatedly as time passes, without the user doing anything! So in the above code, onStep is called over and over again, and each time, it adds 1 to the counter.|Paragraph
+end
+60002#Animation|MainHeading
+600011#A common use of onStep is to animate a shape, so it appears to be moving. Here is an example of a rotating shape:|Paragraph
+630012#|InlineContainer
+600311#mcq|CheckPoint
+end
+60003#app.stepsPerSecond|MainHeading
+600011#By default, onStep is called 30 times per second. We can make this faster or slower by changing app.stepsPerSecond. For example:|Paragraph
+630013#|InlineContainer
+600011#Run the code, press s, n, and f a few times. Then, look at onKeyPress in the code. See how it sets app.stepsPerSecond to speed up or slow down the app. Note that star.rotateAngle is still only increased by 1 on each call to onStep. Here, we are changing the speed by adjusting how often onStep is called.|Paragraph
+end
+60004#Another example (gears)|MainHeading
+600011#For fun, here is one more example of onStep:|Paragraph
+630014#|InlineContainer
+600011#Run the code and make the gears spin at different speeds. See how the code multiplies and divides app.stepsPerSecond to speed up or slow down the gears.|Paragraph
+600312#mcq|CheckPoint
+600012#When autograding apps that use onStep, we may need to call onStep many times. To save space, some test cases will use onSteps. This function calls onStep several times. For example, onSteps(10) is the same as 10 consecutive calls to onStep.|PinkParagraph
+end

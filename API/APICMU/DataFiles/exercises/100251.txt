@@ -1,0 +1,9 @@
+# Edit the opacity of the 4 blue rectangles so the
+# drawing matches the solution. Note that each opacity
+# is a multiple of 25, and no two blue rectangles have
+# the same opacity.
+Rect( 20, 70, 360, 30, fill='yellow')
+Rect( 40, 50, 70, 70, fill='blue')
+Rect(125, 50, 70, 70, fill='blue')
+Rect(210, 50, 70, 70, fill='blue')
+Rect(295, 50, 70, 70, fill='blue')

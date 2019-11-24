@@ -1,0 +1,5 @@
+Which rectangle has a right-bottom corner at (100, 150)?
+Rect(70, 90, 80, 10)
+Rect(70, 90, 100, 150)
+Rect(70, 90, 30, 60)
+Rect(70, 90, 150, 100)

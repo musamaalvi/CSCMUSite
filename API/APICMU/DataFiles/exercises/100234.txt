@@ -1,0 +1,5 @@
+# Edit only the start values of these 4 rectangles so the drawing matches the solution.
+Rect( 40, 50, 70, 70, fill=gradient('red', 'blue', start='left'))
+Rect(125, 50, 70, 70, fill=gradient('red', 'blue', start='left'))
+Rect(210, 50, 70, 70, fill=gradient('red', 'blue', start='left'))
+Rect(295, 50, 70, 70, fill=gradient('red', 'blue', start='left'))

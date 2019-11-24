@@ -1,0 +1,2 @@
+def onMousePress(x, y):
+    Circle(x, y, 20, opacity=x/4)

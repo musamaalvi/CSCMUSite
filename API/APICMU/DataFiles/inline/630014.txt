@@ -1,0 +1,22 @@
+Label('Gears!', 50, 330, size=20, bold=True)
+Label('Press up and down', 55, 360)
+
+app.background = 'lightCyan'
+app.stepsPerSecond = 10
+
+star1 = Star(70, 95, 145, 6, fill='cornflowerBlue')
+star2 = Star(225, 290, 150, 8, fill='mediumOrchid')
+star3 = Star(260, 45, 90, 3, fill='teal', roundness=30)
+star4 = Star(370, 145, 100, 4, fill='darkGreen')
+
+def onStep():
+    star1.rotateAngle += 4
+    star2.rotateAngle -= 3
+    star3.rotateAngle -= 8
+    star4.rotateAngle += 6
+
+def onKeyPress(key):
+    if (key == 'up'):
+        app.stepsPerSecond *= 2
+    elif (key == 'down'):
+        app.stepsPerSecond /= 2

@@ -1,0 +1,27 @@
+40001#contains|MainHeading
+400011#The methods we have seen so far change something -- such as adding a point to a polygon, moving a shape to the front or back, or stopping the app. Now, let's look at a method that does not change anything, but rather computes something.|Paragraph
+400011#Calling the contains method on a shape does not change our drawing. Instead, it takes two values, x and y, and simply tells us whether or not the shape contains the point (x,y). The method doesn't do anything about it, it only tells us if it is True or False. How does the method tell us this? By returning a True/False (boolean) value. We can then test that result using if, so we can take actions only if a point is (or is not) inside a shape. Here is an example:|Paragraph
+430041#|InlineContainer
+400011#Run the code, press the mouse inside and outside the star a few times, and see how the app responds. Now, what is happening? The key line is this:|Paragraph
+400021#if (s.contains(mouseX, mouseY) == True):|Box
+400011#This calls the contains method, which returns True if the point (mouseX, mouseY) is inside the star s. We test if the result of the call == True, and if so, then we know the mouse was inside the star. Very handy!|Paragraph
+end
+40002#hits|MainHeading
+400011#The hits method is very similar to the contains method. Run this code, compare how it works to the previous example, and see if you can tell the difference:|Paragraph
+430042#|InlineContainer
+400011#The contains method returns True if the point is inside the shape at all, but the hits method returns True if the point is inside a part of the shape that is drawn.|Paragraph
+400341#mcq|CheckPoint
+end
+40003#hitsShape|MainHeading
+400011#In addition to testing if a shape hits a point, we can also test if a shape hits another shape. That is, if the two shapes touch at all. We use the hitsShape method for this, like so:|Paragraph
+400011#In addition to testing if a shape hits a point, we can also test if a shape hits another shape. That is, if the two shapes touch at all. We use the hitsShape method for this, like so:|Paragraph
+430043#|InlineContainer
+400011#Run the code, move the mouse to move the dot both inside and outside the star, and see how the app behaves. Here is the key line in the code:|Paragraph
+420001# if (dot.hitsShape(s) == True):|Box
+400342#mcq|CheckPoint
+end
+40004#containShape|MainHeading
+400011#The containsShape method works just like hitsShape, only it requires that the second shape be fully contained within the first shape. For example:|Paragraph
+430044#|InlineContainer
+420001#Is it possible for s.hitsShape(r) to be False but s.containsShape(r) to be True? (Think about this!)|Yes! Run this example to see the relationship between hitsShape and containsShape:|Alert
+end

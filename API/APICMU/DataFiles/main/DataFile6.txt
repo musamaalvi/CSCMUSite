@@ -1,0 +1,16 @@
+60000#6 Groups, Step Events and Motion|Heading
+60001#6.1. Groups|MainHeading
+600011#6.1.1. Groups|SubHeading
+600012#6.1.2. Groups Properties|SubHeading
+900613#6.1.3. Exercise|Exercise
+end
+60002#6.2. Group Methods|MainHeading
+600021#6.2.1. Group Methods|SubHeading
+900622#6.2.2. Exercise|Exercise
+end
+60003#6.3. Step Events and Motion|MainHeading
+600031#6.3.1. Step Events|SubHeading
+600032#6.3.2. Horizontal Motion|SubHeading
+600034#6.3.3. Vertical and Diagonal Motion|SubHeading
+900635#6.3.4. Exercise|Exercise
+end

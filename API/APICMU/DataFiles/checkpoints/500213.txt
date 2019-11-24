@@ -1,0 +1,5 @@
+In the previous example, how do we make the dot to respond appropriately to the down arrow instead of the right arrow? (Try it first!)
+We cannot do that.
+Change 'right' to 'down' on line 7.
+Use centerY instead of centerX on line 8.
+Change 'right' to 'down' on line 7, and use centerY instead of centerX on line 8.

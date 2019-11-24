@@ -1,0 +1,33 @@
+200011#Some shapes have some additional properties just for them. These are shape-specific properties. Let's discuss each of these.|Paragraph
+20001#Circle Properties|MainHeading
+200011#The one circle-specific property is radius. For example:|Paragraph
+230021#|InlineContainer
+end
+20002#RegularPolygon Properties|MainHeading
+200011#The regularPolygon-specific properties are: radius and points. For example:|Paragraph
+230022#|InlineContainer
+200321#mcq|CheckPoint
+end
+20003#Star Properties|MainHeading
+200011#The star-specific properties are: radius, points, and roundness. For example:|Paragraph
+230023#|InlineContainer
+200322#mcq|CheckPoint
+200323#mcq|CheckPoint
+end
+20004#Line Properties|MainHeading
+200011#The line-specific properties are: x1, y1, x2, y2, dashes, and lineWidth. For example:|Paragraph
+230024#|InlineContainer
+end
+20005#Label Properties|MainHeading
+200011#The label-specific properties are: value, font, size, bold, and italic. For example:|Paragraph
+230025#|InlineContainer
+200324#mcq|CheckPoint
+end
+20006#App Properties|MainHeading
+200011#Until now, to set the background of an app to some color, we would draw a 400x400 rectangle in the desired color. That works, but there is a better way. Instead, we can just set the app.background property, like so:|Paragraph
+230026#|InlineContainer
+200011#You can also change this property at any time. For example:|Paragraph
+230027#|InlineContainer
+200021# Is the app a shape?| No, technically the app is not a shape. One use of the app is to manage the canvas (such as changing its background color). We will learn about other uses of the app later.|Alert
+200325#mcq|CheckPoint
+end

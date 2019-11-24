@@ -1,0 +1,5 @@
+What happens when you run the code above?
+The code asks the user to provide the missing color argument, and uses that color.
+The code runs fine and draws a 99 but no circle.
+Nothing happens.
+An error is shown in the Console.

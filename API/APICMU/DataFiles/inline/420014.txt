@@ -1,0 +1,10 @@
+Label('Using arrow keys demo', 200, 20, size=20, bold=True)
+Label('Press the up and down arrow keys to move the circle', 200, 45, size=16)
+
+c = Circle(200, 200, 50, fill='plum')
+
+def onKeyPress(key):
+    if (key == 'up'):
+        c.centerY -= 10
+    elif (key == 'down'):
+        c.centerY += 10

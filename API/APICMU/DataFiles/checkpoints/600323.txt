@@ -1,0 +1,5 @@
+In the previous example, what would happen if we changed c.dx = 5 to instead be c.dx = -5? (Try it first!)
+The circle would move left, and stop at the left edge of the screen.
+The circle would move left, and continue off the screen, because we are only checking if it moves off the right edge.
+The code would not run at all.
+Nothing would change.

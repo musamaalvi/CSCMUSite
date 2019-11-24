@@ -1,0 +1,5 @@
+In the previous example, say that on line 5 instead of setting c.centerY to y, we set it to 0. What happens then when we click the mouse? Hint: try it out first!
+The circle moves horizontally to the x position of the click, but vertically it stays at the top of the canvas.
+The code no longer runs at all.
+Nothing changes. The circle moves to the position of the mouse click.
+The circle always stays in the center of the canvas.

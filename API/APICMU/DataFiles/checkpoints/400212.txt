@@ -1,0 +1,5 @@
+In the previous example, what does it mean to toggle the circle's color?
+To change the color to a darker color.
+To change the color to a random color.
+To change the color back and forth between two colors.
+To change the color to black.

@@ -1,0 +1,12 @@
+Label('Smooth motion demo #3', 200, 20, size=20)
+Label('Smooth but still not fast enough', 200, 45)
+
+app.stepsPerSecond = 1000
+
+c = Circle(200, 200, 20, fill='blue')
+c.dx = 1
+
+def onStep():
+    c.centerX += c.dx
+    if ((c.left < 0) or (c.right > 400)):
+        c.dx = -c.dx

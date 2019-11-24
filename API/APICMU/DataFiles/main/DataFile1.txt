@@ -1,25 +1,27 @@
-0000#1 Creating Drawing|Heading
+880000#1 Creating Drawing|Heading
 10001#1.1. Basics|MainHeading
 100011#1.1.1. Getting Started|SubHeading
 100013#1.1.2. Position and Size|SubHeading
-90000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+900011#1.1.3. Exercise ,90001, Draw Two Rectangles|Exercise
 end
-20001#1.2. Colors|MainHeading
-100012#1.2.1. Fills and Borders|SubHeading
-200011#2.1.1. Getting Started|SubHeading
-200012#2.1.2. Position and Size|SubHeading
-200013#2.1.3. Random|SubHeading
-90000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+10002#1.2. Colors|MainHeading
+100021#1.2.1. Fills and Borders|SubHeading
+900121#1.2.2. Exercise|Exercise
+100023#1.2.3. Colors and Gradients|SubHeading
+900124#1.2.4. Exercise|Exercise
+100025#1.2.5. Opacity|SubHeading
 end
-20001#2.1. Basics|MainHeading
-200011#2.1.1. Getting Started|SubHeading
-200012#2.1.2. Position and Size|SubHeading
-200013#2.1.3. Random|SubHeading
-90000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
-end
-20001#2.1. Basics|MainHeading
-200011#2.1.1. Getting Started|SubHeading
-200012#2.1.2. Position and Size|SubHeading
-200013#2.1.3. Random|SubHeading
-90000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+10003#1.3. Shapes|MainHeading
+100031#1.3.1. Rectangles,Ovals,Circles and Lines|SubHeading
+900131#1.3.2. Exercise|Exercise
+100033#1.3.3. Labels|SubHeading
+900132#1.3.4. Exercise|Exercise
+100035#1.3.5. Regular Polygons and Stars|SubHeading
+900133#1.3.6. Exercise|Exercise
+100037#1.3.7. Polygons|SubHeading
+900134#1.3.8. Exercise|Exercise
+900135#1.4. Unit 1 Exercise|Exercise|SubHeading
+900136#1.5. Unit 1 Challenge Exercise|Exercise
+900137#1.6. Unit 1 Creative Tasks|SubHeading
+900138#1.7. Unit 1 Review|Exercise
 end

@@ -1,0 +1,5 @@
+What happens in the previous example if we used if instead of elif? (Try it first!)
+Nothing changes.
+Both the cyan circles and the gold circles are drawn with black rings.
+Only black rings are drawn.
+The cyan circles are drawn with a black ring.

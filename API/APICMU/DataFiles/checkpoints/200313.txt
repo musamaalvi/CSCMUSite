@@ -1,0 +1,5 @@
+Which of the following are not fill and border properties?
+borderWidth
+gradient and rgb
+opacity and dashes
+fill and border

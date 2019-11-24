@@ -1,0 +1,5 @@
+In the previous example, we set c.dx to 0 to make the circle c stand still. What is another way we can write this code so that c stands still sometimes and moves other times?
+Do not use onKeyPress at all.
+Do not call onStep when the circle should stand still.
+Use c.standingStill, which we set to True when we want c to stand still, and then in onStep we only move c if c.standingStill is False.
+There is no other way to do this.

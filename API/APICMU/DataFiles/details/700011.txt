@@ -1,0 +1,35 @@
+700011#Before we learn about loops, we must first learn about local variables. We'll start by reviewing what we have already learned about variables.|Paragraph
+70001#The notion of a variable|MainHeading
+700011#As we have seen, a variable is basically a name we can use to refer to some value. We can set a variable, or assign a value to it, using =, like so:|Paragraph
+720001#  age = 42||Alert
+700011#Then we can use the variable in the same way we would use any value. For example, like so:|Paragraph
+720001# if (age >= 18):        Label('You can vote!', 200, 200)||Alert
+end
+70002#Global variables|MainHeading
+700011#When variables are defined in top-level code, outside of any functions, we call them global variables, or just globals. Globals can be used anywhere, in top-level code or in any function, but should be used sparingly. For now, we will only use globals to store shapes that we need to change when events occur.|Paragraph
+700111#|CheckPoint
+end
+70003#Function parameters|MainHeading
+700011#We have also learned about function parameters. When we define a function, such as onMousePress(x, y), we provide the function name followed by its parameters (x and y here). Function parameters are names for the values that are provided to the function when it is called. Function parameters are local variables (sometimes just called locals). Global variables can be used anywhere, but local variables can only be used in the function where they are defined.|Paragraph
+700112#|CheckPoint
+end
+70004#Helper Variables|MainHeading
+700011#Since function parameters are local variables, we have already been using local variables. We can also use local variables as helper variables.|Paragraph
+700011#A helper variable is a variable that you add to your code to make it clearer and easier to write. For example:|Paragraph
+700021#Rect(10, 20, 30, 40)|InlineContainer
+700011#Run the code and confirm that it works. Now, look at the variable color. This is a local variable. We set color to 'gold' or 'navy', as appropriate, then use color to set the fill of the new circle we draw.|Paragraph
+700011#The main advantage is that we only had to include one call to Circle to draw the new circle. This is clearer if we draw something more complicated, like so:|Paragraph
+700021#Rect(10, 20, 30, 40)|InlineContainer
+700011#Run the code and confirm that it works. See how we only draw the more complicated circled label once in the code, but because it uses the local variable color, it is gold on the left and navy on the right.|Paragraph
+700113#|CheckPoint
+700114#|CheckPoint
+700115#|CheckPoint
+700116#|CheckPoint
+end
+70005#Locals vs Globals|MainHeading
+700011#Here are some helpful rules about locals and globals:|Paragraph
+700011#- Use globals as little possible.|Paragraph
+700011#- For now, we will only use globals to store shapes that we need to change when events occur.|Paragraph
+700011#- Use locals a lot, especially helper variables!|Paragraph
+700011#- Do not use a local with the same name as a global. This can be confusing and should be avoided.|Paragraph
+end

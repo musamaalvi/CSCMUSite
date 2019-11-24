@@ -1,0 +1,16 @@
+Label('app.stepsPerSecond Demo', 200, 20, size=20, bold=True)
+Label('Watch the star rotate!', 200, 45, size=16)
+Label('Press f for fast, n for normal, and s for slow', 200, 65, size=16)
+
+star = Star(200, 200, 100, 5, fill='gold')
+
+def onStep():
+  star.rotateAngle += 1
+
+def onKeyPress(key):
+    if (key == 'f'):
+        app.stepsPerSecond = 90
+    elif (key == 'n'):
+        app.stepsPerSecond = 30
+    elif (key == 's'):
+        app.stepsPerSecond = 5

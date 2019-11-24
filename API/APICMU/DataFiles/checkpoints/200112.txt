@@ -1,0 +1,5 @@
+In the previous code, what are the parameters?
+drawHello
+100, 'blue'
+200, 200
+labelSize, color

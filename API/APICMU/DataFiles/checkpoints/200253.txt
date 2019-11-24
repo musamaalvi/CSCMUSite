@@ -1,0 +1,5 @@
+Which variables are local, and which are global, in the previous example?
+x and y are local, and c is global.
+c is local, and x and y are global.
+They are all local.
+They are all global.

@@ -1,0 +1,5 @@
+In the previous example, what happens if we change the 1 to 10 on line 8? (Try it first!)
+The dot moves the other direction.
+The dot moves 10 times slower.
+The dot moves 10 times faster.
+Nothing changes.

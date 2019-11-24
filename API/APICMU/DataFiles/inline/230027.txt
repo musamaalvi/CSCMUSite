@@ -1,0 +1,6 @@
+app.background = 'lightGreen'
+L = Label('Press the mouse to make the background cyan!', 200, 200, size=15)
+
+def onMousePress(x, y):
+    app.background = 'cyan'
+    L.value = 'Now the background is cyan!'
