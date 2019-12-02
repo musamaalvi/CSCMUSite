@@ -1,0 +1,5 @@
+In the previous example, what happens if we use / instead of // when we set level.value? Try it first!
+Nothing changes.
+The code will not run.
+The level gets float values like 5.125
+None of these.

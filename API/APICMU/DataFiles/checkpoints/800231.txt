@@ -1,0 +1,5 @@
+In the previous example, what is the range of centerY values where the circle is cyan? Hint: use the inspector and move the circle slowly to find the answer.
+None of these.
+Between 150 and 250
+Between 150 and 200
+Between 200 and 250

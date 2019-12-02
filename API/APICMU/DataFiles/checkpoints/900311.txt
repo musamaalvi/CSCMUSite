@@ -1,0 +1,5 @@
+In the previous example, what happens if we use 0 instead of 100 -- that is, if we loop while (total.value < 0)? Try it first!
+The code runs, but the loop only runs once, no matter what number we input.
+Nothing changes -- the code works the same either way.
+The code will not run at all.
+The body of loop never runs, because toal.value is never negative.

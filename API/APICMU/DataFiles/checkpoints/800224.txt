@@ -1,0 +1,5 @@
+In the previous example, we stored counter.value % 10 in a helper variable named onesDigit. Why did we do that?
+You have to store the result of % in a helper variable.
+None of these.
+There was no particular reason.
+This makes the code clearer, especially the test (onesDigit < 5).

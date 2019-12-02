@@ -1,0 +1,14 @@
+Label('Non-Position Properties Example', 200, 20, size=20, bold=True)
+Label('Press b to make the border blue', 200, 45, size=16)
+Label('Press f to make the fill fuchsia', 200, 65, size=16)
+
+g = Group(
+      Circle(200, 200, 50, fill=None, border='black', borderWidth=5),
+      Star(200, 200, 50, 5, fill=None, border='black', borderWidth=5)
+    )
+
+def onKeyPress(key):
+    if (key == 'b'):
+        g.border = 'blue'
+    elif (key == 'f'):
+        g.fill = 'fuchsia'

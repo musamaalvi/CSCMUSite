@@ -1,0 +1,5 @@
+In the previous example, how can we be sure that the new circles are in fact added to the group?
+The new circles move when onKeyPress changes the group's position.
+All new shapes automatically join the most recent group that was created.
+The new circles are drawn, so they must be in the group.
+We cannot tell if they are in the group.

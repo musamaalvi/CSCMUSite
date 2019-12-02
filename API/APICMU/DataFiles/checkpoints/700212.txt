@@ -1,0 +1,5 @@
+In the previous example, if we use range(15) instead of range(10), it looks like nothing changes (try this, and confirm it for yourself). Why?
+15 circles are drawn, but 5 of them are drawn off the canvas to the left.
+15 circles are drawn, but 5 of them are drawn directly on top of 5 other circles.
+15 circles are drawn, but 5 of them are drawn off the canvas to the right.
+Only 10 circles are drawn no matter what value we use for range.

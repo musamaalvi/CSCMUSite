@@ -1,0 +1,5 @@
+In the previous example, what would happen if we forgot to use abs()? That is, what if we used (y - 200) instead of abs(y - 200)? Try it first!
+The circle will only turn pink on the top part of the canvas.
+The circle will only turn pink on the bottom part of the canvas.
+The circle will always be pink.
+The circle will never turn pink.

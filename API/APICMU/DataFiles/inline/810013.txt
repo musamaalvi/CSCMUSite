@@ -1,0 +1,19 @@
+Label('Arcs Demo #3', 200, 20, size=20, bold=True)
+Label('Different sweepAngle values', 200, 45, size=16)
+Label('The startAngle is always 90', 200, 65, size=16)
+
+Label('sweepAngle = 45', 100, 110, size=16)
+Oval(100, 175, 190, 100, fill='gold')
+Arc(100, 175, 190, 100, 90, 45, fill='navy')
+
+Label('sweepAngle = 90', 300, 110, size=16)
+Oval(300, 175, 190, 100, fill='gold')
+Arc(300, 175, 190, 100, 90, 90, fill='navy')
+
+Label('sweepAngle = 135', 100, 260, size=16)
+Oval(100, 325, 190, 100, fill='gold')
+Arc(100, 325, 190, 100, 90, 135, fill='navy')
+
+Label('sweepAngle = 180', 300, 260, size=16)
+Oval(300, 325, 190, 100, fill='gold')
+Arc(300, 325, 190, 100, 90, 180, fill='navy')

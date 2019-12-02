@@ -1,0 +1,5 @@
+The arc in the previous example was drawn like so:    Arc(200, 200, 250, 250, 0, 90, fill='navy')  Which of these will draw an arc that looks the same as that arc?
+Arc(200, 200, 250, 250, 270, 90, fill='navy', rotateAngle=-90)
+Arc(200, 200, 250, 250, 270, 90, fill='navy', rotateAngle=90)
+Arc(200, 200, 250, 250, 90, 270, fill='navy')
+None of these.

@@ -1,0 +1,13 @@
+Label('Looping over Strings demo', 200, 20, size=20, bold=True)
+Label('Press a letter to count the number of times it appears', 200, 45, size=16)
+
+text = Label('mississippi', 200, 200, size=40, bold=True)
+
+app.letter = app.getTextInput('Enter a letter')
+
+count = 0
+for c in text.value:
+    if (c == app.letter):
+        count += 1
+
+Label(app.letter + ': ' + str(count), 200, 300, size=40, bold=True)

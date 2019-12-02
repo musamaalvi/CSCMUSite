@@ -1,0 +1,7 @@
+Label('For Loop Demo #5', 200, 20, size=20, bold=True)
+Label('Using a for loop in a function', 200, 40, size=16)
+Label('Click anywhere to get 5 circles', 200, 60, size=16)
+
+def onMousePress(x, y):
+    for i in range(5):
+        Circle(x, y + 20 * i, 10)

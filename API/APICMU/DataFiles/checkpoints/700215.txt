@@ -1,0 +1,5 @@
+In the previous example, what happens if we change the name of the looping variable from circle to c? That is, what happens if our loop looks like this: def onKeyPress(key):    for c in circles.children:        c.radius += 5
+The code runs, but no circles get bigger on key presses.
+Nothing changes -- we can name the looping variable whatever we want.
+The code runs, but only one circle gets bigger on key presses.
+The code will not run.

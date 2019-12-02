@@ -1,20 +1,20 @@
 90001#isupper() and islower()|MainHeading
 900011#We have already learned about methods which we can use with shapes and groups. Similarly, strings also have methods. Here is an example that uses isupper to test if a string only contains uppercase letters:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+920011#|InlineContainer
 900011#Run the code and see how only the uppercase letters that you entered appear in the message. isupper returns True if every character in the string is uppercase. We also have the method islower to tell us if the string is lowercase, like so:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+920012#|InlineContainer
 900011#Run the code. This time, only the lowercase letters in the string appear in the message.|Paragraph
-900123#|CheckPoint
+900211#|CheckPoint
 end
 90001#isalpha() and isdigit()|MainHeading
 900011#ust like isupper and islower tell us if a string has uppercase and lowercase letters, isalpha and isdigit tell us if a string only contains letters or only contains digits, like so:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+920013#|InlineContainer
 900011#Run the code and see how letters are drawn in red and digits are drawn in blue. isalpha and isdigit also return a boolean value (True or False) which we can use to check what kind of characters we have in a string.|Paragraph
 end
 90001#upper() and lower()|MainHeading
 900011#So far, we have only seen methods that give us information about strings. We also have some methods that return new strings. For example, we can make a string all uppercase or all lowercase using upper and lower.|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+920014#|InlineContainer
 900011#Run the code, and see that the label switches between all uppercase and all lowercase characters.|Paragraph
-900123#|CheckPoint
+900212#|CheckPoint
 900011#Unlike shapes, we cannot change strings directly with methods. upper and lower return a string, so we should assign this value to a variable if we want to use it.|Paragraph
 end

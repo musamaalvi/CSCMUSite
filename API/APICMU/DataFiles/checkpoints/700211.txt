@@ -1,0 +1,5 @@
+In the previous example, what happens if we use range(5) instead of range(10)? Try it first!
+We see 5 circles centered in the canvas.
+We see 5 circles on the right half of the canvas.
+We see 5 circles on the left half of the canvas.
+Nothing changes.

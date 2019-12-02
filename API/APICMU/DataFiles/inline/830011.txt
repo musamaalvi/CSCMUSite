@@ -1,0 +1,6 @@
+Label('For Loop Demo', 200, 20, size=20, bold=True)
+Label('Shows how range(n) works', 200, 40, size=16)
+
+for i in range(5):
+    centerX = 40 + 80 * i
+    Circle(centerX, 200, 20)

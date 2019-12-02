@@ -1,0 +1,16 @@
+Label('Absolute Value Demo', 200, 20, size=20, bold=True)
+Label('Move the circle with the mouse', 200, 45, size=16)
+Label('The circle is cyan when it is near the center line', 200, 65, size=16)
+Label('The circle is pink otherwise', 200, 85, size=16)
+
+c = Circle(200, 200, 20, fill='cyan')
+Line(0, 200, 400, 200)
+
+def onMouseMove(x, y):
+    c.centerX = x
+    c.centerY = y
+    distanceToLine = abs(y - 200)
+    if (distanceToLine <= 50):
+        c.fill = 'cyan'
+    else:
+        c.fill = 'pink'

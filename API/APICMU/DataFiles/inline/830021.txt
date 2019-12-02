@@ -1,0 +1,5 @@
+Label('For Loop Demo', 200, 20, size=20, bold=True)
+Label('1 column of 3 circles', 200, 40, size=16)
+
+for y in range(100, 301, 100):
+    Circle(50, y, 20)

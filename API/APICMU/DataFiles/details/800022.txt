@@ -1,9 +1,9 @@
 800011#We have learned about +, -, *, and /. These are all Python operators. Here, we will learn about two more Python operators: // and %.|Paragraph
 80001#Integer Division with //|MainHeading
 800011#As we briefly mentioned, / is the division operator, so for example 5 / 4 is 1.25. Python includes another similar operator, //, which is the integer division operator. It works just like /, only it ignores the part after the decimal point. So 5 // 4 is the integer 1. The part after the decimal point is simply ignored.|Paragraph
-820011#It may take some practice to get used to the idea that // does not round values but instead truncates or ignores the part after the decimal point. Thus, while 19 / 10 is 1.9, 19 // 10 is only 1 and not 2.||Alert
+820011#It may take some practice to get used to the idea that // does not round values but instead truncates or ignores the part after the decimal point. Thus, while 19 / 10 is 1.9, 19 // 10 is only 1 and not 2.|PinkParagraph
 800011#Here is a practical example using //:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820021#|InlineContainer
 800221#|CheckPoint
 end
 80001#Remainder with %|MainHeading
@@ -13,7 +13,7 @@ end
 800011#Here we will see how to use the % operator to check if a number is even or odd. Any even number has a remainder of 0 when divided by 2. So we can check if a number is even by checking if that number % 2 is 0. For example, 10 % 2 is the remainder when we divide 10 by 2, which is 0, so 10 is even.|Paragraph
 800011#Similarly, any odd number has a remainder of 1 when divided by 2. For example, 11 % 2 is the remainder when we divide 11 by 2, which is 1, so 11 is odd.|Paragraph
 800011#Here is an example:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820022#|InlineContainer
 800222#|CheckPoint
 800223#|CheckPoint
 end
@@ -21,6 +21,6 @@ end
 800011#Let's look at one more common use of the % operator: using %10 to get the ones digit of a number.|Paragraph
 800011#First, what is 87 % 10? When we divide 87 by 10, the remainder is 7, so 87 % 10 is 7. In fact, for any number, the remainder of that number when we divide by 10 is its ones digit.|Paragraph
 800011#Let's look at a practical example:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820023#|InlineContainer
 800224#|CheckPoint
 end

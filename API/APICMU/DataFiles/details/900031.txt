@@ -1,19 +1,19 @@
 900011#We know how to use range to loop a certain number of times. Sometimes, though, we may not know how many times we need to loop. In those cases, we can use a while loop. A while loop looks similar to an if statement, only instead of running once, the body of the loop runs over and over again until the condition is False.|Paragraph
 900011#For example, say we want to have the user input numbers, and to stop when the sum of those numbers is at least 100. We cannot do this using range, because we do not know how many numbers the user will have to input. This is a perfect case for a while loop, like so:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+930011#|InlineContainer
 900011#Run the code a few times, sometimes entering large numbers and sometimes entering smaller numbers. See how the number of times the code loops depends on the numbers you entered. The key is this line:|Paragraph
-920001#while (total.value < 100):||Alert
+920001#while (total.value < 100):|Box
 900011#This says to keep looping so long as total.value is less than 100.|Paragraph
 900311#|CheckPoint
 900011#Let's look at another example where we draw several rectangles nested inside each other. The largest rectangle will have a size of 400, so it will be 400x400. The next one will be 200x200. Then 100x100. And so on. We want to stop when the size is 25 (or smaller). We could do this with range, if we did some math to pre-compute how many passes we need. But it's both easier and clearer if we let Python do that math for us, and instead use while, looping while (app.size > 25), like so:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+930012#|InlineContainer
 900312#Let's look at one last example. This time, we will do this:|CheckPoint
 900011#- First draw a star and a diamond.|Paragraph
 900011#- The user can click the mouse to move the star.|Paragraph
 900011#- The user can press space for it to fall to the diamond.|Paragraph
 900011#Here is an image that might help:|Paragraph
 900011#We have a problem here: how can we tell exactly how far to make the star fall? If the star is in the center of the canvas it will fall a shorter distance than if it was on the left or right edge of the canvas! This is a great use of a while loop: while the star does not hit the diamond, we keep lowering it (by adding to its center), like so:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+930013#|InlineContainer
 900313#|CheckPoint
-920001#What would happen if the condition for the while loop never became False? In that case, the loop would run forever and our program would never stop. If you notice that nothing happens when you run code with a while loop, try checking that the while condition eventually becomes False.||Alert
+920001#What would happen if the condition for the while loop never became False? In that case, the loop would run forever and our program would never stop. If you notice that nothing happens when you run code with a while loop, try checking that the while condition eventually becomes False.|PinkParagraph
 end

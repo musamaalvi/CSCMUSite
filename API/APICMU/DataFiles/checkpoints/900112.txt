@@ -1,0 +1,5 @@
+In the previous example, what happens if you enter 20.5 for the circle radius? Try it first!
+The circle has a radius of 20.5.
+We get an error.
+We don't get an error, but nothing is drawn.
+We round the radius, so the circle has a radius of 20.

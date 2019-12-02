@@ -1,0 +1,10 @@
+Label('upper and lower demo', 200, 20, size=20, bold=True)
+Label('Press u for uppercase and l for lowercase', 200, 45, size=16)
+
+text = Label('Strings are fun!', 200, 200, size=30)
+
+def onKeyPress(key):
+    if (key == 'l'):
+        text.value = text.value.lower()
+    elif (key == 'u'):
+        text.value = text.value.upper()

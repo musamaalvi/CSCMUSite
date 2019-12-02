@@ -1,0 +1,5 @@
+Which of the following is NOT a type?
+42
+int
+none of these (they all are types)
+boolean

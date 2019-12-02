@@ -1,49 +1,49 @@
 700011#In this section, we will learn an important new concept: how to loop. That is, how to run the same piece of code repeatedly. This is a very important idea that you will use heavily from now on in your coding!|Paragraph
 70001#Looping with range()|MainHeading
 700011#Let's start by running this example:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720011#|InlineContainer
 700011#Run the code and see how it draws 10 circles. Now, let's look closely at how this works. The loop starts on line 4:|Paragraph
-7200011#for i in range(10):||Alert
+7200011#for i in range(10):|Box
 700011#This is a for loop. Since we used range(10), this will loop 10 times. Each time through the loop is called a pass. So this loop has 10 passes. Since we used the variable i, that variable will be different on each pass. The first time, i will be 0, then 1, then 2, and so on. We call i the looping variable.|Paragraph
 700011#We see that line 4 says to loop 10 times. But what code runs on each loop? That is the body of the loop, which is the code that is indented after the first line of the loop. In this example, that is just line 5:|Paragraph
-7200011#Circle(40 * i, 200, 20)||Alert
+7200011#Circle(40 * i, 200, 20)|Box
 700011#This line of code will run 10 times.|Paragraph
 700011#Remember that the looping variable, i here, changes on each pass of the loop. The first pass, i is 0, so the center of the first circle is at (0, 200). The second pass, i is 1, so the center of the second circle is at (40, 200). This is how the circles are all at different positions.|Paragraph
 700011#It's great that we have 10 circles, but the first circle is only halfway on the canvas. Let's fix that by moving all the circles a bit to the right, like so:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720012#|InlineContainer
 700211#|CheckPoint
 700212#|CheckPoint
 end
 70002#Multiple Lines in the Body|MainHeading
 700011#The previous example included only one line in the body, which drew one circle on each pass. We can have multiple lines in the loop body, like so:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720013#|InlineContainer
 700011#Run the code and see how we now have a label drawn on each circle. To do this, we have two lines in our loop body -- one to draw the circle, and another to draw the label.|Paragraph
-720001#How did we get the labels to run from 0 to 9? We did this by using the looping variable i as each label's value (the first value in the call to Label). In general, you can use the looping variable just like any other variable. So you can use the looping variable to set the position, the value, the angle, or any other property of any shape.||Alert
+720001#How did we get the labels to run from 0 to 9? We did this by using the looping variable i as each label's value (the first value in the call to Label). In general, you can use the looping variable just like any other variable. So you can use the looping variable to set the position, the value, the angle, or any other property of any shape.|PinkParagraph
 700213#|CheckPoint
 end
 70002#Code Around the Loop|MainHeading
 700011#You can add code before or after a loop. The only code that runs repeatedly, though, is the code indented inside the loop's body. For example:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720014#|InlineContainer
 700011#Run the code. We see that the labels before and after the loop are drawn only once. They are not in the loop.|Paragraph
 end
 70002#Looping in a Function|MainHeading
 700011#We can use a loop anywhere in our code, including in a function, like so:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720015#|InlineContainer
 700011#Let's do that again, but this time using a loop to draw nested stars instead of circles:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720016#|InlineContainer
 700214#|CheckPoint
 end
 70002#Looping with group.children|MainHeading
 700011#So far, we have used range to loop a given number of times. Here we will use group.children to loop over each shape in a group:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720017#|InlineContainer
 700011#Run the code, press the mouse a few times, and then press a few keys. Repeat these steps. See how each time you press a key, the radius of each circle increases.|Paragraph
 700011#How does this work? First, on line 6, we create the circles group. Then, in onMousePress, we add a new circle to this group. Finally, in onKeyPress, we have this loop:|Paragraph
-720001# for circle in circles.children:||Alert
+720001# for circle in circles.children:|Box
 700011#This loops over each shape in the circles group. On each pass, the looping variable circle is set to the next shape in that group. Thus, when we increase circle.radius on line 15, that line runs repeatedly, once for each circle in the group. In this way, we change each circle's radius.|Paragraph
 700215#|CheckPoint
 end
 70002#Looping in onStep|MainHeading
 700011#The previous example increased the radius of each circle on each key press. It's probably more impressive if we do this in onStep, like so:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+720018#|InlineContainer
 700216#|CheckPoint
 end

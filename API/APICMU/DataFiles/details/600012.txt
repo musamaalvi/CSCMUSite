@@ -1,18 +1,24 @@
 600011#Here we will look into the different ways that we can use a group's properties.|Paragraph
 60001#Position Properties|MainHeading
 600011#First, let's review this example from the previous notes:|Paragraph
-600021#Rect(10, 20, 30, 40)|InlineContainer
+610021#|InlineContainer
 600011#We see that when we change the centerX and centerY of the group, this changes the positions of every shape in the group. This is true of all the position properties of a group. For example, let's change the example so it sets the group's right edge to the mouse, like so:|Paragraph
-600021#Rect(10, 20, 30, 40)|InlineContainer
+610022#|InlineContainer
 600121#|CheckPoint
 end
 60002#Non-position Properties|MainHeading
 600011#In addition to position properties like centerX and right, we can also use groups to set the non-position properties opacity, fill, width, and height. We can see that in the following code:|Paragraph
-600021#Rect(10, 20, 30, 40)|InlineContainer
+610023#|InlineContainer
 end
-60003#Child-specific Properties|MainHeading
-620001#When we add a shape to a group, we say that the shape is a child of the group, and the group is the parent of the shape. Thus, the children of a group are all the shapes that have been added to that group.||Alert
+60003#Shape-specific Properties|MainHeading
+600011#We can also set shape-specific properties using groups. For example, if we set the group's points property, then only the shapes that use that property would change. For example:|Paragraph
+610024#|InlineContainer
+600011#Run the code and press any key. Notice how both of the stars in the group have their points property changed, but the circle does not change since it does not have a points property.|Paragraph
+end
+60004#Child-specific Properties|MainHeading
+620001#When we add a shape to a group, we say that the shape is a child of the group, and the group is the parent of the shape. Thus, the children of a group are all the shapes that have been added to that group.|PinkParagraph
 600011#When we change a property of a group, it changes that property for all of its children that use that property. What if we only want to change one child? For example, let's only change the inner star's points in the previous example.|Paragraph
 600011#To do this, we need to assign that star to a variable. We do this before we add the star to the group. Then we use that variable to add the star to the group, like so:|Paragraph
+610025#|InlineContainer
 600122#|CheckPoint
 end

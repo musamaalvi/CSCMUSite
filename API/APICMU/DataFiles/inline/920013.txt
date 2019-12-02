@@ -1,0 +1,18 @@
+Label('isalpha and isdigit demo', 200, 20, size=20, bold=True)
+Label('This makes letters red, and digits blue', 200, 45, size=16)
+
+t1 = Label('Press a key', 200, 200, size=60)
+t2 = Label('Character type', 200, 250, size=30)
+
+def onKeyPress(key):
+    t1.value = key
+    if (key.isalpha() == True):
+        t1.fill = 'red'
+        t2.value = 'letter'
+    elif (key.isdigit() == True):
+        t1.fill = 'blue'
+        t2.value = 'digit'
+    else:
+        # it's not a letter or a digit!
+        t1.fill = 'black'
+        t2.value = 'other'

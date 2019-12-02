@@ -1,0 +1,5 @@
+In the previous example, what happens if we use += 10 instead of += 1?
+The circles grow much faster.
+The circles stop growing.
+The circles grow much slower.
+Nothing changes.

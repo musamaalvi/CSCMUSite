@@ -1,0 +1,5 @@
+What happens if we change the first startAngle in the example above from 0 to 360? Try it first!
+Nothing changes, because 360 degrees is basically the same as 0 degrees.
+The code will not run.
+The first arc is no longer visible.
+The first arc covers the entire oval behind it.

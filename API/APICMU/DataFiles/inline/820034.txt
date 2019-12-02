@@ -1,0 +1,13 @@
+Label('getPointInDir() Demo', 200, 20, size=20, bold=True)
+Label('Press keys to draw dots in the direction of the arrow', 200, 45, size=16)
+
+arrow = Line(200, 250, 200, 200, arrowEnd=True)
+
+Circle(arrow.centerX, arrow.centerY, 75, fill=None, border='lightGrey', borderWidth=1)
+
+def onStep():
+    arrow.rotateAngle += 2
+
+def onKeyPress(key):
+    x, y = getPointInDir(arrow.centerX, arrow.centerY, arrow.rotateAngle, 75)
+    Circle(x, y, 3)

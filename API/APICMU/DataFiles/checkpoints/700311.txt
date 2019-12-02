@@ -1,0 +1,5 @@
+In the previous example, what would happen if instead of storing the random value in a local variable, we called randrange twice, like this:  def onKeyPress(key):    c.radius = randrange(20, 150)    radiusLabel.value = randrange(20, 150)    Try it first, and press a few keys, and look closely at the result.
+The code will not run at all.
+Nothing changes.
+The code runs, but it crashes when a key is pressed.
+The code runs, but the number that is displayed is a different random value than the actual radius of the circle.

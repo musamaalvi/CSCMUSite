@@ -1,0 +1,5 @@
+In the previous example, which variables are globals?
+mouseX and mouseY
+color
+counter
+mouseX, mouseY, and color

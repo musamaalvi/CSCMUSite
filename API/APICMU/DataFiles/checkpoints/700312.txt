@@ -1,0 +1,5 @@
+Which of the following are ALL the possible values that a call to randrand(2, 5) might return?
+2,3,4,5
+3,4
+3,4,5
+2,3,4

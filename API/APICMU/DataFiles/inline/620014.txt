@@ -1,0 +1,11 @@
+Label('Group Methods Demo #2', 200, 20, size=20, bold=True)
+Label('Click to add circles to the group', 200, 45, size=16)
+Label('Press any key to clear the circles', 200, 65, size=16)
+
+g = Group()
+
+def onMousePress(x, y):
+    g.add(Circle(x, y, 20, fill='cyan', border='black'))
+
+def onKeyPress(key):
+    g.clear()

@@ -1,0 +1,10 @@
+Label('String indexing demo', 200, 20, size=20, bold=True)
+Label('Press a letter to draw a box around it', 200, 45, size=16)
+
+text = Label('awesome', 200, 200, size=75, font='monospace')
+
+app.letter = app.getTextInput('Enter a letter')
+
+for i in range(len(text.value)):
+    if (text.value[i] == app.letter):
+        Rect(40 + 45 * i, 175, 45, 60, fill=None, border='red', borderWidth=1)

@@ -1,0 +1,16 @@
+Label('Remainder (%) Demo', 200, 20, size=20, bold=True)
+Label('This uses %2 to check for evens', 200, 45, size=16)
+Label('Press keys to increase the counter', 200, 65, size=16)
+Label('The circle is cyan when even, pink when odd', 200, 85, size=16)
+
+background = Circle(200, 200, 100, fill='cyan')
+counter = Label(0, 200, 200, size=80)
+
+def onKeyPress(key):
+    counter.value += 1
+    if (counter.value % 2 == 0):
+        # counter.value is even!
+        background.fill = 'cyan'
+    else:
+        # counter.value is odd!
+        background.fill = 'pink'

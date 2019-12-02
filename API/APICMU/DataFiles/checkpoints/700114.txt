@@ -1,0 +1,5 @@
+In the previous example, which variables are locals?
+mouseX and mouseY
+mouseX, mouseY, and color
+counter
+color

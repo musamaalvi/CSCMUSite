@@ -1,18 +1,18 @@
 700011#Let's explore functions that return random values. This means that these functions return different values each time you call them. This is very handy for games, simulations, and many other uses.|Paragraph
 70001#Using randrange|MainHeading
 700011#First, let's consider the function randrange(low, high). This function takes two integers, low and high, and returns a random integer between these numbers. Here is an example:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+730011#|InlineContainer
 700011#Run the code, press space a few times, and see how the radius changes randomly.|Paragraph
 end
 70001#Storing Random Values|MainHeading
 700011#We may wish to use the same random value more than once. To do this, we may store random values in local variables. For example, say we wish to draw the radius as a label in the previous example. Here is the code, which uses a local variable to store the random radius:|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+730012#|InlineContainer
 700311#|CheckPoint
 end
 70001#randrange's High Value|MainHeading
 700011#When we call randrange(1, 3), you might expect that would return 1, 2, or 3. This is not quite what happens, because randrange never returns the high value! So randrange(1,3) would only return 1 or 2, but never 3. This may seem odd, but there are good reasons for it.|Paragraph
 700011#The following example is just like the one above, only now we use randrange(50, 52):|Paragraph
-700021#Rect(10, 20, 30, 40)|InlineContainer
+730013#|InlineContainer
 700011#Run the code, and press a lot of spaces. See how you sometimes get 50, and sometimes 51, but never 52.|Paragraph
 700312#|CheckPoint
 end

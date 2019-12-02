@@ -1,0 +1,18 @@
+Label('Shape Methods for Groups, Example #2', 200, 20, size=20, bold=True)
+Label('Move the triangle over the group to change its color', 200, 45, size=16)
+
+g = Group(
+    Star(70, 200, 50, 5),
+    Label("Hi!", 200, 200, size=100),
+    Circle(330, 200, 40)
+  )
+
+triangle = Polygon(200, 80, 180, 130, 220, 130, fill='teal')
+
+def onMouseMove(mouseX, mouseY):
+    triangle.centerX = mouseX
+    triangle.centerY = mouseY
+    if (g.hitsShape(triangle) == True):
+        g.fill = 'gold'
+    else:
+        g.fill = 'black'

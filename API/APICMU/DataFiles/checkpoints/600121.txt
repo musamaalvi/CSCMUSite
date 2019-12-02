@@ -1,0 +1,5 @@
+What change(s) did we have to make to the code so that the group's right edge moved with the mouse instead of its center?
+Change g.centerX to g.right
+Change both g.centerX and g.centerY to g.right
+No changes were needed
+Change g.centerY to g.right

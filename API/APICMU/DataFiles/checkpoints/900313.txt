@@ -1,0 +1,5 @@
+In the previous example, what happens if we do not include the second-to-last line? Again, try it first!
+The star still falls, but we do not get a trail of stars as it falls.
+The code will not run at all.
+The star does not appear to move at all.
+The star still falls, but it falls all the way off the canvas.

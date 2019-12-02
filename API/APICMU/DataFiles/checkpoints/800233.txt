@@ -1,0 +1,5 @@
+In the previous example, what would happen if we replaced 75 with 10, so we test if (distanceToTarget < 10)? Try it first!
+The circle will remain pink unless it mostly overlaps the gold target.
+The code will not run.
+The circle will never turn pink.
+The circle will always be pink.

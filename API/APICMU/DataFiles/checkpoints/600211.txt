@@ -1,0 +1,5 @@
+What happens in the previous example if we used triangle.hitsShape(g) instead of g.hitsShape(triangle)? (Try it first!)
+The code runs but the shapes never change color.
+Nothing changes.
+The code runs at first, but it crashes when the triangle hits any shape in the group.
+The code will not run at all.

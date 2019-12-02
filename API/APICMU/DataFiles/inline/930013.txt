@@ -1,0 +1,17 @@
+Label('While loops demo #3', 200, 20, fill='white', size=20, bold=True)
+Label('Click the mouse to move the star', 200, 45, fill='white', size=16)
+Label('Press space for it to fall to the diamond', 200, 65, fill='white', size=16)
+
+app.background='black'
+diamond = Polygon(0, 350, 200, 300, 400, 350, 200, 400, fill='lightBlue')
+s = Star(200, 200, 40, 5, fill='yellow')
+
+def onMousePress(mouseX, mouseY):
+    s.centerX = mouseX
+    s.centerY = mouseY
+
+def onKeyPress(key):
+    if (key == 'space'):
+        while (s.hitsShape(diamond) == False):
+            Star(s.centerX, s.centerY, 40, 5, fill='yellow', opacity=10)
+            s.centerY += 5

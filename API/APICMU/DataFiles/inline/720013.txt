@@ -1,0 +1,6 @@
+Label('For Loop Demo #3', 200, 20, size=20, bold=True)
+Label('Now with multiple lines in the loop body', 200, 40, size=16)
+
+for i in range(10):
+    Circle(20 + 40 * i, 200, 20)
+    Label(i, 20 + 40 * i, 200, size=20, fill='yellow')

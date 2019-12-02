@@ -1,0 +1,5 @@
+In the previous example, what happens if we set name to the integer 42 (which, admittedly, is a strange name)? Try it first!
+The code runs and displays: 'My name is 42'
+The code crashes with a Type Error, since we cannot use + with a string and an integer.
+None of these.
+The code runs and displays: 'My name is Fred'

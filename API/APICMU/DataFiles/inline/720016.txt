@@ -1,0 +1,7 @@
+Label('For Loop Demo #6', 200, 20, size=20, bold=True)
+Label('Changing the radius with the loop variable', 200, 40, size=16)
+Label('Click anywhere to get 5 nested stars', 200, 60, size=16)
+
+def onMousePress(x, y):
+    for i in range(5):
+        Star(x, y, 10 + 10 * i, 5, fill=None, border='maroon', borderWidth=1)

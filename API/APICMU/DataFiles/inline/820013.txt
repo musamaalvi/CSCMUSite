@@ -1,0 +1,9 @@
+Label('Key Press Counter Demo', 200, 20, size=20, bold=True)
+Label('This counts the number of key presses', 200, 45, size=16)
+
+text = Label('Press any key', 200, 200, size=40)
+text.count = 0
+
+def onKeyPress(key):
+    text.count += 1
+    text.value = 'Key presses: ' + str(text.count)

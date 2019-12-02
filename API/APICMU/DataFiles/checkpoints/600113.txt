@@ -1,0 +1,5 @@
+What is wrong with this code: g = Group(        Circle(200, 200, 50, fill=None, border='black', borderWidth=5),        Star(200, 200, 50, 5, fill=None, border='black', borderWidth=5)
+It is missing a comma after the circle.
+Nothing is wrong.
+It is missing a closing right-parenthesis after all the shapes.
+It is missing a comma after the star.
