@@ -30,16 +30,18 @@
               <div class="exercise-collection-container depth-3">
                   <div class="level-container">
                       <div class="level-exercises-container">
+                          <ng-container *ngFor="let ex of MainData['Exercise']">
                           <span class="tooltip-trigger">
-                              <button class="exercise-trigger" #exerciseButton id="{{MainData['Exercise'][0].split('#')[1].split(',')[1]}}" (click)="ExerciseDrillDown(exerciseButton)">
+                              <button class="exercise-trigger" #exerciseButton id="{{ex.split('#')[1].split(',')[1]}}" (click)="ExerciseDrillDown(exerciseButton)">
                                   <div class="exercise-icon-complete">
 
                                   </div>
                                   <img class="exercise-icon-img" alt="exercise-icon-Draw two rectangles" src="https://s3.amazonaws.com/cmu-cs-academy.content.public.v2-prod/4cba883d5fa69bdac02ef59a8cd7021a%3A%3A09024c9f91475cbe8c77861e4c7f385d----icon.jpg">
                                 </button><span class="tooltip-content">
-                                    <h6>{{MainData["Exercise"][0].split('#')[1].split(',')[2]}}</h6>
+                                    <h6>{{ex.split('#')[1].split(',')[2]}}</h6>
                                     <b>Level:</b> 1 <br><span><b>Points: </b> 1 / 1 </span></span>
                           </span>
+                        </ng-container>
                           <!-- <span class="tooltip-trigger">
                               <button class="exercise-trigger">
                                   <div class="exercise-icon-complete">

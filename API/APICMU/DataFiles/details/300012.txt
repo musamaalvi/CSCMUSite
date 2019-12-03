@@ -10,22 +10,22 @@
 320001#In this way, we only draw a circle if the user clicked on the left half of the canvas.|Paragraph
 34000#mcq|CheckPoint
 end
-10001#Multiple lines in the body|MainHeading
+10002#Multiple lines in the body|MainHeading
 100011#The code that is indented after the if is called the body of the if statement. We can include more than one line in the body. If the condition is true, then all the lines in the body will run. For example:|Paragraph
 340000#Label('Using "if" Demo (now with stars!)', 200, 20, size=20, bold=True)|InlineContainer
 100011# In the previous example, why did we need two lines in the body of the if statement?| The first line draws the circle, and the second line draws the star over the circle. |Alert
 end
-10001#Lines after the body|MainHeading
+10003#Lines after the body|MainHeading
 100011#We use indenting to tell Python which lines are in the body of the if statement. Code that is no longer indented is not in the body, and Python will run that code whether or not the condition was true. For example, let's move the last line from the previous example (the one that draws the star) so it is not indented, and so not in the body, like so:|Paragraph
 350000#Label('Using "if" Demo (with more stars!)', 200, 20, size=20, bold=True)|InlineContainer
 100011# In the previous example, what is different now that the star is drawn outside the if statement's body?| Now the star is always drawn. So if we click on the left, we get a star in a circle, but if we click on the right, while we do not get a circle, we still get a star. |Alert
 end
-10001#Another example|MainHeading
+10004#Another example|MainHeading
 100011#Here is another example that includes multiples lines in the body, and also code after the body:|Paragraph
 350001#Label('Using "if" Demo (with a counter!)', 200, 20, size=20, bold=True)|InlineContainer
 340001#mcq|CheckPoint
 end
-10001#Some more tests|MainHeading
+10005#Some more tests|MainHeading
 100011#The examples above used < to compare two numbers. Here are a few other tests we can use:|Paragraph
 100011#(x < y)	is x less than y?|Paragraph
 100011#(x <= y)	is x less than or equal to y?|Paragraph

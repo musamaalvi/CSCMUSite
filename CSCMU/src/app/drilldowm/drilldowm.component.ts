@@ -21,6 +21,7 @@ export class DrilldowmComponent implements OnInit {
   checkPointData
   DrillDownDetailPage
   showMainPage = false;
+  urlOfPage="";
   apiURL="http://127.0.0.1:1000/"
 
   ngAfterViewInit(){
@@ -48,7 +49,7 @@ export class DrilldowmComponent implements OnInit {
       this.showMainPage=true;
     })
 
-    
+    this.urlOfPage = window.location.href;
   }
 
   iFrameClicked(iFrameHandle, iFrameHandle1, codeTorRun){

@@ -31,9 +31,10 @@ namespace APICMU.Controllers
           
 
             FileInfo[] Files = dinfo.GetFiles("*.txt");
+            List<FileInfo>  File1 = Files.OrderBy(o=>o.FullName).ToList();
 
             int count = 0, anotherCounter = 0;
-            foreach (FileInfo file in Files)
+            foreach (FileInfo file in File1)
             {
                  subHeadings = new List<string>();
                     Exercise = new List<string>();

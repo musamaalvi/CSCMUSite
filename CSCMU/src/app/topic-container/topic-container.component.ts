@@ -13,6 +13,7 @@ export class TopicContainerComponent implements OnInit {
   @Input() MainData;
 
   constructor(private router: Router) {
+    debugger
     console.log(this.MainData)
   }
 
