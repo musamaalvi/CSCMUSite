@@ -2,6 +2,9 @@
 30001#3.1. Mouse Motion Events|MainHeading
 300011#3.1.1. onMouseMove and onMouseDrag|SubHeading
 30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+30001#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+30002#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+30003#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
 end
 30001#3.2. Conditionals (IF Statements)|MainHeading
 300012#3.2.1. if Statements |SubHeading
