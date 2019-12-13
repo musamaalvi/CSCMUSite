@@ -1,7 +1,7 @@
 880000#1 Creating Drawing|Heading
 10001#1.1. Basics|MainHeading
 100011#1.1.1. Getting Started|SubHeading
-100013#1.1.2. Position and Size|SubHeading
+100013#1.1.2. Position and SizeFOREXERCISEPURPOSE900011#1.1.3. Exercise ,90001, Draw Three Rectangles|SubHeading
 900011#1.1.3. Exercise ,90001, Draw Two Rectangles|Exercise
 9000123#1.1.3. Exercise ,90001, Draw Two Rectangles|Exercise
 end
