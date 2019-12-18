@@ -69,6 +69,12 @@ export class DrilldowmComponent implements OnInit {
     $('#OutputDiv').text($(outputSet).attr('id'))
     $('#pythonFunctionCaller').trigger('click')
   }
+  CodeClearButton(codeToRun, outputSet){
+    $('#panel').empty()
+    //$('#TestingCode').text($(codeToRun).val())
+    $('#OutputDiv').text($(outputSet).attr('id'))
+    $('#codeClearFunction').trigger('click')
+  }
   alertBoxClicked(AlertBox){
     debugger;
     $(AlertBox).removeAttr('hidden')

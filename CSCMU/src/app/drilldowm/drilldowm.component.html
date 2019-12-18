@@ -1125,7 +1125,7 @@
                                 </div>
                             </div>
                                     <p> <span id="status-info"></span>
-                                        <button id="clear" class="btn-disabled">Clear</button>
+                                        <button id="clear" (click)="CodeClearButton(codeToRun, idForOutput)" class="btn-disabled">Clear</button>
                                         <button id="mybutton" (click)="CodeRunButton(codeToRun, idForOutput)">Run Code!</button>
                                     </p>
                                     

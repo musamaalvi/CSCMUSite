@@ -10,6 +10,7 @@
 </head>
 <body >
     <button id="pythonFunctionCaller" hidden>testing button</button>
+    <button id="codeClearFunction" hidden>testing button</button>
   <app-root></app-root>
   
 <script id="python_script" type="text/python">
@@ -164,6 +165,7 @@ def python_initialization():
     turtle.done()
 
 document["pythonFunctionCaller"].bind("click", run_code)
+document["codeClearFunction"].bind("click", clear_print)
 
 def exec_code():
     code = document["TestingCode"].text
