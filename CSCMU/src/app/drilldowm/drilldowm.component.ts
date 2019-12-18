@@ -28,7 +28,7 @@ export class DrilldowmComponent implements OnInit {
     debugger;
     
     setTimeout( ()=>{
-      callBrython();
+      //callBrython();
       }, 1000)
     }
   

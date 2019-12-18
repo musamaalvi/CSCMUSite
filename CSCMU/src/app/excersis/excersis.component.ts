@@ -14,7 +14,7 @@ QuestionId
 
 
   constructor(private route: ActivatedRoute,  private httpClient: HttpClient) {
-    callBrython();
+    // callBrython();
     debugger;
     this.route.paramMap.subscribe(params => {
       this.QuestionId = +params.get('id')
