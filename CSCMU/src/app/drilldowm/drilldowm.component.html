@@ -1110,7 +1110,7 @@
 
 
                                     <svg #iFrameHandle1 id="turtle-div" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 60%; height:400px; float: right; border-style:solid;border-width:1;border-color:#000;" class="IframeHidden">
-  <g id="panel">
+  <g #idForDrawing id="drawing-turtle-print-output{{j}}{{k}}">
   </g>
 </svg>
 
@@ -1126,7 +1126,7 @@
                             </div>
                                     <p> <span id="status-info"></span>
                                         <button id="clear" (click)="CodeClearButton(codeToRun, idForOutput)" class="btn-disabled">Clear</button>
-                                        <button id="mybutton" (click)="CodeRunButton(codeToRun, idForOutput)">Run Code!</button>
+                                        <button id="mybutton" (click)="CodeRunButton(codeToRun, idForOutput, idForDrawing)">Run Code!</button>
                                     </p>
                                     
                                     

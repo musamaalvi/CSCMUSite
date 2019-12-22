@@ -77,7 +77,7 @@ class Rect(Shape):
         else:
             rect = svg.rect(x=self._left, y=self._top, width=self._width, height=self._height, stroke=self._border,\
             stroke_width=self._borderWidth, stroke_dasharray='5', fill=self._fill)
-        panel = document['panel']
+        panel = document[document["DrawingOutputDiv"].text]
         panel <= rect
 
 
@@ -97,7 +97,7 @@ class Oval(Shape):
         from browser import document, svg
         ellipse = svg.ellipse(cx=self._centerX, cy=self._centerY, rx=self._radiusX, ry=self._radiusY, stroke=self._border,\
         stroke_width='2', fill=self._fill)
-        panel = document['panel']
+        panel = document[document["DrawingOutputDiv"].text]
         panel <= ellipse
 
 
@@ -114,7 +114,7 @@ class Circle(Shape):
         from browser import document, svg
         circle =  svg.ellipse(cx=self._centerX, cy=self._centerY, rx=self._radius, ry=self._radius,\
         stroke_width='2', fill=self._fill)
-        panel = document['panel']
+        panel = document[document["DrawingOutputDiv"].text]
         panel <= circle
 
 
@@ -130,7 +130,7 @@ class Line(Shape):
     def render(self):
         from browser import document, svg
         line = svg.line(x1=self._x1, y1=self._y1, x2=self._x2, y2=self._y2, stroke="brown")
-        panel = document['panel']
+        panel = document[document["DrawingOutputDiv"].text]
         panel <= line
 
 
@@ -242,6 +242,7 @@ def copy_content(ev):
 print('testing variables')
 </div>
 <div id="OutputDiv" style='display:none'></div>
+<div id="DrawingOutputDiv" style='display:none'></div>
 
    <!-- <script id="python_script" type="text/python">
         import sys
