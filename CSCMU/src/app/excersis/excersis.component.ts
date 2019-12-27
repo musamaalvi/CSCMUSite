@@ -37,7 +37,7 @@ QuestionId
     debugger;
     $('#TestingCode').text($(codeToRun).val())
     $('#OutputDiv').text('turtle-print-output')
-    $('#DrawingOutputDiv').text('turtle-div')
+    $('#DrawingOutputDiv').text('exerciseOutputDrawing')
     $('#pythonFunctionCaller').trigger('click')
   }
 }
