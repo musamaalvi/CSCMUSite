@@ -26,7 +26,9 @@ export class DrilldowmComponent implements OnInit {
 
   ngAfterViewInit(){
     debugger;
-    
+    $('.inline-af-play').trigger('click')
+    $('.turtleDivClass').addClass("IframeHidden")
+    $('.classForFrame').addClass("IframeHidden")
     setTimeout( ()=>{
       //callBrython();
       }, 1000)
@@ -43,7 +45,7 @@ export class DrilldowmComponent implements OnInit {
       this.mainHeading = params.get('name')
     });
     this.httpClient.get(apiURL + "/api/values/DrillDownDetail/" + this.DrillDownDetailPage).subscribe(data => {
-
+      debugger;
       this.mainData = data;
       //this.SetHTML();
       this.showMainPage=true;

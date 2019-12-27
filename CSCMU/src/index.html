@@ -43,7 +43,7 @@ def run_code(ev):
     if FIRST_TIME:
         FIRST_TIME = False
         #inform("Importing turtle module for the first time and processing; please wait")
-    document["mybutton"].class_name = "btn-disabled"
+    #document["mybutton"].class_name = "btn-disabled"
     # delay to allow updated DOM with above text to be shown.
     timer.set_timeout(exec_code, 1)
 
@@ -178,7 +178,7 @@ def exec_code():
             traceback.print_exc()
         except:
             print("could not print traceback")
-    document["clear"].class_name = "btn-enabled"
+    #document["clear"].class_name = "btn-enabled"
     document["replay-scene"].class_name = "btn-enabled"
     inform("")
 
@@ -189,9 +189,9 @@ def delayed_clear():
     
     inform("")
     
-    document["mybutton"].class_name = "btn-enabled"
+    #document["mybutton"].class_name = "btn-enabled"
     
-    document["clear"].class_name = "btn-disabled"
+    #document["clear"].class_name = "btn-disabled"
     
     clear_print()
 
