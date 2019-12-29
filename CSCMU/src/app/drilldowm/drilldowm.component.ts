@@ -51,7 +51,7 @@ export class DrilldowmComponent implements OnInit {
       this.showMainPage=true;
     })
 
-    this.urlOfPage = window.location.href;
+    this.urlOfPage = window.location.href.split('#')[0];
   }
 
   iFrameClicked(iFrameHandle, iFrameHandle1, codeTorRun){

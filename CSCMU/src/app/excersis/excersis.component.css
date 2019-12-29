@@ -1,4 +1,4 @@
-
+/* 
   div#turtle-print-output {
     background-color: black;
     color: yellow;
@@ -50,4 +50,12 @@
     background: #479fba;
     margin: 15px 10px 0 0;
     border: 0;
+} */
+
+#mybutton{
+  margin-right: 10px;
+}
+
+#clear{
+  background-color: gray;
 }

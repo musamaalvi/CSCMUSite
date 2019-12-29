@@ -33,6 +33,14 @@ QuestionId
     })
     }
   }
+ClearCode(){
+    $('#panel').empty()
+    //$('#TestingCode').text($(codeToRun).val())
+    $('#OutputDiv').text('turtle-print-output')
+    $('#DrawingOutputDiv').text('exerciseOutputDrawing')
+    $('#codeClearFunction').trigger('click')
+}
+
   CodeRunButton(codeToRun){
     debugger;
     $('#TestingCode').text($(codeToRun).val())
