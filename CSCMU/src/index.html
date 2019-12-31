@@ -37,140 +37,504 @@ def clear_print():
     
     document[document["OutputDiv"].text].html = ""
 
-def run_code(ev):
-    outputInit()
-    global FIRST_TIME
-    if FIRST_TIME:
-        FIRST_TIME = False
-        #inform("Importing turtle module for the first time and processing; please wait")
-    #document["mybutton"].class_name = "btn-disabled"
-    # delay to allow updated DOM with above text to be shown.
-    timer.set_timeout(exec_code, 1)
 
-#document["mybutton"].bind("click", run_code)
+document["codeClearFunction"].bind("click", clear_print)
 
-from browser import document, svg
+
+
+
+
+from browser import document, svg, html
+
+
+def clamp(x):
+    return max(0, min(x, 255))
+
+
+def distance(x1, y1, x2, y2):
+    return ((x1-x2)**2 + (y1-y2)**2)**0.5
+
+
+def rgb(r, g, b):
+    return "#{0:02x}{1:02x}{2:02x}".format(clamp(r), clamp(g), clamp(b))
+
+def gradient(*argv, **kwargs):
+    Grad = {
+       'c': [],
+       'start': "center"
+    }
+    for key, value in kwargs.items():
+        if key in Grad.keys() and value != None:
+            Grad[key] = str(value)
+
+    for i in range(len(argv)):
+        Grad['c'].append(argv[i])
+    return Grad
+
 
 class Shape:
-    def __init__(self, fill, border):
-        self._fill = fill
-        self._border = border
+    def __init__(self):
+        self._parameters=\
+        {
+          'fill':"black",
+          'border': None,
+          'dashes': False,
+          'borderWidth': "2"
+        }
+
+    
+    def check_grad(self, param_key):
+        ptList = []
+
+        keys = ['left', 'top', 'width', 'height']
+ 
+        for key in keys:
+           ptList.append(self._parameters['grad_params'][key])
+        
+
+        left = ptList[0]
+        top = ptList[1]
+        width = ptList[2]
+        height = ptList[3]
+        right = ptList[0] + ptList[2]
+        bottom = ptList[1] + ptList[3]
+        
+        if 'centerX' in self._parameters.keys():
+            centerX = self._parameters['centerX']
+        else:
+            centerX = ptList[0] + ptList[2]/2
+        
+        if 'centerY' in self._parameters.keys():
+            centerY = self._parameters['centerY']
+        else:
+            centerY = ptList[0] + ptList[3]/2
+
+        start = self._parameters[param_key]['start']
+        r = None
+        if 'radius' in self._parameters.keys():
+            r = self._parameters['radius']
+            top = centerY - r
+            bottom = centerY + r
+            right = centerX + r
+            left = centerX - r
+        else:
+            r = distance(centerX, centerY, right, top)
+        grd1 = None
+        if start == 'center':
+            grd1 = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, r);
+        else:
+            if start == 'left-top':
+                x0 = left
+                x1 = right
+                y0 = top
+                y1 = bottom
+
+            elif start == 'left-bottom':
+                x0 = left
+                x1 = right
+                y0 = bottom
+                y1 = top
+        
+            elif start == 'top':
+                x0 = x1 = centerX
+                y0 = top
+                y1 = bottom
+
+            elif start == 'bottom':
+                x0 = x1 = centerX
+                y0 = bottom
+                y1 = top
+          
+            elif start == 'right-top':
+                x0 = right
+                x1 = left
+                y0 = top
+                y1 = bottom
+
+            elif start == 'right':
+                x0 = right
+                x1 = left
+                y0 = y1 = centerY
+        
+            elif start == 'right-bottom':
+                x0 = right
+                x1 = left
+                y0 = top
+                y1 = bottom
+        
+            elif start == 'left':
+                x0 = left
+                x1 = right
+                y0 = y1 = centerY
+        
+            grd1=ctx.createLinearGradient(x0, y0, x1, y1)
+        return grd1  
+
+
+    def _update_fill(self, param_key):
+        ptList = []
+
+        grd1 = None
+        if self._parameters[param_key] != None:
+            if isinstance(self._parameters[param_key], str):
+                grd1=self._parameters[param_key]
+            else:
+                grd1 = self.check_grad(param_key)
+                for i in range(len(self._parameters[param_key]['c'])):
+                    grd1.addColorStop(i/(len(self._parameters[param_key]['c'])-1), self._parameters[param_key]['c'][i])
+        return grd1
+
+         
+
+
+class Label(Shape):
+    def __init__(self, *argv, **kwargs):
+        super().__init__()
+        self._parameters['text'] = argv[0]
+        self._parameters['centerX'] = argv[1]
+        self._parameters['centerY'] = argv[2]
+        self._parameters['opacity'] = 100 #done
+        self._parameters['size'] = 12 #done
+        self._parameters['font'] = 'arial' #done
+        self._parameters['bold'] = False
+        self._parameters['italic'] = False
+        self._parameters['rotateAngle'] = 0
+        self._parameters['align'] = 'center' #done
+        self._parameters['visible'] = True
+        for key, value in kwargs.items():
+            self._parameters[key] = value
+        self.render()
+
+    def render(self):
+        ctx.globalAlpha = self._parameters['opacity']/100
+        s = str(self._parameters['size']) + 'px' + ' ' + self._parameters['font']
+        if self._parameters['bold']:
+            s = 'bold ' + s
+        if self._parameters['italic']:
+            s = 'italic ' + s
+        ctx.font = s
+        ctx.fillStyle = self._parameters['fill']
+        ctx.textAlign = self._parameters['align']
+        ctx.fillText(self._parameters['text'], self._parameters['centerX'], self._parameters['centerY'] + 12/2 - 2)
+        container <= canvas
+
+
+class Polygon(Shape):
+    def __init__(self, *argv, **kwargs):
+        """
+        @argv: used to pass a variable number of arguments
+        @kwargs: used for keyworded variable number of arguments
+        """
+        super().__init__()
+        self._parameters['opacity'] = 100
+        self._parameters['rotateAngle'] = 0
+        self._parameters['visible'] = True
+        self._parameters['x'] = []
+        self._parameters['y'] = []
+        for i in range(0, len(argv), 2):
+            self._parameters['x'].append(str(argv[i+0]))
+            self._parameters['y'].append(str(argv[i+1]))
+ 
+        for key, value in kwargs.items():
+          if key in self._parameters.keys() and value != None:
+            self._parameters[key] = value
+
+        self.render()
+
+    def render(self):
+        ctx.globalAlpha = self._parameters['opacity']/100
+        self._parameters['grad_params'] = {\
+            'left': 0,
+            'top' : 0,
+            'width' : 400,
+            'height' : 400
+        }
+
+        grd1 = self._update_fill('fill')
+        ctx.beginPath()
+        ctx.moveTo(self._parameters['x'][0], self._parameters['y'][0])
+        for i in range(1, len(self._parameters['x'])):
+            ctx.lineTo(self._parameters['x'][i], self._parameters['y'][i])
+        ctx.fillStyle=grd1
+        ctx.fill()
+        container <= canvas
 
 
 class Rect(Shape):
-    def __init__(self, left, top, width, height, fill="black", border=None, dashes=False, borderWidth=2):
-        super().__init__(fill, border)
-        self._top = str(top)
-        self._left = str(left)
-        self._width = str(width)
-        self._height = str(height)
-        self._dashes = dashes
-        self._borderWidth = str(borderWidth)
+    def __init__(self, *argv, **kwargs):
+        super().__init__()
+        self._parameters['left'] = argv[0]
+        self._parameters['top'] = argv[1]
+        self._parameters['width'] = argv[2]
+        self._parameters['height'] = argv[3]
+        self._parameters['opacity'] = 100
+        for key, value in kwargs.items():
+            self._parameters[key] = value
         self.render()
 
 
     def render(self):
-        from browser import document, svg
-        if self._dashes == False:
-            rect = svg.rect(x=self._left, y=self._top, width=self._width, height=self._height, stroke=self._border,\
-            stroke_width=self._borderWidth, fill=self._fill)
+        ctx.globalAlpha = self._parameters['opacity']/100
+        if self._parameters['dashes'] == False:
+            ctx.beginPath();
+            left=self._parameters['left']
+            top = self._parameters['top']
+            width = self._parameters['width']
+            height = self._parameters['height']
+            self._parameters['grad_params'] = {
+               'left': left,
+               'top' : top,
+               'width' : width,
+               'height' : height
+            }
+
+            grd1 = self._update_fill('fill')
+            if grd1 != None:
+                ctx.fillStyle=grd1
+                ctx.lineWidth = self._parameters['borderWidth']
+                ctx.rect(self._parameters['left'],\
+                self._parameters['top'],\
+                self._parameters['width'],\
+                self._parameters['height']
+                )
+                ctx.fill()
+            else:
+                ctx.lineWidth = self._parameters['borderWidth']
+                
+                ctx.rect(self._parameters['left'],\
+                self._parameters['top'],\
+                self._parameters['width'],\
+                self._parameters['height']
+                )
+                ctx.stroke()
+                self._update_fill('fill')   
+            s = self._update_fill('border')
+            if s != None:
+                ctx.strokeStyle = s
+                ctx.lineWidth = self._parameters['borderWidth']
+                ctx.stroke()
+            
+            
+            container <= canvas
+            
         else:
-            rect = svg.rect(x=self._left, y=self._top, width=self._width, height=self._height, stroke=self._border,\
-            stroke_width=self._borderWidth, stroke_dasharray='5', fill=self._fill)
-        panel = document[document["DrawingOutputDiv"].text]
-        panel <= rect
+            rect = svg.rect(\
+            x=self._parameters['left'],\
+            y=self._parameters['top'],\
+            width=self._parameters['width'],\
+            height=self._parameters['height'],\
+            stroke=self._parameters['border'],\ 
+            stroke_dasharray='5',\
+            fill=self._parameters['fill']
+            )
 
-
+        
 
 class Oval(Shape):
-    def __init__(self, centerX, centerY, radiusX, radiusY, fill='black', border=None):
-        super().__init__(fill, border)
-        self._centerX = str(centerX)
-        self._centerY = str(centerY)
-        self._radiusX = str(radiusX)
-        self._radiusY = str(radiusY)
-        self._fill = fill
+    def __init__(self, centerX, centerY, width, height, **kwargs):
+        super().__init__()
+        self._parameters['centerX'] = centerX
+        self._parameters['centerY'] = centerY
+        self._parameters['radiusX'] = width/2
+        self._parameters['radiusY'] = height/2
+        self._parameters['opacity'] = 100
+        for key, value in kwargs.items():
+            self._parameters[key] = value
         self.render()
 
 
     def render(self):
-        from browser import document, svg
-        ellipse = svg.ellipse(cx=self._centerX, cy=self._centerY, rx=self._radiusX, ry=self._radiusY, stroke=self._border,\
-        stroke_width='2', fill=self._fill)
-        panel = document[document["DrawingOutputDiv"].text]
-        panel <= ellipse
+        ctx.globalAlpha = self._parameters['opacity']/100
+        self._parameters['grad_params'] = {\
+            'left': 0,
+            'top' : 0,
+            'width' : 400,
+            'height' : 400
+        }
+        s = self._update_fill('fill')
+        ctx.beginPath()
+        ctx.ellipse(self._parameters['centerX'], self._parameters['centerY'], self._parameters['radiusX'], self._parameters['radiusY'], 0, 0, 2 * 3.14);
+        ctx.closePath()
+        if s != None:
+            ctx.fillStyle = s
+            ctx.fill()
+        else:
+            ctx.stroke()
+        ctx.closePath()
+        container <= canvas
+
 
 
 class Circle(Shape):
-    def __init__(self, centerX, centerY, radius, fill='black'):
-       self._centerX = str(centerX)
-       self._centerY = str(centerY)
-       self._radius = str(radius)
-       self._fill = fill
-       self.render()
-
-
-    def render(self):
-        from browser import document, svg
-        circle =  svg.ellipse(cx=self._centerX, cy=self._centerY, rx=self._radius, ry=self._radius,\
-        stroke_width='2', fill=self._fill)
-        panel = document[document["DrawingOutputDiv"].text]
-        panel <= circle
-
-
-class Line(Shape):
-    def __init__(self, x1, y1, x2, y2):
-        self._x1 = str(x1)
-        self._y1 = str(y1)
-        self._x2 = str(x2)
-        self._y2 = str(y2)
+    def __init__(self, *argv, **kwargs):
+        super().__init__()
+        self._parameters['centerX'] = argv[0]
+        self._parameters['centerY'] = argv[1]
+        self._parameters['radius'] = argv[2]
+        self._parameters['opacity'] = 100
+        for key, value in kwargs.items():
+            self._parameters[key] = value
         self.render()
 
 
     def render(self):
+        ctx.globalAlpha = self._parameters['opacity']/100
+        self._parameters['grad_params'] = {\
+            'left': 0,
+            'top' : 0,
+            'width' : 400,
+            'height' : 400
+        }
+        s = self._update_fill('fill')
+        if s != None:
+            ctx.fillStyle = s
+            ctx.fill()
+
+        s = self._update_fill('border')
+        if s != None:
+            ctx.strokeStyle = s
+            ctx.lineWidth = self._parameters['borderWidth']
+        ctx.beginPath()
+        ctx.arc(self._parameters['centerX'], self._parameters['centerY'], self._parameters['radius'], 0, 2*3.14)
+        ctx.closePath()
+         
+        ctx.stroke()
+        ctx.closePath()
+        container <= canvas
+        
+
+class Line(Shape):
+    def __init__(self, x1, y1, x2, y2, **kwargs):
+        super().__init__()
+        self._x1 = x1
+        self._y1 = y1
+        self._x2 = x2
+        self._y2 = y2
+        self._parameters['lineWidth'] = 2
+        self._parameters['dashes'] = []
+        for key, value in kwargs.items():
+            if key == 'dashes':
+                self._parameters[key] = list(value)
+            if value != None:
+                self._parameters[key] = value
+            else:
+                self._parameters[key] = None
+        
+        self.render()
+
+
+    def render(self):
+        ctx.setLineDash(self._parameters['dashes'])
+        self._parameters['grad_params'] = {\
+            'left': 0,
+            'top' : 0,
+            'width' : 400,
+            'height' : 400
+        }
+        LinearGradient = False
+        ctx.beginPath();
+        ctx.strokeStyle=self._update_fill('key')
+        ctx.lineWidth = self._parameters['lineWidth']
+        ctx.moveTo(self._x1, self._y1);
+        ctx.lineTo(self._x2, self._y2);
+        ctx.stroke()
+        container <= canvas
+
+class Star(Shape):
+    def __init__(self):
+          
+          self.render()
+    
+    
+    def render(self):
         from browser import document, svg
-        line = svg.line(x1=self._x1, y1=self._y1, x2=self._x2, y2=self._y2, stroke="brown")
-        panel = document[document["DrawingOutputDiv"].text]
-        panel <= line
+        star = svg.polygon(fill="lime", stroke="blue", stroke_width="2",\
+        points=""" 75,38  90,80  135,80  98,107\
+        111,150 75,125  38,150 51,107\
+        15,80  60,80""")
+        panel = document['panel']
+        panel <= star        
+
+class Octagon(Shape):
+
+    def __init__(self):
+        self.render()
+    
+    
+    def render(self):
+        from browser import document, svg
+        octagon = svg.polygon(fill="lime", stroke="red", stroke_width="2",\
+        points=""" 50,5   100,5  125,30  125,80 100,105
+        50,105  25,80  25, 30""")
+        panel = document['panel']
+        panel <= octagon 
+
+class Hexagon(Shape):
+
+    def __init__(self):      
+          self.render()
+        
+        
+    def render(self):
+        from browser import document, svg
+        hexagon = svg.polygon(fill="lime", stroke="blue", stroke_width="10",\
+        points=""" 300,150 225,280 75,280 0,150 75,20 225,20""")
+        panel = document['panel']
+        panel <= hexagon          
+
+class Pentagon(Shape):
+    def __init__(self):  
+          self.render()
+    
+    
+    def render(self):
+        from browser import document, svg
+        pentagon = svg.polygon(fill="lime", stroke="red", stroke_width="2",\
+        points=""" 150,20 200,60 180,110 120,110 100,60""")
+        panel = document['panel']
+        panel <= pentagon 
+
+class Trapezium(Shape):
+    def __init__(self):
+        self.render()
+    
+    
+    def render(self):
+        from browser import document, svg
+        trapezium = svg.polygon(fill="lime", stroke="red", stroke_width="2",\
+        points=""" 60,20 260,20 300,120 20,120""")
+        panel = document['panel']
+        panel <= trapezium        
+
+class Parallelogram(Shape):
+    def __init__(self):
+          
+          self.render()
+    
+    
+    def render(self):
+        from browser import document, svg
+        parallelogram = svg.polygon(fill="lime", stroke="red", stroke_width="2",\
+        points=""" 100,10  400, 10  40, 50  1, 50""")
+        panel = document['panel']
+        panel <= parallelogram 
+
+def run_code(ev):
+    global container
+    container = document[document["DrawingOutputDiv"].text]
+    global canvas 
+    canvas = html.CANVAS(width = 400, height = 400)
+    global ctx 
+    ctx = canvas.getContext('2d')
 
 
+    outputInit()
+    timer.set_timeout(exec_code, 1)
 
-
-
-def python_initialization():
-    alert("Usama")
-    import turtle
-    turtle.set_defaults(
-        turtle_canvas_wrapper = document['turtle-div']
-    )
-    t = turtle.Turtle()
-    t.width(5)
-
-    for c in ['red', '#00ff00', '#fa0', 'rgb(0,0,200)']:
-        t.color(c)
-        t.forward(100)
-        t.left(90)
-
-    # dot() and write() do not require the pen to be down
-    t.penup()
-    t.goto(-30, -100)
-    t.dot(40, 'rgba(255, 0, 0, 0.5')
-    t.goto(30, -100)
-    t.dot(40, 'rgba(0, 255, 0, 0.5')
-    t.goto(0, -70)
-    t.dot(40, 'rgba(0, 0, 255, 0.5')
-    t.goto(0, 125)
-    t.color('purple')
-    t.write("I love Brython!", font=("Arial", 20, "normal"))
-    turtle.done()
 
 document["pythonFunctionCaller"].bind("click", run_code)
-document["codeClearFunction"].bind("click", clear_print)
-
 def exec_code():
-    code = document["TestingCode"].text
-    _code = code
-    #_code= document["inline-editor-68eb97269a19374dd4ffc0a6538caf06b497ecce"].text
+    _code= document["TestingCode"].text
     try:
         exec(_code)
     except:
@@ -178,32 +542,22 @@ def exec_code():
             traceback.print_exc()
         except:
             print("could not print traceback")
-    #document["clear"].class_name = "btn-enabled"
-    document["replay-scene"].class_name = "btn-enabled"
     inform("")
 
 def delayed_clear():
-    
     from turtle import restart
     restart()
-    
     inform("")
-    
-    #document["mybutton"].class_name = "btn-enabled"
-    
-    #document["clear"].class_name = "btn-disabled"
-    
     clear_print()
 
 def clear(ev):
-    
     global FIRST_TIME
     if FIRST_TIME:
         FIRST_TIME = False
         #inform("Importing turtle module for the first time and processing; please wait")
-        document["run"].class_name = "btn-disabled"
-    # delay to allow updated DOM with above text to be shown.
+        # delay to allow updated DOM with above text to be shown.
     timer.set_timeout(delayed_clear, 1)
+
 
 document["clear"].bind("click", clear)
 def replay(ev):
@@ -212,19 +566,15 @@ def replay(ev):
     from turtle import replay_scene
     replay_scene()
 
-#document["replay-scene"].bind("click", replay)
 
 def copy_content(ev):
-    choice = document["demo_selector"].value
     document["source"].text = document['demo'+ str(choice)].text
     document["info"].html = document['info'+ str(choice)].html
     clear(ev)
 
-#document["demo_selector"].bind("change", copy_content)
 
-# Start with first demo
-#document["source"].text = document["demo1"].text
-#document["info"].html = document["info1"].html
+
+
 </script>
 
   <!-- <script type="text/python">

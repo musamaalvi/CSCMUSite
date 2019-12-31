@@ -66,13 +66,14 @@ export class DrilldowmComponent implements OnInit {
   }
   CodeRunButton(codeToRun, outputSet, outputIdDrawing){
     debugger;
+    $('canvas').remove()
     $('#panel').empty()
     $('#TestingCode').text($(codeToRun).val())
     //For console
     $('#OutputDiv').text($(outputSet).attr('id'))
     //For drawing
     $('#DrawingOutputDiv').text($(outputIdDrawing).attr('id'))
-
+    $('#codeClearFunction').trigger('click')
     $('#pythonFunctionCaller').trigger('click')
   }
   CodeClearButton(codeToRun, outputSet){

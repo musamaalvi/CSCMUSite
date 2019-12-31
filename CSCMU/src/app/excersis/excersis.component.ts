@@ -43,9 +43,11 @@ ClearCode(){
 
   CodeRunButton(codeToRun){
     debugger;
+    $('canvas').remove()
     $('#TestingCode').text($(codeToRun).val())
     $('#OutputDiv').text('turtle-print-output')
     $('#DrawingOutputDiv').text('exerciseOutputDrawing')
+    $('#codeClearFunction').trigger('click')
     $('#pythonFunctionCaller').trigger('click')
   }
 }
