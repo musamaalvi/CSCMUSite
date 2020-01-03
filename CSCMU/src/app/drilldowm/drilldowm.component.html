@@ -1109,7 +1109,7 @@
                                     </div>
 
 
-                                    <div #iFrameHandle1 id="turtle-div" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 60%; height:400px; float: right; border-style:solid;border-width:1;border-color:#000;" class="IframeHidden turtleDivClass" >
+                                    <div #iFrameHandle1 id="turtle-div" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  class="IframeHidden turtleDivClass newRBox" >
   <!-- <g #idForDrawing id="drawing-turtle-print-output{{j}}{{k}}">
   </g> -->
   <div #idForDrawing id="drawing-turtle-print-output{{j}}{{k}}"></div>
@@ -1127,10 +1127,12 @@
                                     </pre>
                                 </div>
                             </div>
-                                    <p> <span id="status-info"></span>
-                                        <button id="clear" (click)="CodeClearButton(codeToRun, idForOutput)" class="btn-disabled">Clear</button>
-                                        <button id="mybutton" (click)="CodeRunButton(codeToRun, idForOutput, idForDrawing)">Run Code!</button>
-                                    </p>
+                                  <div class='buttonsBottom'>
+                                        
+                                        <button id="mybutton" (click)="CodeRunButton(codeToRun, idForOutput, idForDrawing)" class="runcode">Run Code!</button>
+                                        <button id="clear" (click)="CodeClearButton(codeToRun, idForOutput)" class="btn-disabled clearButton">Clear</button>
+                                        <button id="clear" (click)="ResetClearButton(codeToRun, idForOutput, idForDrawing)" class="btn-disabled clearButton">Reset Code</button>
+                                    </div>
                                     
                                     
                                 </div>

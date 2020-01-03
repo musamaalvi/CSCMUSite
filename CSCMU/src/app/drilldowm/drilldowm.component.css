@@ -31,3 +31,43 @@ pre#turtle-print-output {
     border-radius:0;
     border:none
   }
+
+  .newRBox {
+    width: 60%;
+    height:515px;
+    float: right;
+    border-left: 0;
+    border-style:solid;
+    border-width:1;
+    border-color:#ccc;
+}
+.buttonsBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.buttonsBottom .clearButton {
+display: inline-block;
+padding: 0 30px;
+color: #FFF;
+font-size: 15px;
+height: 30px;
+line-height: 30px;
+font-weight: 700;
+background: #479fba;
+margin: 15px 10px 0 0;
+border: 0;
+}
+.buttonsBottom .runcode {
+display: inline-block;
+padding: 0 30px;
+color: #FFF;
+font-size: 15px;
+height: 30px;
+line-height: 30px;
+font-weight: 700;
+background: #ce7cf4;
+margin: 15px 10px 0 0;
+border: 0;
+}

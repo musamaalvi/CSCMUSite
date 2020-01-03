@@ -58,4 +58,24 @@
 
 #clear{
   background-color: gray;
+  margin-right: 10px;
+}
+.sandBox_bottom {
+  height:400px;
+  border-style:solid;
+  border-width:1;
+  border-color:#ccc;
+  display: flex;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+
+div#turtle-print-output{
+background-color: black;
+color: yellow;
+font-weight: bolder;
+min-height: 400px;
+height: auto;
+max-height: 200px;
 }

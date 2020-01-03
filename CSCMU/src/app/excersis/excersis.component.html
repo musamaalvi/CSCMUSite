@@ -10613,7 +10613,8 @@
       
                       <div class="rightButtons">
                           <button class="check-button runnable" id="mybutton" (click)="CodeRunButton(codeToRun)"> Run Code</button>
-                          <button class="check-button runnable" id="clear" (click)="ClearCode()"> Clear Code</button>
+                          <button class="check-button runnable" id="clear" (click)="ClearCode()"> Clear</button>
+                          <button class="check-button runnable" id="clear" (click)="ResetCode()"> Reset Code</button>
                           
                       </div>
       
@@ -10663,7 +10664,13 @@
         
       
           </div>
-          <div id="exerciseOutputDrawing" style="margin-left: 150px; width: 400px; height:400px;border-style:solid;border-width:1;border-color:#000;"></div>
+          <div class="container">
+    
+            <div class="col-md-12">
+                <div  class="sandBox_bottom" id="exerciseOutputDrawing"></div>
+            </div>
+        
+            </div>
 
           <!-- <svg id="turtle-div" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 100%; height:400px; float: right; border-style:solid;border-width:1;border-color:#000;" class="IframeHidden turtleDivClass" >
             <g #idForDrawing id="exerciseOutputDrawing">

@@ -64,6 +64,10 @@ export class DrilldowmComponent implements OnInit {
     $(iFrameHandle1).removeClass("IframeHidden")
 
   }
+  ResetClearButton(codeToRun, outputSet, outputIdDrawing){
+    $('#TestingCode').text('')
+    $(codeToRun).val('')
+  }
   CodeRunButton(codeToRun, outputSet, outputIdDrawing){
     debugger;
     $('canvas').remove()

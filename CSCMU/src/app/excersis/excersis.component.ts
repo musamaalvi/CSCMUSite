@@ -33,9 +33,15 @@ QuestionId
     })
     }
   }
+
+  ResetCode(){
+    debugger;
+    $('textarea').val('')
+  }
 ClearCode(){
     $('#panel').empty()
     //$('#TestingCode').text($(codeToRun).val())
+    $('canvas').remove()
     $('#OutputDiv').text('turtle-print-output')
     $('#DrawingOutputDiv').text('exerciseOutputDrawing')
     $('#codeClearFunction').trigger('click')
