@@ -1,0 +1,5 @@
+How can we write the previous example without using a group?
+We cannot do that.
+Assign a variable to each shape.
+Assign a variable to each shape, and set each shape's location separately in onMouseMove.
+Set each shape's location separately in onMouseMove.

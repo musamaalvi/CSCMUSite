@@ -1,0 +1,7 @@
+Label('angleTo() Demo', 200, 20, size=20, bold=True)
+Label('Move the mouse and the arrow points at it!', 200, 45, size=16)
+
+arrow = Line(200, 250, 200, 200, arrowEnd=True)
+
+def onMouseMove(x, y):
+    arrow.rotateAngle = angleTo(arrow.centerX, arrow.centerY, x, y)

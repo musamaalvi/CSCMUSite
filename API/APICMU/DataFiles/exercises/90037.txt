@@ -1,0 +1,11 @@
+# Time to draw the CMU mascot, the Scotty Dog! We've provided the main shape of
+# the dog but to complete the image, you'll need to add the scarf.
+
+# draws the Scotty Dog head
+Polygon(130, 60, 150, 140, 150, 70, 170, 130, 260, 130, 220, 150, 325, 160,
+        315, 260, 290, 240, 210, 240, 210, 270, 250, 310, 180, 380, 80, 280,
+        130, 205)
+
+# Draw the scarf around the neck.
+### Place Your Code Here ###
+Polygon(130,205,80,280,250,310,210,270,fill='red')

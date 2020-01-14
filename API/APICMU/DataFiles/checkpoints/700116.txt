@@ -1,0 +1,5 @@
+In the previous example, which variables are helper variables?
+mouseX, mouseY, and color
+color
+counter
+mouseX and mouseY

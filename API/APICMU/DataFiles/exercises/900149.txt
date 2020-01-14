@@ -1,0 +1,19 @@
+# In this exercise, you will draw the cute mascot of Android!
+# On all rounded corners, the rounded portion gets drawn before the rest of that
+# part of the mascot.
+# Have fun!
+
+# Draw the head.
+### Place Your Code Here ###
+
+# Draw the eyes and then the antennas.
+### Place Your Code Here ###
+
+# Draw the main body (with rounded bottom corners).
+### Place Your Code Here ###
+
+# Draw the legs.
+### Place Your Code Here ###
+
+# Draw the arms.
+### Place Your Code Here ###

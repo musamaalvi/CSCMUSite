@@ -1,0 +1,5 @@
+In the previous example, what happens if we use 20 + 80 * i for centerX instead of 40 + 80 * i? Try it first!
+All the circles are shifted right.
+The circles are further apart.
+The number of circles drawn changes.
+All the circles are shifted left.

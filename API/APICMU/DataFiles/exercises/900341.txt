@@ -1,0 +1,21 @@
+# (1) Move your cursor around the canvas.
+# (2) Notice how your cursor reflects vertically across the middle of the canvas.
+# That's it! Let's code!
+
+# background
+Rect(100, 300, 600, 600, fill=gradient('aqua', 'royalBlue', 'midnightBlue'),
+     align='center')
+
+cursor = Polygon(200, 190, 200, 208, 205, 203, 209, 210, 211, 209, 207, 203,
+                 213, 203, border='white', borderWidth=0.8)
+
+def onMouseMove(mouseX, mouseY):
+    # Change the location of the cursor based on mouse location.
+    ### (HINT: The mouseX and mouseY values are given by the left top of your
+    #          own mouse. cursor should follow your mouse but refected vertically)
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMouseMove(100, 100)

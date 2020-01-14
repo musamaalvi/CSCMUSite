@@ -1,0 +1,11 @@
+# Draw Polygons with differing number of vertices.
+
+# draws a background and the Circle on the left.
+Rect(0, 0, 400, 400, fill='orchid')
+Circle(100, 200, 150, fill='crimson', border='black')
+
+### Place Your Code Here ###
+RegularPolygon(150,200,125,6,fill='indigo',border='black')
+RegularPolygon(200,200,100,5,fill='royalBlue',border='black')
+RegularPolygon(250,200,75,4,fill='springGreen',border='black')
+RegularPolygon(300,200,50,3,fill='yellow',border='black')

@@ -1,0 +1,5 @@
+In the previous example, what happens if we change app.size //= 2 to app.size //= 3? Try it first!
+More rectangles are drawn because they get smaller more slowly.
+The same amount of rectangles are drawn, but they have different sizes.
+Fewer rectangles are drawn because they get smaller more quickly.
+Fewer rectangles are drawn, but they have the same size as before.

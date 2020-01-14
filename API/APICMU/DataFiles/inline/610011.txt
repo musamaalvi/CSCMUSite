@@ -1,0 +1,11 @@
+Label('Motivating Groups Example #1', 200, 20, size=20, bold=True)
+Label('Move the circled-star with the mouse', 200, 40, size=16)
+
+c = Circle(200, 200, 50, fill=None, border='black', borderWidth=5)
+s = Star(200, 200, 50, 5, fill=None, border='black', borderWidth=5)
+
+def onMouseMove(mouseX, mouseY):
+    c.centerX = mouseX
+    c.centerY = mouseY
+    s.centerX = mouseX
+    s.centerY = mouseY

@@ -1,0 +1,16 @@
+Label('Local Variables Demo #2', 200, 20, size=20)
+Label('Click anywhere (gold on left, navy on right)', 200, 50, size=20)
+
+counter = Label(0, 200, 200, size=50, bold=True)
+
+def onMousePress(mouseX, mouseY):
+    if (mouseX < 200):
+        color = 'gold'
+    else:
+        color = 'navy'
+    # Here we draw 2 circles and a label:
+    Circle(mouseX, mouseY, 40, fill=None, border=color, borderWidth=8)
+    Circle(mouseX, mouseY, 30, fill=None, border=color, borderWidth=4)
+    Label(color, mouseX, mouseY, fill=color, size=20, bold=True)
+    # Let's also keep a counter of how many times we clicked:
+    counter.value += 1

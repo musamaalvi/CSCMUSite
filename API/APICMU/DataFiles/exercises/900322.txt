@@ -1,0 +1,19 @@
+# (1) Move the mouse on the canvas
+# (2) Notice how the ball moves to the right each time you move the mouse
+# (3) Keep moving the mouse until the ball goes off the screen
+# (4) Notice how it resets to the left side
+# That's it, let's code!
+
+Label('Ball wrap around', 200, 20, fill='white', size=20, bold=True)
+Label('Move the mouse to roll the ball right by 10', 200, 45, fill='white')
+Label('Until it gets to the edge, then it wraps around!', 200, 65, fill='white')
+
+app.background = 'midnightBlue'
+
+ball = Circle(20, 200, 20, fill='yellow')
+
+def onMouseMove(mouseX, mouseY):
+    ### (HINT: As long as the ball's center is left of the right edge of the
+    #          canvas, keep moving right by 10. Otherwise restart at the left edge)
+    ### Place Your Code Here ###
+    pass

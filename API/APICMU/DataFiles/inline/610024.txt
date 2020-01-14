@@ -1,0 +1,11 @@
+Label('Shape-Specific Properties Example', 200, 20, size=20, bold=True)
+Label('Press any key to make the stars have 12 sides', 200, 45, size=16)
+
+g = Group(
+    Circle(200, 200, 50, fill=None, border='black', borderWidth=5),
+    Star(200, 200, 50, 5, fill=None, border='black', borderWidth=5),
+    Star(200, 200, 15, 5, fill='red')
+  )
+
+def onKeyPress(key):
+    g.points = 12

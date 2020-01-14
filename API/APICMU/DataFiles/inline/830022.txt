@@ -1,0 +1,6 @@
+Label('Nested For Loops Demo', 200, 20, size=20, bold=True)
+Label('3 rows of 4 circles each', 200, 40, size=16)
+
+for x in range(50, 351, 100):
+    for y in range(100, 301, 100):
+        Circle(x, y, 20)

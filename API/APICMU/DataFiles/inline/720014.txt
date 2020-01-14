@@ -1,0 +1,8 @@
+Label('For Loop Demo #4', 200, 20, size=20, bold=True)
+Label('Now with lines before and after the loop', 200, 40, size=16)
+
+Label('This is before the loop', 200, 150, size=20)
+for i in range(10):
+    Circle(20 + 40 * i, 200, 20)
+    Label(i, 20 + 40 * i, 200, size=20, fill='yellow')
+Label('This is after the loop', 200, 250, size=20)

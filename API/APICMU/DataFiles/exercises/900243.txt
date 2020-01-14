@@ -1,0 +1,31 @@
+# (1) Click anywhere on the canvas, without releasing the mouse.
+# (2) The mask turns black and becomes Venom!
+# (3) Now, release the mouse, and Spiderman's mask reappears.
+# That's it, let’s code!
+
+app.background = 'red'
+
+# mask ridges
+Line(0, 0, 400, 400)
+Line(400, 0, 0, 400)
+Line(200, 0, 200, 400)
+Line(0, 200, 400, 200)
+Star(200, 200, 150, 9, fill=None, border='black', roundness=90)
+Star(200, 200, 25, 9, fill=None, border='black', roundness=90)
+Star(200, 200, 250, 9, fill=None, border='black', roundness=90)
+
+# eyes
+Oval(100, 150, 100, 200, fill='white', border='black', borderWidth=6, rotateAngle=-20)
+Oval(300, 150, 100, 200, fill='white', border='black', borderWidth=6, rotateAngle=20)
+
+def onMousePress(mouseX, mouseY):
+    # Change from spiderman to venom
+    ### (HINT: The only thing that changes is the color)
+    ### Place Your Code Here ###
+    pass
+
+def onMouseRelease(mouseX, mouseY):
+    # Change from venom to spiderman
+    ### (HINT: The only thing that changes is the color)
+    ### Place Your Code Here ###
+    pass

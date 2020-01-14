@@ -1,0 +1,34 @@
+# (1) Select the first test case.
+# (2) See how the home team is leading 42 to 18 with 8 minutes, 17 seconds left.
+# (3) Now select the second test case.
+# (4) The score has changed so the home team 13 points compared to the away
+# team's 24 points. And now there are 10 minutes and 53 seconds left in the game.
+# That's it, let's code!
+
+def scoreboard(timeString, homeScore, awayScore):
+    Rect(0, 0, 400, 400, fill='cornflowerblue')
+
+    # Display the time remaining
+    ### Fix Your Code Here ###
+    Rect(50, 0, 300, 150)
+    Rect(35, 0, 330, 165, fill=None, border='white', borderWidth=5)
+    Rect(165, 150, 70, 30, fill='cornflowerblue')
+    Label('TIME', 200, 165, size=20, fill='white')
+    Label('15:00', 200, 75, size=80, fill='goldenrod', font='monospace',
+          bold=True)
+
+    # Add the home team's score
+    ### Place Your Code Here ###
+    Label('HOME', 100, 220, fill='white',
+          size=60, font='monospace', bold=True)
+    Rect(25, 250, 150, 100)
+
+    # Add the away team's score
+    ### Place Your Code Here ###
+    Label('AWAY', 300, 220, fill='white',
+          size=60, font='monospace', bold=True)
+    Rect(225, 250, 150, 100)
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+scoreboard('08:17', 42, 18)

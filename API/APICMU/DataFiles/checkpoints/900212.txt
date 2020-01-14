@@ -1,0 +1,5 @@
+In the previous example, what happens if we change text.value = text.value.lower() to simply text.value.lower()? That is, we use the following code in onKeyPress:     if (key == 'l'):     text.value.lower()
+Nothing changes.
+We get an error.
+The text never becomes lowercase.
+The text is always lowercase.

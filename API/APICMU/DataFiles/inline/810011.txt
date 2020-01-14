@@ -1,0 +1,5 @@
+Label('Arcs Demo #1', 200, 20, size=20, bold=True)
+Label('A navy arc on a gold oval', 200, 45, size=16)
+
+Oval(200, 200, 400, 150, fill='gold')
+Arc(200, 200, 400, 150, 0, 90, fill='navy')

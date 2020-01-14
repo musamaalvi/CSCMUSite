@@ -1,0 +1,5 @@
+One of the arrows in the previous example was drawn like so:    Line(100, 175, 300, 175, arrowStart=True)    Which of the following will draw an arrow that looks the same as that arrow?
+Line(300, 175, 100, 175, arrowEnd=True)
+Line(100, 175, 300, 175, arrowEnd=True)
+None of these.
+Line(300, 175, 100, 175, arrowStart=True)

@@ -1,0 +1,53 @@
+# (1) Click anywhere on the canvas.
+# (2) The dipper stick moves to the 'height' of your click, and the honey
+#     "sticks" to it, and moves to that height as well.
+# (3) Keep clicking at various heights.
+# (4) Notice that the width of the dripping honey depends on how high the
+#     stick is above the pot of honey.
+# (5) When the dipper is right above the honey, more of it sticks, and the
+#     line is thicker (thickening the line is done for you).
+# (6) As the dipper goes higher, less and less honey sticks.
+# That's it, let’s code!
+
+app.background = gradient('lightSkyBlue', 'lightCyan', start='top')
+
+# flower and tree
+Rect(375, 200, 25, 200, fill=gradient('peru', 'saddleBrown', start='left'))
+Circle(325, 200, 50, fill=gradient('mediumSeaGreen', 'green', 'green',
+                                   start='left'))
+Circle(400, 200, 50, fill='green')
+Circle(350, 150, 50, fill=gradient('mediumSeaGreen', 'green', 'green',
+                                   start='left-top'))
+Circle(375, 100, 50, fill=gradient('mediumSeaGreen', 'green', 'green',
+                                   start='left-top'))
+Circle(400, 50, 50, fill=gradient('mediumSeaGreen', 'green', 'green',
+                                  start='left-top'))
+
+stickyHoney = Line(200, 275, 200, 200,
+                   fill=gradient('chocolate', 'goldenrod', 'goldenrod', start='bottom'),
+                   lineWidth=40)
+dipperStick = Line(200, 200, 400, 300,
+                   fill=gradient('sienna', 'burlyWood', start='top'), lineWidth=20)
+dipperTop = Line(200, 200, 240, 220,
+                 fill=gradient('goldenrod', 'maroon', start='bottom'),
+                 lineWidth=40, dashes=True)
+
+Polygon(125, 265, 140, 275, 125, 300, 125, 375, 140, 400, 260, 400, 275, 375,
+        275, 300, 260, 275, 275, 265,
+        fill=gradient('chocolate', 'goldenrod', start='left'), border='goldenrod')
+
+Rect(200, 340, 100, 50, fill='goldenrod', align='center')
+Label('HONEY', 200, 340, fill='white', italic=True, size=25)
+
+def onMousePress(mouseX, mouseY):
+    # This changes the lineWidth and position of the honey
+    stickyHoney.y2 = mouseY
+    stickyHoney.lineWidth = mouseY / 5 + 1
+
+    # Change the y1 and y2 values of the dipperStick to move to the
+    # location of click
+    ### Place Your Code Here ###
+
+    # Change the y1 and y2 values of dipperTop
+    ### Place Your Code Here ###
+    pass

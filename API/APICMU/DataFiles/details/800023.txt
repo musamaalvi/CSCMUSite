@@ -1,9 +1,9 @@
 800011#We have learned about functions like random() and randrange(). Now we will learn about several other helpful functions.|Paragraph
 80001#abs()|MainHeading
 800011#We can use the abs() function to compute the absolute value of a number. For example, abs(-5) is 5. Here is an example:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820031#|InlineContainer
 800011#Run the code, move the mouse, and see when it is cyan and when it is pink. Now, look at line 13:|Paragraph
-820001#distanceToLine = abs(y - 200)||Alert
+820001#distanceToLine = abs(y - 200)|Box
 800011#We use (y - 200) to find the vertical distance from the mouse to the center line (which is at 200). However, this value can be negative if the mouse is above the center line. So we use abs(y - 200) to only consider the positive distance to the center line.|Paragraph
 800231#|CheckPoint
 800232#|CheckPoint
@@ -14,20 +14,21 @@ end
 80003#distance()|MainHeading
 800011#We can use the distance() function to find the distance between two points. For example, to find the distance from the point (10, 20) to the point (40, 60), we call distance(10, 20, 40, 60), which returns 50.|Paragraph
 800011#Here is a practical example:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820032#|InlineContainer
 800233#|CheckPoint
 end
 80004#angleTo()|MainHeading
 800011#We can use the angleTo function to compute the angle from one point to another, where 0 degrees is straight up, and 90 degrees is to the right, and so on.|Paragraph
 800011#For example, what is the angle from (200, 200) to (400, 0)? That is, from the center to the top-right corner of the canvas? Since 0 degrees is straight up, and 90 degrees is to the right, and the this is halfway between those, it is 45 degrees. Thus, angleTo(200, 200, 400, 0), returns 45. That is, we follow a 45 degree angle to get from (200, 200) to (400, 0).|Paragraph
 800011#Here is an example that uses angleTo() to find the angle from an arrow to the current mouse position, and then we set the arrow's rotateAngle to that angle. In this way, the arrow always points towards the mouse!|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820033#|InlineContainer
 800234#|CheckPoint
 end
 80005#getPointInDir()|MainHeading
 800011#Here is one more function that is very useful at times: getPointInDir(). We use this function to find the point that lies a certain distance at a given angle from another point. For example, say we want to find the point that is a distance of 50 away from the point (200, 200) at 90 degrees. We would call getPointInDir(200, 200, 90, 50), which returns the point (250, 200). Since 90 degrees is to the right, this matches our expectation.|Paragraph
-820001#Every function we have seen so far returns one value. However, getPointInDir() returns two values -- both x and y of the resulting point. For this reason, we set not one but two variables to its result, like so:       x, y = getPointInDir(200, 200, 90, 50)||Alert
+820001#Every function we have seen so far returns one value. However, getPointInDir() returns two values -- both x and y of the resulting point. For this reason, we set not one but two variables to its result, like so:|PinkParagraph
+800011#x, y = getPointInDir(200, 200, 90, 50)|Box
 800011#Here is an example:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+820034#|InlineContainer
 800235#|CheckPoint
 end

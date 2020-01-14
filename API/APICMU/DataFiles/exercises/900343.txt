@@ -1,0 +1,31 @@
+# (1) Drag your mouse across the canvas to turn on the flashlight and reveal the
+#     answer to the dog joke.
+# (2) Notice how your the light follows the location of your mouse drag.
+# (3) Also notice how the light disappears when you release your mouse.
+# That's it! Let's code!
+
+app.background = 'black'
+
+light = Circle(200, 200, 55, fill='white', visible = False)
+message = Label('Delighted.', 200, 200, font='arial', size=48)
+
+Label('How did the dog feel when', 200, 30, fill='gold', size=24, font='arial')
+Label('he lost his flashlight?', 200, 60, fill='gold', size=24, font='arial')
+Label('Turn on the flashlight to find the answer!', 200, 370, fill='gold',
+      size=15, font='arial')
+
+def onMouseDrag(mouseX, mouseY):
+    # The light should appear and follow the mouse.
+    ### Place Your Code Here ###
+    pass
+
+def onMouseRelease(mouseX, mouseY):
+    # The light should disappear.
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMouseDrag(50, 200)
+onMouseDrag(55, 200)
+onMouseDrag(60, 200)

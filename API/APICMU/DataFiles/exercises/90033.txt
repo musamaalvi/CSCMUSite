@@ -1,0 +1,11 @@
+# The code given to you draws the logo for the supermarket chain Target. Add
+# the name to complete the logo like in the solution.
+
+# draw the target
+Circle(200, 150, 100, fill='red')
+Circle(200, 150, 70, fill='white')
+Circle(200, 150, 35, fill='red')
+
+# Use a Label to draw the name.
+### Place Your Code Here ###
+Label('TARGET',200,300,size=65,font='arial',bold=True,fill='red')

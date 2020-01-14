@@ -1,0 +1,33 @@
+# (1) Move your cursor to the upper-left quadrant.
+# (2) Notice the red ball follows your mouse.
+# (3) Notice the balls in the other three quadrants mirror the first ball.
+# That's it, let's code!
+
+app.background = gradient('dodgerBlue', 'navy')
+
+dot1 = Circle(100, 100, 10, fill=gradient('lightCoral', 'crimson'))
+dot2 = Circle(300, 100, 10, fill=gradient('lightCoral', 'crimson'))
+dot3 = Circle(100, 300, 10, fill=gradient('lightCoral', 'crimson'))
+dot4 = Circle(300, 300, 10, fill=gradient('lightCoral', 'crimson'))
+
+Line(0, 200, 400, 200, dashes=True)
+Line(200, 400, 200, 0, dashes=True)
+
+def onMouseMove(mouseX, mouseY):
+    # dot 1 should follow the mouse exactly
+    ### Place Your Code Here ###
+
+    # dot 2 should follow the mouse but reflected in horizontal movement
+    ### Place Your Code Here ###
+
+    # dot 3 should follow the mouse but reflected in vertical movement
+    ### Place Your Code Here ###
+
+    # dot 4 should follow the mouse but reflected in both horizontal and
+    # vertical movement
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMouseMove(50, 100)

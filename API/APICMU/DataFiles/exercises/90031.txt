@@ -1,0 +1,15 @@
+# Draw a cube using a Rect and some Lines with gradients!
+# front face of the cube
+Rect(70, 150, 200, 200, fill=None, border='dodgerBlue')
+# Draw the rest of the cube using Lines.
+### (HINT: Use dashes to add depth to the cube and distinguish the 'back' of the
+# cube from the 'front')
+### Place Your Code Here ###
+Line(70,150,130,70,lineWidth= 2,fill=gradient('dodgerBlue','darkViolet',start='left'))
+Line(270,150,330,70,lineWidth= 2,fill=gradient('dodgerBlue','darkViolet',start='left'))
+Line(270,350,330,270,lineWidth= 2,fill=gradient('dodgerBlue','darkViolet',start='left'))
+Line(70,350,130,270,dashes= True,lineWidth= 2,fill=gradient('dodgerBlue','darkViolet',start='left'))
+Line(130,270,130,70,dashes= True,lineWidth= 2,fill='darkViolet')
+Line(130,270,330,270,dashes= True,lineWidth= 2,fill='darkViolet')
+Line(330,70,130,70,lineWidth= 2,fill='darkViolet')
+Line(330,270,330,70,lineWidth= 2,fill='darkViolet')

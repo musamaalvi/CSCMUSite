@@ -1,0 +1,8 @@
+Label('While loops demo #1', 200, 20, size=20, bold=True)
+Label('Enter numbers until the total is at least 100', 200, 45, size=16)
+
+total = Label(0, 200, 200, size=50)
+
+while (total.value < 100):
+    userInput = app.getTextInput('Enter next number. Total so far: ' + str(total.value))
+    total.value += int(userInput)

@@ -1,0 +1,10 @@
+Label('Group Methods Demo #4', 200, 20, size=20, bold=True)
+Label('Click to add circles to the group', 200, 45, size=16)
+Label('Press c to clear all shapes (including this text)', 200, 65, size=16)
+
+def onMousePress(x, y):
+    Circle(x, y, 20, fill='cyan', border='black')
+
+def onKeyPress(key):
+    if (key == 'c'):
+        app.group.clear()

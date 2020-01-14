@@ -1,0 +1,46 @@
+# (1) Move the mouse on the canvas.
+# (2) Notice how the pin rotates every time you move your mouse.
+# (3) Also notice how the blinkers for the boat, glacier, and shark change size.
+# That's it, let's code!
+
+app.background = 'black'
+
+# radar shapes
+Circle(200, 200, 200, fill=None, border='lime', borderWidth=10, opacity=50)
+Circle(200, 200, 125, fill=None, border='lime', borderWidth=10, opacity=50)
+Circle(200, 200, 50, fill=None, border='lime', borderWidth=10, opacity=50)
+pin = Line(200, 10, 200, 390, lineWidth=10, fill='lime', dashes=True,
+           opacity=70)
+
+boatBlinker = Circle(100, 100, 10, fill='white', opacity=50)
+Polygon(70, 100, 130, 103, 120, 113, 80, 110, fill='white', border='white')
+Polygon(70, 100, 120, 97, 130, 103, fill='lightSteelBlue', border='white')
+Polygon(107, 100, 110, 70, 132, 94, 110, 92, 110, 97, fill='lightSteelBlue')
+
+glacierBlinker = Circle(300, 60, 10, fill='white', opacity=50)
+Polygon(265, 75, 281, 55, 282, 60, 298, 41, 300, 63, 315, 52, 315, 61, 311, 65,
+        310, 80, fill='lavender', border='lightSteelBlue')
+Polygon(315, 52, 340, 75, 310, 80, 311, 65, 315, 61, fill='lightSteelBlue',
+        border='lightSteelBlue')
+Polygon(298, 41, 309, 56, 300, 63, fill='lightSteelBlue', border='lightSteelBlue')
+
+sharkBlinker = Circle(280, 315, 10, fill='white', opacity=50)
+Polygon(315, 310, 333, 295, 327, 310, 333, 325, fill='lightSteelBlue')
+Polygon(230, 310, 265, 323, 320, 310, 270, 314, fill='white')
+Polygon(230, 310, 265, 291, 320, 310, 270, 315, fill='lightSteelBlue')
+Polygon(284, 316, 290, 325, 268, 319, fill='lightSteelBlue')
+Polygon(284, 300, 286, 280, 268, 300, fill='lightSteelBlue')
+Circle(253, 305, 2)
+
+def blink(blinker):
+    # Increase the radius of the blinker given as a parameter.
+    # When the blinker radius is past the max value, 35, set the
+    # blinker radius back.
+    ### Place Your Code Here ###
+    pass
+
+def onMouseMove(mouseX, mouseY):
+    pin.rotateAngle += 3
+    blink(boatBlinker)
+    blink(glacierBlinker)
+    blink(sharkBlinker)

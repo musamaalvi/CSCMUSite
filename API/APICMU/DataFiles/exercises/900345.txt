@@ -1,0 +1,31 @@
+# (1) Click on each test case starting from the first.
+# (2) Notice how a balloon is added each time the parameter of drawHouseAndBalloons
+#     increases by 1.
+# (3) Also notice how the house changes position when the number of balloons hits 5.
+# That's it, let's code!
+
+def drawBalloon(centerX, centerY, radius, color):
+    Line(centerX, centerY, 200, 325, fill='silver', lineWidth=1)
+    Circle(centerX, centerY, radius, fill=color)
+
+def drawHouse(houseBottom):
+    Rect(200, houseBottom, 100, 50, align='bottom', fill='grey')
+    Polygon(140, houseBottom-50, 260, houseBottom-50, 200, houseBottom-100,
+            fill='grey')
+
+def drawHouseAndBalloons(balloons):
+    # Draw the background.
+    ### Place Your Code Here ###
+
+    # Draw appropriate number of balloons.
+    ### (HINT: There are maximum 5 balloons.)
+    ### Place Your Code Here ###
+
+    # Draw the house.
+    ### (HINT: The house is not on the ground when there are 5 balloons.)
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+drawHouseAndBalloons(0)

@@ -1,0 +1,23 @@
+# (1) Click on the left half of the canvas.
+# (2) Notice how a footprint appears at the location of the mouse press and in black.
+# (3) Now click on the right half of the canvas.
+# (4) Notice how a footprint appears at the location of the mouse press and in brown.
+# That's it! Let's code!
+
+Rect(190, 0, 10, 400, fill='black')
+Rect(200, 0, 10, 400, fill='brown')
+
+def drawFootstep(x, y, color):
+    Oval(x, y - 5, 22, 40, fill=color)
+    Circle(x, y + 20, 8, fill=color)
+    Rect(x, y + 13, 16, 3, fill='white', align='center')
+
+def onMousePress(mouseX, mouseY):
+    # Draw a black footstep if the click is on left half, brown footstep otherwise.
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMousePress(100, 100)
+onMousePress(300, 100)

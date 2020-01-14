@@ -1,0 +1,11 @@
+# (1) Click anywhere on the canvas.
+# (2) At the location of the mouse press, a tree grows!
+# (3) Keep clicking around the canvas. At each click, a new tree grows.
+# That's it, let’s code!
+
+Rect(0, 0, 400, 400, fill=rgb(30, 58, 19))
+
+def onMousePress(mouseX, mouseY):
+    # Draw a tree composed of two Regular Polygons and a Rect
+    ### Place Your Code Here ###
+    pass

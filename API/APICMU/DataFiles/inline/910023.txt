@@ -1,0 +1,15 @@
+Label('Using in demo', 200, 20, size=20, bold=True)
+Label('Enter a word to see which letters it contains', 200, 45, size=16)
+
+app.targetWord = app.getTextInput('Enter a word')
+app.alphabet = 'abcdefghijklmnopqrstuvwxyz'
+Label(app.targetWord, 200, 200, size=30, bold=True)
+
+for i in range(len(app.alphabet)):
+    letter = app.alphabet[i]
+    if (letter in app.targetWord):
+        color = 'green'
+    else:
+        color = 'red'
+    Label(letter, 15 + 15 * i, 250, fill=color, size=20, font='monospace',
+          bold=True, align='bottom')

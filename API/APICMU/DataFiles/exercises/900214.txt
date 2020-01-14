@@ -1,0 +1,33 @@
+# (1) Select the first test case.
+# (2) The background is an orange gradient from top to bottom, and the flower has a radial purple gradient.
+# (3) Notice that the background color changed from an orange gradient to dark purple.
+# (4) Notice that the flower color changed from a purple gradient to green.
+# That's it, let's code!
+
+# The beeAndFlower function ignores its parameters and always draws the same
+# color background and flower.
+
+# Use the function parameters to replace hardcoded colors below!
+### Fix Your Code Here ###
+def beeAndFlower(backgroundColor, flowerColor):
+    # background
+    Rect(0, 0, 400, 400, fill='lightBlue')
+
+    # flower stem and petals
+    Oval(197, 350, 85, 200, fill=rgb(75, 155, 100))
+    Star(200, 125, 225, 25, fill='pink', roundness=80)
+    Star(200, 125, 275, 24, fill='violet', roundness=60)
+
+    # bee body and stripes
+    Oval(80, 150, 100, 60,
+         fill=gradient('gold', 'gold', 'gold', 'gold', 'black', 'gold', 'black',
+                       'gold', 'black', 'gold', start='right'))
+
+    # bee eye and wings
+    Circle(110, 140, 3)
+    Oval(80, 112, 40, 75, fill=gradient('gainsboro', 'dimGrey', start='top'), opacity=60)
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+beeAndFlower(gradient('gold', 'orange', 'salmon', start='top'),
+             gradient('lavender', 'fuchsia', 'indigo'))

@@ -1,0 +1,25 @@
+raw a covered patio like the solution. Careful use of the Inspector shows
+# there is only one way to draw this exercise.
+### (HINT: None of the Rects in the solution overlap, except on the edges.)
+
+# Draw the patio steps.
+### Modify Your Code Here ###
+Rect(25,375,375,25)
+Rect(50,350,350,25)
+Rect(75,325,325,25)
+
+# Draw the cover supports and the patio cover.
+### Modify Your Code Here ###
+Rect(100,150,25,175)
+Rect(150,150,25,175)
+Rect(350,100,50,225)
+
+# Draw the house roof.
+### Modify Your Code Here ###
+Rect(100,100,250,50)
+Rect(275,75,125,25)
+Rect(325,50,75,25)
+
+# Finish by drawing the front of the house!
+### Modify Your Code Here ###
+Rect(375,25,25,25)

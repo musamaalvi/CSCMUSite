@@ -1,0 +1,19 @@
+# (1) Move the mouse on the canvas.
+# (2) Notice the width and height of the oval changing.
+# That's it, let's code!
+
+app.background = gradient('skyblue', 'lightblue', start='top')
+
+o = Oval(200, 200, 200, 200, fill=gradient('lemonChiffon', 'gold'))
+
+def onMouseMove(mouseX, mouseY):
+    # Change the width and height of the oval based on mouse position
+    # Make sure there are no issues when mouseX or mouseY is 0!
+    ### (HINT: Carefully use the Inspector to figure out how to update
+    #          the width and height using mouseX and mouseY)
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMouseMove(100, 100)

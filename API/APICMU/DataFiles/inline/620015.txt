@@ -1,0 +1,23 @@
+Label('Group Methods Demo #3', 200, 20, size=20, bold=True)
+Label('Press left and right arrows to move the group', 200, 45, size=16)
+Label('Press a to add the green circle to the group', 200, 65, size=16)
+Label('Press r to remove the green circle from the group', 200, 85, size=16)
+
+g = Group(
+    Circle(100, 200, 30, fill='red'),
+    Circle(200, 200, 30, fill='gold'),
+    Circle(300, 200, 30, fill='teal')
+)
+
+greenCircle = Circle(200, 300, 30, fill='green')
+g.add(greenCircle)
+
+def onKeyPress(key):
+    if (key == 'right'):
+        g.centerX += 10
+    elif (key == 'left'):
+        g.centerX -= 10
+    elif (key == 'a'):
+        g.add(greenCircle)
+    elif (key == 'r'):
+        g.remove(greenCircle)

@@ -1,0 +1,5 @@
+When might isupper and islower both return False?
+All of these.
+The string has numbers.
+The string has special characters such as %.
+The string has both upper and lowercase characters.

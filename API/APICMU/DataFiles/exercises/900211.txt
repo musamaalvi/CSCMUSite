@@ -1,0 +1,32 @@
+# These header comments help you understand the problem.
+# Treat them like a checklist, completing one before moving to the next.
+
+# (1) Select test case drawMinion('gold').
+# (2) Now, select drawMinion('darkOrchid').
+# (3) Notice how the minion's face changes from yellow to purple.
+# That's it, let's code!
+
+# Complete the function below to draw a minion!
+
+def drawMinion(minionColor):
+    # Change the background to use the function parameter as the fill!
+    ### Fix Your Code Here ###
+    Rect(0, 0, 400, 400, fill='pink')
+
+    # Add code to draw the mouth!
+    ### Place Your Code Here ###
+
+    # glasses
+    Rect(0, 100, 400, 60)
+    Circle(130, 130, 60, border='dimGray', borderWidth=15, fill='snow')
+    Circle(270, 130, 60, border='dimGray', borderWidth=15, fill='snow')
+
+    # eyes
+    Circle(130, 130, 25, border='saddleBrown', borderWidth=10)
+    Circle(270, 130, 25, border='saddleBrown', borderWidth=10)
+    Circle(115, 115, 5, fill='white')
+    Circle(255, 115, 5, fill='white')
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+drawMinion('gold')

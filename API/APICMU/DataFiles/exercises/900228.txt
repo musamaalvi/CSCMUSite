@@ -1,0 +1,29 @@
+# (1) Click and release somewhere around the edge of the cookie.
+# (2) A bite has been taken out of the cookie
+# (3) Keep clicking on the cookie and see a circular bite appears every time
+#     you release
+# That's it, let’s code!
+
+Rect(0, 0, 400, 400, fill='lightSteelBlue')
+
+# cookie
+Circle(205, 205, 155, fill='saddlebrown')
+Circle(200, 200, 150, fill='peru')
+
+# chocolate chips
+Circle(140, 90, 10, fill=rgb(90, 35, 15))
+Circle(215, 150, 10, fill=rgb(90, 35, 15))
+Circle(275, 100, 10, fill=rgb(90, 35, 15))
+Circle(315, 200, 10, fill=rgb(90, 35, 15))
+Circle(270, 300, 10, fill=rgb(90, 35, 15))
+Circle(230, 240, 10, fill=rgb(90, 35, 15))
+Circle(150, 315, 10, fill=rgb(90, 35, 15))
+Circle(150, 245, 10, fill=rgb(90, 35, 15))
+Circle(80, 220, 10, fill=rgb(90, 35, 15))
+Circle(120, 155, 10, fill=rgb(90, 35, 15))
+Circle(190, 200, 10, fill=rgb(90, 35, 15))
+
+def onMouseRelease(mouseX, mouseY):
+    # Add code to draw a circular bite
+    ### Place Your Code Here ###
+    pass

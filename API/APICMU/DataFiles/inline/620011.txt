@@ -1,0 +1,19 @@
+Label('Shape Methods for Groups, Example #1', 200, 20, size=20, bold=True)
+Label('Press f to move the group of shapes to the front', 200, 45, size=16)
+Label('Press b to move the group of shapes to the back', 200, 65, size=16)
+
+Rect(0, 150, 400, 30, fill='teal') # this rect starts behind the group
+
+g = Group(
+      Star(70, 200, 50, 5),
+      Label("Hi!", 200, 200, size=100),
+      Circle(330, 200, 40)
+    )
+
+Rect(0, 210, 400, 30, fill='teal') # this rect starts in front of the group
+
+def onKeyPress(key):
+    if (key == 'f'):
+        g.toFront()
+    elif (key == 'b'):
+        g.toBack()

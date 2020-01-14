@@ -1,0 +1,5 @@
+In the previous example, which variables are function parameters?
+mouseX, mouseY, and color
+mouseX and mouseY
+counter
+color

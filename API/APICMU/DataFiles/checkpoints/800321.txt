@@ -1,0 +1,5 @@
+In the previous example, what would happen if we switched x and y so the loops looked like this:   for y in range(50, 351, 100):    for x in range(100, 301, 100):        Circle(x, y, 20)
+Only 3 circles are drawn.
+The circles are drawn off the canvas.
+Nothing changes.
+4 rows of 3 circles are drawn.

@@ -83,6 +83,7 @@ export class DrilldowmComponent implements OnInit {
   CodeClearButton(codeToRun, outputSet){
     $('#panel').empty()
     //$('#TestingCode').text($(codeToRun).val())
+    $('canvas').remove()
     $('#OutputDiv').text($(outputSet).attr('id'))
     $('#codeClearFunction').trigger('click')
   }
@@ -117,10 +118,17 @@ export class DrilldowmComponent implements OnInit {
     debugger;
     for (var i = 0; i < $(options).find('input').length; i++) {
       if ($(options).find('input')[i].checked == true) {
-        if (i != this.checkPointData[5])
-          $(options).closest('div').find('div').removeClass('checkPointHiddenWrong')
-        else
-          $(options).closest('div').find('div').removeClass('checkPointHiddenCorrect')
+        if (i != this.checkPointData[5]){
+
+          $(options).find('div').eq(0).removeClass('checkPointHiddenWrong');
+          $(options).find('div').eq(1).addClass('checkPointHiddenCorrect');
+        }
+          
+        else{
+          $(options).find('div').eq(1).removeClass('checkPointHiddenCorrect');
+          $(options).find('div').eq(0).addClass('checkPointHiddenWrong');
+        }
+         
       }
     }
 

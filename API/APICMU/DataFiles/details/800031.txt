@@ -1,6 +1,6 @@
 80001#Review of range(n)|MainHeading
 800011#Here is a slightly modified example from an earlier unit that shows how range(n) works:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+830011#|InlineContainer
 800011#Here is how the loop works:|Paragraph
 800011#- We used range(5), so the looping variable i will start at 0 and increase by 1 each time through the loop until it reaches 4.|Paragraph
 800011#- On each pass, we run the loop body, so we create a new circle on each pass.|Paragraph
@@ -15,11 +15,11 @@
 end
 80002#range(lo, hi, step)|MainHeading
 800011#There is another way to loop and create circles with centerX values of 40, 120, 200, 280, and 360. We can use range(lo, hi, step). For example, if we use range(40, 360, 80), this means to start the looping variable at 40, and to increase it by 80 on each pass, until we get to 360. It's almost exactly what we want. Let's give it a try:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
+830012#|InlineContainer
 800011#See that we named the looping variable centerX instead of i. This is because the looping variable here is actually the centerX value! On the first pass, centerX is 40. On the second pass, we add the step of 80 to that, to get 120. And so on.|Paragraph
 800011#Unfortunately, we have a small error in the previous example: we wanted 5 circles, but we wound up with only 4 circles. We meant for the loop to include the case where centerX is 360. However, range(lo, hi, step) excludes the hi value! So, to include 360, we need our hi value to be larger than 360, like so:|Paragraph
-800021#Rect(10, 20, 30, 40)|InlineContainer
-820001#Note: if we omit the step, it defaults to 1. So range(50, 55) is the same as range(50, 55, 1), and loops over the values 50, 51, 52, 53, and 54.||Alert
+830013#|InlineContainer
+820001#Note: if we omit the step, it defaults to 1. So range(50, 55) is the same as range(50, 55, 1), and loops over the values 50, 51, 52, 53, and 54.|Box
 800313#|CheckPoint
 800314#|CheckPoint
 end

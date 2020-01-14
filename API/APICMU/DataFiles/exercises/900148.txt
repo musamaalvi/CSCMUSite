@@ -1,0 +1,13 @@
+# The illusion of a 3-dimensional perspective in this image is created by
+# drawing five Lines. And don't forget to use the Inspector, it will be
+# your friend for this exercise!
+# You've got this!
+
+# background
+Rect(0, 0, 400, 400, fill=gradient('white', 'navy'))
+
+# Draw the perspective lines next.
+### Place Your Code Here ###
+
+# Draw the ninja here.
+### Place Your Code Here ###

@@ -1,28 +1,35 @@
 880000#1 Creating Drawing|Heading
 10001#1.1. Basics|MainHeading
 100011#1.1.1. Getting Started|SubHeading
-100013#1.1.2. Position and SizeFOREXERCISEPURPOSE900011#1.1.3. Exercise ,90001, Draw Three Rectangles|SubHeading
-900011#1.1.3. Exercise ,90001, Draw Two Rectangles|Exercise
-9000123#1.1.3. Exercise ,90001, Draw Two Rectangles|Exercise
+100013#1.1.2. Position and Size|SubHeading
+900111#1.1.3. Exercise ,900111, Draw two Rectangles|Exercise
+900112#1.1.3. Exercise ,900112, Draw three Rectangles|Exercise
+900113#1.1.3. Exercise ,900113, Pickaxe|Exercise
+900114#1.1.3. Exercise ,900114, Hi!|Exercise
+900115#1.1.3. Exercise ,900115, Patio|Exercise
 end
 10002#1.2. Colors|MainHeading
-100021#1.2.1. Fills and Borders|SubHeading
-900121#1.2.2. Exercise|Exercise
-100023#1.2.3. Colors and Gradients|SubHeading
-900124#1.2.4. Exercise|Exercise
-100025#1.2.5. Opacity|SubHeading
+100021#1.2.1. Fills and BordersFOREXERCISEPURPOSE900011#1.2.2. Exercise ,90021, Flag of Mali|SubHeading
+100023#1.2.2. Colors and GradientsFOREXERCISEPURPOSE900011#1.2.3. Exercise ,90023, Nine gradients|SubHeading
+100025#1.2.3. OpacityFOREXERCISEPURPOSE900011#1.2.5. Exercise ,90025, Rectangle with Opacity|SubHeading
+900115#1.2.4. Exercise ,900115, Patio|Exercise
 end
 10003#1.3. Shapes|MainHeading
-100031#1.3.1. Rectangles,Ovals,Circles and Lines|SubHeading
-900131#1.3.2. Exercise|Exercise
-100033#1.3.3. Labels|SubHeading
-900132#1.3.4. Exercise|Exercise
-100035#1.3.5. Regular Polygons and Stars|SubHeading
-900133#1.3.6. Exercise|Exercise
-100037#1.3.7. Polygons|SubHeading
-900134#1.3.8. Exercise|Exercise
-900135#1.4. Unit 1 Exercise|Exercise|SubHeading
-900136#1.5. Unit 1 Challenge Exercise|Exercise
-900137#1.6. Unit 1 Creative Tasks|SubHeading
-900138#1.7. Unit 1 Review|Exercise
+100031#1.3.1. Rectangles,Ovals,Circles and LinesFOREXERCISEPURPOSE900011#1.3.1. Exercise ,90031, Cube|SubHeading
+100033#1.3.2. LabelsFOREXERCISEPURPOSE900011#1.3.3. Exercise ,90033, Targets|SubHeading
+100035#1.3.3. Regular Polygons and StarsFOREXERCISEPURPOSE900011#1.3.5. Exercise ,90035, Regular Polygons|SubHeading
+100037#1.3.4. Polygons|SubHeading
+900311#1.3.5. Exercise ,90037, Scotty Dog|Exercise
+end
+10004#1.4. Exercise|MainHeading
+900141# Unit 1 Creative Exercises,900141, London and Chicago|Exercise
+900142#1.4. Unit 1 Exercise, 900142, Flag of Antigua and Barbuda|Exercise
+900143#1.4. Unit 1 Exercise, 900143, Poggendorf Illusion|Exercise
+900144#1.4. Unit 1 Exercise, 900144, Flag of Rwanda|Exercise
+900145#1.4. Unit 1 Exercise, 900145, Logos|Exercise
+900146#1.4. Unit 1 Exercise, 900146, Sailboat|Exercise
+900147#1.4. Unit 1 Exercise, 900147, Jellyfish|Exercise
+900148#1.4. Unit 1 Exercise, 900148, A new prespective|Exercise
+900149#1.4. Unit 1 Exercise, 900149, Andriod|Exercise
+900140#1.4. Unit 1 Exercise, 900140, Mickey|Exercise
 end

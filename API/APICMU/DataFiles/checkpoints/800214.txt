@@ -1,0 +1,5 @@
+In the previous example, what happens if we forget to call str() -- that is, what if we use text.count instead of str(text.count)? Try it first!
+None of these.
+The code crashes with a Type Error.
+Nothing changes. The code runs the same.
+The code runs, but the count never increases.

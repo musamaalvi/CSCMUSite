@@ -1,0 +1,9 @@
+Label('While loops demo #2', 200, 20, size=20, bold=True)
+Label('Nested rectangles', 200, 45, size=16)
+
+app.size = 400
+
+while (app.size > 25):
+    Rect(200, 200, app.size, app.size, fill='blue', opacity=20, align='center')
+    Label('size=' + str(app.size), 200, 200-app.size//2, align='top')
+    app.size //= 2

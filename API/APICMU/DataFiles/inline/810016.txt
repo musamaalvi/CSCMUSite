@@ -1,0 +1,13 @@
+Label('Arrows Demo', 200, 20, size=20, bold=True)
+
+Label('Line with no arrows', 200, 85, size=16)
+Line(100, 105, 300, 105)
+
+Label('Line with a start arrow', 200, 155, size=16)
+Line(100, 175, 300, 175, arrowStart=True)
+
+Label('Line with an end arrow', 200, 225, size=16)
+Line(100, 245, 300, 245, arrowEnd=True)
+
+Label('Line with both a start arrow and an end arrow', 200, 295, size=16)
+Line(100, 315, 300, 315, arrowStart=True, arrowEnd=True)

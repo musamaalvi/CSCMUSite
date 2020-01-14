@@ -1,0 +1,13 @@
+# (1) Click somewhere around the middle of the canvas.
+# (2) A 'shiny' line is drawn from the left top corner to where you just clicked
+# (3) Continue clicking in a few other locations. Each click should draw a new
+#     line.
+# That's it, let’s code!
+
+Rect(0, 0, 400, 400)
+
+def onMousePress(mouseX, mouseY):
+    # Draw a line from left-top corner to where the mouse is being clicked
+    ### (HINT: Don't forget about the special color gradient!)
+    ### Place Your Code Here ###
+    pass

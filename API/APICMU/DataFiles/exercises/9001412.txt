@@ -1,0 +1,18 @@
+# Draw the lighthouse scene in the following order!
+# Happy coding!
+
+# background
+### Place Your Code Here ###
+
+# Draw the rock behind the lighthouse and its reflection
+### (HINT: There is a point of the rock behind the lighthouse!)
+### Place Your Code Here ###
+
+# The lighthouse should be drawn top-down
+### Place Your Code Here ###
+
+# Draw the light coming from the lighthouse
+### Place Your Code Here ###
+
+# Draw the rock in front of the lighthouse and its reflection
+### Place Your Code Here ###

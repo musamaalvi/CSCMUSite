@@ -1,0 +1,5 @@
+Which one of the following is true?
+Python will not run code that includes globals.
+Globals should be used as little as possible.
+Globals should never be used.
+Globals should be used as much as possible.

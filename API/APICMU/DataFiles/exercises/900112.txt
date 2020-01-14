@@ -1,0 +1,5 @@
+# Draw three rectangles to match the solution.
+
+### (HINT: Again, use the Inspector to find the left-top, width, and height!)
+### Place Your Code Here ###
+Rect(100, 0,0, 200)

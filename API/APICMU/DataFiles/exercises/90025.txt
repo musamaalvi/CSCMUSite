@@ -1,0 +1,5 @@
+Rect(0,0,200,200,fill='lime',opacity=50)
+Rect(200,200,200,200,fill='aqua',opacity=50)
+Rect(50,50,300,300,fill='midnightBlue',opacity=100)
+Rect(200,0,200,200,fill='red',opacity=50)
+Rect(0,200,200,200,fill='deepPink',opacity=50)

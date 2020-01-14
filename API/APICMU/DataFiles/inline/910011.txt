@@ -1,0 +1,6 @@
+Label('Text input demo #1', 200, 20, size=20, bold=True)
+Label('Enter a message and see it displayed', 200, 45, size=16)
+
+app.message = app.getTextInput('Enter a message')
+
+Label(app.message, 200, 200, size=20, bold=True)

@@ -1,0 +1,5 @@
+Label('Type Error Demo', 200, 20, size=20, bold=True)
+Label('This tries to set the circle radius to a string', 200, 45, size=16)
+Label('See the error message in the console!', 200, 65, size=16)
+
+Circle(200, 200, 'whoops')

@@ -1,0 +1,29 @@
+# (1) Click anywhere on the canvas.
+# (2) The face begins 'talking': the mouth opens, the eye gets bigger, and the
+#     'voice' becomes visible.
+# (3) Release the mouse click. The mouth closes, the eye returns to its original
+#     size, and the 'voice' disappears.
+# That's it, let's code!
+
+Rect(0, 0, 400, 400, fill='lavenderBlush')
+
+# This draws the voice
+voice = Star(140, 215, 75, 8, fill='lavenderBlush', roundness=10)
+Rect(80, 135, 75, 160, fill='lavenderBlush')
+
+# face
+Oval(30, 140, 230, 350, fill='lightSkyBlue', align='center')
+Polygon(0, 0, 130, 0, 145, 60, 180, 130, 145, 155, 0, 210, fill='lightSkyBlue')
+eye = Circle(80, 50, 15)
+
+mouth = Polygon(150, 185, 80, 185, 95, 225, 140, 250, fill='lavenderBlush', visible=False)
+
+def onMousePress(x, y):
+    # Open the mouth and talk!
+    ### Place Your Code Here ###
+    pass
+
+def onMouseRelease(x, y):
+    # Close the mouth to stop talking
+    ### Place Your Code Here ###
+    pass

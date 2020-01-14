@@ -1,0 +1,31 @@
+# (1) Click on the night sky.
+# (2) Notice how a building is drawn from the location of your click to the
+#     horizon and that a corresponding reflection is drawn below the horizon.
+# (3) Also notice how nothing happens when you click below the horizon.
+# That's it! Let's code!
+
+app.background = 'black'
+Rect(0, 0, 400, 250, fill=gradient(rgb(13, 23, 40), rgb(19, 42, 81), start='top'))
+
+Circle(130, 90, 60, fill=gradient('lemonchiffon', rgb(247, 240, 170)))
+Circle(200, 400, 60, fill=gradient('lemonchiffon', rgb(247, 240, 170)), opacity=20)
+
+def drawReflection(buildingTopX):
+    Polygon(buildingTopX - 30, 250, buildingTopX + 30, 250,
+            buildingTopX + 100, 400, buildingTopX + 40, 400, opacity=60,
+            fill=gradient(rgb(114, 104, 78), rgb(50, 42, 35), 'black', start='top'))
+
+def drawBuilding(buildingTopX, buildingTopY):
+    Rect(buildingTopX, buildingTopY, 60, 250 - buildingTopY,
+         fill=gradient(rgb(50, 50, 55), rgb(91, 91, 124), start='left-top'),
+         align='top')
+
+def onMousePress(mouseX, mouseY):
+    # When mouse is above the skyline, draw a building and a reflection from
+    # where you click.
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMousePress(50, 175)

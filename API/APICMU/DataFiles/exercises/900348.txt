@@ -1,0 +1,25 @@
+# (1) Move the mouse on the canvas.
+# (2) Notice how the lightsaber rotates every time you move your mouse.
+# (3) Also notice how the glow of the lightsaber changes transparency.
+# That's it, let's code!
+
+app.background = 'indigo'
+
+# lightsaber
+glow = Star(200, 200, 150, 50, fill=gradient('red', 'indigo'), opacity=0,
+            roundness=20)
+plasma = Line(200, 50, 200, 350, fill='red', lineWidth=5)
+handle = Line(200, 175, 200, 225, lineWidth=6)
+
+def onMouseMove(mouseX, mouseY):
+    # Change the angle of the plasma and handle.
+    ### Place Your Code Here ###
+
+   # Increase the transparency of the glow and when it becomes fully opaque,
+    # set it back to transparent.
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMouseMove(100, 100)

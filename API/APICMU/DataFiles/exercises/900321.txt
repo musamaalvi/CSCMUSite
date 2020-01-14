@@ -1,0 +1,17 @@
+# (1) Click on the canvas
+# (2) Notice how the counter goes up by +1
+# (3) Click a few more times
+# (4) Notice how after 3 clicks the counter ignores you
+# That's it, let's code!
+
+Label('Count to 3', 200, 20, size=20, bold=True)
+Label('Click to increase the counter by 1', 200, 45)
+Label('Until it gets to 3, then it ignores you!', 200, 65)
+
+app.background = gradient('aliceBlue', 'lightCyan', 'cyan', 'blue')
+counter = Label(0, 200, 200, size=200, bold=True)
+
+def onMousePress(mouseX, mouseY):
+    ### (HINT: The counter value should only go up if the count is less than 3)
+    ### Place Your Code Here ###
+    pass

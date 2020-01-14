@@ -1,0 +1,5 @@
+In the previous example, what happens if we change range(len(text.value)) to range(len(text.value)+1)? Try it first!
+We get an error.
+An extra rectangle is always drawn after the word.
+The code works as expected.
+All the rectangles are shifted to the right.

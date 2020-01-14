@@ -1,0 +1,15 @@
+# (1) Click a few times on the canvas.
+# (2) Note that circles are darker near the bottom, and lighter near the top.
+# (3) Use opacity to do this, like we did in the notes.
+# That's it, let’s code!
+
+Label('Click near here for light circles', 200, 50)
+Label('Click near here for dark circles', 200, 350)
+
+def onMousePress(mouseX, mouseY):
+    ### Fix Your Code Here ###
+    Circle(mouseX, mouseY, 50)
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMousePress(100, 100)

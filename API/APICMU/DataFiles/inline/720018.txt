@@ -1,0 +1,14 @@
+Label('For Loop Demo #8', 200, 20, size=20, bold=True)
+Label('Looping in onStep', 200, 40, size=16)
+Label('Click to add a small circle', 200, 60, size=16)
+
+circles = Group()
+
+def onMousePress(x, y):
+    circles.add(
+        Circle(x, y, 10, fill=None, border='black')
+    )
+
+def onStep():
+    for circle in circles.children:
+        circle.radius += 1

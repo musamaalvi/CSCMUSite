@@ -1,0 +1,17 @@
+# The solution canvas contains the logos for four popular tech companies. You
+# should draw each of them one by one.
+# Four images at once, wow!
+
+# Instagram
+### Place Your Code Here ###
+
+# YouTube
+### Place Your Code Here ###
+
+# Microsoft
+### Place Your Code Here ###
+
+# Uber
+### (HINT: Use a line to connect the outer and inner black sections through the
+# circle!)
+### Place Your Code Here ###

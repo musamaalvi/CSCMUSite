@@ -1,0 +1,15 @@
+Label('islower demo', 200, 20, size=20, bold=True)
+Label('Press r to reveal the hidden lowercase message', 200, 45, size=16)
+
+text = Label('ALNFJHhOPALeANFLllAAOPWKo', 200, 200, size=25)
+message = Label('', 200, 250, size=30, fill='green')
+
+def revealText():
+    message.value = ''
+    for c in text.value:
+        if (c.islower() == True):
+            message.value += c
+
+def onKeyPress(key):
+    if (key == 'r'):
+        revealText()

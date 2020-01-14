@@ -1,0 +1,5 @@
+In the previous example, we used range(10), but the largest value of the looping variable i was 9, not 10 (try this, and confirm it for yourself). Why?
+Since i starts at 0, the value of i on the tenth pass is 9, not 10.
+When we loop with range(n), the largest value the looping variable will be is (n-1).
+All of these.
+Looping with range(n) will go up to but not including n.

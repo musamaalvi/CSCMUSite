@@ -1,0 +1,31 @@
+# (1) Click and drag the mouse on the canvas.
+# (2) Notice how the swing moves based on your mouse drag.
+# That's it, let's code!
+
+Oval(365, 90, 400, 150, fill='powderBlue')
+Oval(180, 315, 400, 150, fill=rgb(187, 247, 148))
+
+# swing set top bar
+Line(85, 98, 305, 113, fill='sienna', lineWidth=10)
+
+# swing set left side
+Line(90, 100, 115, 270, fill='sienna', lineWidth=10)
+Line(90, 100, 40, 320, fill='sienna', lineWidth=10)
+
+# swing set right side
+Line(300, 115, 330, 330, fill='sienna', lineWidth=10)
+Line(300, 115, 265, 365, fill='sienna', lineWidth=10)
+
+# ropes and seat
+leftRope = Line(150, 105, 150, 260)
+seat = Line(150, 260, 200, 270, fill='red', lineWidth=15)
+rightRope = Line(200, 110, 200, 270)
+
+def onMouseDrag(mouseX, mouseY):
+    # First update the seat location, updates the seat location
+    ### Place Your Code Here ###
+
+    # Then change properties of the leftRope and rightRope with respect to
+    # the seat.
+    ### Place Your Code Here ###
+    pass

@@ -1,0 +1,7 @@
+# Another fun drawing! Write code to draw the owl as shown.
+# The body of the owl is composed of two Circles. The face is composed of
+# two Circles and an Oval. The ear, nose, and wings are all Polygons, and the
+# eyes and pupils are Circles.
+# Don't fly too fast!
+
+### Place Your Code Here ###

@@ -1,0 +1,5 @@
+In the previous example, what happens if we test if counter.value % 2 == 1 instead of counter.value % 2 == 0? Try it first!
+Nothing changes.
+After the first key press, the circle is cyan when the counter is even and pink when the counter is odd.
+After the first key press, the circle is pink when the counter is even and cyan when the counter is odd.
+None of these.

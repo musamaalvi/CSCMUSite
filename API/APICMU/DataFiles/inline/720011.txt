@@ -1,0 +1,5 @@
+Label('For Loop Demo #1', 200, 20, size=20, bold=True)
+Label('This uses a for loop to draw 10 circles', 200, 40, size=16)
+
+for i in range(10):
+    Circle(40 * i, 200, 20)

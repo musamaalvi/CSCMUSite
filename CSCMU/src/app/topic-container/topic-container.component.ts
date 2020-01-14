@@ -16,7 +16,11 @@ export class TopicContainerComponent implements OnInit {
     debugger
     console.log(this.MainData)
   }
-
+  hideSubheadings(ele, ind){
+    debugger
+    $(ind).toggleClass('closed').toggleClass('open')
+    $(ele).toggleClass('hide')
+  }
 
   ExerciseDrillDown(id){
     debugger;

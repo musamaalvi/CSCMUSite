@@ -1,0 +1,5 @@
+In the previous example, what happens if we do not call int(app.r), and instead set dot.radius = app.r? Try it first!
+The code works as expected.
+We don't get an error, but nothing is drawn.
+We get an error after we enter the radius.
+The code will not run at all.

@@ -1,0 +1,5 @@
+In the previous example, what happens if we enter a word with all uppercase letters? Try it first!
+We get an error.
+All the letters are drawn in uppercase.
+All the letters in the alphabet are drawn in red.
+Nothing changes; the letters in the alphabet tha are in the word are still drawn in green.

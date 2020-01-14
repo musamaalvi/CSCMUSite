@@ -1,0 +1,17 @@
+# (1) Click a few times on the canvas.
+# (2) Note that stars are spikier near the left, and rounder near the right.
+# (3) Use roundness to do this, like we did with opacity in the notes.
+# That's it, let’s code!
+
+Rect(0, 0, 400, 400, fill='midnightBlue')
+
+Label('Spiky', 60, 200, fill='white', size=40)
+Label('Round', 340, 200, fill='white', size=40)
+
+def onMousePress(mouseX, mouseY):
+    ### Fix Your Code Here ###
+    Star(mouseX, mouseY, 50, 5, fill='gold')
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMousePress(100, 100)

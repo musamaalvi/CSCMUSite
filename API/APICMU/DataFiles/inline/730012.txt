@@ -1,0 +1,10 @@
+Label('Random Values Demo #2', 200, 20, size=20, bold=True)
+Label('Press keys to change the radius', 200, 40, size=16)
+
+c = Circle(200, 200, 50, fill=gradient('red', 'blue'))
+radiusLabel = Label(50, 200, 200, fill='gold', size=30, bold=True)
+
+def onKeyPress(key):
+    newRadius = randrange(20, 150)
+    c.radius = newRadius
+    radiusLabel.value = newRadius

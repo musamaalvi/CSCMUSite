@@ -1,0 +1,29 @@
+# (1) Click anywhere on the canvas, but don't release the mouse click.
+# (2) The pin is drawn at the location of the mouse press.
+# (3) Now, release the mouse click.
+# (4) The balloon pops!
+# (5) Continue clicking on the canvas. Notice that while the pins are still
+#     being drawn on mouse press,
+# (6) The balloon is already popped so there are no visual changes to the
+#     canvas when the click is released.
+# That's it, let’s code!
+
+Rect(0, 0, 400, 400, fill='lightSkyBlue')
+
+# string
+Line(200, 330, 200, 400, fill='white', lineWidth=5, dashes=True)
+
+# balloon
+RegularPolygon(200, 370, 20, 3, fill='crimson')
+Oval(200, 185, 300, 340,
+     fill=gradient('lightCoral', 'crimson', start='right-top'), align='center')
+
+def onMousePress(mouseX, mouseY):
+    # Draw the needle
+    ### Place Your Code Here ###
+    pass
+
+def onMouseRelease(mouseX, mouseY):
+    # Pop the balloon
+    ### Place Your Code Here ###
+    pass

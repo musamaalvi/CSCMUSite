@@ -1,11 +1,10 @@
-10001#Using if|MainHeading
-100011#We will now learn how to use a conditional statement -- also called an if statement -- to run code only if some test (or condition) is true. For example, say that when the user presses the mouse, we want to draw a circle, but only if the press is on the left half of the canvas. That is, only if (mouseX < 200). Here is the code for that:|Paragraph
-340001#def onMousePress(mouseX, mouseY):|InlineContainer
-100011#Run the code, click a few times on the left and on the right, and confirm that it works as noted. While it works, we can make it easier to use by adding a title, a brief explanation, and in this case, a helpful vertical line to separate the left and right sides. Here is the result:|Paragraph
-340002#Label('Using "if" Demo', 200, 20, size=20, bold=True)|InlineContainer
-320001#That's better! Let's take a closer look at how this works. When the mouse is pressed, Python calls onMousePress, and then runs this line:|Paragraph
-34444#if (mouseX < 200): |Box
-34444#Here, Python tests if mouseX is less than 200. If and only if that test is true, Python runs the indented code after it:|Paragraph
+10001#onMouseMove|MainHeading
+100011#When you move the mouse on the canvas without pressing the mouse down, Python calls onMouseMove.|Paragraph
+310001#For example:|Paragraph
+310001#Label('Mouse Move Demo No.1', 200, 20, size=20, bold=True)|InlineContainer
+100011#Run that code and move the mouse around. See how we get lots of gold circles as you move. While this is nice, it is less common to create new shapes on each mouse move, and more common to change shapes, like so:|Paragraph
+310002#Label('Mouse Move Demo No.2', 200, 20, size=20, bold=True)|InlineContainer
+320001#mcq|CheckPoint
 end
 10001#onMouseDrag|MainHeading
 100011#WWe just saw onMouseMove is only called if the mouse is not pressed. If the mouse is pressed and held, instead of onMouseMove, CMU Graphics calls onMouseDrag. Let's change the previous example to use onMouseDrag:|Paragraph

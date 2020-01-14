@@ -1,0 +1,5 @@
+In the previous example, which of the following changes to the loop would increase the spacing between circles?
+We cannot change the spacing with the loop.
+Increasing the hi value
+Increasing the step value
+Increasing the lo value

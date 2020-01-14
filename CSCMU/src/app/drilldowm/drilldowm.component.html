@@ -1069,7 +1069,7 @@
                             
                 <ul  class="scrollspy-nav">
                     <ng-container *ngFor="let i of objectKeys(mainData)" >
-                    <li *ngIf="mainData[i][0].split('|')[1]=='MainHeading'" class=""><a href="{{urlOfPage}}#{{mainData[i][0].split('#')[0]}}" class="">
+                    <li *ngIf="mainData[i][0].split('|')[1]=='MainHeading'" class=""><a href="{{urlOfPage.split('#')[0]}}#{{mainData[i][0].split('#')[0]}}" class="">
                             {{mainData[i][0].split('|')[0].split('#')[1]}}
                         </a></li>
                     </ng-container>
@@ -1079,9 +1079,9 @@
                     <li class=""><a href="#" class="">The Autograder</a></li>
                     <li class=""><a href="#" class="">Errors</a></li>
                     <li class=""><a href="#" class="">Comments</a></li> -->
-                    <div class="strength-earned">0 <img
+                    <!-- <div class="strength-earned">0 <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAsCAYAAAB2d9g5AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcFFQ0rEVnanQAAAxBJREFUWMPtmMtPE1EUxs8dWqGlvAzEAgXa8m6rogYCupD4gETUplHQSEWjWAyibCAKLnBh2Lrqn+DGlS5woRutUWgHmFJBJCo+8NUnJZTC0HbGhQlB2g69ZerCeHadO51fzp3vfPecQSzLwt8MAv5y/PtAAdciwzJwj+qfejNPqXAemoQIaJKfRVrlBbwMZ+YnABcGABBiGfixNGfE3lLSbtLGs21JKAlOKtquYQFDbBDGHC8exgNsKNDl50kK8UQz7R4HX3ARG5aVnA3HFa3fsVVqsZs648nuTIkBpQjEeGURZAIw7nxlxIVVZu7+VC09iF+HUy4SlkNLeAWNBHCuvEsRV+Fb7KYBbKHItPJoQuEEroZooFzDd3CFckKp/xyXtdlcZqCZFazsWoqvcAqFEzjqMBlxhVKTWx/z/Wj9eUiHlqHb1MIGmNWYHyAmxJAsFEVdZ1mAquzapvOVNx6HmTflGAYcGACAn/GDn/Zz3vPaQw4BAArbUvLnsyH+zz8E+rJOFPYOlwM+mPSOHeMbeFimrdqVUxcumjHHSwgyQV5hhWnFcLq0fSKiSkn7cwufsGQiBTrU/UhACCOXxeziTDWfwNbyTiRNlUVvMQyqXjTtsaoAoUB0iTPip98eWTdrLWul9YMH8ho3r8PN4uPCW7g72s35hxxRLgxUG5FImLr1rs3m5n7NAkIAHZqbUWHYQKtzhDM7naINKdIr+elLPbQLvvpmo66rs/ZaG4ua+WuEJ51mYCBygunCDGjX9O5BiOAPSDlHnkTxf7is6kHp27bz1+rToRWY9lqPRlprLNCVabJr+J0tZjxUxFOkSFIKupJL73gfZiinuTncukRg2NmHhBusa8tAFliwuc0PNl7XV3QhqTif/3Hty8J78K56/rhWt+PQ7f25RxIzH1pdw2HWpa+4PpiwgXTCZWbXT0VX1X0xd2jYQC/tgjnfh7Xfp5QXkTyjPHEjt81pWXMXddY+skHeDFsNTuCkm7z/27oyoV3TU4MAJRYokyhbJYI0MGhuxWxdWI3w/+80fMQv6UICCCr8x+gAAAAASUVORK5CYII="
-                            alt="strength icon"></div>
+                            alt="strength icon"></div> -->
                 </ul>
                     <!-- </div> -->
                 <div class="notes-page-container" tabindex="-1" *ngIf="showMainPage">

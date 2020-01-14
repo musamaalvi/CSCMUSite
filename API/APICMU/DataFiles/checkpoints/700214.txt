@@ -1,0 +1,5 @@
+In the previous example, what happens if we change the radius of each star to be 10 * i instead of 10 + 10 * i? Try it first!
+The code crashes, because when i is 0, the star has radius 0, which is not legal.
+The code runs, and all the stars are a bit smaller.
+The code runs, but only draws 4 stars instead of 5.
+Nothing changes.

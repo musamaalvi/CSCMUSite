@@ -1,17 +1,34 @@
 30000#3 Mouse Motion Events, Conditionals, and Helper Functions|Heading
 30001#3.1. Mouse Motion Events|MainHeading
 300011#3.1.1. onMouseMove and onMouseDrag|SubHeading
-30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
-30001#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
-30002#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
-30003#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+900311#1.1.3. Exercise ,900311, Swing Set|Exercise
+900312#1.1.3. Exercise ,900312, Controlling Ovals|Exercise
+900313#1.1.3. Exercise ,900313, Mirror Mouse|Exercise
+900314#1.1.3. Exercise ,900314, Fruit Ninja|Exercise
+900315#1.1.3. Exercise ,900315, Cat petting|Exercise
 end
 30001#3.2. Conditionals (IF Statements)|MainHeading
-300012#3.2.1. if Statements |SubHeading
-300013#3.2.2. using if-else and multiple if's |SubHeading
-30000#1.1.3. Exercise ,90001, Draw Two Rectangles |Exercise
+300012#3.2.1. if StatementsFOREXERCISEPURPOSE900011#3.2.1. Exercise ,900321, Count to three|SubHeading
+300013#3.2.2. using if-else and multiple if'sFOREXERCISEPURPOSE900011#3.2.2 Exercise ,900322, Ball wraparound|SubHeading
+900323#3.2.3. Exercise ,900323, Sun and Moon|Exercise
+900324#3.2.3. Exercise ,900324, Scoreboard|Exercise
+900325#3.2.3. Exercise ,900325, Fireworks|Exercise
+900326#3.2.3. Exercise ,900326, Flashlight|Exercise
 end
-30001#3.3. Helper Fuctnions|MainHeading
-300011#3.3.1. Helper Fuctnions |SubHeading
-30000#3.3.3. Exercise ,90001, Draw Two Rectangles |Exercise
+30002#3.3. Helper Fuctnions|MainHeading
+300011#3.3.1. Helper Fuctnions|SubHeading
+900331#3.3.2. Exercise ,900331, Skyline reflection|Exercise
+900332#3.3.2. Exercise ,900332, Footsteps|Exercise
+900333#3.3.2. Exercise ,900333, Chicks|Exercise
+900334#3.3.2. Exercise ,900334, Pacman ghost|Exercise
+end
+30003#3.4. Exercises|MainHeading
+900341#3.4.1 Unit 3 Creative Exercises,900341,Cursor duplication|Exercise
+900342#3.4.1 Unit 3 Creative Exercises,900342,Radar|Exercise
+900343#3.4.1 Unit 3 Creative Exercises,900343,Dog joke|Exercise
+900344#3.4.1 Unit 3 Creative Exercises,900344,Monument|Exercise
+900345#3.4.1 Unit 3 Creative Exercises,900345,Up|Exercise
+900346#3.4.1 Unit 3 Creative Exercises,900346,Owl eyes|Exercise
+900347#3.4.1 Unit 3 Creative Exercises,900347,Castle|Exercise
+900348#3.4.1 Unit 3 Creative Exercises,900348,Rotating lightsebar|Exercise
 end

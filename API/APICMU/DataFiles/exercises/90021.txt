@@ -1,0 +1,6 @@
+# Draw the flag of Mali using 4 differently filled rectangles, one of which has
+# a border. None of the three stripes overlap each other.
+
+### (HINT: To draw the border, use a Rect with a fill of None and the Inspector to
+# find the borderWidth)
+### Place Your Code Here ###

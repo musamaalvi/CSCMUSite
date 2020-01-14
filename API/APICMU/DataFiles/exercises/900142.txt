@@ -1,0 +1,5 @@
+# Draw the flag of Antigua and Barbuda!
+# Use the Inspector to find the left-top of the rectangles hiding behind the
+# crimson polygons. The star in the center has 15 points.
+# Good luck!### Place Your Code Here ###
+Rect(0,0,400,400,fill='powderBlue')

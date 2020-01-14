@@ -1,0 +1,12 @@
+Label('Integer Division (//) Demo', 200, 20, size=20, bold=True)
+Label('Move the mouse left and right to set the level', 200, 45, size=16)
+Label('Notice how the level is always an integer!', 200, 65, size=16)
+
+Label('Level:', 200, 160, size=40)
+level = Label(0, 200, 200, size=40)
+
+indicator = Line(0, 250, 0, 250, lineWidth=5)
+
+def onMouseMove(x, y):
+    level.value = x // 40
+    indicator.x2 = x

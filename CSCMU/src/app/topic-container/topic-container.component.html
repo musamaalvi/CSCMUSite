@@ -1,13 +1,13 @@
 <div class="topic-container">
     <div class="topic-header">
-        <button id="topic-114-trigger" class="topic-trigger depth-1 " type="button" aria-expanded="true"
+        <button (click)="hideSubheadings(forHiddingPurpose, indicator)" id="topic-114-trigger" class="topic-trigger depth-1 " type="button" aria-expanded="true"
             aria-controls="topic-114-content">
-            <div class="indicator open"></div> {{MainData["MainHeading"][0].split('#')[1]}}
+            <div #indicator class="indicator open"></div> {{MainData["MainHeading"][0].split('#')[1]}}
             <div class="spacer"></div>
             <div class="status-icon complete"></div>
         </button>
     </div>
-    <div id="topic-114-content" class="topic-panel" role="region" aria-labelledby="topic-114-trigger">
+    <div #forHiddingPurpose id="topic-114-content" class="topic-panel" role="region" aria-labelledby="topic-114-trigger">
         <div *ngFor="let item of MainData['SubHeading']">
             <div class="notes-container ">
                 <div role="button" tabindex="0"><a (click)="headingClicked($event)" id="{{item.split('FOREXERCISEPURPOSE')[0].split('#')[0]}}"
@@ -24,9 +24,9 @@
                                 <button class="exercise-trigger" #exerciseButton
                                 id="{{item.split('FOREXERCISEPURPOSE')[1].split('#')[1].split(',')[1]}}"
                                 (click)="ExerciseDrillDown(exerciseButton)">
-                                <div class="exercise-icon-complete">
+                                <!-- <div class="exercise-icon-complete">
 
-                                </div>
+                                </div> -->
                                 <img class="exercise-icon-img" alt="exercise-icon-Draw two rectangles"
                                     src="https://s3.amazonaws.com/cmu-cs-academy.content.public.v2-prod/4cba883d5fa69bdac02ef59a8cd7021a%3A%3A09024c9f91475cbe8c77861e4c7f385d----icon.jpg">
                             </button></a><span class="tooltip-content">
@@ -64,9 +64,9 @@
                                     <button class="exercise-trigger" #exerciseButton
                                         id="{{ex.split('#')[1].split(',')[1]}}"
                                         (click)="ExerciseDrillDown(exerciseButton)">
-                                        <div class="exercise-icon-complete">
+                                        <!-- <div class="exercise-icon-complete">
 
-                                        </div>
+                                        </div> -->
                                         <img class="exercise-icon-img" alt="exercise-icon-Draw two rectangles"
                                             src="https://s3.amazonaws.com/cmu-cs-academy.content.public.v2-prod/4cba883d5fa69bdac02ef59a8cd7021a%3A%3A09024c9f91475cbe8c77861e4c7f385d----icon.jpg">
                                     </button><span class="tooltip-content">

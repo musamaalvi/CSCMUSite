@@ -1,0 +1,4 @@
+Label('Demo: Using + with strings', 200, 20, size=20, bold=True)
+
+name = 'Fred'
+Label('My name is ' + name, 200, 200, size=40)

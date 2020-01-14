@@ -1,0 +1,19 @@
+# Write code to draw the logos of the London Underground and the
+# Chicago Transit Authority as illustrated.
+# Note that two circles should have no fill, just a border.
+# You've got this!
+
+# London Underground
+### Place Your Code Here ###
+Circle(200, 100, 90, fill=None, border='red', borderWidth=25)
+Rect(90, 80, 220, 40, fill='navy')
+Label('UNDERGROUND', 200, 100, fill='white', size=25, bold=True)
+
+
+# Chicago CTA
+### (HINT: the blue circle shouldn't have a border!)
+### Place Your Code Here ###
+
+Circle(200, 300, 85, fill=None, border='red', borderWidth=10)
+Circle(200, 300, 70, fill='blue')
+Label('cta', 200, 300, fill='white', size=80, bold=True, italic=True)

@@ -1,0 +1,5 @@
+Which one of the following is true?
+Function parameters should be used as little as possible.
+Function parameters are locals, not globals.
+Function parameters are globals, not locals.
+Function parameters should never be used.

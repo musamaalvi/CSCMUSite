@@ -1,0 +1,17 @@
+# This exercise features a jellyfish making bubbles! As always, the Inspector
+# will be invaluable and be sure to use the Hints below if needed.
+# Break a tentacle!
+
+# Draw the background.
+### Place Your Code Here ###
+
+# Draw the body.
+### (HINT: Use two Circles and then a Rect to cover up the bottom half of the Circles.)
+### Place Your Code Here ###
+
+# Draw the tentacles and the rest of the face.
+### (HINT: Use a Circle and then a Rect to create the mouth.)
+### Place Your Code Here ###
+
+# Finally, draw the bubbles!
+### Place Your Code Here ###

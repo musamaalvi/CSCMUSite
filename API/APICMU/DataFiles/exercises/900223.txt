@@ -1,0 +1,18 @@
+# (1) Click anywhere on the canvas.
+# (2) A flower is drawn where you just clicked, consisting of three shapes.
+# (3) The flower also has a stem, connecting it to the top of the base.
+# (4) Continue clicking in a few other locations on the map. Each click should
+#     draw a flower at the location of the click.
+# That's it, let’s code!
+
+# background
+Rect(0, 0, 400, 400, fill=gradient('ghostWhite', 'aliceBlue'))
+
+# vase
+Oval(200, 300, 50, 10, fill='limeGreen')
+Rect(175, 300, 50, 100, fill='silver')
+
+def onMousePress(mouseX, mouseY):
+    # Draw a flower where you click the mouse and connect its stem to the vase!
+    ### Place Your Code Here ###
+    pass

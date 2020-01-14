@@ -1,0 +1,13 @@
+# (1) Click anywhere on the canvas.
+# (2) Two lines are drawn: one vertical, and one horizontal, and they intersect
+#     at the point where you just clicked.
+# (3) Continue clicking in a few other locations on the canvas. Each click
+#     should draw two lines that intersect at the location of the click.
+# That's it, let’s code!
+
+Rect(0, 0, 400, 400,
+     fill=gradient('darkBlue', 'teal', 'teal', 'darkGreen', start='left-top'))
+
+def onMousePress(mouseX, mouseY):
+    ### Place Your Code Here ###
+    pass

@@ -1,0 +1,5 @@
+Which of the following values will NOT result in a Type Error when used as the radius of a circle? First try each of them in the previous example.
+50.5
+'whoops'
+-5
+None of these (they all result in a Type Error)

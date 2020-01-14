@@ -1,0 +1,5 @@
+What happens in the previous example if we had a typo, and we used innerStar.point instead of innerStar.points? (Try it first!)
+The code will not run.
+Nothing changes -- the inner star's points change when the user presses a key.
+The code runs, but it crashes when the user presses a key.
+The code runs but the inner star's points never change.

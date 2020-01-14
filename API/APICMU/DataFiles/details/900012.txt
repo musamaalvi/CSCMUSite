@@ -1,11 +1,11 @@
 90001#Looping over Strings|Mainheading
 900011#Sometimes we want to do something with each individual character in a string. For this, we use a special kind of loop, like so:|Paragraph
-920001#for c in 'some string':||Alert
+920001#for c in 'some string':|Box
 900011#On each pass of this loop, the looping variable (c in the above example) is set to the next character in the string ('some string'). For example:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+910021#|InlineContainer
 900011#Run the code and see how it shows the number of times letter occurs in the string 'mississippi'. Let's see how this works:|Paragraph
 900011#First, look at this line:|Paragraph
-920001#for c in text.value:||Alert
+920001#for c in text.value:|Box
 900011#Here, the variable c loops over each character in text.value, which is 'mississippi'.|Paragraph
 900011#Then, for each character in the string, we use (c == app.letter) to check if that character equals the target letter, and if so, we add one to the count.|Paragraph
 900121#|CheckPoint
@@ -13,19 +13,19 @@ end
 90002#String Indexing|Mainheading
 900011#Sometimes when we loop over a string, we need to know the position, or the index of each character in the loop body. The approach above does not allow for that. Instead, we need to use string indexing. If s is a string, then s[0] is the first character in that string. So if s is the string 'amazing', then s[0] is 'a'.|Paragraph
 900011#More generally, s[i] is the ith character in s, starting from 0. So if s is the string 'amazing', then s[0] is 'a', s[1] is 'm', s[2] is 'a', and so on.|Paragraph
-920001#Note that when we use s[i], we say that i is an index into the string s.||Alert
+920001#Note that when we use s[i], we say that i is an index into the string s.|PinkParagraph
 900011#We can use the string index as a looping variable, and in that way we can know the index of each character in the loop body (which was our goal here). We just loop over all the indexes up to the length of the string, like so:|Paragraph
-920001#for i in range(len(s)):||Alert
+920001#for i in range(len(s)):|Box
 900011#Then, in the loop body, we use s[i] to access the ith character in s.|Paragraph
-920001#Note that we used len(s) to get the length of the string s. That is, the number of characters in the string. For example, len('Hello!') is 6.||Alert
+920001#Note that we used len(s) to get the length of the string s. That is, the number of characters in the string. For example, len('Hello!') is 6.|PinkParagraph
 900011#Here is an example using a loop with string indexing:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+910022#|InlineContainer
 900011#Run the code and see how it draws a box around some letters. Look at the last line of code in the example, and see how the left edge of each rectangle is at 40 + 45 * i. This is why we needed to use this kind of loop here: we needed to use the index i to compute the left edge of the ith rectangle.|Paragraph
 900122#|CheckPoint
 end
 90003#Using in|Mainheading
 900011#We can test if a string occurs within another string using the in operator: (s in t) is True when the string s occurs anywhere inside the string t. Thus, ('ab' in 'abc') is True, and ('ac' in 'abc') is False. Here is an example that uses in to test if each letter in the alphabet is in a given word:|Paragraph
-900021#Rect(10, 20, 30, 40)|InlineContainer
+910023#|InlineContainer
 900011#Run the code and see how it makes each letter green only if it occurs in the target word. Note that the previous example uses in in two separate ways. On line 8, we have for i in range(len(app.alphabet)):, which uses in as part of a loop. Then on line 10 we have if (letter in app.targetWord):, which uses in to check if a string occurs within another string.|Paragraph
 900123#|CheckPoint
 end

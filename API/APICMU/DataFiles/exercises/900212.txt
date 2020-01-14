@@ -1,0 +1,19 @@
+# (1) Select the first test case.
+# (2) Notice that there are 2 circled polygons.
+# (3) Now, select the second test case.
+# (4) Notice that there are now three circled polygons.
+# (5) Also, notice that the colors changed from midnight blue to shades of green.
+# (6) Finally, notice that the number of points on the polygons also changed.
+# That's it, let's code!
+
+# Write the function drawCircledPolygon(...) that takes five parameters.
+# Run test cases and use the Inspector to find more details.
+
+def drawCircledPolygon(centerX, centerY, circleColor, numberOfSides, polyColor):
+    ### Place Your Code Here ###
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+drawCircledPolygon(140, 260, 'midnightBlue', 3, 'yellow')
+drawCircledPolygon(260, 140, 'midnightBlue', 6, 'yellow')

@@ -1,0 +1,5 @@
+In the previous example, what would happen if we changed the distance from 75 to -75? That is, instead of this:     x,y = getPointInDir(arrow.centerX, arrow.centerY, arrow.rotateAngle, 75)    We did this:    x,y = getPointInDir(arrow.centerX, arrow.centerY, arrow.rotateAngle, -75)     Try it first!
+Nothing changes.
+The small circles are drawn directly away from where the arrow points.
+The code will not run.
+None of these.

@@ -1,0 +1,18 @@
+# (1) Select the test case that makes one call to drawEye.
+# (2) One eye appears on the alien, at the location specified by the first two
+#     arguments to drawEye.
+# (3) Now, select the test case that has three calls to drawEye. There are now
+#     three eyes!
+# (4) Notice that the second two arguments correspond to the size of the eye
+#     and the pupil: The bigger those values are, the bigger that eye is.
+# That's it, let’s code!
+
+app.background = gradient('black', 'midnightBlue', start='top')
+
+# Draw the alien body (Hint: use 7 shapes)
+### Place Your Code Here ###
+
+# Write a function that draws one eye
+def drawEye(centerX, centerY, eyeSize, pupilSize):
+    ### Place Your Code Here ###
+    pass

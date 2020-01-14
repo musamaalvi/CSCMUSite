@@ -1,0 +1,21 @@
+# (1) Click through the test cases to see the light changing intensity.
+# (2) Notice how the number of polygons increases as intensity increases.
+# (3) Also notice how the light changes at intensities of 0, 30, 60, and 90.
+# That's it, let's code!
+
+app.background = 'black'
+
+
+def turnOnFlashlight(intensity):
+    # Check how large intensity is.
+    # Draw triangles of different colors to represent light.
+    ### Place Your Code Here ###
+
+    # flashlight
+    Rect(195, 230, 10, 60, fill=rgb(68, 68, 68))
+    RegularPolygon(200, 225, 15, 3, fill=rgb(68, 68, 68), rotateAngle=180)
+    Oval(200, 218, 24, 5, fill='white')
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+turnOnFlashlight(100)

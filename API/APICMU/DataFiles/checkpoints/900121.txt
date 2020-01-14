@@ -1,0 +1,5 @@
+In the previous example, how many passes does the for loop have?
+The number of characters in the text
+One
+The number of times count increases
+The size of the text

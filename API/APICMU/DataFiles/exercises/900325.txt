@@ -1,0 +1,24 @@
+# (1) Click above where y is 150 on the canvas.
+# (2) Notice how a firework explodes at the location of your click.
+# (3) Now click below where y is 150 on the canvas.
+# (4) Notice how a pre-firework line rises up to the location of your click.
+# That's it, let's code!
+
+app.background = 'black'
+
+def onMousePress(mouseX, mouseY):
+    # Check if the firework is high enough up to explode.
+    ### Fix Your Code Here ###
+    Star(mouseX, mouseY, 100, 12, fill=gradient('red', 'white'), roundness=10)
+
+    Star(mouseX, mouseY, 100, 12, fill=gradient('yellow', 'white'),
+        roundness=10, rotateAngle=10)
+
+    Star(mouseX, mouseY, 100, 12, fill='black', roundness=10, rotateAngle=5)
+
+    # If the firework is not high enough, draw a rising pre-firework line.
+    ### Place Your Code Here ###
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+onMousePress(100, 300)

@@ -1,0 +1,23 @@
+# (1) Select the first test case.
+# (2) Notice that the background is blue, and there is a splash in the middle of the canvas.
+# (3) Now, select the second test case.
+# (4) Notice that there are now three splashes on the canvas.
+# That's it, let's code!
+
+# Write the function drawSplash(centerX, centerY) that takes an x,y location and
+# draws a splash centered at that point.
+# Run test cases and use the Inspector to find more details.
+
+def drawBackground():
+    Rect(0, 0, 400, 400, fill=gradient('royalBlue', 'dodgerBlue', start='top'))
+
+def drawSplash(centerX, centerY):
+    # Draw four circles with different radii and opacities.
+    ### Place Your Code Here ###
+
+    pass
+
+##### Place your code above this line, code below is for testing purposes #####
+# test case:
+drawBackground()
+drawSplash(200, 200)

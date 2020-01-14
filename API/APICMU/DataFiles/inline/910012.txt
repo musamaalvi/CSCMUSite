@@ -1,0 +1,8 @@
+Label('Text input demo #2', 200, 20, size=20, bold=True)
+Label('Enter the radius for a circle', 200, 45, size=16)
+
+dot = Circle(200, 200, 50, fill='blue')
+
+app.r = app.getTextInput('Enter the new radius of the circle')
+
+dot.radius = int(app.r)

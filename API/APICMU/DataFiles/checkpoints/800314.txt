@@ -1,0 +1,5 @@
+In the previous example, nothing changes if we use range(40, 440, 80) instead of range(40, 361, 80). Why?
+440 is still excluded, so the last pass of the loop sets centerX to 360.
+It is an error to have a value greater than the size of the canvas.
+Another circle is added, but it is drawn off screen so we can't see it.
+We can never loop more than 5 times.
