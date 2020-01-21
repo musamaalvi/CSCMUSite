@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DrilldowmComponent } from './drilldowm/drilldowm.component';
 import { ExcersisComponent } from './excersis/excersis.component';
+import { DocPageComponent } from './doc-page/doc-page.component';
 
 const routes: Routes = [{path:'', component:MainPageComponent},
 {path:'details/:id/:name', component:DrilldowmComponent},
 {path:'sandbox/:id', component:ExcersisComponent},
-{path:'sandbox', component:ExcersisComponent}];
+{path:'sandbox', component:ExcersisComponent},
+{path: 'docPage', component:DocPageComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

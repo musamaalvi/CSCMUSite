@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://academy.cs.cmu.edu/docs#LineAndArrow -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://academy.cs.cmu.edu/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://academy.cs.cmu.edu/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://academy.cs.cmu.edu/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://academy.cs.cmu.edu/favicons/manifest.json">
+    <link rel="mask-icon" href="https://academy.cs.cmu.edu/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://academy.cs.cmu.edu/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <!-- <link rel="stylesheet" href="./Documentation _ CMU CS Academy_files/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./Documentation _ CMU CS Academy_files/112-highlight-style.css"> -->
+    <title>Documentation | CMU CS Academy</title>
+    <!-- <link href="./Documentation _ CMU CS Academy_files/main.3a358e1b.chunk.css" rel="stylesheet"> -->
+    <style data-styled="" data-styled-version="4.4.1"></style>
+    <style id="ace_editor.css">
+        .ace_editor {
+            position: relative;
+            overflow: hidden;
+            font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .ace_scroller {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            bottom: 0;
+            background-color: inherit;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: text;
+        }
+        
+        .ace_content {
+            position: absolute;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            min-width: 100%;
+        }
+        
+        .ace_dragging .ace_scroller:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            background: rgba(250, 250, 250, 0.01);
+            z-index: 1000;
+        }
+        
+        .ace_dragging.ace_dark .ace_scroller:before {
+            background: rgba(0, 0, 0, 0.01);
+        }
+        
+        .ace_selecting,
+        .ace_selecting * {
+            cursor: text !important;
+        }
+        
+        .ace_gutter {
+            position: absolute;
+            overflow: hidden;
+            width: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            cursor: default;
+            z-index: 4;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        .ace_gutter-active-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        
+        .ace_scroller.ace_scroll-left {
+            box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;
+        }
+        
+        .ace_gutter-cell {
+            padding-left: 19px;
+            padding-right: 6px;
+            background-repeat: no-repeat;
+        }
+        
+        .ace_gutter-cell.ace_error {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
+            background-repeat: no-repeat;
+            background-position: 2px center;
+        }
+        
+        .ace_gutter-cell.ace_warning {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");
+            background-position: 2px center;
+        }
+        
+        .ace_gutter-cell.ace_info {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");
+            background-position: 2px center;
+        }
+        
+        .ace_dark .ace_gutter-cell.ace_info {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");
+        }
+        
+        .ace_scrollbar {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 6;
+        }
+        
+        .ace_scrollbar-inner {
+            position: absolute;
+            cursor: text;
+            left: 0;
+            top: 0;
+        }
+        
+        .ace_scrollbar-v {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            top: 0;
+        }
+        
+        .ace_scrollbar-h {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            left: 0;
+        }
+        
+        .ace_print-margin {
+            position: absolute;
+            height: 100%;
+        }
+        
+        .ace_text-input {
+            position: absolute;
+            z-index: 0;
+            width: 0.5em;
+            height: 1em;
+            opacity: 0;
+            background: transparent;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            resize: none;
+            outline: none;
+            overflow: hidden;
+            font: inherit;
+            padding: 0 1px;
+            margin: 0 -1px;
+            text-indent: -1em;
+            -ms-user-select: text;
+            -moz-user-select: text;
+            -webkit-user-select: text;
+            user-select: text;
+            white-space: pre!important;
+        }
+        
+        .ace_text-input.ace_composition {
+            background: inherit;
+            color: inherit;
+            z-index: 1000;
+            opacity: 1;
+            text-indent: 0;
+        }
+        
+        .ace_layer {
+            z-index: 1;
+            position: absolute;
+            overflow: hidden;
+            word-wrap: normal;
+            white-space: pre;
+            height: 100%;
+            width: 100%;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+        
+        .ace_gutter-layer {
+            position: relative;
+            width: auto;
+            text-align: right;
+            pointer-events: auto;
+        }
+        
+        .ace_text-layer {
+            font: inherit !important;
+        }
+        
+        .ace_cjk {
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .ace_cursor-layer {
+            z-index: 4;
+        }
+        
+        .ace_cursor {
+            z-index: 4;
+            position: absolute;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-left: 2px solid;
+            transform: translatez(0);
+        }
+        
+        .ace_slim-cursors .ace_cursor {
+            border-left-width: 1px;
+        }
+        
+        .ace_overwrite-cursors .ace_cursor {
+            border-left-width: 0;
+            border-bottom: 1px solid;
+        }
+        
+        .ace_hidden-cursors .ace_cursor {
+            opacity: 0.2;
+        }
+        
+        .ace_smooth-blinking .ace_cursor {
+            -webkit-transition: opacity 0.18s;
+            transition: opacity 0.18s;
+        }
+        
+        .ace_editor.ace_multiselect .ace_cursor {
+            border-left-width: 1px;
+        }
+        
+        .ace_marker-layer .ace_step,
+        .ace_marker-layer .ace_stack {
+            position: absolute;
+            z-index: 3;
+        }
+        
+        .ace_marker-layer .ace_selection {
+            position: absolute;
+            z-index: 5;
+        }
+        
+        .ace_marker-layer .ace_bracket {
+            position: absolute;
+            z-index: 6;
+        }
+        
+        .ace_marker-layer .ace_active-line {
+            position: absolute;
+            z-index: 2;
+        }
+        
+        .ace_marker-layer .ace_selected-word {
+            position: absolute;
+            z-index: 4;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .ace_line .ace_fold {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 11px;
+            margin-top: -2px;
+            vertical-align: middle;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");
+            background-repeat: no-repeat, repeat-x;
+            background-position: center center, top left;
+            color: transparent;
+            border: 1px solid black;
+            border-radius: 2px;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        
+        
+        
+        .ace_fold:hover {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");
+        }
+        
+        .ace_tooltip {
+            background-color: #FFF;
+            background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
+            background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+            border: 1px solid gray;
+            border-radius: 1px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            color: black;
+            max-width: 100%;
+            padding: 3px 4px;
+            position: fixed;
+            z-index: 999999;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            cursor: default;
+            white-space: pre;
+            word-wrap: break-word;
+            line-height: normal;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            pointer-events: none;
+        }
+        
+        .ace_folding-enabled > .ace_gutter-cell {
+            padding-right: 13px;
+        }
+        
+        .ace_fold-widget {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0 -12px 0 1px;
+            display: none;
+            width: 11px;
+            vertical-align: top;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+        
+        .ace_folding-enabled .ace_fold-widget {
+            display: inline-block;
+        }
+        
+        .ace_fold-widget.ace_end {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");
+        }
+        
+        .ace_fold-widget.ace_closed {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");
+        }
+        
+        .ace_fold-widget:hover {
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+        }
+        
+        .ace_fold-widget:active {
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+        }
+        
+        .ace_dark .ace_fold-widget {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");
+        }
+        
+        .ace_dark .ace_fold-widget.ace_end {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");
+        }
+        
+        .ace_dark .ace_fold-widget.ace_closed {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");
+        }
+        
+        .ace_dark .ace_fold-widget:hover {
+            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .ace_dark .ace_fold-widget:active {
+            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .ace_fold-widget.ace_invalid {
+            background-color: #FFB4B4;
+            border-color: #DE5555;
+        }
+        
+        .ace_fade-fold-widgets .ace_fold-widget {
+            -webkit-transition: opacity 0.4s ease 0.05s;
+            transition: opacity 0.4s ease 0.05s;
+            opacity: 0;
+        }
+        
+        .ace_fade-fold-widgets:hover .ace_fold-widget {
+            -webkit-transition: opacity 0.05s ease 0.05s;
+            transition: opacity 0.05s ease 0.05s;
+            opacity: 1;
+        }
+        
+        .ace_underline {
+            text-decoration: underline;
+        }
+        
+        .ace_bold {
+            font-weight: bold;
+        }
+        
+        .ace_nobold .ace_bold {
+            font-weight: normal;
+        }
+        
+        .ace_italic {
+            font-style: italic;
+        }
+        
+        .ace_error-marker {
+            background-color: rgba(255, 0, 0, 0.2);
+            position: absolute;
+            z-index: 9;
+        }
+        
+        .ace_highlight-marker {
+            background-color: rgba(255, 255, 0, 0.2);
+            position: absolute;
+            z-index: 8;
+        }
+        
+        .ace_br1 {
+            border-top-left-radius: 3px;
+        }
+        
+        .ace_br2 {
+            border-top-right-radius: 3px;
+        }
+        
+        .ace_br3 {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        
+        .ace_br4 {
+            border-bottom-right-radius: 3px;
+        }
+        
+        .ace_br5 {
+            border-top-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        .ace_br6 {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        .ace_br7 {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        .ace_br8 {
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br9 {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br10 {
+            border-top-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br11 {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br12 {
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br13 {
+            border-top-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br14 {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        .ace_br15 {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        /*# sourceURL=ace/css/ace_editor.css */
+    </style>
+    <style id="ace-tm">
+        .ace-tm .ace_gutter {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .ace-tm .ace_print-margin {
+            width: 1px;
+            background: #e8e8e8;
+        }
+        
+        .ace-tm .ace_fold {
+            background-color: #6B72E6;
+        }
+        
+        .ace-tm {
+            background-color: #FFFFFF;
+            color: black;
+        }
+        
+        .ace-tm .ace_cursor {
+            color: black;
+        }
+        
+        .ace-tm .ace_invisible {
+            color: rgb(191, 191, 191);
+        }
+        
+        .ace-tm .ace_storage,
+        .ace-tm .ace_keyword {
+            color: blue;
+        }
+        
+        .ace-tm .ace_constant {
+            color: rgb(197, 6, 11);
+        }
+        
+        .ace-tm .ace_constant.ace_buildin {
+            color: rgb(88, 72, 246);
+        }
+        
+        .ace-tm .ace_constant.ace_language {
+            color: rgb(88, 92, 246);
+        }
+        
+        .ace-tm .ace_constant.ace_library {
+            color: rgb(6, 150, 14);
+        }
+        
+        .ace-tm .ace_invalid {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: red;
+        }
+        
+        .ace-tm .ace_support.ace_function {
+            color: rgb(60, 76, 114);
+        }
+        
+        .ace-tm .ace_support.ace_constant {
+            color: rgb(6, 150, 14);
+        }
+        
+        .ace-tm .ace_support.ace_type,
+        .ace-tm .ace_support.ace_class {
+            color: rgb(109, 121, 222);
+        }
+        
+        .ace-tm .ace_keyword.ace_operator {
+            color: rgb(104, 118, 135);
+        }
+        
+        .ace-tm .ace_string {
+            color: rgb(3, 106, 7);
+        }
+        
+        .ace-tm .ace_comment {
+            color: rgb(76, 136, 107);
+        }
+        
+        .ace-tm .ace_comment.ace_doc {
+            color: rgb(0, 102, 255);
+        }
+        
+        .ace-tm .ace_comment.ace_doc.ace_tag {
+            color: rgb(128, 159, 191);
+        }
+        
+        .ace-tm .ace_constant.ace_numeric {
+            color: rgb(0, 0, 205);
+        }
+        
+        .ace-tm .ace_variable {
+            color: rgb(49, 132, 149);
+        }
+        
+        .ace-tm .ace_xml-pe {
+            color: rgb(104, 104, 91);
+        }
+        
+        .ace-tm .ace_entity.ace_name.ace_function {
+            color: #0000A2;
+        }
+        
+        .ace-tm .ace_heading {
+            color: rgb(12, 7, 255);
+        }
+        
+        .ace-tm .ace_list {
+            color: rgb(185, 6, 144);
+        }
+        
+        .ace-tm .ace_meta.ace_tag {
+            color: rgb(0, 22, 142);
+        }
+        
+        .ace-tm .ace_string.ace_regex {
+            color: rgb(255, 0, 0)
+        }
+        
+        .ace-tm .ace_marker-layer .ace_selection {
+            background: rgb(181, 213, 255);
+        }
+        
+        .ace-tm.ace_multiselect .ace_selection.ace_start {
+            box-shadow: 0 0 3px 0px white;
+        }
+        
+        .ace-tm .ace_marker-layer .ace_step {
+            background: rgb(252, 255, 0);
+        }
+        
+        .ace-tm .ace_marker-layer .ace_stack {
+            background: rgb(164, 229, 101);
+        }
+        
+        .ace-tm .ace_marker-layer .ace_bracket {
+            margin: -1px 0 0 -1px;
+            border: 1px solid rgb(192, 192, 192);
+        }
+        
+        .ace-tm .ace_marker-layer .ace_active-line {
+            background: rgba(0, 0, 0, 0.07);
+        }
+        
+        .ace-tm .ace_gutter-active-line {
+            background-color: #dcdcdc;
+        }
+        
+        .ace-tm .ace_marker-layer .ace_selected-word {
+            background: rgb(250, 250, 255);
+            border: 1px solid rgb(200, 200, 250);
+        }
+        
+        .ace-tm .ace_indent-guide {
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;
+        }
+        /*# sourceURL=ace/css/ace-tm */
+    </style>
+    <style>
+        .error_widget_wrapper {
+            background: inherit;
+            color: inherit;
+            border: none
+        }
+        
+        .error_widget {
+            border-top: solid 2px;
+            border-bottom: solid 2px;
+            margin: 5px 0;
+            padding: 10px 40px;
+            white-space: pre-wrap;
+        }
+        
+        .error_widget.ace_error,
+        .error_widget_arrow.ace_error {
+            border-color: #ff5a5a
+        }
+        
+        .error_widget.ace_warning,
+        .error_widget_arrow.ace_warning {
+            border-color: #F1D817
+        }
+        
+        .error_widget.ace_info,
+        .error_widget_arrow.ace_info {
+            border-color: #5a5a5a
+        }
+        
+        .error_widget.ace_ok,
+        .error_widget_arrow.ace_ok {
+            border-color: #5aaa5a
+        }
+        
+        .error_widget_arrow {
+            position: absolute;
+            border: solid 5px;
+            border-top-color: transparent!important;
+            border-right-color: transparent!important;
+            border-left-color: transparent!important;
+            top: -5px;
+        }
+    </style>
+    <style id="ace_searchbox">
+        .ace_search {
+            background-color: #ddd;
+            border: 1px solid #cbcbcb;
+            border-top: 0 none;
+            max-width: 325px;
+            overflow: hidden;
+            margin: 0;
+            padding: 4px;
+            padding-right: 6px;
+            padding-bottom: 0;
+            position: absolute;
+            top: 0px;
+            z-index: 99;
+            white-space: normal;
+        }
+        
+        .ace_search.left {
+            border-left: 0 none;
+            border-radius: 0px 0px 5px 0px;
+            left: 0;
+        }
+        
+        .ace_search.right {
+            border-radius: 0px 0px 0px 5px;
+            border-right: 0 none;
+            right: 0;
+        }
+        
+        .ace_search_form,
+        .ace_replace_form {
+            border-radius: 3px;
+            border: 1px solid #cbcbcb;
+            float: left;
+            margin-bottom: 4px;
+            overflow: hidden;
+        }
+        
+        .ace_search_form.ace_nomatch {
+            outline: 1px solid red;
+        }
+        
+        .ace_search_field {
+            background-color: white;
+            color: black;
+            border-right: 1px solid #cbcbcb;
+            border: 0 none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+            height: 22px;
+            outline: 0;
+            padding: 0 7px;
+            width: 214px;
+            margin: 0;
+        }
+        
+        .ace_searchbtn,
+        .ace_replacebtn {
+            background: #fff;
+            border: 0 none;
+            border-left: 1px solid #dcdcdc;
+            cursor: pointer;
+            float: left;
+            height: 22px;
+            margin: 0;
+            position: relative;
+        }
+        
+        .ace_searchbtn:last-child,
+        .ace_replacebtn:last-child {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        .ace_searchbtn:disabled {
+            background: none;
+            cursor: default;
+        }
+        
+        .ace_searchbtn {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            width: 27px;
+        }
+        
+        .ace_searchbtn.prev {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADFJREFUeNpiSU1NZUAC/6E0I0yACYskCpsJiySKIiY0SUZk40FyTEgCjGgKwTRAgAEAQJUIPCE+qfkAAAAASUVORK5CYII=);
+        }
+        
+        .ace_searchbtn.next {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADRJREFUeNpiTE1NZQCC/0DMyIAKwGJMUAYDEo3M/s+EpvM/mkKwCQxYjIeLMaELoLMBAgwAU7UJObTKsvAAAAAASUVORK5CYII=);
+        }
+        
+        .ace_searchbtn_close {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;
+            border-radius: 50%;
+            border: 0 none;
+            color: #656565;
+            cursor: pointer;
+            float: right;
+            font: 16px/16px Arial;
+            height: 14px;
+            margin: 5px 1px 9px 5px;
+            padding: 0;
+            text-align: center;
+            width: 14px;
+        }
+        
+        .ace_searchbtn_close:hover {
+            background-color: #656565;
+            background-position: 50% 100%;
+            color: white;
+        }
+        
+        .ace_replacebtn.prev {
+            width: 54px
+        }
+        
+        .ace_replacebtn.next {
+            width: 27px
+        }
+        
+        .ace_button {
+            margin-left: 2px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: hidden;
+            opacity: 0.7;
+            border: 1px solid rgba(100, 100, 100, 0.23);
+            padding: 1px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: black;
+        }
+        
+        .ace_button:hover {
+            background-color: #eee;
+            opacity: 1;
+        }
+        
+        .ace_button:active {
+            background-color: #ddd;
+        }
+        
+        .ace_button.checked {
+            border-color: #3399ff;
+            opacity: 1;
+        }
+        
+        .ace_search_options {
+            margin-bottom: 3px;
+            text-align: right;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        /*# sourceURL=ace/css/ace_searchbox */
+    </style>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div id="app" style="font-size: 14px;">
+            <nav class="navbar-nav">
+                <ul class="navbar" role="navigation">
+                    <div class="group">
+                        <li class="navitem"><a href="https://academy.cs.cmu.edu/splash">Home</a></li>
+                        <li class="navitem"><a href="https://academy.cs.cmu.edu/ide">Sandbox</a></li>
+                        <li class="navitem"><a class="active" aria-current="page" href="https://academy.cs.cmu.edu/docs">Docs</a></li>
+                        <li class="navitem"><a href="https://academy.cs.cmu.edu/resource/colors">Colors</a></li>
+                    </div>
+                    <div class="group center">
+                        <li class="navbar-center navbar-title">
+                            <div class="navbar-brand"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAMAAACTGUWNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDkzQjE4RjlCODI1MTFFNzhFQjdFMzEwMkQ5M0ZEQTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDkzQjE4RkFCODI1MTFFNzhFQjdFMzEwMkQ5M0ZEQTkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0OTNCMThGN0I4MjUxMUU3OEVCN0UzMTAyRDkzRkRBOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0OTNCMThGOEI4MjUxMUU3OEVCN0UzMTAyRDkzRkRBOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoQU6qgAAAAGUExURf//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" alt="CMU CS dragon"></div>Docs</li>
+                    </div>
+                    <div class="group right">
+                        <li class="navitem sign-up"><a href="https://academy.cs.cmu.edu/register">Sign Up</a></li>
+                        <li class="navitem"><a href="https://academy.cs.cmu.edu/login">Sign in</a></li>
+                    </div>
+                </ul>
+            </nav>
+            <div id="documentation" class="docs-container">
+                <div class="docs-sidebar">
+                    <div class="docs-title">
+                        <div class="flex-row"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAMAAACTGUWNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDkzQjE4RjlCODI1MTFFNzhFQjdFMzEwMkQ5M0ZEQTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDkzQjE4RkFCODI1MTFFNzhFQjdFMzEwMkQ5M0ZEQTkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0OTNCMThGN0I4MjUxMUU3OEVCN0UzMTAyRDkzRkRBOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0OTNCMThGOEI4MjUxMUU3OEVCN0UzMTAyRDkzRkRBOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoQU6qgAAAAGUExURf///////1V89WwAAAACdFJOU/8A5bcwSgAACrRJREFUeNrs3VmypDgMBVBp/5vu6Iqo7pwAD1ejL18VrzIN1sEzaUR5hB7CEBCAADzOApD3gwBxsSeBL4BcHQSIjT8BGP8uANfRZPg9AC7jKYy/B8BlQBl/F4DLkDL+sQCMvw/ARVSF8fcB+B1WYfxDAYQAXgC/AiuMfyiAEMAP4CuyIox/GMDQwdgjAYQA1QAYeiQACwABCMD4E+BYAMafAAQgAAEIwPgTgAAEIAABCEAAAhCAAAQgAAEIQAACNAf4N5wEiAP4E08ChAHIEgAFsAAsAmEA/8WTACEA/weUALUAKAABeA0oAYIBlAChACwCAQAfESVALMCkAEMfDEABOACLQDiAEiAUYE6AsccDCItAMAAFwgFYCcUCUCAaYEqA4TcAEAIEA1DADYACSQEmBAhgAkCBaIBxAQIoBVoCUCAagK1AOIBSILgEUMAcACNAALNGgGUgGIAtsTWAEqAHwLkEkN+IUYAA5wLgBIQAwQBlBXYunQCKjEAEAFKgpMFeHkRzCTSI/1wusgFIh/jP5CIdQDGC7UwEbV3cRUDCAVb2KehDcD0B7DsbiheQLOH9FW59eFWdZy9IzI409/dFVkHxR+2W0llA1PLHb6ASoE0KgUy8jBdz0WmroBgC2RboBeBB8P3+460MdgMQ31rntt0dagzaAZgbvJ3h9qdWIznWjgC2BLf3/GjXM2w6WqQ8gUwICDz+ZQDsDN5Td7+8QgBWBDNVPP7aSgHkFdg4eSkAI4PF35mfCWBiEHhFFQEMCOIuJ82zocEEYddSFQCOEHUZlQGwBkFXUBwAaRBz9voAOIWQ8+Z5PD0BQcRJ2wBgbscAdG0k4EqAanlaAezHxb3tz/Z4ejSB/whQKTCRFYNpqIYAG5Pz/lOxGZ+ODhMImQrPMZ+bQkAKAzQQCFqPw3WnaguMPAiRG6B0X+g+GdsF6UQLe2EAT6lUAdCSACOJ2MVfsywr5QR4/VAJgEwGyPgbHoIOf7EFguj44wFqlYDw+NsAaAcA1coloMhifXz8+1ZBu+NfAhDg5E6oEsBpHiI6/qcDhMe/J4AqAQrXPwSInoVTAgRWP8UBtHz1471FSzMA6CJASQBl/A8GgFwiAQKXYDoAaO37vwGA1o4/Ac6Kv5o8cV23AegBkHcTlXzxV+MteKpVQG0Aku6ldRKAK0Hd+Kv9jpDJAJQAkQBPl9UMIOnGricB+BjgLqgjQLot1o8DSFYC5EgAWwbc7cASQABDAI0HOGwg9pVpo+KAK4wHVEGBb7yC96eKdkOVANHjAI0QMBhRFB6Iub+E2GRIVwUgfChsUpsRYDRs+Obk9ZMSvHt6+qGYWWuimH1sWgPYNOdSDyBGwLg9B+3j1AVAYOecHVgS4Gck7Lq0Pz+97tEHQEAnnAfYKhGNAAR0usmJlc0qqROAYM62l5ejAQRzMtclBa99oRwJbAfWQoCn/McArM5LuO3MVeqYzkj2cUA1gMm5pfwDsUYC6DUEx725egLUmIpoJIBeQnPdnauDAHoJ03dzogYCpQE6CNQGaCBQHKA+QXmAYgStekEtCFoAvD1PUEsAPA4OA6hVFu4vmAA5FttqAmittgC6GJkDoNosaT+AsgKgiel4AK17wzcB0LIVThcALVvhN+gFFRV4u/bK44BuC5acCyLAEV1/ArSJP6ugIwGU8SdAkvi7P5rYQKAkQP15nsoAhQe5LQBK1y/1AcrX77bxb7J1sW37WhegTQenJkCnDiYBonv4VvEnwOi9XRCgmsLUUJ4ABGg/Bvudm0oA7SbZDOLf5T1iPpOcdQCaTjKXAWg7y2/x7llG36RtDQPgMlcsANcZYwG40BsJ4BitPvEHArjeqwI+ZX2AqLqCVZB33W907qVMnwhgdfa1HGcBSLZs7gAgmQAydBedASQTQL5lc3MBZMstpeIvhpcyn+MUvaBcI1YPAUkFkHXl1gNAzwSYfccIfEkAPHSTcvFHvjx1bVUMOnSWevH/zP/Vf5gtzEOnLqRm/O9+67R5fb4FYAcgwRz+QwgNu7qwnw1UBhgIIbyZgc+olq2CrOdMV7JMAOy06XwCrgA1l3nTLS1L2/hLxIX7AYhQACIQAACIw+XbpPa7Mu5La47Rn0jkeY/ap797Fd/XJ3bzAsymoiN7NVz8j+2c6df3P9P1AAAVyOcvPSV4JeAwXwpbFRDD+C+mc/eZpyRsGzBNAQBrjRZGP49pmDZiJusCYhT/tYQW74b5aCx1tExWJsUk/qspbQMABK4/lwHANPzrAApqBiYW4WMAcsZfluIxevLHspENYOSc2PgLtFsy2gWIALBrfddG8V/jr+YAtvUPDMBMwGR5GAuwl04xAPUGQE0FTn/7YYSmUQCQ7TskTwEY2LPw7g60Eni8vDQA6DGQDg1G8SG5vAi1OAIABt8HODRTpw6HWeUGBgC15ui+anYBGIDNjHZ/ARSA0Zz2zEqvi8B5AA+Tks4CoVUQtmaerXFiART1u2wjgP26dXAZVkWyvHouAsCoYRxfh9WzAYw7Jnl6PdUATPp7pwhImgLgAdwTQK0BhAAuAEKAUICbB3MI4B//tz8RwB7gdgKCAPbd9NvpBwKYA9w/nk6AIAAlQEAb/P1XDsQc2+Aff+ZUhBvArz+rEsCnCro4KQG8ZoIOPQhQBEAIkBGA8SMAAXgQgAA8CEAAHgQgQM4spr7u7gDpR/AdAf7uoPL4oyopDyCFbvmkOWgFUOU3Z00BKv3srx+A94a37gDJW2H/LYcJgAx/YE42H8xqEv3AzFRvA0I33k4AIMXin69AVwYAbn8bl52yAJh6Jj5DJZ8LQlb10Rna3+eqYJt7n2ipbqjjJRt2d0JvKUgA0oZ/dAAZJwDaLyhP+PXrdzW5BWK2LDO7+dcnUQoABAnsD2VTCwC3Lo6v+/fmEWMEEBs22f2WCzSV87sxziGAAbD5MRF2Li2pAGLPuCw9z20APR7gqfN428mfv/h6AKbLAlf7hOJ2dM1YBEBvUcJVOOO3/0K8EhYB1Ja3sAp/4v5fiRe8CHi/yG1vVlSmU70/y8ItgAeQJABjvRDsYAsPoOkBdHEoNJbnSQHZFMAAiC+ALvTHx+chn3dR3wSYmLsbTy8ZwNXee0NrsqslywBgpmPlCbC5NjWd0lY4rQG2+4E+75Rfr3x2wznbDV0HEEeAvTdSIx9VywSwhrDqhl2iXR5aGADo8g2wJGD58guP5zRnv2MNIF4AmiL884vp5gDiBWBJsHwRmGDtAcy+Uk2zCWxdBKS62FlimM7C5kRGvMD4l1cW8RdO7gqg6YrA7Qo1ZOZq8dxGAFCCxcnFy5Wy2dUYDIBfIwxFgJ5dX/+x0GFcbwSCALZ+LrG/nIY3X2+FowAsomB8bkUA6OcIPw5ge3HFWUBxAHPfMAZ4iIcaHWYPcQ2c+f0rKQACDmzNtzEncioA4jH2pTro8yvnAiiy6VkvAgcD7K8w7wCwChoWmEyJAFiC6XQIACRYSWXy8wTAPEBMACjD1tdN46/c/pkA6QuQxaiBAMAaLH5B5miBDCtiRwtszvUSYKw3u/UhAiDGE88DDiWA7YBu7r8JYDKkvv4vJYDfpAZwsZUAGAElQKTAzgkY430BJUAkwWbqDPAmgBIgkmA/bYZ3HQGSLkOLGRcToKorQ0CAo49/BBgAwJiUlM5mN/EAAAAASUVORK5CYII=" alt="CMU CS dragon">
+                            <h3>CMU<br>CS Academy</h3></div>
+                        <div class="flex-row">
+                            <h5>Graphics Documentation</h5></div>
+                        <form>
+                            <div role="combobox" aria-haspopup="listbox" aria-owns="react-autowhatever-1" aria-expanded="false" class="react-autosuggest__container">
+                                <input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input" placeholder="Search..." value="">
+                                <div id="react-autowhatever-1" role="listbox" class="react-autosuggest__suggestions-container"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="scrollspy-nav">
+                        <li class=""><a href="{{url}}#shapes">shapes</a></li>
+                        <li class=""><a href="{{url}}#canvas">canvas</a></li>
+                        <li class=""><a href="{{url}}#shapeObjects">shapeObjects</a></li>
+                        <li class=""><a href="{{url}}#Rect">Rect</a></li>
+                        <li class=""><a href="{{url}}#Oval">Oval</a></li>
+                        <li class=""><a href="{{url}}#Circle">Circle</a></li>
+                        <li class="active"><a href="#LineAndArrow">LineAndArrow</a></li>
+                        <li class=""><a href="{{url}}#Label">Label</a></li>
+                        <li class=""><a href="{{url}}#RegularPolygon">RegularPolygon</a></li>
+                        <li class=""><a href="{{url}}#Star">Star</a></li>
+                        <li class=""><a href="{{url}}#Polygon">Polygon</a></li>
+                        <li class=""><a href="{{url}}#Arc">Arc</a></li>
+                        <li class=""><a href="{{url}}#generalShapeProperties">generalShapeProperties</a></li>
+                        <li class=""><a href="{{url}}#colorsAndGradients">colorsAndGradients</a></li>
+                        <li class=""><a href="{{url}}#generalShapeMethods">generalShapeMethods</a></li>
+                        <li class=""><a href="{{url}}#toBack">toBack</a></li>
+                        <li class=""><a href="{{url}}#toFront">toFront</a></li>
+                        <li class=""><a href="{{url}}#contains">contains</a></li>
+                        <li class=""><a href="{{url}}#hits">hits</a></li>
+                        <li class=""><a href="{{url}}#containsShape">containsShape</a></li>
+                        <li class=""><a href="{{url}}#hitsShape">hitsShape</a></li>
+                        <li class=""><a href="{{url}}#groups">groups</a></li>
+                        <li class=""><a href="{{url}}#groupProperties">groupProperties</a></li>
+                        <li class=""><a href="{{url}}#groupSpecificMethods">groupSpecificMethods</a></li>
+                        <li class=""><a href="{{url}}#add">add</a></li>
+                        <li class=""><a href="{{url}}#clear">clear</a></li>
+                        <li class=""><a href="{{url}}#remove">remove</a></li>
+                        <li class=""><a href="{{url}}#hitTest">hitTest</a></li>
+                        <li class=""><a href="#appObject">appObject</a></li>
+                        <li class=""><a href="{{url}}#appProperties">appProperties</a></li>
+                        <li class=""><a href="{{url}}#appMethods">appMethods</a></li>
+                        <li class=""><a href="{{url}}#app.stop">app.stop</a></li>
+                        <li class=""><a href="{{url}}#app.group.hitTest">app.group.hitTest</a></li>
+                        <li class=""><a href="{{url}}#app.getTextInput">app.getTextInput</a></li>
+                        <li class=""><a href="{{url}}#functions">functions</a></li>
+                        <li class=""><a href="{{url}}#eventFunctions">eventFunctions</a></li>
+                        <li class=""><a href="{{url}}#onMousePress">onMousePress</a></li>
+                        <li class=""><a href="{{url}}#onMouseRelease">onMouseRelease</a></li>
+                        <li class=""><a href="{{url}}#onMouseMove">onMouseMove</a></li>
+                        <li class=""><a href="{{url}}#onMouseDrag">onMouseDrag</a></li>
+                        <li class=""><a href="{{url}}#onKeyPress">onKeyPress</a></li>
+                        <li class=""><a href="{{url}}#onKeyRelease">onKeyRelease</a></li>
+                        <li class=""><a href="{{url}}#onKeyHold">onKeyHold</a></li>
+                        <li class=""><a href="{{url}}#onStep">onStep</a></li>
+                        <li class=""><a href="{{url}}#mathFunctions">mathFunctions</a></li>
+                        <li class=""><a href="{{url}}#distance">distance</a></li>
+                        <li class=""><a href="{{url}}#angleTo">angleTo</a></li>
+                        <li class=""><a href="{{url}}#getPointInDir">getPointInDir</a></li>
+                        <li class=""><a href="{{url}}#rounded">rounded</a></li>
+                        <li class=""><a href="{{url}}#makeList">makeList</a></li>
+                        <li class=""><a href="{{url}}#pythonFunctions">pythonFunctions</a></li>
+                        <li class=""><a href="{{url}}#media">media</a></li>
+                        <li class=""><a href="{{url}}#Images">Images</a></li>
+                        <li class=""><a href="{{url}}#Sound">Sound</a></li>
+                        <li class=""><a href="{{url}}#glossary">glossary</a></li>
+                    </ul>
+                </div>
+                <div class="docs-content" tabindex="-1">
+                    <div id="shapes">
+                        <h1> Shapes </h1>
+                    </div>
+
+                    <div id="canvas">
+                        <h3> Canvas </h3>
+                    </div>
+                    <div class="single-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/644"> 1.1.2</a></b>
+                        <br>
+                        <br> All shapes will be drawn on a canvas.
+                        <ul>
+                            <li> The point (0, 0) is the left-top corner of the canvas (not the middle!).</li>
+                            <li> As x increases, you head right. As y increases, you head down (not up!).</li>
+                            <li> The canvas is 400x400. So (200, 200) is the middle of the canvas, and (400, 400) is the right-bottom corner.</li>
+                        </ul>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="shapeObjects">
+                        <h2> Shapes Objects </h2>
+                    </div>
+
+                    <div id="Rect" class="single-indent">
+                        <h4> Rect </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/644"> 1.1.2</a> or <a href="https://academy.cs.cmu.edu/notes/652"> 1.3.1 </a> </b>
+                        <br>
+                        <br> To create a Rect in code, we write:
+                        <div><pre><code class="hljs javascript">Rect(<b>left, top, width, height</b>, fill=<span class="hljs-string">'black'</span>, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>,
+     opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>, dashes=<span class="hljs-keyword">False</span>, align=<span class="hljs-string">'left-top'</span>, visible=<span class="hljs-keyword">True</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> The first four values are required, the rest are optional.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># This creates a black rectangle with a left-top corner at (200, 200),</span>
+<span class="hljs-comment"># a width of 20 pixels, and a height of 40 pixels.</span>
+<span class="hljs-comment"># This makes the left 200, top 200, right 220, and bottom 240.</span>
+Rect(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>, <span class="hljs-number">40</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="Oval" class="single-indent">
+                        <h4> Oval </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/652"> 1.3.1 </a> </b>
+                        <br>
+                        <br> To create an Oval in code, we write:
+                        <div><pre><code class="hljs javascript">Oval(<b>centerX, centerY, width, height</b>, fill=<span class="hljs-string">'black'</span>, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>,
+     opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>, dashes=<span class="hljs-keyword">False</span>, align=<span class="hljs-string">'center'</span>, visible=<span class="hljs-keyword">True</span>) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> The first four values are required, the rest are optional.
+                        <br>
+                        <br><b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># This creates a black oval with a center at (200, 200),</span>
+<span class="hljs-comment"># a width of 60 pixels, and a height of 30 pixels.</span>
+<span class="hljs-comment"># This makes the left 170, top 185, right 170, and bottom 215.</span>
+Oval(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="Circle" class="single-indent">
+                        <h4> Circle </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/652"> 1.3.1 </a></b>
+                        <br>
+                        <br> To create a Circle in code, we write:
+                        <div><pre><code class="hljs javascript">Circle(<b>centerX, centerY, radius</b>, fill=<span class="hljs-string">'black'</span>, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>,
+       opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>, dashes=<span class="hljs-keyword">False</span>, align=<span class="hljs-string">'center'</span>, visible=<span class="hljs-keyword">True</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> The first three values are required, the rest are optional.
+                        <br>
+                        <br><b> Circle-Specific Properties: </b>
+                        <br> radius
+                        <br>
+                        <br>radius defines the length of half the circle.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># This creates a black circle centered at (200, 200) with a radius of 20</span>
+<span class="hljs-comment"># This makes the left 180, top 180, right 220, and bottom 220.</span>
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>)</code> </pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="LineAndArrow" class="single-indent">
+                        <h4> Line (and Arrow) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/652"> 1.3.1 </a> or <a href="https://academy.cs.cmu.edu/notes/554"> 8.1.1 </a> </b>
+                        <br>
+                        <br> To create a Line from the point (x1, y1) to the point (x2, y2) in code, we write:
+                        <div><pre><code class="hljs javascript">Line(<b>x1, y1, x2, y2</b>, fill=<span class="hljs-string">'black'</span>, lineWidth=<span class="hljs-number">2</span>, dashes=<span class="hljs-keyword">False</span>,
+     opacity=<span class="hljs-number">100</span>, visible=<span class="hljs-keyword">True</span>, arrowStart=<span class="hljs-keyword">False</span>, arrowEnd=<span class="hljs-keyword">False</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                        <br> The first four values are required, the rest are optional.
+                        <br>
+                        <br><b> Line-Specific Properties:</b>
+                        <br> x1, y1, x2, y2, lineWidth, arrowStart, arrowEnd, dashes
+                        <ul>
+                            <li> x1, y1, x2, y2 are the x and y coordinates of the endpoints of the line.
+                            </li>
+                            <li> lineWidth determines how thick the line is and must be bigger than 0.
+                            </li>
+                            <li> dashes can be used to create a dashed line.
+                            </li>
+                            <li> arrowStart can be set to True to draw an arrow head on the (x1, y1) end of the line.
+                            </li>
+                            <li> arrowEnd can be set to True to draw an arrow head on the (x2, y2) end of the line.</li>
+                        </ul>
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Creates a double sided arrow with the line stretching down the center of the canvas</span>
+<span class="hljs-comment"># from (0, 200) to (400, 200).</span>
+Line(<span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">400</span>, <span class="hljs-number">200</span>, arrowStart=<span class="hljs-keyword">True</span>, arrowEnd=<span class="hljs-keyword">True</span>) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="Label" class="single-indent">
+                        <h4> Label </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/439"> 1.3.3 </a> </b>
+                        <br>
+                        <br> To create a Label with the text "value" in code, we write:
+                        <div><pre><code class="hljs javascript">Label(<b>value, centerX, centerY</b>, size=<span class="hljs-number">12</span>, font=<span class="hljs-string">'arial'</span>, bold=<span class="hljs-keyword">False</span>,
+      italic=<span class="hljs-keyword">False</span>, fill=<span class="hljs-string">'black'</span>, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>, opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>,
+      align=<span class="hljs-string">'center'</span>, visible=<span class="hljs-keyword">True</span>) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> The first three values are required, the rest are optional.
+                        <br>
+                        <br><b> Label-Specific Properties:</b>
+                        <br> value, font, size, bold, italic
+                        <ul>
+                            <li> value can be any type and is the text that is drawn onto the canvas.
+                            </li>
+                            <li> font changes the font of the text with a default font of 'arial'.
+                            </li>
+                            <li> font can either be 'arial' or 'monospace'.
+                            </li>
+                            <li> size will change the size of the text with a default size of 12.
+                            </li>
+                            <li> bold and italic can either be True or False with a default state of False.</li>
+                        </ul>
+                        <br>
+                        <br> <b>Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Writes Hello World onto the canvas in arial font with the text centered at (200, 200).</span>
+Label(<span class="hljs-string">'Hello World'</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="RegularPolygon" class="single-indent">
+                        <h4> Regular Polygon </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/441"> 1.3.5 </a> </b>
+                        <br>
+                        <br> To create a RegularPolygon with points number of sides in code, we write:
+                        <div><pre><code class="hljs javascript">RegularPolygon(<b>centerX, centerY, radius, points,</b> fill=<span class="hljs-string">'black'</span>,
+               border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>, opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>,
+               dashes=<span class="hljs-keyword">False</span>, align=<span class="hljs-string">'center'</span>, visible=<span class="hljs-keyword">True</span>)
+            </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> Only the first four values are required, the rest are optional.
+                        <br> A RegularPolygon is defined to fit exactly inside a circle of the same radius with points equi-distant around the edge of the Circle.
+                        <br>
+                        <br><b> RegularPolygon-Specific Properties:</b>
+                        <br> radius, points
+                        <br>
+                        <ul>
+                            <li> radius is the size of the circle that the polygon fits inside.
+                            </li>
+                            <li> radius must be a number greater than 0.
+                            </li>
+                            <li> points is the number of points evenly spread out around the circle to create a polygon.
+                            </li>
+                            <li> points must be an integer greater than 2.</li>
+                        </ul>
+                        <br>
+                        <br><b>Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Creates a triangle centered at (200, 200) with a radius of 20.</span>
+RegularPolygon(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>, <span class="hljs-number">3</span>)
+
+<span class="hljs-comment"># Creates a square centered at (200, 200) with a radius of 20</span>
+RegularPolygon(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>, <span class="hljs-number">4</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="Star" class="single-indent">
+                        <h4> Star </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/441"> 1.3.5 </a> </b>
+                        <br>
+                        <br> To create a Star with points number of points in code, we write:
+                        <div><pre><code class="hljs javascript">Star(<b>centerX, centerY, radius, points,</b> fill=’black’, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>,
+     roundness=<span class="hljs-keyword">None</span>, opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>, dashes=<span class="hljs-keyword">False</span>, align=’center’, visible=<span class="hljs-keyword">True</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> Only the first four values are required, the rest are optional.
+                        <br>
+                        <br><b> Star-Specific Properties:</b>
+                        <br> radius, points, roundness
+                        <ul>
+                            <li> radius determines how large the star is and must be greater than 0.
+                            </li>
+                            <li> points determines how many points are in the star and must be an integer greater than 2.
+                            </li>
+                            <li> roundness changes how round the star is with 0 being the minimum and 100 being the maximum.</li>
+                        </ul>
+                        <br>
+                        <br><b>Example:</b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Creates a typical 5 pointed star centered at (200, 200).</span>
+Star(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">30</span>, <span class="hljs-number">5</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="Polygon" class="single-indent">
+                        <h4> Polygon </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/443"> 1.3.7 </a></b>
+                        <br>
+                        <br> To create a Polygon with points (x1, y1), (x2, y2), (x3, y3), ... in code, we write:
+                        <div><pre><code class="hljs javascript">Polygon(x1, y1, x2, y2, x3, y3, …, fill=’black’, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>,
+        opacity=<span class="hljs-number">100</span>, rotateAngle=<span class="hljs-number">0</span>, dashes=<span class="hljs-keyword">False</span>, visible=<span class="hljs-keyword">True</span>) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> There are no required values for Polygons, they are all optional.
+                        <br> The polygon is drawn using straight lines in between each point, with a line between the last point and the first point as well.
+                        <br> Note: align is not a valid property for polygon.
+                        <br>
+                        <br> <b>Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Creates a 5-sided polygon in the top left corner of the canvas.</span>
+Polygon(<span class="hljs-number">25</span>, <span class="hljs-number">25</span>, <span class="hljs-number">150</span>, <span class="hljs-number">25</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">250</span>, <span class="hljs-number">25</span>, <span class="hljs-number">200</span>) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                        <br><b>Polygon-Specific Methods: </b>
+                        <br> .addPoint(x, y)
+                        <ul>
+                            <li> addPoint takes in two numbers (x, y) and adds that point to the end of a polygon's list of points. </li>
+                        </ul>
+                        <br>
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># This creates a square shape with a triangle cut from it.</span>
+a = Polygon(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">0</span>)
+a.addPoint(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="Arc" class="single-indent">
+                        <h4> Arc </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/554"> 8.1.1 </a> </b>
+                        <br>
+                        <br> To create an Arc that goes from the startAngle to the sweepAngle in code, we write:
+                        <div><pre><code class="hljs javascript">Arc(<b>centerX, centerY, width, height, startAngle, sweepAngle,</b>
+            fill=<span class="hljs-string">'black'</span>, border=<span class="hljs-keyword">None</span>, borderWidth=<span class="hljs-number">2</span>, opacity=<span class="hljs-number">100</span>,
+            rotateAngle=<span class="hljs-number">0</span>, dashes=<span class="hljs-keyword">False</span>, visible=<span class="hljs-keyword">True</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> The first 6 values are required, the rest are optional.
+                        <br> An Arc is created by taking an Oval with the same centerX, centerY, width, and height and then only drawing the portion from the startAngle for sweepAngle many degrees.
+                        <br>
+                        <br> <b> Arc-Specific Properties:</b>
+                        <br> startAngle, sweepAngle
+                        <ul>
+                            <li> startAngle is the angle that the cut of the oval starts at.
+                            </li>
+                            <li> sweepAngle is the amount that is added to the startAngle to get how much of the oval the arc covers.
+                            </li>
+                            <li> An angle of 0 degrees points straight up, and increasing the angle moves clockwise. So 90 degrees is straight right.</li>
+                        </ul>
+                        <br>
+                        <br><b>Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># This creates an Arc that is the right-top quarter of the oval.</span>
+<span class="hljs-comment"># The arc begins at (200, 150), and then goes 90 degrees till it hits (300, 200).</span>
+Arc(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">0</span>, <span class="hljs-number">90</span>) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="generalShapeProperties">
+                        <h3> General Shape Properties </h3>
+                        <div class="single-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/673"> 2.3.1</a></b>
+                            <br>
+                            <br> General shape properties are properties which apply to all shapes. They are used to
+                            <br> change the shape they apply to. They can be set either when the shape is created or later on.
+                            <br>
+                            <br> To set the property when creating the shape, add the following after the required properties have been set.
+                            <div><pre><code class="hljs">propertyName = newValue </code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                            <br> To set the property later on use:
+                            <div><pre><code class="hljs">variableName.propertyName = newValue </code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                            <br>
+                            <div id="positionProperties">
+                                <h4> Position Properties:</h4>
+                                <b>left, right, top, bottom, centerX, centerY</b>
+                                <ul>
+                                    <li>These properties are defined in relation to the "bounding box" of the shape, which is the smallest rectangle that completely encloses the shape.</li>
+                                    <li>centerX is the x-coordinate and centerY is the y-coordinate of the center of the bounding box of the shape.</li>
+                                    <li>Assigning a value to one of these properties causes the shape to move.</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="sizeProperties">
+                                <h4> Size Properties:</h4>
+                                <b>width, height</b>
+                                <ul>
+                                    <li> width affects how large a shape is horizontally and height affects how large a shape is vertically.
+                                    </li>
+                                    <li> width and height must both be greater than 0.</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="fillProperty">
+                                <h4> Fill:</h4>
+                                <b>fill</b>
+                                <ul>
+                                    <li> fill changes the color of the shape. It can be set to either a color or None.
+                                    </li>
+                                    <li> The color can be a <a href="https://academy.cs.cmu.edu/resource/colors"> pre-defined color</a>, a gradient, or a rgb value.
+                                    </li>
+                                    <li> Fill will default to 'black' if not set otherwise.</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="opacityProperty">
+                                <h4> Opacity:</h4>
+                                <b>opacity</b>
+                                <ul>
+                                    <li> opacity changes the transparency of the shape.
+                                    </li>
+                                    <li> opacity has a default value of 100, and can go from 0 to 100.
+                                    </li>
+                                    <li> 0 makes the shape invisible (completely see through).
+                                    </li>
+                                    <li> 100 makes the shape completely solid (nothing can be seen behind it).</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="borderProperty">
+                                <h4> border Properties:</h4>
+                                <b>border, borderWidth, dashes</b>
+                                <ul>
+                                    <li> border affects the color of the border around the shape.
+                                    </li>
+                                    <li> border is default set to None.
+                                    </li>
+                                    <li> borderWidth affects how thick the border is. borderWidth will default be set to 2.
+                                    </li>
+                                    <li> dashes makes the border into a dashed border.
+                                    </li>
+                                    <li> dashes is default set to False; however it can be set either to True or to a tuple (dashWidth, gapWidth).</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="alignProperty">
+                                <h4> Align:</h4>
+                                <b>align</b>
+                                <ul>
+                                    <li> align changes what the position values mean when a shape is created.</li>
+                                </ul>
+                                <br><b>Example:</b>
+                                <div><pre><code class="hljs javascript"><span class="hljs-comment"># This draws a Circle with a center at (200, 200) and a radius of 50.</span>
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>)
+
+<span class="hljs-comment"># This draws a Circle with a left-most point of (200, 200) and a radius of 50.</span>
+<span class="hljs-comment"># Its center is at (225, 200).</span>
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, align=<span class="hljs-string">'left'</span>)</code></pre>
+                                    <button class="small button flat teal">Copy code</button>
+                                </div>
+                                <ul>
+                                    <li> align can be set to: ‘center’, ‘left’, ‘right’, ‘top’, ‘bottom’, ‘left-top’, ‘right-top’, ‘left-bottom’, ‘right-bottom’
+                                    </li>
+                                    <li> align must be set upon creation of the shape and cannot be changed later.
+                                    </li>
+                                    <li> Polygons cannot have the align property.</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="rotateAngleProperty">
+                                <h4> RotateAngle:</h4>
+                                <b>rotateAngle</b>
+                                <ul>
+                                    <li> rotateAngle rotates the shape clockwise.
+                                    </li>
+                                    <li> rotateAngle can be set to any number which represents the amount that the shape is being turned.
+                                    </li>
+                                    <li> rotateAngle has a default value of 0 with 360 returning the shape back to its original rotation.</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div id="visibleProperty">
+                                <h4> Visible:</h4>
+                                <b>visible</b>
+                                <ul>
+                                    <li> visible makes a shape visible or invisible by removing or putting the shape back on the canvas.
+                                    </li>
+                                    <li> visible can be set to True or False with a default value of True.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="colorsAndGradients">
+                        <h3> Colors and Gradients </h3>
+                        <div class="single-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/648">1.2.3</a></b>
+                            <br>
+                            <br> Colors can be used either by using <a href="https://academy.cs.cmu.edu/resource/colors"> predefined colors </a> or rgb values.
+                            <br>
+                            <br>
+                        </div>
+
+                        <div id="rgbValues" class="single-indent">
+                            <h4> rgb Values </h4>
+                        </div>
+                        <div class="double-indent">
+                            An rgb value is a way of representing a color by stating how much red, green, and blue appears in that color. The amount of each color is represented by a number between 0 and 255, where 0 means none of that color and 255 means all of that color.
+                            <br>
+                            <br> To create an rgb value in code, we write:
+                            <div><pre><code class="hljs">rgb(redValue, greenValue, blueValue)</code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                            <br> Here are some example rgbs:
+                            <div><pre><code class="hljs javascript"><span class="hljs-comment"># No amount of any color: black</span>
+Circle(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=rgb(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+
+<span class="hljs-comment"># All of each color: white</span>
+Circle(<span class="hljs-number">150</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=rgb(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>))
+
+<span class="hljs-comment"># Only the redValue has a non-zero color: brightest red</span>
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=rgb(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+
+<span class="hljs-comment"># Only the greenValue has a non-zero color: brightest green</span>
+Circle(<span class="hljs-number">250</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=rgb(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>))
+
+<span class="hljs-comment"># Only the blueValue has a non-zero color: brightest blue</span>
+Circle(<span class="hljs-number">300</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=rgb(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>))</code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div id="gradients" class="single-indent">
+                            <h4> Gradients </h4>
+                        </div>
+                        <div class="double-indent">
+                            A gradient is a smooth transition of colors. Gradients can be used to colors shapes and borders just like with single colors.
+                            <br>
+                            <br> To create a gradient in code, we write:
+                            <div><pre><code class="hljs javascript"> gradient(<b>color1, color2</b>, color3, ..., start=<span class="hljs-string">'center'</span>) </code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                            <br>
+                            <ul>
+                                <li> Gradients need at least 2 colors and can have up to as many colors as you want it to.
+                                </li>
+                                <li> The gradient start can be used to define where the first color begins and then the gradient will proceed linearly or radially across the shape.
+                                </li>
+                                <li> start is set to 'center' by default and can be set to all of the same values as align.</li>
+                            </ul>
+                            <br> <b> Example: </b>
+                            <div><pre><code class="hljs javascript"><span class="hljs-comment"># A gradient from the left-top to the right-bottom.</span>
+Rect(<span class="hljs-number">75</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'left-top'</span>))
+
+<span class="hljs-comment"># A gradient from the top to the bottom.</span>
+Rect(<span class="hljs-number">175</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'top'</span>))
+
+<span class="hljs-comment"># A gradient from the rightt-top to the left-bottom.</span>
+Rect(<span class="hljs-number">275</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'right-top'</span>))
+
+<span class="hljs-comment"># A gradient from the left to the right.</span>
+Rect(<span class="hljs-number">75</span>, <span class="hljs-number">175</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'left'</span>))
+
+<span class="hljs-comment"># No start is set, so by default this is a radial gradient from out of the center.</span>
+Rect(<span class="hljs-number">175</span>, <span class="hljs-number">175</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>))
+
+<span class="hljs-comment"># A gradient from the right to the left.</span>
+Rect(<span class="hljs-number">275</span>, <span class="hljs-number">175</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'right'</span>))
+
+<span class="hljs-comment"># A gradient from the left-bottom to the right-top.</span>
+Rect(<span class="hljs-number">75</span>, <span class="hljs-number">275</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'left-bottom'</span>))
+
+<span class="hljs-comment"># A gradient from the bottom to the top.</span>
+Rect(<span class="hljs-number">175</span>, <span class="hljs-number">275</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'bottom'</span>))
+
+<span class="hljs-comment"># A gradient from the right-bottom to the left-top.</span>
+Rect(<span class="hljs-number">275</span>, <span class="hljs-number">275</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=gradient(<span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, start=<span class="hljs-string">'right-bottom'</span>))</code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="generalShapeMethods">
+                        <h3> General Shape Methods </h3>
+                    </div>
+                    <div class="single-indent">
+                        These methods are pre-defined methods that apply to all shapes.
+                        <br>
+                        <br> To call a method in code, we write:
+                        <div><pre><code class="hljs">variableName.method(parameters)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="toBack" class="single-indent">
+                        <h4> .toBack() </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/504">4.3.2</a></b>
+                        <br>
+                        <br> Pushes the shape to the back behind everything else on the canvas at that moment.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Sends topBlue behind bottomRed.</span>
+bottomRed = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">70</span>, fill=<span class="hljs-string">'red'</span>)
+topBlue = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=<span class="hljs-string">'blue'</span>)
+topBlue.toBack()
+topBlue.radius = <span class="hljs-number">90</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="toFront" class="single-indent">
+                        <h4> .toFront() </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/504">4.3.2</a></b>
+                        <br>
+                        <br> Pulls the shape to the front of everything else on the canvas at that moment.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Sends bottomRed in front of topBlue.</span>
+bottomRed = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">70</span>, fill=<span class="hljs-string">'red'</span>)
+topBlue = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=<span class="hljs-string">'blue'</span>)
+bottomRed.toFront()
+bottomRed.radius = <span class="hljs-number">30</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="contains" class="single-indent">
+                        <h4> .contains(x, y) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/506">4.3.4</a></b>
+                        <br>
+                        <br> Takes in two numbers and returns True if the point represented by those numbers (x, y) is contained inside the shape.
+                        <br> Otherwise it returns False.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The red ring becomes gold since the point (200, 200) is inside the red ring.</span>
+<span class="hljs-comment"># The first conditonal is True.</span>
+ring = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, fill=<span class="hljs-keyword">None</span>, border=<span class="hljs-string">'red'</span>, borderWidth=<span class="hljs-number">50</span>)
+<span class="hljs-keyword">if</span> (ring.contains(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>) == <span class="hljs-keyword">True</span>):
+    ring.border = <span class="hljs-string">'gold'</span>
+<span class="hljs-keyword">elif</span> (ring.contains(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>) == <span class="hljs-keyword">True</span>):
+    ring.border = <span class="hljs-string">'black'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="hits" class="single-indent">
+                        <h4> .hits(x, y) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b>CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/506">4.3.4</a></b>
+                        <br>
+                        <br> Takes in two numbers and returns True if the point represented by those numbers (x, y) hits what is drawn of the shape on the canvas.
+                        <br> Otherwise it returns False.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The red ring becomes black since the inside fill is None and therefore the first hits returns False.</span>
+<span class="hljs-comment"># The outside border is also hit making the second hits return True.</span>
+ring = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, fill=<span class="hljs-keyword">None</span>, border=<span class="hljs-string">'red'</span>, borderWidth=<span class="hljs-number">50</span>)
+<span class="hljs-keyword">if</span> (ring.hits(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>) == <span class="hljs-keyword">True</span>):
+    ring.border = <span class="hljs-string">'gold'</span>
+<span class="hljs-keyword">elif</span> (ring.hits(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>) == <span class="hljs-keyword">True</span>):
+    ring.border=<span class="hljs-string">'black'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="containsShape" class="single-indent">
+                        <h4> .containsShape(shape) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/506">4.3.4</a></b>
+                        <br>
+                        <br> Takes in a shape and returns True if the input shape is entirely contained inside the shape the method applies to.
+                        <br> Otherwise it returns False.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># blueCircle is rimmed with a green border while goldCircle has no border</span>
+<span class="hljs-comment"># since goldCircle is not fully inside the redCircle.</span>
+redCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, fill=<span class="hljs-keyword">None</span>, border=<span class="hljs-string">'red'</span>, borderWidth=<span class="hljs-number">50</span>)
+blueCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">10</span>, fill=<span class="hljs-string">'blue'</span>, borderWidth=<span class="hljs-number">5</span>)
+goldCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">20</span>, fill=<span class="hljs-string">'gold'</span>, borderWidth=<span class="hljs-number">5</span>)
+
+<span class="hljs-keyword">if</span> (redCircle.containsShape(blueCircle) == <span class="hljs-keyword">True</span>):
+    blueCircle.border = <span class="hljs-string">'lightGreen'</span>
+<span class="hljs-keyword">if</span> (redCircle.containsShape(goldCircle) == <span class="hljs-keyword">True</span>):
+    goldCircle.border = <span class="hljs-string">'fuchsia'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="hitsShape" class="single-indent">
+                        <h4> .hitsShape(shape) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/506">4.3.4</a></b>
+                        <br>
+                        <br> Takes in a shape and returns True if the input shape hits any filled portion of the shape that the method applies to.
+                        <br> Otherwise it returns False.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># goldCircle is rimmed with a fuchsia border while the blueCircle has no border.</span>
+<span class="hljs-comment"># goldCircle hits part of the redCircle while the blueCircle only hits</span>
+<span class="hljs-comment"># the area not filled by anything.</span>
+redCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, fill=<span class="hljs-keyword">None</span>, border=<span class="hljs-string">'red'</span>, borderWidth=<span class="hljs-number">50</span>)
+blueCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">10</span>, fill=<span class="hljs-string">'blue'</span>, borderWidth=<span class="hljs-number">5</span>)
+goldCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">20</span>, fill=<span class="hljs-string">'gold'</span>, borderWidth=<span class="hljs-number">5</span>)
+
+<span class="hljs-keyword">if</span> (redCircle.hitsShape(blueCircle) == <span class="hljs-keyword">True</span>):
+    blueCircle.border = <span class="hljs-string">'lightGreen'</span>
+<span class="hljs-keyword">if</span> (redCircle.hitsShape(goldCircle) == <span class="hljs-keyword">True</span>):
+    goldCircle.border = <span class="hljs-string">'fuchsia'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="groups">
+                        <h2> Groups </h2>
+                    </div>
+                    <div class="single-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/705">6.1.1</a></b>
+                        <br>
+                        <br> A group is a collection of shapes which are treated as a single shape.
+                        <br>
+                        <br> To create a Group in code, we write:
+                        <div><pre><code class="hljs"> Group(shape1, shape2, ...) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div id="groupProperties" class="single-indent">
+                        <h3> Group Properties</h3>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/706">6.1.2</a> </b>
+                        <br>
+                        <br> Groups have all of the general shape properties except for border, borderWidth, and align.
+                        <br> Properties are applied to all shapes in the group.
+                        <br>
+                        <br> <b>children Property </b>
+                        <br> The children of a group are all of the shapes in the group. A single shape in the group is called a child and the group is called the parent.
+                        <br> groupName.children will get all shapes inside the group.
+                    </div>
+                    <br>
+
+                    <div id="groupSpecificMethods" class="single-indent">
+                        <h3> Group Specific Methods</h3>
+                    </div>
+                    <div class="double-indent">
+                        To call a method in code, we write:
+                        <div><pre><code class="hljs"> groupName.methodName(parameters)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="add" class="double-indent">
+                        <h4>.add(shape)</h4>
+                    </div>
+                    <div class="triple-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/707">6.2.1</a> </b>
+                        <br>
+                        <br> Takes in a shape and adds it into the group.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># leftTopCircle and rightBottomCircle has a gold fill while the middleCircle has no fill.</span>
+<span class="hljs-comment"># The leftTopCircle and rightBottomCircle are added into the circleGroup group resulting in circleGroup.fill changing both circles at once.</span>
+circleGroup = Group()
+leftTopCircle = Circle(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">20</span>)
+middleCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>, fill=<span class="hljs-keyword">None</span>, border=<span class="hljs-string">'black'</span>)
+rightBottomCircle = Circle(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>, <span class="hljs-number">20</span>)
+
+circleGroup.add(leftTopCircle)
+circleGroup.add(rightBottomCircle)
+circleGroup.fill = <span class="hljs-string">'gold'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="clear" class="double-indent">
+                        <h4>.clear()</h4>
+                    </div>
+                    <div class="triple-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/707">6.2.1</a> </b>
+                        <br>
+                        <br> Removes everything from the group. This will make all of the shapes invisible.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># All of the shapes disappear when they are cleared so nothing gains a gold fill since circleGroup is empty.</span>
+leftTopCircle = Circle(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">20</span>)
+middleCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>)
+rightBottomCircle = Circle(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>, <span class="hljs-number">20</span>)
+
+circleGroup = (leftTopCircle, middleCircle, rightBottomCircle)
+circleGroup.clear()
+circleGroup.border = <span class="hljs-string">'gold'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="remove" class="double-indent">
+                        <h4> .remove(shape) </h4>
+                    </div>
+                    <div class="triple-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/707">6.2.1</a> </b>
+                        <br>
+                        <br> Takes in a variable representing a shape already in the group and removes it from the group. This will make the shape invisible.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># middleCircle gains a gold fill but leftTopCircle and rightBottomCircle disappear.</span>
+<span class="hljs-comment"># Originally all three circles are in the group, but since leftTopCircle and rightBottomCircle are removed</span>
+<span class="hljs-comment"># only middleCircle is left in the group.</span>
+leftTopCircle = Circle(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">20</span>)
+middleCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>)
+rightBottomCircle = Circle(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>, <span class="hljs-number">20</span>)
+
+circleGroup = Group(leftTopCircle, middleCircle, rightBottomCircle)
+circleGroup.remove(leftTopCircle)
+circleGroup.remove(rightBottomCircle)
+circleGroup.fill = <span class="hljs-string">'gold'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="hitTest" class="double-indent">
+                        <h4>.hitTest(x, y)</h4>
+                    </div>
+                    <div class="triple-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/592">10.3.1</a> </b>
+                        <br>
+                        <br> Takes in two numbers representing the point (x, y) and returns which shape the point (x, y) hits from inside the group.
+                        <br> If it hits nothing from the Group it will return None.
+                        <br> If there are multiple shapes that it might hit, it returns the top shape.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The star gains a gold fill but the circle does not</span>
+<span class="hljs-comment"># since hitTest returns the top-most shape hit in the group.</span>
+circStarGroup = Group(
+     Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">40</span>, fill=<span class="hljs-string">'blue'</span>),
+     Star(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">40</span>, <span class="hljs-number">5</span>, fill=<span class="hljs-string">'green'</span>)
+     )
+result = circStarGroup.hitTest(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
+<span class="hljs-keyword">if</span> (circStarGroup != <span class="hljs-keyword">None</span>):
+    result.fill = <span class="hljs-string">'gold'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="appObject">
+                        <h1> App </h1>
+                        <br> A predefined object which represents the overall application with some predefined properties and methods.
+                        <br>
+                    </div>
+                    <div id="appProperties">
+                        <h3> App Properties </h3>
+                        <div class="single-indent">
+                            Custom properties can be added to app for properties that apply to the overall application.
+                            <br> There are also predefined properties as well.
+                            <br>
+                            <br> To set the property in code, we write:
+                            <div><pre><code class="hljs"> app.propertyName = newValue </code></pre>
+                                <button class="small button flat teal">Copy code</button>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="single-indent">
+                            <h4> app.background </h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/674">2.3.2</a> </b>
+                            <br> Changes the background color of the canvas.
+                            <br> It must be set to a color of some kind.
+                        </div>
+                        <br>
+                    </div>
+                    <div class="single-indent">
+                        <h4> app.group </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/707">6.2.1</a> </b>
+                        <br> This is a group that automatically contains all of the shapes on the canvas. All group properties and methods apply to this group.
+                        <br> Shapes do not need to be explictly added to app.group.
+                    </div>
+                    <br>
+
+                    <div class="single-indent">
+                        <h4> app.stepsPerSecond </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/708">6.3.1</a> </b>
+                        <br> Sets how many times event functions are called per second.
+                        <br> It must be set to a number.
+                    </div>
+                    <br>
+
+                    <div class="single-indent">
+                        <h4> app.paused </h4>
+                    </div>
+                    <div class="double-indent">
+                        Sets whether the application is paused or not.
+                        <br> Setting it to True will pause the app and setting it to False will cause the app to keep running.
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="appMethods">
+                        <h3> App Methods </h3>
+                    </div>
+                    <div class="single-indent">
+                        To call a method in code, we write:
+                        <div><pre><code class="hljs"> app.methodName(parameters) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="app.stop" class="single-indent">
+                        <h4> app.stop() </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/504">4.3.2</a> </b>
+                        <br>
+                        <br> Stops all events in the app from running which is equivalent to stopping the app from running.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The circle expands till it got to a size of 100 then</span>
+<span class="hljs-comment"># app.stop() is called, stopping anything from running anymore.</span>
+growingCircle = Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">5</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onStep</span><span class="hljs-params">()</span>:</span>
+    growingCircle.radius += <span class="hljs-number">5</span>
+<span class="hljs-keyword">if</span> (growingCircle.radius &gt;= <span class="hljs-number">100</span>):
+    app.stop()</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="app.group.hitTest" class="single-indent">
+                        <h4> app.group.hitTest(x, y) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/592">10.3.1</a> </b>
+                        <br>
+                        <br> Takes in two numbers representing the point (x, y) and returns which shape the point (x, y) hits from on the canvas.
+                        <br> If it hits nothing on the canvas it will return None.
+                        <br> If there are multiple shapes that it might hit, it returns the top shape.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The top most circle that (200, 200) hits is yellow so that shape</span>
+<span class="hljs-comment"># is returned and given a green border.</span>
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, fill=<span class="hljs-string">'red'</span>)
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">80</span>, fill=<span class="hljs-string">'orange'</span>)
+Circle(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, fill=<span class="hljs-string">'yellow'</span>))
+
+result = app.group.hitTest(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
+<span class="hljs-keyword">if</span> (result != <span class="hljs-keyword">None</span>):
+    result.border=<span class="hljs-string">'green'</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="app.getTextInput" class="single-indent">
+                        <h4> app.getTextInput(message) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/572">9.1.1</a> </b>
+                        <br>
+                        <br> Takes in a string message which will be shown as the prompt the user sees in the dialog box pop up.
+                        <br> Returns a string of whatever the user types into the prompt.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The label displays the value that is returned from the getTextInput method.</span>
+response = app.getTextInput(<span class="hljs-string">'Hello World! How are you?'</span>)
+Label(response, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">50</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="functions">
+                        <h1> Functions </h1>
+                        <br> Functions will run all the code inside the function whenever the function is called.
+                        <br> Code is inside a function if it is indented underneath where the function is defined.
+                    </div>
+
+                    <div id="eventFunctions">
+                        <h3> Event Functions </h3>
+                    </div>
+                    <div class="single-indent">
+                        Event based functions will be called when certain actions or events occur.
+                        <br>
+                    </div>
+
+                    <div id="onMousePress" class="single-indent">
+                        <h4> onMousePress(mouseX, mouseY) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/665">2.2.1</a> </b>
+                        <br>
+                        <br> onMousePress is a function that is called whenever the mouse is clicked.
+                        <br> (mouseX, mouseY) represents the (x, y) coordinates of where the mouse was clicked on the canvas.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Changes the top label to the x coordinate</span>
+<span class="hljs-comment"># and the bottom label to the y coordinate when the mouse is pressed.</span>
+xCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">150</span>, size=<span class="hljs-number">50</span>)
+yCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, size=<span class="hljs-number">50</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onMousePress</span><span class="hljs-params">(mouseX, mouseY)</span>:</span>
+    xCoord.value = mouseX
+    yCoord.value = mouseY
+                </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="onMouseRelease" class="single-indent">
+                        <h4> onMouseRelease(mouseX, mouseY) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/670">2.2.5</a> </b>
+                        <br>
+                        <br> onMouseRelease is a function that is called whenever the mouse is no longer held down.
+                        <br> (mouseX, mouseY) represents the (x, y) coordinates of where the mouse was released.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The top and bottom label change to the x and y coordinate of the mouse when the mouse is released.</span>
+<span class="hljs-comment"># If the mouse is pressed at one location, but released at a different location,</span>
+<span class="hljs-comment"># the labels will only change to the coordinates of where the mouse has been released.</span>
+xCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">150</span>, size=<span class="hljs-number">50</span>)
+yCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, size=<span class="hljs-number">50</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onMouseRelease</span><span class="hljs-params">(mouseX, mouseY)</span>:</span>
+    xCoord.value = mouseX
+    yCoord.value = mouseY</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="onMouseMove" class="single-indent">
+                        <h4> onMouseMove(mouseX, mouseY) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/476">3.1.1</a> </b>
+                        <br>
+                        <br> onMouseMove is a function that is called whenever the mouse is moved (but not clicked).
+                        <br> (mouseX, mouseY) represents the (x, y) coordinates of where the mouse is on the canvas.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># While the mouse is moving around but hasn't been pressed,</span>
+<span class="hljs-comment"># the top and bottom label changes to the x and y coordinate</span>
+<span class="hljs-comment"># respectively of the mouse at that moment.</span>
+xCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">150</span>, size=<span class="hljs-number">50</span>)
+yCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, size=<span class="hljs-number">50</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onMouseMove</span><span class="hljs-params">(mouseX, mouseY)</span>:</span>
+    xCoord.value = mouseX
+    yCoord.value = mouseY</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="onMouseDrag" class="single-indent">
+                        <h4>onMouseDrag(mouseX, mouseY) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/476">3.1.1</a> </b>
+                        <br>
+                        <br> onMouseDrag is a function that is called while the mouse is clicked and moved.
+                        <br> (mouseX, mouseY) represents the (x, y) coordinates of where the mouse is on the canvas.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># While the mouse is dragged, the top label and bottom label</span>
+<span class="hljs-comment"># constantly changes to whatever the x and y coordinate is.</span>
+xCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">150</span>, size=<span class="hljs-number">50</span>)
+yCoord = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, size=<span class="hljs-number">50</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onMouseDrag</span><span class="hljs-params">(mouseX, mouseY)</span>:</span>
+    xCoord.value = mouseX
+    yCoord.value = mouseY</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="onKeyPress" class="single-indent">
+                        <h4> onKeyPress(key) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/692">4.2.1</a> </b>
+                        <br>
+                        <br> onKeyPress is a function that is called whenever a key is pressed.
+                        <br> key is a string corresponding to whatever key was pressed on the keyboard.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># When a key is pressed, the label shows what key was pressed.</span>
+keyLabel = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">50</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onKeyPress</span><span class="hljs-params">(key)</span>:</span>
+    keyLabel.value = key</code> </pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="onKeyRelease" class="single-indent">
+                        <h4> onKeyRelease(key)</h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/692">4.2.1</a> </b>
+                        <br>
+                        <br> onKeyRelease is a function that is called whenever a key stops being held down.
+                        <br> key is a string corresponding to what key was released.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># When a key is released, the label shows what key was released.</span>
+keyLabel = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">50</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onKeyRelease</span><span class="hljs-params">(key)</span>:</span>
+    keyLabel.value = key</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="onKeyHold" class="single-indent">
+                        <h4> onKeyHold(keys)</h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/517">5.2.1</a> </b>
+                        <br>
+                        <br> onKeyHold(keys) is a function that is called repeatedly while keys are held down.
+                        <br> keys is a list of all keys currently being held down.
+                        <br>
+                        <br><b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># While keys are being held down,</span>
+<span class="hljs-comment"># the label will show the list of all keys being held down.</span>
+keyLabel = Label(<span class="hljs-string">''</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">50</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onKeyHold</span><span class="hljs-params">(keys)</span>:</span>
+    keyLabel.value = keys</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                        <br> <b> Related Function: onKeyHolds(keys, numOfCalls): </b>
+                        <br> onKeyHolds(keyList, numOfCalls) will call onKeyHold numOfCalls times, with the argument keys.
+                        <br> This is useful for testing purposes.
+                    </div>
+                    <br>
+
+                    <div id="onStep" class="single-indent">
+                        <h4> onStep()</h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/708">6.3.1</a> </b>
+                        <br>
+                        <br> onStep is a function that is called app.stepsPerSecond number of times per second.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># counter's value increases by 1 every second</span>
+<span class="hljs-comment"># since onStep will run once per second as defined by app.stepsPerSecond.</span>
+app.stepsPerSecond = <span class="hljs-number">1</span>
+counter = Label(<span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">50</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onStep</span><span class="hljs-params">()</span>:</span>
+    counter.value += <span class="hljs-number">1</span></code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br>
+                        <br> <b> Related Function: onSteps(numOfCalls): </b>
+                        <br> onSteps(numOfCalls) will call and run the code in onStep numOfCalls times.
+                        <br> This is useful for testing purposes.
+                    </div>
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="mathFunctions">
+                        <h3> Math Functions </h3>
+                    </div>
+
+                    <div id="distance" class="single-indent">
+                        <h4> distance(x1, y1, x2, y2) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b>CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/559">8.2.3</a> </b>
+                        <br>
+                        <br> Returns a number representing how far apart the point (x1, y1) and (x2, y2) are.
+                        <br> It returns the solution of the square root of ((x1-x2)^2 + (y1-y2)^2).
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># The label shows a distance of 200 since the distance between (200, 0) and (400, 0) is 200.</span>
+dist = distance(<span class="hljs-number">200</span>, <span class="hljs-number">0</span>, <span class="hljs-number">400</span>, <span class="hljs-number">0</span>)
+Label(dist, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">50</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="angleTo" class="single-indent">
+                        <h4> angleTo(x1, y1, x2, y2)</h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/559">8.2.3</a> </b>
+                        <br>
+                        <br> Returns an integer representing the angle from the point (x1, y1) to (x2, y2) with straight up being 0 degrees.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"> <span class="hljs-comment"># Shows the different angle going from (200, 200) to 100 to the right, 100 below,</span>
+<span class="hljs-comment"># 100 to the left, and 100 above.</span>
+ang1 = angleTo(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-number">200</span>)
+ang2 = angleTo(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>)
+ang3 = angleTo(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>)
+ang4 = angleTo(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>)
+Label(ang1, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>, size=<span class="hljs-number">20</span>)
+Label(ang2, <span class="hljs-number">200</span>, <span class="hljs-number">150</span>, size=<span class="hljs-number">20</span>)
+Label(ang3, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, size=<span class="hljs-number">20</span>)
+Label(ang4, <span class="hljs-number">200</span>, <span class="hljs-number">350</span>, size=<span class="hljs-number">20</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="getPointInDir" class="single-indent">
+                        <h4>getPointInDir(centerX, centerY, angle, distance)</h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/559">8.2.3</a> </b>
+                        <br>
+                        <br> Returns a point that is the given number of pixels from the center point, in the given direction.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># Draws a line starting at 200, 200 and heads at 45 degrees</span>
+<span class="hljs-comment"># a distance of 50 to reach the endpoint of (235, 165).</span>
+x, y = getPointInDir(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">45</span>, <span class="hljs-number">50</span>)
+Line(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, x, y)</code> </pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="rounded" class="single-indent">
+                        <h4> rounded(num) </h4>
+                    </div>
+                    <div class="double-indent">
+                        Returns the rounded value of num with 0.5 and above rounding up and anything below rounding down.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"> <span class="hljs-comment"># num1 will show 2, num2 will show 3 and num3 will show 3.</span>
+<span class="hljs-comment"># Shows how rounded() rounds using normal conventions.</span>
+num1 = rounded(<span class="hljs-number">2.4</span>)
+num2 = rounded(<span class="hljs-number">2.5</span>)
+num3 = rounded(<span class="hljs-number">2.6</span>)
+Label(num1, <span class="hljs-number">200</span>, <span class="hljs-number">150</span>, size=<span class="hljs-number">20</span>)
+Label(num2, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">20</span>)
+Label(num3, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, size=<span class="hljs-number">20</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="otherFunctions">
+                        <h3> Other CMU Graphics Functions </h3>
+                    </div>
+                    <div id="makeList" class="single-indent">
+                        <h4> makeList(row, col) </h4>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/601">11.1.1</a> </b>
+                        <br>
+                        <br> Creates a 2D list with row number of rows and col number of columns.
+                        <br> Every element will have a default value of None.
+                        <br>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"><span class="hljs-comment"># makeList created a list with 3 lists filled with 4 empty None values.</span>
+board = makeList(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> range(len(board)):
+    <span class="hljs-keyword">for</span> col <span class="hljs-keyword">in</span> range(len(board[row])):
+        Rect(col * <span class="hljs-number">60</span>, row * <span class="hljs-number">60</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, fill=<span class="hljs-keyword">None</span>, border=<span class="hljs-string">'black'</span>)
+        Label(board[row][col], col * <span class="hljs-number">60</span> + <span class="hljs-number">25</span>, row * <span class="hljs-number">60</span> + <span class="hljs-number">25</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="pythonFunctions">
+                        <h2> Relevant Python Functions </h2>
+                        <div id="String Methods" class="single-indent">
+                            <h3> String Methods</h3>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link:
+                        <a href="https://academy.cs.cmu.edu/notes/576"> 9.2.1 </a> </b>
+                            <br>
+                        </div>
+                        <div class="double-indent">
+                            <h4> .isupper() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Checks if the string is all uppercase.
+                        </div>
+                        <br>
+                        <div class="double-indent">
+                            <h4> .islower() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Checks if the string is all lowercase.
+                        </div>
+                        <br>
+                        <div class="double-indent">
+                            <h4> .isdigit() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Checks if something is made of all numbers.
+                        </div>
+                        <br>
+                        <div class="double-indent">
+                            <h4> .isalpha() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Checks if something is made of all characters from the alphabet.
+                        </div>
+                        <br>
+                        <div class="double-indent">
+                            <h4> .upper() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Returns the uppercase version of the string.
+                        </div>
+                        <br>
+                        <div class="double-indent">
+                            <h4> .lower() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Returns the lowercase version of the string.
+                        </div>
+                        <br>
+                        <br>
+                        <hr>
+
+                        <div id="List Methods and Functions" class="single-indent">
+                            <h3> List Methods and Functions </h3>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link:
+                        <a href="https://academy.cs.cmu.edu/notes/589"> 10.2.1 </a> </b>
+                            <br>
+                        </div>
+                        <div class="double-indent">
+                            <h4> .append(element) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Adds element to the end of the list.
+                        </div>
+                        <br>
+
+                        <div class="double-indent">
+                            <h4> .pop(index) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Removes the index element in the list and returns what was removed.
+                            <br> .pop can also take in nothing in which it will default pop the last element in the list.
+                        </div>
+                        <br>
+
+                        <div class="double-indent">
+                            <h4> choice(list) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Returns a random element from the list.
+                            <br> The list remains unchanged.
+                        </div>
+                        <br>
+                        <br>
+                        <hr>
+
+                        <div id="Other Functions" class="single-indent">
+                            <h3> Other Functions </h3>
+                        </div>
+
+                        <div id="randrange(lo, hi)" class="double-indent">
+                            <h4> randrange(lo, hi) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/546"> 7.3.1</a></b>
+                            <br> Returns a random integer from range(lo, hi).
+                            <ul>
+                                <li> randrange also will work for randrange(lo, hi, step) or randrange(hi).
+                                </li>
+                                <li> randrange(hi) will go from 0 to but not including hi.
+                                </li>
+                                <li> randrange is always inclusive lo, exclusive hi.</li>
+                            </ul>
+                        </div>
+                        <br>
+
+                        <div id="random()" class="double-indent">
+                            <h4> random() </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Returns a random float value from 0 to 1.
+                            <br>
+                        </div>
+
+                        <br>
+
+                        <div id="seed(number)" class="double-indent">
+                            <h4> seed(number) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            Sets the random seed to number.
+                            <br> This is useful for debugging.
+                        </div>
+
+                        <br>
+
+                        <div id="abs(number)" class="double-indent">
+                            <h4> abs(number)</h4>
+                        </div>
+                        <div class="triple-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/559"> 8.2.3</a></b>
+                            <br> Returns the absolute value or positive of number.
+                        </div>
+
+                        <br>
+
+                        <div id="int(text" class="double-indent">
+                            <h4> int(text) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/572"> 9.1.1</a></b>
+                            <br> Converts the text of type string into the integer type.
+                        </div>
+
+                        <br>
+
+                        <div id="str(value)" class="double-indent">
+                            <h4> str(value) </h4>
+                        </div>
+                        <div class="triple-indent">
+                            <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/557"> 8.2.1</a></b>
+                            <br> Converts value of another type into a string.
+                            <br> Often this is used to convert integers or floats into strings.
+                        </div>
+
+                        <br>
+
+                        <div id="//" class="double-indent">
+                            <h4> a // b </h4>
+                        </div>
+                        <div class="triple-indent">
+                            <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/558"> 8.2.2</a></b>
+                            <br> Performs integer division between two numbers.
+                            <br> It returns the lowest whole number of a divided by b;
+                            <br> or in other words, rounds down regardless of the decimal.
+                        </div>
+
+                        <br>
+
+                        <div id="%" class="double-indent">
+                            <h4> a % b </h4>
+                        </div>
+                        <div class="triple-indent">
+                            <b> CS1 Reference Link:<a href="https://academy.cs.cmu.edu/notes/558"> 8.2.2</a></b>
+                            <br> Performs modular arthimetic between two numbers.
+                            <br> It returns the remainder of a divided by b.
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="media">
+                        <h1> Media </h1>
+                    </div>
+                    <div id="Images" class="single-indent">
+                        <h3> Images </h3>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/613">12.1.1</a> </b>
+                        <br>
+                        <br> To add a pre-existing image to our canvas, we write:
+                        <div><pre><code class="hljs"> Image(url, left, top) </code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> All three parameters are required.
+                        <ul>
+                            <li> The url of an image that is on the web can be obtained by right-clicking on the image you want to use and selecting "Copy image address" or "Copy image location".</li>
+                        </ul>
+                        <br> <b> Example: </b>
+                        <div><pre><code class="hljs javascript"> <span class="hljs-comment"># Loads an image with the left-top at (50, 100).</span>
+app.url = <span class="hljs-string">'https://academy.cs.cmu.edu/static/media/project_10.472f439f.jpg'</span>
+Image(app.url, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="Sound" class="single-indent">
+                        <h3> Sound </h3>
+                    </div>
+                    <div class="double-indent">
+                        <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/614">12.1.2</a> </b>
+                        <br>
+                        <br> To add a pre-existing sound to our program, we write:
+                        <div><pre><code class="hljs">track = Sound(url)</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                        <br> The url parameter is required.
+                        <br>
+                        <br> A sound track can be played and paused using pause and play methods.
+                        <br>
+                        <br>
+                        <h4> .pause() </h4>
+                        <ul>
+                            <li> Pauses the audio track.</li>
+                        </ul>
+                        <br>
+                        <h4> .play() </h4>
+                        <ul>
+                            <li> Plays the audio track from whereever it stopped.</li>
+                        </ul>
+                        <br>
+                        <h4> Special play inputs:</h4>
+                        <b>restart, loop</b>
+                        <ul>
+                            <li> restart=True will cause the track to play starting from the beginning.
+                            </li>
+                            <li> loop=True will cause the track to continue looping after it ends.</li>
+                        </ul>
+                        <br>
+                        <b> Example: </b>
+                        <div><pre><code class="hljs javascript"> <span class="hljs-comment"># Loads a sound track that can be paused/played by pressing 'p'.</span>
+<span class="hljs-comment"># The track is looped so it never stops unless it is paused.</span>
+pausedLabel = Label(<span class="hljs-string">'Paused...'</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, size=<span class="hljs-number">30</span>, bold=<span class="hljs-keyword">True</span>)
+music = Sound(<span class="hljs-string">'https://freesound.org/data/previews/152/152574_2764107-lq.mp3'</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onKeyPress</span><span class="hljs-params">(key)</span>:</span>
+  <span class="hljs-keyword">if</span> (key == <span class="hljs-string">'p'</span>):
+      <span class="hljs-keyword">if</span> (pausedLabel.value == <span class="hljs-string">'Paused...'</span>):
+          pausedLabel.value = <span class="hljs-string">'Playing!'</span>
+          music.play(loop=<span class="hljs-keyword">True</span>)
+      <span class="hljs-keyword">else</span>:
+          pausedLabel.value = <span class="hljs-string">'Paused...'</span>
+          music.pause()</code></pre>
+                            <button class="small button flat teal">Copy code</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <br>
+                    <br>
+                    <hr>
+
+                    <div id="glossary">
+                        <h1> Glossary </h1>
+                        <div class="single-indent">
+                            <h4> variable:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/669">2.2.4</a></b>
+                            <br> A value that is used to represent something which can be changed.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> global variable:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/669">2.2.4</a></b>
+                            <br> A variable that is declared outside any function that can be used at any point either inside or outide functions.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> local variable:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/540">7.1.1</a></b>
+                            <br> A variable that is not global and can only be used and accessed within its scope (most often, inside a function or a for loop).
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> parameters:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/658">2.1.1</a></b>
+                            <br> Variables that methods and functions take in upon declaration.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> arguments:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/658">2.1.1</a></b>
+                            <br> Data or values passed into calls of the function or method.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> function:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/658">2.1.1</a></b>
+                            <br> A code body that has a name. The name can be called to repeat the code body. It can take in parameters, or data to act upon.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> helper function: </h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/486">3.3.1</a></b>
+                            <br> A function used within another function to help that function.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> for-loop: </h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/543">7.2.1</a></b> or <b><a href="https://academy.cs.cmu.edu/notes/563">8.3.1</a></b> or <b><a href="https://academy.cs.cmu.edu/notes/565">8.3.3</a></b>
+                            <br> A loop that is run a set number of times. Generally for loops are given a start value, an end value, and a step value.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> while-loop:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/579">9.3.1</a></b>
+                            <br> A loop that keeps running until its conditional statement becomes false.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> event: </h4>
+                        </div>
+                        <div class="double-indent">
+                            A change of state that triggers an event function call. Examples include moving the mouse, or holding a key.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> conditional:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/684">3.2.1</a></b> or <b><a href="https://academy.cs.cmu.edu/notes/686">3.2.3</a></b> or <b><a href="https://academy.cs.cmu.edu/notes/496">4.1.1</a></b> or <b><a href="https://academy.cs.cmu.edu/notes/513">5.1.1</a></b> or <b><a href="https://academy.cs.cmu.edu/notes/698">5.1.2</a></b>
+                            <br> A logical statement that can evaluate to either True or False.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> type:</h4>
+                        </div>
+                        <div class="double-indent">
+                            <b> CS1 Reference Link: <a href="https://academy.cs.cmu.edu/notes/557">8.2.1</a></b>
+                            <br> A classification given to variables and data.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> string: </h4>
+                        </div>
+                        <div class="double-indent">
+                            A special type that characters within single or double quotes are classified as.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> integer:</h4>
+                        </div>
+                        <div class="double-indent">
+                            A special type that whole numbers are classified as.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> float: </h4>
+                        </div>
+                        <div class="double-indent">
+                            A special type that numbers with a decimal point are classified as.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> booleans:</h4>
+                        </div>
+                        <div class="double-indent">
+                            A special type that is either True or False.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> character: </h4>
+                        </div>
+                        <div class="double-indent">
+                            A symbol like 'a', '!', '1'.
+                        </div>
+                        <br>
+                        <div class="single-indent">
+                            <h4> pseudocode:</h4>
+                        </div>
+                        <div class="double-indent">
+                            Normal everyday language to describe a coding problem (instead of syntactically correct language).
+                        </div>
+                        <br>
+                    </div>
+
+                </div>
+                <textarea class="copy-button-proxy-textarea" readonly=""></textarea>
+                <div></div>
+            </div>
+            <div id="settings"></div>
+            <div class="toaster-container"></div>
+            <div id="support-popup"></div>
+        </div>
+    </div>
+    <div id="application-target"></div>
+    <div id="brython-target"></div>
+    <script type="text/javascript" async="" src="./Documentation _ CMU CS Academy_files/mixpanel-2-latest.min.js.download"></script>
+    <script crossorigin="" src="./Documentation _ CMU CS Academy_files/rollbar.min.js.download" async=""></script>
+    <script>
+        var _rollbarConfig = {
+            accessToken: "ce5718b091db44c2b31b4ff4d410d686",
+            captureUncaught: !0,
+            enabled: -1 === "ce5718b091db44c2b31b4ff4d410d686".indexOf("%"),
+            checkIgnore: function(r, e, o) {
+                return !!(o && o.body && o.body.message && "Error executing solution code" === o.body.message.body && o.request && o.request.url && 0 < o.request.url.indexOf("/sharing/")) || !!(r && o && o.body && o.body.trace && o.body.trace.exception && "SyntaxError" === o.body.trace.exception.class)
+            },
+            ignoredMessages: [],
+            payload: {
+                client: {
+                    javascript: {
+                        source_map_enabled: !0,
+                        code_version: "1",
+                        guess_uncaught_frames: !0
+                    }
+                },
+                environment: "production"
+            }
+        };
+        ! function(o) {
+            function n(r) {
+                if (t[r]) return t[r].exports;
+                var e = t[r] = {
+                    exports: {},
+                    id: r,
+                    loaded: !1
+                };
+                return o[r].call(e.exports, e, e.exports, n), e.loaded = !0, e.exports
+            }
+            var t = {};
+            n.m = o, n.c = t, n.p = "", n(0)
+        }([function(r, e, o) {
+            "use strict";
+            var n = o(1),
+                t = o(4);
+            (_rollbarConfig = _rollbarConfig || {}).rollbarJsUrl = _rollbarConfig.rollbarJsUrl || "https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.4.2/rollbar.min.js", _rollbarConfig.async = void 0 === _rollbarConfig.async || _rollbarConfig.async;
+            var a = n.setupShim(window, _rollbarConfig),
+                l = t(_rollbarConfig);
+            window.rollbar = n.Rollbar, a.loadFull(window, document, !_rollbarConfig.async, _rollbarConfig, l)
+        }, function(r, e, o) {
+            "use strict";
+
+            function c(r) {
+                return function() {
+                    try {
+                        return r.apply(this, arguments)
+                    } catch (r) {
+                        try {
+                            console.error("[Rollbar]: Internal error", r)
+                        } catch (r) {}
+                    }
+                }
+            }
+
+            function n(r, e) {
+                this.options = r, this._rollbarOldOnError = null;
+                var o = i++;
+                this.shimId = function() {
+                    return o
+                }, "undefined" != typeof window && window._rollbarShims && (window._rollbarShims[o] = {
+                    handler: e,
+                    messages: []
+                })
+            }
+
+            function t(o) {
+                return c(function() {
+                    var r = Array.prototype.slice.call(arguments, 0),
+                        e = {
+                            shim: this,
+                            method: o,
+                            args: r,
+                            ts: new Date
+                        };
+                    window._rollbarShims[this.shimId()].messages.push(e)
+                })
+            }
+            var a, l = o(2),
+                i = 0,
+                s = o(3),
+                d = function(r, e) {
+                    return new n(r, e)
+                };
+            a = s.curry ? s.curry(d) : s.bind(null, d), n.prototype.loadFull = function(l, r, e, o, i) {
+                var n = !1,
+                    t = r.createElement("script"),
+                    a = r.getElementsByTagName("script")[0],
+                    s = a.parentNode;
+                t.crossOrigin = "", t.src = o.rollbarJsUrl, e || (t.async = !0), t.onload = t.onreadystatechange = c(function() {
+                    if (!(n || this.readyState && "loaded" !== this.readyState && "complete" !== this.readyState)) {
+                        t.onload = t.onreadystatechange = null;
+                        try {
+                            s.removeChild(t)
+                        } catch (r) {}
+                        n = !0,
+                            function() {
+                                var r;
+                                if (void 0 === l._rollbarDidLoad) {
+                                    r = new Error("rollbar.js did not load");
+                                    for (var e, o, n, t, a = 0; e = l._rollbarShims[a++];)
+                                        for (e = e.messages || []; o = e.shift();)
+                                            for (n = o.args || [], a = 0; a < n.length; ++a)
+                                                if ("function" == typeof(t = n[a])) {
+                                                    t(r);
+                                                    break
+                                                }
+                                }
+                                "function" == typeof i && i(r)
+                            }()
+                    }
+                }), s.insertBefore(t, a)
+            }, n.prototype.wrap = function(o, r, n) {
+                try {
+                    var t;
+                    if (t = "function" == typeof r ? r : function() {
+                            return r || {}
+                        }, "function" != typeof o) return o;
+                    if (o._isWrap) return o;
+                    if (!o._rollbar_wrapped && (o._rollbar_wrapped = function() {
+                            n && "function" == typeof n && n.apply(this, arguments);
+                            try {
+                                return o.apply(this, arguments)
+                            } catch (r) {
+                                var e = r;
+                                throw e && ("string" == typeof e && (e = new String(e)), e._rollbarContext = t() || {}, e._rollbarContext._wrappedSource = o.toString(), window._rollbarWrappedError = e), e
+                            }
+                        }, o._rollbar_wrapped._isWrap = !0, o.hasOwnProperty))
+                        for (var e in o) o.hasOwnProperty(e) && (o._rollbar_wrapped[e] = o[e]);
+                    return o._rollbar_wrapped
+                } catch (r) {
+                    return o
+                }
+            };
+            for (var p = "log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","), u = 0; u < p.length; ++u) n.prototype[p[u]] = t(p[u]);
+            r.exports = {
+                setupShim: function(e, o) {
+                    if (e) {
+                        var n = o.globalAlias || "Rollbar";
+                        if ("object" == typeof e[n]) return e[n];
+                        e._rollbarShims = {}, e._rollbarWrappedError = null;
+                        var t = new a(o);
+                        return c(function() {
+                            o.captureUncaught && (t._rollbarOldOnError = e.onerror, l.captureUncaughtExceptions(e, t, !0), l.wrapGlobals(e, t, !0)), o.captureUnhandledRejections && l.captureUnhandledRejections(e, t, !0);
+                            var r = o.autoInstrument;
+                            return !1 !== o.enabled && (void 0 === r || !0 === r || "object" == typeof r && r.network) && e.addEventListener && (e.addEventListener("load", t.captureLoad.bind(t)), e.addEventListener("DOMContentLoaded", t.captureDomContentLoaded.bind(t))), e[n] = t
+                        })()
+                    }
+                },
+                Rollbar: a
+            }
+        }, function(r, e) {
+            "use strict";
+
+            function l(n, r, e) {
+                if (r.hasOwnProperty && r.hasOwnProperty("addEventListener")) {
+                    for (var t = r.addEventListener; t._rollbarOldAdd && t.belongsToShim;) t = t._rollbarOldAdd;
+                    var o = function(r, e, o) {
+                        t.call(this, r, n.wrap(e), o)
+                    };
+                    o._rollbarOldAdd = t, o.belongsToShim = e, r.addEventListener = o;
+                    for (var a = r.removeEventListener; a._rollbarOldRemove && a.belongsToShim;) a = a._rollbarOldRemove;
+                    var l = function(r, e, o) {
+                        a.call(this, r, e && e._rollbar_wrapped || e, o)
+                    };
+                    l._rollbarOldRemove = a, l.belongsToShim = e, r.removeEventListener = l
+                }
+            }
+            r.exports = {
+                captureUncaughtExceptions: function(a, l, r) {
+                    if (a) {
+                        var i;
+                        "function" == typeof l._rollbarOldOnError ? i = l._rollbarOldOnError : a.onerror && !a.onerror.belongsToShim && (i = a.onerror, l._rollbarOldOnError = i);
+                        var e = function() {
+                            var r, e, o, n, t = Array.prototype.slice.call(arguments, 0);
+                            e = l, o = i, n = t, (r = a)._rollbarWrappedError && (n[4] || (n[4] = r._rollbarWrappedError), n[5] || (n[5] = r._rollbarWrappedError._rollbarContext), r._rollbarWrappedError = null), e.handleUncaughtException.apply(e, n), o && o.apply(r, n)
+                        };
+                        e.belongsToShim = r, a.onerror = e
+                    }
+                },
+                captureUnhandledRejections: function(r, t, e) {
+                    if (r) {
+                        "function" == typeof r._rollbarURH && r._rollbarURH.belongsToShim && r.removeEventListener("unhandledrejection", r._rollbarURH);
+                        var o = function(r) {
+                            var e, o, n;
+                            try {
+                                e = r.reason
+                            } catch (r) {
+                                e = void 0
+                            }
+                            try {
+                                o = r.promise
+                            } catch (r) {
+                                o = "[unhandledrejection] error getting `promise` from event"
+                            }
+                            try {
+                                n = r.detail, !e && n && (e = n.reason, o = n.promise)
+                            } catch (r) {
+                                n = "[unhandledrejection] error getting `detail` from event"
+                            }
+                            e || (e = "[unhandledrejection] error getting `reason` from event"), t && t.handleUnhandledRejection && t.handleUnhandledRejection(e, o)
+                        };
+                        o.belongsToShim = e, r._rollbarURH = o, r.addEventListener("unhandledrejection", o)
+                    }
+                },
+                wrapGlobals: function(r, e, o) {
+                    if (r) {
+                        var n, t, a = "EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");
+                        for (n = 0; n < a.length; ++n) r[t = a[n]] && r[t].prototype && l(e, r[t].prototype, o)
+                    }
+                }
+            }
+        }, function(r, e) {
+            "use strict";
+
+            function o(r, e) {
+                this.impl = r(e, this), this.options = e,
+                    function(r) {
+                        for (var e = function(e) {
+                                return function() {
+                                    var r = Array.prototype.slice.call(arguments, 0);
+                                    if (this.impl[e]) return this.impl[e].apply(this.impl, r)
+                                }
+                            }, o = "log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","), n = 0; n < o.length; n++) r[o[n]] = e(o[n])
+                    }(o.prototype)
+            }
+            o.prototype._swapAndProcessMessages = function(r, e) {
+                this.impl = r(this.options);
+                for (var o, n, t; o = e.shift();) n = o.method, t = o.args, this[n] && "function" == typeof this[n] && ("captureDomContentLoaded" === n || "captureLoad" === n ? this[n].apply(this, [t[0], o.ts]) : this[n].apply(this, t));
+                return this
+            }, r.exports = o
+        }, function(r, e) {
+            "use strict";
+            r.exports = function(i) {
+                return function(r) {
+                    if (!r && !window._rollbarInitialized) {
+                        for (var e, o, n = (i = i || {}).globalAlias || "Rollbar", t = window.rollbar, a = function(r) {
+                                return new t(r)
+                            }, l = 0; e = window._rollbarShims[l++];) o || (o = e.handler), e.handler._swapAndProcessMessages(a, e.messages);
+                        window[n] = o, window._rollbarInitialized = !0
+                    }
+                }
+            }
+        }])
+    </script>
+    <script type="text/javascript">
+        ! function(e, p) {
+            if (!p.__SV) {
+                var i, c, t = window;
+                try {
+                    var n, o, a, r = t.location,
+                        l = r.hash;
+                    n = function(e, t) {
+                        return (o = e.match(RegExp(t + "=([^&]*)"))) ? o[1] : null
+                    }, l && n(l, "state") && ("mpeditor" === (a = JSON.parse(decodeURIComponent(n(l, "state")))).action && (t.sessionStorage.setItem("_mpcehash", l), history.replaceState(a.desiredHash || "", e.title, r.pathname + r.search)))
+                } catch (e) {}(window.mixpanel = p)._i = [], p.init = function(e, t, n) {
+                    function o(e, t) {
+                        var n = t.split(".");
+                        2 == n.length && (e = e[n[0]], t = n[1]), e[t] = function() {
+                            e.push([t].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    }
+                    var a = p;
+                    for (void 0 !== n ? a = p[n] = [] : n = "mixpanel", a.people = a.people || [], a.toString = function(e) {
+                            var t = "mixpanel";
+                            return "mixpanel" !== n && (t += "." + n), e || (t += " (stub)"), t
+                        }, a.people.toString = function() {
+                            return a.toString(1) + ".people (stub)"
+                        }, i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" "), c = 0; c < i.length; c++) o(a, i[c]);
+                    var r = "set set_once union unset remove delete".split(" ");
+                    a.get_group = function() {
+                        function e(e) {
+                            t[e] = function() {
+                                call2_args = arguments, call2 = [e].concat(Array.prototype.slice.call(call2_args, 0)), a.push([n, call2])
+                            }
+                        }
+                        for (var t = {}, n = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), o = 0; o < r.length; o++) e(r[o]);
+                        return t
+                    }, p._i.push([e, t, n])
+                }, p.__SV = 1.2, (t = e.createElement("script")).type = "text/javascript", t.async = !0, t.src = "undefined" != typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js", (n = e.getElementsByTagName("script")[0]).parentNode.insertBefore(t, n)
+            }
+        }(document, window.mixpanel || [])
+    </script>
+    <script>
+        ! function(l) {
+            function e(e) {
+                for (var r, t, n = e[0], o = e[1], u = e[2], f = 0, i = []; f < n.length; f++) t = n[f], p[t] && i.push(p[t][0]), p[t] = 0;
+                for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (l[r] = o[r]);
+                for (s && s(e); i.length;) i.shift()();
+                return c.push.apply(c, u || []), a()
+            }
+
+            function a() {
+                for (var e, r = 0; r < c.length; r++) {
+                    for (var t = c[r], n = !0, o = 1; o < t.length; o++) {
+                        var u = t[o];
+                        0 !== p[u] && (n = !1)
+                    }
+                    n && (c.splice(r--, 1), e = f(f.s = t[0]))
+                }
+                return e
+            }
+            var t = {},
+                p = {
+                    1: 0
+                },
+                c = [];
+
+            function f(e) {
+                if (t[e]) return t[e].exports;
+                var r = t[e] = {
+                    i: e,
+                    l: !1,
+                    exports: {}
+                };
+                return l[e].call(r.exports, r, r.exports, f), r.l = !0, r.exports
+            }
+            f.m = l, f.c = t, f.d = function(e, r, t) {
+                f.o(e, r) || Object.defineProperty(e, r, {
+                    enumerable: !0,
+                    get: t
+                })
+            }, f.r = function(e) {
+                "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                    value: "Module"
+                }), Object.defineProperty(e, "__esModule", {
+                    value: !0
+                })
+            }, f.t = function(r, e) {
+                if (1 & e && (r = f(r)), 8 & e) return r;
+                if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+                var t = Object.create(null);
+                if (f.r(t), Object.defineProperty(t, "default", {
+                        enumerable: !0,
+                        value: r
+                    }), 2 & e && "string" != typeof r)
+                    for (var n in r) f.d(t, n, function(e) {
+                        return r[e]
+                    }.bind(null, n));
+                return t
+            }, f.n = function(e) {
+                var r = e && e.__esModule ? function() {
+                    return e.default
+                } : function() {
+                    return e
+                };
+                return f.d(r, "a", r), r
+            }, f.o = function(e, r) {
+                return Object.prototype.hasOwnProperty.call(e, r)
+            }, f.p = "/";
+            var r = window.webpackJsonp = window.webpackJsonp || [],
+                n = r.push.bind(r);
+            r.push = e, r = r.slice();
+            for (var o = 0; o < r.length; o++) e(r[o]);
+            var s = n;
+            a()
+        }([])
+    </script>
+    <script src="./Documentation _ CMU CS Academy_files/main.7615b9cd.chunk.js.download"></script>
+    <script type="text/javascript" src="./Documentation _ CMU CS Academy_files/freshwidget.js.download"></script>
+    <script src="./Documentation _ CMU CS Academy_files/cmu-graphics.564a0d10.js.download"></script>
+</body>
+
+</html>

@@ -13,6 +13,9 @@ export class NavBarComponent implements OnInit {
   SandBoxClicked(){
     this.router.navigateByUrl('/sandbox');
   }
+  DocClicked(){
+    this.router.navigateByUrl('/docPage');
+  }
   ngOnInit() {
   }
 

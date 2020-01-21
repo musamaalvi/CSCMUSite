@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DrilldowmComponent } from './drilldowm/drilldowm.component';
 import { ExcersisComponent } from './excersis/excersis.component';
+import { DocPageComponent } from './doc-page/doc-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ExcersisComponent } from './excersis/excersis.component';
     TopicContainerComponent,
     MainPageComponent,
     DrilldowmComponent,
-    ExcersisComponent
+    ExcersisComponent,
+    DocPageComponent
   ],
   imports: [
     BrowserModule,
